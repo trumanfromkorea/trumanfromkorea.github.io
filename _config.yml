@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "What am i doing"
+title                    : "오래하길 바래"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "trumanfromkorea"
-description              : "my dev diary"
+description              : "꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지"
 url                      : "https://trumanfromkorea.github.io"
 baseurl                  : ""
 repository               : "trumanfromkorea/trumanfromkorea"
