@@ -23,7 +23,7 @@ name                     : "trumanfromkorea"
 description              : "my dev diary"
 url                      : "https://trumanfromkorea.github.io"
 baseurl                  : ""
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "trumanfromkorea/trumanfromkorea"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -104,8 +104,8 @@ analytics:
 author:
   name             : "trumanfromkorea"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "Junior App Developer"
+  location         : "Seoul, Korea"
   email            :
   links:
     - label: "Email"
@@ -125,7 +125,7 @@ author:
       # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/trumanfromkorea/"
 
 # Site Footer
 footer:
