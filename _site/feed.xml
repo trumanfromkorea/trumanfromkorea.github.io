@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-30T00:23:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Git] 커밋 취소하기, 되돌리기</title><link href="http://localhost:4000/git/3/" rel="alternate" type="text/html" title="[Git] 커밋 취소하기, 되돌리기" /><published>2021-12-29T09:05:20+09:00</published><updated>2021-12-29T09:05:20+09:00</updated><id>http://localhost:4000/git/3</id><content type="html" xml:base="http://localhost:4000/git/3/">&lt;h2 id=&quot;git-reset&quot;&gt;git reset&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-30T22:03:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/1/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/1</id><content type="html" xml:base="http://localhost:4000/flutter/1/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
+
+&lt;p&gt;Flutter 의 Lifecycle, 생명주기를 이해하기 위해서는 Stateless Widget 과 Stateful Widget 의 차이점을 알아야 합니다.&lt;/p&gt;
+
+&lt;p&gt;여기서 State 란 위젯의 상태를 의미합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;stateless-widget&quot;&gt;Stateless Widget&lt;/h3&gt;
+
+&lt;p&gt;Stateless Widget 은 변경 가능한 State 가 필요하지 않은 Widget 을 뜻합니다.&lt;/p&gt;
+
+&lt;p&gt;다시 말해 Stateless Widget 도 State 를 가지긴 하지만, 한 번 생성된 이후에 변경될 일이 없는 값이라는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;그렇다고 해서 Stateless Widget 이 전혀 변경되지 않는다는 것은 아닙니다. 상위 위젯이 전달해주는 값에 따라 Stateless Widget 의 값이 변경될 수도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;Stateless Widget 이 빌드 될 때는 build 메소드가 호출됩니다. 그렇기 때문에 Stateful Widget 과는 다르게 다른 생명주기 메소드에 신경을 써줄 필요가 없습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;stateful-widget&quot;&gt;Stateful Widget&lt;/h3&gt;
+
+&lt;p&gt;Stateful Widget 은 State 의 변화에 따라 빌드가 결정되는 위젯입니다. setState 메소드를 이용하면 State 의 값을 변경해줄 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;Stateful Widget 은 화면을 계속하여 그려주기 때문에 복잡한 생명주기를 가지고 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;lifecycle&quot;&gt;LifeCycle&lt;/h2&gt;
+
+&lt;p&gt;Stateful Widget 의 생명주기를 순서대로 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/147754074-ae28d073-cd50-4b8f-b56d-3ef8126cbd9e.png&quot; alt=&quot;프레젠테이션1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;0-constructor&quot;&gt;0. constructor&lt;/h3&gt;
+
+&lt;p&gt;Stateful Widget 이 빌드될 때 제일 처음 실행되는 것은 당연하게도 constructor 입니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 constructor 가 실행될 때 위젯 속성은 비어있는 상태이기 때문에 생명주기의 일부분으로 취급되지는 않습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-createstate&quot;&gt;1. createState()&lt;/h3&gt;
+
+&lt;p&gt;constructor 가 실행된 후 곧바로 createState() 가 호출됩니다.&lt;/p&gt;
+
+&lt;p&gt;이 메소드는 말 그대로 State 객체를 생성하며, 이 State 객체 내에서는 변경 가능한 모든 State 를 관리할 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-initstate&quot;&gt;2. initState()&lt;/h3&gt;
+
+&lt;p&gt;initState() 메소드는 State 객체가 최초 생성될 때 호출되는 메소드입니다. 해당 메소드는 한번만 호출됩니다.&lt;/p&gt;
+
+&lt;p&gt;initState() 메소드는 context 가 형성되기 전에 실행되기 때문에 해당 메소드에서는 BuildContext 를 사용할 수 없으니 주의하시길 바랍니다.&lt;/p&gt;
+
+&lt;p&gt;저는 initState() 메소드를 이용해 주로 http request 를 관리합니다. 서버에서 받아온 데이터를 즉각 setState 메소드를 이용해 화면에 표시 가능한 상태로 만들어줍니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-didchangedependencies&quot;&gt;3. didChangeDependencies()&lt;/h3&gt;
+
+&lt;p&gt;initState() 가 호출된 이후에 호출되는 메소드입니다. initState() 는 State 객체가 생성될 때 최초 한번만 실행되지만 didChangeDependencies() 메소드는 말 그대로 해당 위젯이 의존하는 위젯이 변경되면 호출됩니다.&lt;/p&gt;
+
+&lt;p&gt;대표적인 예는 inheritedWidget 을 사용하는 경우라고들 하는데, 해당 부분에 대해서는 추후에 더 추가적으로 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-build&quot;&gt;4. build()&lt;/h3&gt;
+
+&lt;p&gt;build() 메소드는 바로 위젯을 그려주는 메소드입니다. build() 는 위젯을 그려주는 필수적인 역할을 하기 때문에 State 가 변경될때마다 호출됩니다.&lt;/p&gt;
+
+&lt;p&gt;앞서 말씀드렸듯이 State 는 setState 메소드를 통해 변경해줄 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-setstate&quot;&gt;5. setState()&lt;/h3&gt;
+
+&lt;p&gt;setState() 메소드는 State 를 변경해주는 메소드이며 State 객체의 상태가 변경될 때마다 프레임워크에 알려줍니다.&lt;/p&gt;
+
+&lt;p&gt;이 상태를 ‘dirty’ 한 상태라고 하며 변경된 State 에 따라 UI 를 재구성하기 위해 build() 메소드가 호출되어 위젯이 다시 빌드됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;6-didupdatewidget&quot;&gt;6. didUpdateWidget()&lt;/h3&gt;
+
+&lt;p&gt;didUpdateWidget() 메소드는 부모 위젯이 다시 빌드되어 해당 위젯을 다시 빌드해야하는 경우에 호출됩니다.&lt;/p&gt;
+
+&lt;p&gt;이 때 새 위젯과 비교해볼 수 있도록 이전 위젯을 인자로 받습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;7-deactivate&quot;&gt;7. deactivate()&lt;/h3&gt;
+
+&lt;p&gt;State 객체가 제거될 때마다 호출됩니다.&lt;/p&gt;
+
+&lt;p&gt;어떤 경우에는 프레임워크가 제거된 State 객체를 트리의 다른 부분에 다시 삽입하기도 합니다. 이 경우 State 객체가 트리의 새로운 위치에 적응할 수 있는 기회를 주기 위헤 build() 를 호출합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;8-dispose&quot;&gt;8. dispose()&lt;/h3&gt;
+
+&lt;p&gt;State 객체가 영구적으로 제거될 때 호출됩니다.&lt;/p&gt;
+
+&lt;p&gt;State 객체 내에서 생성된 listener 들이나 timer 객체 등을 해제시켜줄 경우에 dispose() 메소드를 이용할 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;9-reassemble&quot;&gt;9. reassemble()&lt;/h3&gt;
+
+&lt;p&gt;reassemble() 메소드는 hot reload 를 실행하면 호출됩니다. 이 때 당연히 build() 도 호출됩니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Stateless / Stateful Widget</summary></entry><entry><title type="html">[Git] 커밋 취소하기, 되돌리기</title><link href="http://localhost:4000/git/1/" rel="alternate" type="text/html" title="[Git] 커밋 취소하기, 되돌리기" /><published>2021-12-29T09:05:20+09:00</published><updated>2021-12-29T09:05:20+09:00</updated><id>http://localhost:4000/git/1</id><content type="html" xml:base="http://localhost:4000/git/1/">&lt;h2 id=&quot;git-reset&quot;&gt;git reset&lt;/h2&gt;
 
 &lt;p&gt;Git 레포지토리를 이용하다 보면 commit 후 push 를 잘못 진행하거나, 브랜치 병합 후 push 과정에서 오류가 발생해 브랜치를 이전 commit 으로 되돌려야 하는 상황이 종종 발생합니다.&lt;/p&gt;
 
