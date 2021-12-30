@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -103,8 +103,8 @@ analytics:
 # Site Author
 author:
   name             : "장재훈"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "쥬쥬쥬니어 앱 개발자"
+  avatar           : "/assets/images/avatar.jpeg"
+  bio              : "쥬쥬쥬니어 개발자"
   location         : "Seoul, Korea"
   email            :
   links:
@@ -286,8 +286,21 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: #true
       share: false
       related: true
+      sidebar_main: true
+
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: #true
+      share: false
+      related: true
+      sidebar_main: true
 
 remote_theme : mmistakes/minimal-mistakes
