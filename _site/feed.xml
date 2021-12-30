@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-30T23:33:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/1/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/1</id><content type="html" xml:base="http://localhost:4000/flutter/1/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-31T00:04:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/1/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/1</id><content type="html" xml:base="http://localhost:4000/flutter/1/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
 
 &lt;p&gt;Flutter 의 Lifecycle, 생명주기를 이해하기 위해서는 Stateless Widget 과 Stateful Widget 의 차이점을 알아야 합니다.&lt;/p&gt;
 
@@ -156,7 +156,11 @@ git reset --soft HEAD~n
 
 &lt;p&gt;혹시나 사용할 경우가 생기더라도 자신의 상황에 맞춰 신중하게 사용하시길 바랍니다.&lt;/p&gt;
 
-&lt;p&gt;간혹가다 기본적인 기능들이 아닌 신기하거나 헷갈리는 git 명령어들을 정리해볼 생각입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Git" /><summary type="html">git reset</summary></entry><entry><title type="html">[Flutter] Runner.app/Frameworks/Flutter.framework does not support the minimum OS Version specified in the Info.plist</title><link href="http://localhost:4000/flutter/2/" rel="alternate" type="text/html" title="[Flutter] Runner.app/Frameworks/Flutter.framework does not support the minimum OS Version specified in the Info.plist" /><published>2021-12-07T07:57:17+09:00</published><updated>2021-12-07T07:57:17+09:00</updated><id>http://localhost:4000/flutter/2</id><content type="html" xml:base="http://localhost:4000/flutter/2/">&lt;h2 id=&quot;문제-상황&quot;&gt;문제 상황&lt;/h2&gt;
+&lt;p&gt;간혹가다 기본적인 기능들이 아닌 신기하거나 헷갈리는 git 명령어들을 정리해볼 생각입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Git" /><summary type="html">git reset</summary></entry><entry><title type="html">[Flutter] minimum OS Version 에러 발생</title><link href="http://localhost:4000/flutter/2/" rel="alternate" type="text/html" title="[Flutter] minimum OS Version 에러 발생" /><published>2021-12-07T07:57:17+09:00</published><updated>2021-12-07T07:57:17+09:00</updated><id>http://localhost:4000/flutter/2</id><content type="html" xml:base="http://localhost:4000/flutter/2/">&lt;h3 id=&quot;error&quot;&gt;ERROR?&lt;/h3&gt;
+
+&lt;p&gt;Runner.app/Frameworks/Flutter.framework does not support the minimum OS Version specified in the Info.plist&lt;/p&gt;
+
+&lt;h2 id=&quot;문제-상황&quot;&gt;문제 상황&lt;/h2&gt;
 
 &lt;p&gt;Flutter 를 이용한 첫 프로젝트 릴리즈를 위해 Xcode 에서 Archive 를 진행하던 도중, 다음과 같은 에러가 발생했다.&lt;/p&gt;
 
@@ -224,7 +228,7 @@ git reset --soft HEAD~n
 
 &lt;p&gt;dev 채널이 테스트가 완료된 최신 빌드라고는 하지만 bad build 가 있다는 걸로 보아서는 완전하진 않은 모양이다.&lt;/p&gt;
 
-&lt;p&gt;공식 문서에서도 권장하는 만큼 앞으로는 최대한 stable 채널에서 작업을 하는게 나은것 같다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">문제 상황</summary></entry><entry><title type="html">Hello World!</title><link href="http://localhost:4000/etc/first-post/" rel="alternate" type="text/html" title="Hello World!" /><published>2021-12-07T07:30:57+09:00</published><updated>2021-12-07T07:30:57+09:00</updated><id>http://localhost:4000/etc/first-post</id><content type="html" xml:base="http://localhost:4000/etc/first-post/">&lt;h2 id=&quot;안녕&quot;&gt;안녕!&lt;/h2&gt;
+&lt;p&gt;공식 문서에서도 권장하는 만큼 앞으로는 최대한 stable 채널에서 작업을 하는게 나은것 같다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">ERROR?</summary></entry><entry><title type="html">Hello World!</title><link href="http://localhost:4000/etc/first-post/" rel="alternate" type="text/html" title="Hello World!" /><published>2021-12-07T07:30:57+09:00</published><updated>2021-12-07T07:30:57+09:00</updated><id>http://localhost:4000/etc/first-post</id><content type="html" xml:base="http://localhost:4000/etc/first-post/">&lt;h2 id=&quot;안녕&quot;&gt;안녕!&lt;/h2&gt;
 
 &lt;p&gt;개발을 진행하며 생기는 이런저런 문제들과 해결방안들,&lt;/p&gt;
 
