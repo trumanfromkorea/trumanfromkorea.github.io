@@ -5,7 +5,7 @@
 <lastmod>2021-12-07T07:30:57+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/flutter/2/</loc>
+<loc>http://localhost:4000/flutter/1/</loc>
 <lastmod>2021-12-07T07:57:17+09:00</lastmod>
 </url>
 <url>
@@ -13,8 +13,12 @@
 <lastmod>2021-12-29T09:05:20+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/flutter/1/</loc>
+<loc>http://localhost:4000/flutter/2/</loc>
 <lastmod>2021-12-31T07:00:20+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/flutter/3/</loc>
+<lastmod>2022-01-02T09:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/categories/flutter</loc>

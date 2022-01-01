@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Flutter] minimum OS Version 에러 발생 - 오래하길 바래</title>
-<meta name="description" content="ERROR?">
+<!-- begin _includes/seo.html --><title>[Flutter] Stateless, Stateful Widget, LifeCycle - 오래하길 바래</title>
+<meta name="description" content="Stateless / Stateful Widget">
 
 
   <meta name="author" content="장재훈">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="오래하길 바래">
-<meta property="og:title" content="[Flutter] minimum OS Version 에러 발생">
+<meta property="og:title" content="[Flutter] Stateless, Stateful Widget, LifeCycle">
 <meta property="og:url" content="http://localhost:4000/flutter/2/">
 
 
-  <meta property="og:description" content="ERROR?">
+  <meta property="og:description" content="Stateless / Stateful Widget">
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2021-12-07T07:57:17+09:00">
+  <meta property="article:published_time" content="2021-12-31T07:00:20+09:00">
 
 
 
@@ -268,7 +268,7 @@
             <!--전체 글 수-->
             <li>
                 📂 <b><span style="font-size:0.8rem;">전체 글 수 <span
-              style="font-size:1rem; color : #008fe8;">4</span> 개</span></b>
+              style="font-size:1rem; color : #008fe8;">5</span> 개</span></b>
             </li>
 
             <li>
@@ -278,7 +278,7 @@
                 <span class="nav__sub-title">App</span>
                 <ul>
                        
-                    <li><a href="/categories/flutter" class="nav__sub-title_sub">Flutter (2)</a></li>
+                    <li><a href="/categories/flutter" class="nav__sub-title_sub">Flutter (3)</a></li>
                        
                     <!--                -->
                 </ul>
@@ -291,16 +291,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Flutter] minimum OS Version 에러 발생">
-    <meta itemprop="description" content="ERROR?">
-    <meta itemprop="datePublished" content="2021-12-07T07:57:17+09:00">
+    <meta itemprop="headline" content="[Flutter] Stateless, Stateful Widget, LifeCycle">
+    <meta itemprop="description" content="Stateless / Stateful Widget">
+    <meta itemprop="datePublished" content="2021-12-31T07:00:20+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/flutter/2/" class="u-url" itemprop="url">[Flutter] minimum OS Version 에러 발생
+            <a href="http://localhost:4000/flutter/2/" class="u-url" itemprop="url">[Flutter] Stateless, Stateful Widget, LifeCycle
 </a>
           </h1>
 <!--          
@@ -317,7 +317,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -352,86 +352,101 @@
 
                   
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-12-07T07:57:17+09:00">December 7, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-12-31T07:00:20+09:00">December 31, 2021</time></p>
 
               </span>
       
               
       <section class="page__content e-content" itemprop="text">
         
-        <h3 id="error">ERROR?</h3>
+        <h2 id="stateless--stateful-widget">Stateless / Stateful Widget</h2>
 
-<p>Runner.app/Frameworks/Flutter.framework does not support the minimum OS Version specified in the Info.plist</p>
+<p>Flutter 의 Lifecycle, 생명주기를 이해하기 위해서는 Stateless Widget 과 Stateful Widget 의 차이점을 알아야 합니다.</p>
 
-<h2 id="문제-상황">문제 상황</h2>
+<p>여기서 State 란 위젯의 상태를 의미합니다.</p>
 
-<p>Flutter 를 이용한 첫 프로젝트 릴리즈를 위해 Xcode 에서 Archive 를 진행하던 도중, 다음과 같은 에러가 발생했다.</p>
+<h3 id="stateless-widget">Stateless Widget</h3>
 
-<p><img src="https://user-images.githubusercontent.com/55919701/144858991-d8f5c829-2298-4109-9f6f-edef8b5b3a62.png" alt="KakaoTalk_Photo_2021-12-06-22-55-17" /></p>
+<p>Stateless Widget 은 변경 가능한 State 가 필요하지 않은 Widget 을 뜻합니다.</p>
 
-<h4 id="flutter-runnerappframeworksflutterframework-does-not-support-the-minimum-os-version-specified-in-the-infoplist">[Flutter] Runner.app/Frameworks/Flutter.framework does not support the minimum OS Version specified in the Info.plist</h4>
+<p>다시 말해 Stateless Widget 도 State 를 가지긴 하지만, 한 번 생성된 이후에 변경될 일이 없는 값이라는 것입니다.</p>
 
-<hr />
+<p>그렇다고 해서 Stateless Widget 이 전혀 변경되지 않는다는 것은 아닙니다. 상위 위젯이 전달해주는 값에 따라 Stateless Widget 의 값이 변경될 수도 있습니다.</p>
 
-<p>처음에는 에러의 첫 부분을 제대로 읽지 않아서 단순하게 Info.plist 파일의 최소 OS 버전이 맞지 않는다고 생각했다.</p>
+<p>Stateless Widget 이 빌드 될 때는 build 메소드가 호출됩니다. 그렇기 때문에 Stateful Widget 과는 다르게 다른 생명주기 메소드에 신경을 써줄 필요가 없습니다.</p>
 
-<p>동시에 <em>Info.plist 파일에는 OS 버전을 지정해주는 부분이 없을텐데?</em> 라는 생각을 했지만,</p>
+<h3 id="stateful-widget">Stateful Widget</h3>
 
-<p>이전에 React Native 를 이용한 릴리즈 당시 OS 버전을 통일해주지 않아 에러가 발생한적이 있어 우선 프로젝트의 타겟 버전을 확인해보기로 했다.</p>
+<p>Stateful Widget 은 State 의 변화에 따라 빌드가 결정되는 위젯입니다. setState 메소드를 이용하면 State 의 값을 변경해줄 수 있습니다.</p>
 
-<p><a href="https://trumanfromkorea.tistory.com/20">관련 링크</a></p>
+<p>Stateful Widget 은 화면을 계속하여 그려주기 때문에 복잡한 생명주기를 가지고 있습니다.</p>
 
-<h2 id="분석-및-과정">분석 및 과정</h2>
+<h2 id="lifecycle">LifeCycle</h2>
 
-<p>먼저 Runner.xcworkspace 파일에서 프로젝트 <code class="language-plaintext highlighter-rouge">TARGETS &gt; Deployment Info</code> 부분을 확인했다.</p>
+<p>Stateful Widget 의 생명주기를 순서대로 알아보도록 하겠습니다.</p>
 
-<p>요즘 지원되는 최소 iOS 버전이 9.0 이상이어야 하는데 나는 이 부분을 11.0 으로 통일시켜주기로 했다.</p>
+<p><img src="https://user-images.githubusercontent.com/55919701/147754074-ae28d073-cd50-4b8f-b56d-3ef8126cbd9e.png" alt="프레젠테이션1" /></p>
 
-<p>두번째로 <code class="language-plaintext highlighter-rouge">PROJECT &gt; Deployment Target &gt; iOS Deployment Target</code> 또한 11.0 으로 설정해주었다.</p>
+<h3 id="0-constructor">0. constructor</h3>
 
-<p>마지막으로 PodFile 의 2번째 라인에서 <code class="language-plaintext highlighter-rouge">platform: ios, '11.0'</code> 부분 또한 버전을 통일시켜주었다.</p>
+<p>Stateful Widget 이 빌드될 때 제일 처음 실행되는 것은 당연하게도 constructor 입니다.</p>
 
-<p>이후 빌드를 진행했지만 똑같은 에러가 발생했다.</p>
+<p>하지만 constructor 가 실행될 때 위젯 속성은 비어있는 상태이기 때문에 생명주기의 일부분으로 취급되지는 않습니다.</p>
 
-<hr />
+<h3 id="1-createstate">1. createState()</h3>
 
-<p>두 번째로 에러가 발생하고 나서야 비로소 에러의 첫 줄이 눈에 들어왔는데,</p>
+<p>constructor 가 실행된 후 곧바로 createState() 가 호출됩니다.</p>
 
-<p>Frameworks/Flutter.Framework 의 Info.plist 에 문제가 생겼다는 것이었다.</p>
+<p>이 메소드는 말 그대로 State 객체를 생성하며, 이 State 객체 내에서는 변경 가능한 모든 State 를 관리할 수 있습니다.</p>
 
-<p>그런데 내 디렉토리에는 해당 파일이 존재하지 않았고, 구글링 결과 해당 경로는 Xcode 내에서</p>
+<h3 id="2-initstate">2. initState()</h3>
 
-<p><code class="language-plaintext highlighter-rouge">Runner &gt; Flutter &gt; AppFrameworkInfo</code> 부분을 뜻한다는 것을 알았다.</p>
+<p>initState() 메소드는 State 객체가 최초 생성될 때 호출되는 메소드입니다. 해당 메소드는 한번만 호출됩니다.</p>
 
-<p><a href="https://github.com/flutter/flutter/issues/58200">관련 Github 이슈</a></p>
+<p>initState() 메소드는 context 가 형성되기 전에 실행되기 때문에 해당 메소드에서는 BuildContext 를 사용할 수 없으니 주의하시길 바랍니다.</p>
 
-<p><img width="849" alt="KakaoTalk_Photo_2021-12-06-23-12-26" src="https://user-images.githubusercontent.com/55919701/144861162-9e5fe51e-b508-499f-8aaf-3ff66339ece8.png" /></p>
+<p>저는 initState() 메소드를 이용해 주로 http request 를 관리합니다. 서버에서 받아온 데이터를 즉각 setState 메소드를 이용해 화면에 표시 가능한 상태로 만들어줍니다.</p>
 
-<p>파일 맨 아래 부분에 MinimumOSVersion 부분을 11.0 으로 설정하고 다시 빌드를 시도하였지만, 똑같은 에러가 한번 더 발생했다.</p>
+<h3 id="3-didchangedependencies">3. didChangeDependencies()</h3>
 
-<h2 id="해결-방법">해결 방법</h2>
+<p>initState() 가 호출된 이후에 호출되는 메소드입니다. initState() 는 State 객체가 생성될 때 최초 한번만 실행되지만 didChangeDependencies() 메소드는 말 그대로 해당 위젯이 의존하는 위젯이 변경되면 호출됩니다.</p>
 
-<p>Flutter 캐시와 Cocoapods 도 재설정 해보며 여러 차례 시도하였지만 에러는 해결되지 않았다.</p>
+<p>대표적인 예는 inheritedWidget 을 사용하는 경우라고들 하는데, 해당 부분에 대해서는 추후에 더 추가적으로 알아보도록 하겠습니다.</p>
 
-<p>나는 Flutter dev 채널을 이용하고 있었는데, 혹시 Flutter 버전에 문제가 있나 싶어 stable 채널로 변경 후 릴리즈를 시도해보고자 하였다.</p>
+<h3 id="4-build">4. build()</h3>
 
-<p>Flutter 공식 문서에서는 stable 채널을 이용할 것을 권장하고 있지만, 최신 버전의 빌드를 이용하고 싶다면 dev 채널을 이용할 수 있다.</p>
+<p>build() 메소드는 바로 위젯을 그려주는 메소드입니다. build() 는 위젯을 그려주는 필수적인 역할을 하기 때문에 State 가 변경될때마다 호출됩니다.</p>
 
-<p>stable 채널로 변경하고 나니 dart 가 버전을 충족하지 못해서 pubspec.yaml 파일의</p>
+<p>앞서 말씀드렸듯이 State 는 setState 메소드를 통해 변경해줄 수 있습니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>environment:
-  sdk: "&gt;=2.12.0 &lt;3.0.0"
-</code></pre></div></div>
+<h3 id="5-setstate">5. setState()</h3>
 
-<p>의 sdk 부분을 내 dart 버전에 맞게 수정해주었다.</p>
+<p>setState() 메소드는 State 를 변경해주는 메소드이며 State 객체의 상태가 변경될 때마다 프레임워크에 알려줍니다.</p>
 
-<p>이후 릴리즈 빌드가 정상적으로 진행되는 것을 확인할 수 있었다.</p>
+<p>이 상태를 ‘dirty’ 한 상태라고 하며 변경된 State 에 따라 UI 를 재구성하기 위해 build() 메소드가 호출되어 위젯이 다시 빌드됩니다.</p>
 
-<hr />
+<h3 id="6-didupdatewidget">6. didUpdateWidget()</h3>
 
-<p>dev 채널이 테스트가 완료된 최신 빌드라고는 하지만 bad build 가 있다는 걸로 보아서는 완전하진 않은 모양이다.</p>
+<p>didUpdateWidget() 메소드는 부모 위젯이 다시 빌드되어 해당 위젯을 다시 빌드해야하는 경우에 호출됩니다.</p>
 
-<p>공식 문서에서도 권장하는 만큼 앞으로는 최대한 stable 채널에서 작업을 하는게 나은것 같다.</p>
+<p>이 때 새 위젯과 비교해볼 수 있도록 이전 위젯을 인자로 받습니다.</p>
+
+<h3 id="7-deactivate">7. deactivate()</h3>
+
+<p>State 객체가 제거될 때마다 호출됩니다.</p>
+
+<p>어떤 경우에는 프레임워크가 제거된 State 객체를 트리의 다른 부분에 다시 삽입하기도 합니다. 이 경우 State 객체가 트리의 새로운 위치에 적응할 수 있는 기회를 주기 위헤 build() 를 호출합니다.</p>
+
+<h3 id="8-dispose">8. dispose()</h3>
+
+<p>State 객체가 영구적으로 제거될 때 호출됩니다.</p>
+
+<p>State 객체 내에서 생성된 listener 들이나 timer 객체 등을 해제시켜줄 경우에 dispose() 메소드를 이용할 수 있습니다.</p>
+
+<h3 id="9-reassemble">9. reassemble()</h3>
+
+<p>reassemble() 메소드는 hot reload 를 실행하면 호출됩니다. 이 때 당연히 build() 도 호출됩니다.</p>
+
 
         
       </section>
@@ -458,7 +473,7 @@
 -->
 <!--        
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-12-07T07:57:17+09:00">December 7, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-12-31T07:00:20+09:00">December 31, 2021</time></p>
 -->
       </footer>
 
@@ -467,11 +482,11 @@
       
   <nav class="pagination">
     
-      <a href="/etc/first-post/" class="pagination--pager" title="Hello World!
+      <a href="/git/1/" class="pagination--pager" title="[Git] 커밋 취소하기, 되돌리기
 ">Previous</a>
     
     
-      <a href="/git/1/" class="pagination--pager" title="[Git] 커밋 취소하기, 되돌리기
+      <a href="/flutter/3/" class="pagination--pager" title="[Flutter] Null Safety
 ">Next</a>
     
   </nav>
@@ -497,14 +512,14 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/flutter/1/" rel="permalink">[Flutter] Stateless, Stateful Widget, LifeCycle
+        <a href="/flutter/3/" rel="permalink">[Flutter] Null Safety
 </a>
       
 
       
             <span class="page__meta" style="margin-left:0.5rem">
                 <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-                2021-12-31
+                2022-01-02
             </span> 
         
     </h2>
@@ -529,6 +544,30 @@
             <span class="page__meta" style="margin-left:0.5rem">
                 <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
                 2021-12-29
+            </span> 
+        
+    </h2>
+  </article>
+</div>
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/flutter/1/" rel="permalink">[Flutter] minimum OS Version 에러 발생
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2021-12-07
             </span> 
         
     </h2>
@@ -588,7 +627,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2021 trumanfromkorea. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2022 trumanfromkorea. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
