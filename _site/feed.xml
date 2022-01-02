@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-02T00:17:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Flutter] Null Safety</title><link href="http://localhost:4000/flutter/3/" rel="alternate" type="text/html" title="[Flutter] Null Safety" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/3</id><content type="html" xml:base="http://localhost:4000/flutter/3/">&lt;h2 id=&quot;flutter---null-safety&quot;&gt;Flutter - null safety&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-02T23:41:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Flutter] Null Safety</title><link href="http://localhost:4000/flutter/3/" rel="alternate" type="text/html" title="[Flutter] Null Safety" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/3</id><content type="html" xml:base="http://localhost:4000/flutter/3/">&lt;h2 id=&quot;flutter---null-safety&quot;&gt;Flutter - null safety&lt;/h2&gt;
 
 &lt;p&gt;Flutter 2.0 에 들어서면서부터 null safety 가 적용되었다고 합니다. 오늘은 null safety 가 무엇이며 어떻게 쓰이는지 알아보도록 하겠습니다.&lt;/p&gt;
 
@@ -83,7 +83,30 @@ int length = nullable?.length;
 
 &lt;p&gt;오늘은 null safety 와 이를 효과적으로 사용하는 방법에 대해 알아보았습니다.&lt;/p&gt;
 
-&lt;p&gt;타 언어에서도 ? 와 ! 연산자등을 이용해 본적이 있어 이해하는데 도움이 많이 되었던 것 같습니다. 어떤 언어로 된 프로그램이던 간에 코드를 작성하다 보면 null 로 인한 에러가 발생하는 경우가 굉장히 많기 때문에 null safety 에 대해 잘 이해하는 것이 좋을 것 같습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Flutter - null safety</summary></entry><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/2/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/2</id><content type="html" xml:base="http://localhost:4000/flutter/2/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
+&lt;p&gt;타 언어에서도 ? 와 ! 연산자등을 이용해 본적이 있어 이해하는데 도움이 많이 되었던 것 같습니다. 어떤 언어로 된 프로그램이던 간에 코드를 작성하다 보면 null 로 인한 에러가 발생하는 경우가 굉장히 많기 때문에 null safety 에 대해 잘 이해하는 것이 좋을 것 같습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Flutter - null safety</summary></entry><entry><title type="html">[Flutter] iOS - Firestore 추가 시 빌드 에러</title><link href="http://localhost:4000/flutter/4/" rel="alternate" type="text/html" title="[Flutter] iOS - Firestore 추가 시 빌드 에러" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/4</id><content type="html" xml:base="http://localhost:4000/flutter/4/">&lt;h2 id=&quot;ios---firestore-추가-시-빌드-에러&quot;&gt;iOS - Firestore 추가 시 빌드 에러&lt;/h2&gt;
+
+&lt;p&gt;pubspec.yaml 파일 dependencies 부분에 cloud_firestore 추가 후 flutter run 커맨드로 빌드 시 iOS 빌드가 굉장히 느려지는 이슈가 발생했습니다.&lt;/p&gt;
+
+&lt;p&gt;따로 에러 메세지가 출력되지는 않았고, Xcode build 부분에서 로딩이 약 5분 이상으로 매우 오래 지속되었습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;문제-원인-및-해결법-탐색&quot;&gt;문제 원인 및 해결법 탐색&lt;/h2&gt;
+
+&lt;p&gt;일단 저는 Podfile 에 Cocoapods 관련 dependencies 가 제대로 추가되지 않아서 발생하는 문제라고 생각했고, 이 부분을 수정해준다면 문제가 해결될 것이라고 생각했습니다.&lt;/p&gt;
+
+&lt;p&gt;관련 키워드로 구글링 도중 해결법을 발견하였는데,&lt;/p&gt;
+
+&lt;p&gt;Podfile 의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;target 'Runner' do&lt;/code&gt; 하위에&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod 'FirebaseFirestore', :git =&amp;gt; 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag =&amp;gt; '8.9.1'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;라인을 추가하는 것으로 문제를 해결하였습니다.&lt;/p&gt;
+
+&lt;p&gt;현재 firestore 코드가 50만 줄이 넘어가는 C++ 코드에 의존하고 있어서 빌드하는데 시간이 매우 오래 걸린다고 합니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 추가한 코드 맨 끝에 버전이 명시되어 있음과 firebase 정식 레포를 가리키지 않는다는 점에서 해당 문제의 원인과 해결방안이 100% 맞는지는 확신할 수 없습니다.&lt;/p&gt;
+
+&lt;p&gt;관련 에러에 대해서 더 나은 해결방안을 찾게되는 즉시 포스트를 업데이트할 예정입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">iOS - Firestore 추가 시 빌드 에러</summary></entry><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/2/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/2</id><content type="html" xml:base="http://localhost:4000/flutter/2/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
 
 &lt;p&gt;Flutter 의 Lifecycle, 생명주기를 이해하기 위해서는 Stateless Widget 과 Stateful Widget 의 차이점을 알아야 합니다.&lt;/p&gt;
 

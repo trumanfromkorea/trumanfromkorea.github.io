@@ -28,4 +28,10 @@ var store = [{
         "tags": [],
         "url": "/flutter/3/",
         "teaser": null
+      },{
+        "title": "[Flutter] iOS - Firestore 추가 시  빌드 에러",
+        "excerpt":"iOS - Firestore 추가 시 빌드 에러 pubspec.yaml 파일 dependencies 부분에 cloud_firestore 추가 후 flutter run 커맨드로 빌드 시 iOS 빌드가 굉장히 느려지는 이슈가 발생했습니다. 따로 에러 메세지가 출력되지는 않았고, Xcode build 부분에서 로딩이 약 5분 이상으로 매우 오래 지속되었습니다. 문제 원인 및 해결법 탐색 일단 저는 Podfile 에 Cocoapods...","categories": ["Flutter"],
+        "tags": [],
+        "url": "/flutter/4/",
+        "teaser": null
       }]
