@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-03T21:29:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[iOS] Swift UI 사이드 프로젝트 시작</title><link href="http://localhost:4000/til/1/" rel="alternate" type="text/html" title="[iOS] Swift UI 사이드 프로젝트 시작" /><published>2022-01-03T09:00:00+09:00</published><updated>2022-01-03T09:00:00+09:00</updated><id>http://localhost:4000/til/1</id><content type="html" xml:base="http://localhost:4000/til/1/">&lt;h2 id=&quot;bdg---해외-거주-한국인을-위한-역-배대지-사이트&quot;&gt;BDG - 해외 거주 한국인을 위한 역 배대지 사이트&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-05T23:49:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[iOS] SwiftUI - Navigation Link</title><link href="http://localhost:4000/til/2/" rel="alternate" type="text/html" title="[iOS] SwiftUI - Navigation Link" /><published>2022-01-05T09:00:00+09:00</published><updated>2022-01-05T09:00:00+09:00</updated><id>http://localhost:4000/til/2</id><content type="html" xml:base="http://localhost:4000/til/2/">&lt;h2 id=&quot;화면-전환&quot;&gt;화면 전환&lt;/h2&gt;
+
+&lt;p&gt;오늘은 소소하게 화면 간 전환을 학습했습니다. 당연히 목표한 학습량은 훨씬 거대했지만 확실히 새롭게 무언가를 시작하는것은 어렵네요. 이전에 사용했던 Flutter, React Native 와는 상이한 점이 많아 헷갈렸습니다.&lt;/p&gt;
+
+&lt;p&gt;오늘 학습한 내용 정리해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;(아직 SwiftUI 용어들에 익숙하지 않아 마구잡이로 단어를 사용하고 있으니 틀린부분이 상당히 많을 수도 있습니다..)&lt;/p&gt;
+
+&lt;h2 id=&quot;navigationlink&quot;&gt;NavigationLink&lt;/h2&gt;
+
+&lt;p&gt;SwiftUI 에서는 NavigationLink 를 이용하여 화면을 전환합니다.&lt;/p&gt;
+
+&lt;p&gt;처음에는 NavigationLink 가 화면 전환을 담당하는 하나의 메소드라고 생각했습니다. Flutter, React Native 에서는 클릭이 가능한 컴포넌트의 콜백에서 메소드 처리를 해주었기 때문에 당연히도 그렇게 생각했던 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 마찬가지로 버튼을 하나 생성하고 콜백부분에서 NavigationLink 를 사용하려니 계속 에러가 발생하기에 적잖이 당황했습니다. 이 모든건 NavigationLink 에 대해 자세히 알아보지 않고 어림짐작으로 넘겨서였겠죠. 다시 한번 무엇이든 꼼꼼하게 읽어보자고 반성해봅니다..&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A view that controls a navigation presentation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;공식 문서에 따르면 NavigationLink 는 네비게이션을 제어해주는 하나의 View 라고 합니다. 그렇기에 다른 View 들과 함께 body 부분에서 사용해주면 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct NavigationLink&amp;lt;Label, Destination&amp;gt; where Label : View, Destination : View
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;NavigationLink 에는 2가지 속성이 있는데, 첫번째는 목표 View 를 나타내는 destination 입니다. 저는 어떤 시스템을 작성하던간에 로그인과 회원가입 화면부터 작성하는 버릇이 있기 때문에 NavigationLink 는 로그인 화면에, destiantion 은 회원가입 화면에 두었습니다.&lt;/p&gt;
+
+&lt;p&gt;두번째는 클릭할 수 있는 자식 컴포넌트를 나타내는 Label 입니다. Label 에 단독으로 String 을 사용할 경우 텍스트 버튼처럼 사용할 수 있게 됩니다. Label 속성에 아무것도 할당하지 않은 후 {} 를 이용하여 Text 를 집어넣은 다음 스타일링도 가능합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// navigation link 예제
+NavigationLink(destination: SomeView()) { // destination -&amp;gt; 목표화면
+    Text(&quot;Navigate to SomeView&quot;) // 버튼 스타일
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.blue)
+                .frame(width: windowSize.width * 0.9)
+        )
+        .foregroundColor(Color.white)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+
+&lt;p&gt;오늘은 시간이 많지 않아 여기까지 학습하도록 하겠습니다. 역시 퇴근 후에 무언가를 한다는건 거의 불가능에 가깝다는 점을 다시 한번 느끼게 되네요. 하지만 이렇게라도 꾸준히 하다 보면 언젠가는 실력이 늘어있을꺼라 믿습니다.&lt;/p&gt;
+
+&lt;p&gt;Flutter 에서는 Container 와 GestureDetector 를, React Native 에서는 View 와 GestureDetector 를 많이 활용해서 버튼들을 만들곤 했었는데, Swift UI 에서 이에 해당하는게 뭔지 아직도 찾지 못했습니다 ㅜㅜ&lt;/p&gt;
+
+&lt;p&gt;Swift UI 에서는 Container 와 View 가 각각 다른 의미로 쓰이고 있어 검색 키워드를 어떻게 설정해야할지 도통 모르겠네요..&lt;/p&gt;
+
+&lt;p&gt;그럼 이김에 다음 목표는 이를 꼭 알아오는 것으로 하도록 하겠습니다. 목표 생기고 좋네요. 감사합니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="TIL" /><summary type="html">화면 전환</summary></entry><entry><title type="html">[iOS] Swift UI 사이드 프로젝트 시작</title><link href="http://localhost:4000/til/1/" rel="alternate" type="text/html" title="[iOS] Swift UI 사이드 프로젝트 시작" /><published>2022-01-03T09:00:00+09:00</published><updated>2022-01-03T09:00:00+09:00</updated><id>http://localhost:4000/til/1</id><content type="html" xml:base="http://localhost:4000/til/1/">&lt;h2 id=&quot;bdg---해외-거주-한국인을-위한-역-배대지-사이트&quot;&gt;BDG - 해외 거주 한국인을 위한 역 배대지 사이트&lt;/h2&gt;
 
 &lt;p&gt;해외에 거주하고 있는 한국인들은 한국 물건이나 음식을 사려면 거주지에서 멀리 떨어진 한인마트로 향하거나, 지인에게 필요한 물건을 배송해달라고 부탁하곤 합니다.&lt;/p&gt;
 
@@ -58,7 +108,30 @@
 
 &lt;p&gt;오늘은 직접적인 개발에 대한 내용을 적어보진 않았지만, 다른 카테고리에 글을 올릴만큼 내용이 없는 날이면 이렇게 아주 소소하게나마 제가 오늘 기획했거나 배운 내용들에 대해 정리해볼 생각입니다.&lt;/p&gt;
 
-&lt;p&gt;BDG 앱에 대해서는 우선적으로 Swift UI 를 학습하며 구현해볼 예정이며, 더욱 상세한 기획이나 플로우를 작성할 수 있는 여유시간이 생기면 추가적으로 업로드 할 계획입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="TIL" /><summary type="html">BDG - 해외 거주 한국인을 위한 역 배대지 사이트</summary></entry><entry><title type="html">[Flutter] Null Safety</title><link href="http://localhost:4000/flutter/3/" rel="alternate" type="text/html" title="[Flutter] Null Safety" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/3</id><content type="html" xml:base="http://localhost:4000/flutter/3/">&lt;h2 id=&quot;flutter---null-safety&quot;&gt;Flutter - null safety&lt;/h2&gt;
+&lt;p&gt;BDG 앱에 대해서는 우선적으로 Swift UI 를 학습하며 구현해볼 예정이며, 더욱 상세한 기획이나 플로우를 작성할 수 있는 여유시간이 생기면 추가적으로 업로드 할 계획입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="TIL" /><summary type="html">BDG - 해외 거주 한국인을 위한 역 배대지 사이트</summary></entry><entry><title type="html">[Flutter] iOS - Firestore 추가 시 빌드 에러</title><link href="http://localhost:4000/flutter/4/" rel="alternate" type="text/html" title="[Flutter] iOS - Firestore 추가 시 빌드 에러" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/4</id><content type="html" xml:base="http://localhost:4000/flutter/4/">&lt;h2 id=&quot;ios---firestore-추가-시-빌드-에러&quot;&gt;iOS - Firestore 추가 시 빌드 에러&lt;/h2&gt;
+
+&lt;p&gt;pubspec.yaml 파일 dependencies 부분에 cloud_firestore 추가 후 flutter run 커맨드로 빌드 시 iOS 빌드가 굉장히 느려지는 이슈가 발생했습니다.&lt;/p&gt;
+
+&lt;p&gt;따로 에러 메세지가 출력되지는 않았고, Xcode build 부분에서 로딩이 약 5분 이상으로 매우 오래 지속되었습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;문제-원인-및-해결법-탐색&quot;&gt;문제 원인 및 해결법 탐색&lt;/h2&gt;
+
+&lt;p&gt;일단 저는 Podfile 에 Cocoapods 관련 dependencies 가 제대로 추가되지 않아서 발생하는 문제라고 생각했고, 이 부분을 수정해준다면 문제가 해결될 것이라고 생각했습니다.&lt;/p&gt;
+
+&lt;p&gt;관련 키워드로 구글링 도중 해결법을 발견하였는데,&lt;/p&gt;
+
+&lt;p&gt;Podfile 의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;target 'Runner' do&lt;/code&gt; 하위에&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod 'FirebaseFirestore', :git =&amp;gt; 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag =&amp;gt; '8.9.1'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;라인을 추가하는 것으로 문제를 해결하였습니다.&lt;/p&gt;
+
+&lt;p&gt;현재 firestore 코드가 50만 줄이 넘어가는 C++ 코드에 의존하고 있어서 빌드하는데 시간이 매우 오래 걸린다고 합니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 추가한 코드 맨 끝에 버전이 명시되어 있음과 firebase 정식 레포를 가리키지 않는다는 점에서 해당 문제의 원인과 해결방안이 100% 맞는지는 확신할 수 없습니다.&lt;/p&gt;
+
+&lt;p&gt;관련 에러에 대해서 더 나은 해결방안을 찾게되는 즉시 포스트를 업데이트할 예정입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">iOS - Firestore 추가 시 빌드 에러</summary></entry><entry><title type="html">[Flutter] Null Safety</title><link href="http://localhost:4000/flutter/3/" rel="alternate" type="text/html" title="[Flutter] Null Safety" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/3</id><content type="html" xml:base="http://localhost:4000/flutter/3/">&lt;h2 id=&quot;flutter---null-safety&quot;&gt;Flutter - null safety&lt;/h2&gt;
 
 &lt;p&gt;Flutter 2.0 에 들어서면서부터 null safety 가 적용되었다고 합니다. 오늘은 null safety 가 무엇이며 어떻게 쓰이는지 알아보도록 하겠습니다.&lt;/p&gt;
 
@@ -143,30 +216,7 @@ int length = nullable?.length;
 
 &lt;p&gt;오늘은 null safety 와 이를 효과적으로 사용하는 방법에 대해 알아보았습니다.&lt;/p&gt;
 
-&lt;p&gt;타 언어에서도 ? 와 ! 연산자등을 이용해 본적이 있어 이해하는데 도움이 많이 되었던 것 같습니다. 어떤 언어로 된 프로그램이던 간에 코드를 작성하다 보면 null 로 인한 에러가 발생하는 경우가 굉장히 많기 때문에 null safety 에 대해 잘 이해하는 것이 좋을 것 같습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Flutter - null safety</summary></entry><entry><title type="html">[Flutter] iOS - Firestore 추가 시 빌드 에러</title><link href="http://localhost:4000/flutter/4/" rel="alternate" type="text/html" title="[Flutter] iOS - Firestore 추가 시 빌드 에러" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/4</id><content type="html" xml:base="http://localhost:4000/flutter/4/">&lt;h2 id=&quot;ios---firestore-추가-시-빌드-에러&quot;&gt;iOS - Firestore 추가 시 빌드 에러&lt;/h2&gt;
-
-&lt;p&gt;pubspec.yaml 파일 dependencies 부분에 cloud_firestore 추가 후 flutter run 커맨드로 빌드 시 iOS 빌드가 굉장히 느려지는 이슈가 발생했습니다.&lt;/p&gt;
-
-&lt;p&gt;따로 에러 메세지가 출력되지는 않았고, Xcode build 부분에서 로딩이 약 5분 이상으로 매우 오래 지속되었습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;문제-원인-및-해결법-탐색&quot;&gt;문제 원인 및 해결법 탐색&lt;/h2&gt;
-
-&lt;p&gt;일단 저는 Podfile 에 Cocoapods 관련 dependencies 가 제대로 추가되지 않아서 발생하는 문제라고 생각했고, 이 부분을 수정해준다면 문제가 해결될 것이라고 생각했습니다.&lt;/p&gt;
-
-&lt;p&gt;관련 키워드로 구글링 도중 해결법을 발견하였는데,&lt;/p&gt;
-
-&lt;p&gt;Podfile 의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;target 'Runner' do&lt;/code&gt; 하위에&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod 'FirebaseFirestore', :git =&amp;gt; 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag =&amp;gt; '8.9.1'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;라인을 추가하는 것으로 문제를 해결하였습니다.&lt;/p&gt;
-
-&lt;p&gt;현재 firestore 코드가 50만 줄이 넘어가는 C++ 코드에 의존하고 있어서 빌드하는데 시간이 매우 오래 걸린다고 합니다.&lt;/p&gt;
-
-&lt;p&gt;하지만 추가한 코드 맨 끝에 버전이 명시되어 있음과 firebase 정식 레포를 가리키지 않는다는 점에서 해당 문제의 원인과 해결방안이 100% 맞는지는 확신할 수 없습니다.&lt;/p&gt;
-
-&lt;p&gt;관련 에러에 대해서 더 나은 해결방안을 찾게되는 즉시 포스트를 업데이트할 예정입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">iOS - Firestore 추가 시 빌드 에러</summary></entry><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/2/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/2</id><content type="html" xml:base="http://localhost:4000/flutter/2/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
+&lt;p&gt;타 언어에서도 ? 와 ! 연산자등을 이용해 본적이 있어 이해하는데 도움이 많이 되었던 것 같습니다. 어떤 언어로 된 프로그램이던 간에 코드를 작성하다 보면 null 로 인한 에러가 발생하는 경우가 굉장히 많기 때문에 null safety 에 대해 잘 이해하는 것이 좋을 것 같습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Flutter - null safety</summary></entry><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/2/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/2</id><content type="html" xml:base="http://localhost:4000/flutter/2/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
 
 &lt;p&gt;Flutter 의 Lifecycle, 생명주기를 이해하기 위해서는 Stateless Widget 과 Stateful Widget 의 차이점을 알아야 합니다.&lt;/p&gt;
 

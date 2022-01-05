@@ -40,4 +40,10 @@ var store = [{
         "tags": [],
         "url": "/til/1/",
         "teaser": null
+      },{
+        "title": "[iOS] SwiftUI - Navigation Link",
+        "excerpt":"화면 전환 오늘은 소소하게 화면 간 전환을 학습했습니다. 당연히 목표한 학습량은 훨씬 거대했지만 확실히 새롭게 무언가를 시작하는것은 어렵네요. 이전에 사용했던 Flutter, React Native 와는 상이한 점이 많아 헷갈렸습니다. 오늘 학습한 내용 정리해보도록 하겠습니다. (아직 SwiftUI 용어들에 익숙하지 않아 마구잡이로 단어를 사용하고 있으니 틀린부분이 상당히 많을 수도 있습니다..) NavigationLink SwiftUI 에서는...","categories": ["TIL"],
+        "tags": [],
+        "url": "/til/2/",
+        "teaser": null
       }]
