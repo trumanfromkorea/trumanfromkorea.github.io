@@ -9,8 +9,8 @@
 <lastmod>2021-12-07T07:57:17+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/git/1/</loc>
-<lastmod>2021-12-29T09:05:20+09:00</lastmod>
+<loc>http://localhost:4000/etc/1/</loc>
+<lastmod>2021-12-29T09:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/flutter/2/</loc>
@@ -31,6 +31,9 @@
 <url>
 <loc>http://localhost:4000/til/2/</loc>
 <lastmod>2022-01-05T09:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/categories/ETC</loc>
 </url>
 <url>
 <loc>http://localhost:4000/categories/flutter</loc>

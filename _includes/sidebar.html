@@ -48,6 +48,12 @@
                     <li><a href="/categories/TIL" class="nav__sub-title_sub">TIL ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
+
+                    {% for category in site.categories %}
+                    {% if category[0] == "ETC" %}
+                    <li><a href="/categories/ETC" class="nav__sub-title_sub">ETC ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% endfor %}
                     
                     <!--  {% for category in site.categories %} {% if category[0] == "CS" %}
                     <li><a href="/categories/CS" class="nav__sub-title_sub">CS ({{category[1].size}})</a></li>

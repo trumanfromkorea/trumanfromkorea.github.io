@@ -12,9 +12,9 @@ var store = [{
         "teaser": null
       },{
         "title": "[Git] 커밋 취소하기, 되돌리기",
-        "excerpt":"git reset Git 레포지토리를 이용하다 보면 commit 후 push 를 잘못 진행하거나, 브랜치 병합 후 push 과정에서 오류가 발생해 브랜치를 이전 commit 으로 되돌려야 하는 상황이 종종 발생합니다. 저같은 경우 이러한 상황이 자주 발생하지는 않지만 간혹 commit 을 되돌려야 할 때마다 커맨드가 헷갈리곤 해 확실히 정리하고자 합니다. 사용법 원하는 commit...","categories": ["Git"],
+        "excerpt":"git reset Git 레포지토리를 이용하다 보면 commit 후 push 를 잘못 진행하거나, 브랜치 병합 후 push 과정에서 오류가 발생해 브랜치를 이전 commit 으로 되돌려야 하는 상황이 종종 발생합니다. 저같은 경우 이러한 상황이 자주 발생하지는 않지만 간혹 commit 을 되돌려야 할 때마다 커맨드가 헷갈리곤 해 확실히 정리하고자 합니다. 사용법 원하는 commit...","categories": ["ETC"],
         "tags": [],
-        "url": "/git/1/",
+        "url": "/etc/1/",
         "teaser": null
       },{
         "title": "[Flutter] Stateless, Stateful Widget, LifeCycle",
