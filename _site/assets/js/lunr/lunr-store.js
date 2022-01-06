@@ -46,4 +46,10 @@ var store = [{
         "tags": [],
         "url": "/til/2/",
         "teaser": null
+      },{
+        "title": "[알고리즘] 탐욕법 Greedy",
+        "excerpt":"탐욕법 오늘은 탐욕법, Greedy 알고리즘에 대해 알아보도록 하겠습니다. 탐욕법이란 현재 상황에서의 최적해를 쫓는 알고리즘입니다. 하지만 현재 상황에서의 최적해만을 추구하는 것이 전체적으로 어떤 영향을 끼칠지는 고려하지 않기 때문에 항상 옳은 결과를 장담하지는 않습니다. Local minimum &amp; Global minimum 그래프 위 시작점 X 에서 최소값을 찾는 프로그램을 작성한다고 할 때, 탐욕법을 이용한다고...","categories": ["Algorithm"],
+        "tags": [],
+        "url": "/algorithm/1/",
+        "teaser": null
       }]

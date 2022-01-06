@@ -1,0 +1,663 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[알고리즘] 탐욕법 Greedy - 오래하길 바래</title>
+<meta name="description" content="탐욕법">
+
+
+  <meta name="author" content="장재훈">
+  
+  <meta property="article:author" content="장재훈">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="오래하길 바래">
+<meta property="og:title" content="[알고리즘] 탐욕법 Greedy">
+<meta property="og:url" content="http://localhost:4000/algorithm/1/">
+
+
+  <meta property="og:description" content="탐욕법">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-01-06T09:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/algorithm/1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "trumanfromkorea",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="오래하길 바래 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          오래하길 바래
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+<div class="sidebar sticky">
+    
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/avatar.jpeg" alt="장재훈" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">장재훈</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>쥬쥬쥬니어 개발자</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="trumanfromkorea@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/trumanfromkorea" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/trumanfromkorea/" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div> 
+
+    <!-- 카테고리 파트 -->
+    
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+    
+    <nav class="nav__list" style="margin-top:1.5rem;">
+        <input id="ac-toc" name="accordion-toc" type="checkbox" />
+        <label for="ac-toc">Toggle menu</label>
+        <ul class="nav__items" id="category_tag_menu">
+
+            <!--전체 글 수-->
+            <li>
+                📂 <b><span style="font-size:0.8rem;">전체 글 수 <span
+                            style="font-size:1rem; color : #008fe8;">9</span> 개</span></b>
+            </li>
+
+            <li>
+                <!--여기가 카테고리 대분류 -->
+
+                <!-- 앱 카테고리 -->
+                <span class="nav__sub-title">App</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/flutter" class="nav__sub-title_sub">Flutter (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!--                    -->
+                </ul>
+                <span class="nav__sub-title">Studies</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/TIL" class="nav__sub-title_sub">TIL (2)</a></li>
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm (1)</a></li>
+                    
+                    
+
+                    
+                    
+                    <li><a href="/categories/ETC" class="nav__sub-title_sub">ETC (2)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!--                    -->
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+    
+</div>
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[알고리즘] 탐욕법 Greedy">
+    <meta itemprop="description" content="탐욕법">
+    <meta itemprop="datePublished" content="2022-01-06T09:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/algorithm/1/" class="u-url" itemprop="url">[알고리즘] 탐욕법 Greedy
+</a>
+          </h1>
+<!--          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+-->
+
+        </header>
+      
+      
+
+<!--      날짜-->
+      
+              <span class="page__meta" style="font-size : 0.8rem">
+                  
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a>
+    
+    </span>
+  </p>
+
+
+                  
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-06T09:00:00+09:00">January 6, 2022</time></p>
+
+              </span>
+      
+              
+      <section class="page__content e-content" itemprop="text">
+        
+        <h2 id="탐욕법">탐욕법</h2>
+
+<p>오늘은 탐욕법, Greedy 알고리즘에 대해 알아보도록 하겠습니다.</p>
+
+<p>탐욕법이란 현재 상황에서의 최적해를 쫓는 알고리즘입니다. 하지만 현재 상황에서의 최적해만을 추구하는 것이 전체적으로 어떤 영향을 끼칠지는 고려하지 않기 때문에 항상 옳은 결과를 장담하지는 않습니다.</p>
+
+<h2 id="local-minimum--global-minimum">Local minimum &amp; Global minimum</h2>
+
+<p><img src="https://user-images.githubusercontent.com/55919701/148390866-844350b0-11a2-4b30-a132-02b4d1fdecfc.jpg" alt="연습장-123" /></p>
+
+<p>그래프 위 시작점 X 에서 최소값을 찾는 프로그램을 작성한다고 할 때, 탐욕법을 이용한다고 가정해보겠습니다.</p>
+
+<p>탐욕법은 앞서 말했듯이 현재 상황에서의 최적해를 찾는 알고리즘이기 때문에 시작점 X 에서 최소값을 찾으려면 무조건 지금의 값보다 낮은 왼쪽으로 향하게 될 것입니다.</p>
+
+<p>왼쪽으로 진행하던 점 X 는 어느 순간 값이 커지는 변곡점을 맞게 될 것이고, 프로그램은 해당 변곡점을 그래프의 최소값이라고 생각할 것입니다.</p>
+
+<p>하지만 위 그래프를 전체적으로 봤을때 그 변곡점은 local minimum 에 해당하는 점 A 일 것이며, 그래프의 실제 최소값은 global minimum 에 해당하는 점 B 일 것입니다.</p>
+
+<p>탐욕법은 전체적인 부분을 고려하지 않고 현재 상황에서의 최적해만을 쫓기 때문에 위와 같은 예제에서는 알맞은 풀이법이 아니라고 볼 수 있습니다.]</p>
+
+<h2 id="그렇다면-어떤-경우에-탐욕법을-사용하는-것이-좋을까">그렇다면 어떤 경우에 탐욕법을 사용하는 것이 좋을까?</h2>
+
+<p>탐욕법은 탐욕 선택 속성 (Greedy Choice Property) 와 최적 부분 구조 (Optimal Substructure) 의 특성을 가지는 문제들을 해결할 때 활용할 수 있습니다.</p>
+
+<h3 id="--탐욕-선택-속성-greedy-choice-property">- 탐욕 선택 속성 (Greedy Choice Property)</h3>
+
+<p>탐욕 선택 속성은 이전의 선택이 이후의 선택에 영향을 끼치지 않아야 한다는 조건입니다. 즉 탐욕적인 접근이 항상 옳은 선택이라는게 보장되어야 한다는 의미입니다.</p>
+
+<h3 id="--최적-부분-구조-optimal-substructure">- 최적 부분 구조 (Optimal Substructure)</h3>
+
+<p>최적 부분 구조는 전체 문제의 최적해가 부분 문제들의 최적해로 이루어진 경우를 얘기합니다. 이 말은 전체 문제를 부분적인 문제들로 나누었을 때, 부분적인 문제들의 최적해가 전체적으로 보았을 때 마찬가지로 최적해를 구성해야 한다는 의미입니다.</p>
+
+<h2 id="동전-문제">동전 문제</h2>
+
+<p>가장 보편적인 문제는 동전 문제입니다.</p>
+
+<blockquote>
+  <p>500원, 100원, 50원, 10원 짜리 동전만을 이용해서 주어진 금액 N 원을 구성해야 한다고 할 때, 구성할 수 있는 동전의 최소 개수를 구하라. N 은 항상 10의 배수이다.</p>
+</blockquote>
+
+<p>가장 적은 수의 동전을 이용하여 N 원을 구성하기 위해서는 동전 중 가장 큰 동전으로 구성할 수 있는 최대값을 고려한 후, 해당 값을 뺀 나머지에서 다음 단위의 동전으로 구성할 수 있는 최대값을 고려해야 합니다.</p>
+
+<p>이와 같이 가장 큰 단위의 동전부터 이용해 N 원을 구상한다면 탐욕법을 이용하여 문제를 해결할 수 있습니다.</p>
+
+<p>(코드는 추후에 첨부하도록 하겠습니다)</p>
+
+<p>해당 문제를 탐욕법으로 접근할 수 있는 이유는 가지고 있는 동전 중 큰 단위의 동전이 항상 작은 단위의 동전의 배수이기 때문입니다. 그렇기 때문에 작은 단위의 동전을 조합해 이 중 큰 단위가 아닌 다른 단위의 금액을 도출해낼 수 없습니다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>오늘은 탐욕법에 대해 알아보았습니다.</p>
+
+<p>탐욕법은 매우 정리하기 간단할 것이라 생각했는데 전혀 아니었네요.. 알고리즘의 개념에 대한 학습이 얼마나 중요한지 다시 한번 느끼게 되었습니다.</p>
+
+<p>다음에는 탐욕법과 많이 비교되는 Dynamic Programming 에 대해 알아보는 시간을 갖도록 하겠습니다.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+<!--        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a>
+    
+    </span>
+  </p>
+
+-->
+<!--        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-06T09:00:00+09:00">January 6, 2022</time></p>
+-->
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/til/2/" class="pagination--pager" title="[iOS] SwiftUI - Navigation Link
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/2/" rel="permalink">[iOS] SwiftUI - Navigation Link
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-01-05
+            </span> 
+        
+    </h2>
+  </article>
+</div>
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/1/" rel="permalink">[iOS] Swift UI 사이드 프로젝트 시작
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-01-03
+            </span> 
+        
+    </h2>
+  </article>
+</div>
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/flutter/4/" rel="permalink">[Flutter] iOS - Firestore 추가 시  빌드 에러
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-01-02
+            </span> 
+        
+    </h2>
+  </article>
+</div>
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/flutter/3/" rel="permalink">[Flutter] Null Safety
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-01-02
+            </span> 
+        
+    </h2>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 trumanfromkorea. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

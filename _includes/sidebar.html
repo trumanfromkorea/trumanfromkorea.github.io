@@ -50,6 +50,12 @@
                     {% endfor %}
 
                     {% for category in site.categories %}
+                    {% if category[0] == "Algorithm" %}
+                    <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% for category in site.categories %}
                     {% if category[0] == "ETC" %}
                     <li><a href="/categories/ETC" class="nav__sub-title_sub">ETC ({{category[1].size}})</a></li>
                     {% endif %}
