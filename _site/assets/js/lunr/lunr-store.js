@@ -52,4 +52,10 @@ var store = [{
         "tags": [],
         "url": "/algorithm/1/",
         "teaser": null
+      },{
+        "title": "[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)",
+        "excerpt":"DFS (깊이 우선 탐색) , BFS (너비 우선 탐색) 그래프는 정점 (node, vertex) 과 정점들 사이를 연결하는 간선 (edge) 로 이루어진 자료구조입니다. 오늘은 이 그래프를 탐색하는 방법 중 DFS 와 BFS 에 대해 알아보도록 하겠습니다. DFS (Depth First Search, 깊이 우선 탐색) DFS 는 깊이 우선 탐색으로, 루트 노드에서 시작해서...","categories": ["Algorithm"],
+        "tags": [],
+        "url": "/algorithm/2/",
+        "teaser": null
       }]
