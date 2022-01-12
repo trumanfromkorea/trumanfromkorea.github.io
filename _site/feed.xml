@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-08T18:53:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)</title><link href="http://localhost:4000/algorithm/2/" rel="alternate" type="text/html" title="[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)" /><published>2022-01-08T09:00:00+09:00</published><updated>2022-01-08T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/2</id><content type="html" xml:base="http://localhost:4000/algorithm/2/">&lt;h2 id=&quot;dfs-깊이-우선-탐색--bfs-너비-우선-탐색&quot;&gt;DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-12T22:44:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] Dynamic Programming - 동적 계획법</title><link href="http://localhost:4000/algorithm/3/" rel="alternate" type="text/html" title="[알고리즘] Dynamic Programming - 동적 계획법" /><published>2022-01-12T09:00:00+09:00</published><updated>2022-01-12T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/3</id><content type="html" xml:base="http://localhost:4000/algorithm/3/">&lt;h2 id=&quot;dynamic-programming---동적-계획법&quot;&gt;Dynamic Programming - 동적 계획법&lt;/h2&gt;
+
+&lt;p&gt;이전에 올렸던 탐욕법 알고리즘에 이어 오늘은 동적 계획법, Dynamic Programming 에 대해서 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;해당 포스트에 등장하는 메소드는 모두 Swift 코드로 작성되었습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;어떤-경우에-사용할까&quot;&gt;어떤 경우에 사용할까?&lt;/h2&gt;
+
+&lt;p&gt;다이나믹 프로그래밍은 하나의 큰 문제를 여러개의 작은 문제들로 나눠서 해결하는 방식입니다.&lt;/p&gt;
+
+&lt;p&gt;그렇기 때문에 다이나믹 프로그래밍을 이용하여 문제를 해결하려면 2 가지 조건을 만족해야 합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;--부분-반복-문제-overlapping-subproblem&quot;&gt;- 부분 반복 문제 (Overlapping Subproblem)&lt;/h3&gt;
+
+&lt;p&gt;다이나믹 프로그래밍은 전체 문제를 여러개의 작은 문제들로 나눈 다음 그 결과값들을 이용해 전체의 답을 도출해냅니다.&lt;/p&gt;
+
+&lt;p&gt;그렇기 때문에 동일한 작은 문제들이 반복하여 나타나는 경우에 사용 가능합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;--최적-부분-구조-optimal-substructure&quot;&gt;- 최적 부분 구조 (Optimal Substructure)&lt;/h3&gt;
+
+&lt;p&gt;최적 부분 구조는 전체 문제의 최적해가 부분 문제들의 최적해로 이루어진 경우를 말합니다. 그렇기 때문에 특정 문제의 정답은 문제의 크기에 상관없이 항상 동일합니다.&lt;/p&gt;
+
+&lt;p&gt;최적 부분 구조 조건은 탐욕법에도 해당하는 조건입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;개념과-설명&quot;&gt;개념과 설명&lt;/h2&gt;
+
+&lt;p&gt;오늘은 피보나치 수열을 예로 들어 다이나믹 프로그래밍을 학습해 보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/148966788-ed9fcc74-56e4-491d-a7aa-efe2ac705652.jpeg&quot; alt=&quot;06-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;피보나치 수열은 다음과 같이 앞의 두 항의 합이 뒤의 항이 되어있는 수열입니다.&lt;/p&gt;
+
+&lt;p&gt;n 번째 피보나치 수를 구하는 함수를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fib(n)&lt;/code&gt; 이라고 정의할 때, 이는 다음과 같이 나타낼 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fib(n) = fib(n-1) + fib(n-2)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;우리는 이러한 식을 간단한 재귀 함수로 표현할 수 있을 것입니다. 아래는 피보나치 수열을 재귀함수로 이용해 작성한 코드입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func fib(n: Int) -&amp;gt; Int {
+    if n == 0 || n == 1 {
+        return 1
+    } else {
+        return fib_naive(n: n - 1) + fib_naive(n: n - 2)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;피보나치 수열의 개념만 이해한다면 재귀함수로 구현하는건 그닥 어렵지 않은 일일것입니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 위 함수가 한번 실행될 때마다 같은 함수가 새롭게 두번씩 호출될 것이고, 그 과정에서 분명히 중복되는 호출들이 있을 것입니다.&lt;/p&gt;
+
+&lt;p&gt;만약 5 번째 피보나치 수를 구한다고 했을 때, 그 과정을 트리로 그려본다면 아래 그림과 같을 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/149143933-bd048c70-7d8c-416b-8e9b-c083b6269a31.png&quot; alt=&quot;프레젠테ㅁㄴㅇㄹ이션1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위 그림에서 확인할 수 있는 사실은 2가지 입니다.&lt;/p&gt;
+
+&lt;p&gt;첫번째는 시간복잡도 입니다. 피보나치 수열을 재귀함수로 구현하면 위와 같은 트리 형태의 연산이 실행되기 때문에 시간복잡도는 O(n^2) 입니다.&lt;/p&gt;
+
+&lt;p&gt;두번째는 중복 호출입니다. 5번째 피보나치 수열을 구하는 과정에서도 중복 호출되는 함수가 여러 개 있는 것을 확인할 수 있었습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;memoization&quot;&gt;Memoization&lt;/h2&gt;
+
+&lt;p&gt;위 특징들을 더 개선할 수 있는 방향은 중복 호출되는 함수들의 리턴값을 기억하고 있다가 해당 값이 필요할 경우 다시 함수를 호출할 필요 없이 필요한 값을 가져다가 사용하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 한번 실행된 함수의 결과를 저장해두었다가 사용하는 방식으로 중복 호출을 줄이는 것을 Memoization 이라고 합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func fib(n: Int) -&amp;gt; Int {
+    if n == 0 || n == 1 {
+        return 1
+    }
+
+    var fib_array: [Int] = [1, 1]
+
+    for i in 2 ... n {
+        let num: Int = fib_array[i - 1] + fib_array[i - 2]
+        fib_array.append(num)
+    }
+    return fib_array[n]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위는 Memoization 을 활용해 다시 구성한 피보나치 수열 메소드입니다.&lt;/p&gt;
+
+&lt;p&gt;fib_array 에 연산에 필요한 가장 앞쪽의 값 두개인 1 을 넣어주고 1번째 피보나치 수 부터 구해나가는 방식입니다. 해당 방식의 시간복잡도는 코드에서도 간단하게 알아볼 수 있듯이 O(n) 입니다.&lt;/p&gt;
+
+&lt;p&gt;재귀로 구현한 방식은 값이 높은쪽부터 시작해 점차적으로 내려오는 Top-Down 방식이고, Memoization 을 이용해 구현한 방식은 값이 낮은쪽부터 시작해 점차적으로 올라가는 Bottom-Up 방식입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+
+&lt;p&gt;다이나믹 프로그래밍은 모든 방법을 일일히 검토하여 최적해를 찾아내는 방식의 알고리즘으로 탐욕법보다 조금 더 오랜 시간이 걸린다는 특징이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 탐욕법은 현재 상황에서의 최적해를 쫓는 방법이기 때문에 항상 옳은 결과를 장담하지는 않는다는 특징이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;두 방식은 서로 대비되는 알고리즘이기 때문에 알맞은 문제에 적절하게 사용할 수 있도록 판단하는 능력이 중요하다고 생각됩니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">Dynamic Programming - 동적 계획법</summary></entry><entry><title type="html">[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)</title><link href="http://localhost:4000/algorithm/2/" rel="alternate" type="text/html" title="[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)" /><published>2022-01-08T09:00:00+09:00</published><updated>2022-01-08T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/2</id><content type="html" xml:base="http://localhost:4000/algorithm/2/">&lt;h2 id=&quot;dfs-깊이-우선-탐색--bfs-너비-우선-탐색&quot;&gt;DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)&lt;/h2&gt;
 
 &lt;p&gt;그래프는 정점 (node, vertex) 과 정점들 사이를 연결하는 간선 (edge) 로 이루어진 자료구조입니다.&lt;/p&gt;
 
@@ -128,7 +223,6 @@ func BFS_list(x: Int) {
 
     while !queue.isEmpty {
         let now: Int = queue.dequeue()!
-        print(now)
 
         for i in 0 ..&amp;lt; graphList[now].count {
             let next: Int = graphList[now][i]
@@ -152,7 +246,31 @@ func BFS_list(x: Int) {
 
 &lt;p&gt;물론 오늘 한번으로 100% 이해하기는 어렵겠지만, 꾸준히 관련 문제들을 반복해서 풀어보며 빠르게 익숙해져야겠다는 생각을 했습니다.&lt;/p&gt;
 
-&lt;p&gt;다음에는 DFS 와 BFS 관련 문제 풀이를 해보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)</summary></entry><entry><title type="html">[알고리즘] 탐욕법 Greedy</title><link href="http://localhost:4000/algorithm/1/" rel="alternate" type="text/html" title="[알고리즘] 탐욕법 Greedy" /><published>2022-01-06T09:00:00+09:00</published><updated>2022-01-06T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/1</id><content type="html" xml:base="http://localhost:4000/algorithm/1/">&lt;h2 id=&quot;탐욕법&quot;&gt;탐욕법&lt;/h2&gt;
+&lt;p&gt;다음에는 DFS 와 BFS 관련 문제 풀이를 해보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)</summary></entry><entry><title type="html">애플 개발자 계정을 등록하다</title><link href="http://localhost:4000/etc/3/" rel="alternate" type="text/html" title="애플 개발자 계정을 등록하다" /><published>2022-01-08T09:00:00+09:00</published><updated>2022-01-08T09:00:00+09:00</updated><id>http://localhost:4000/etc/3</id><content type="html" xml:base="http://localhost:4000/etc/3/">&lt;h2 id=&quot;애플-개발자-계정&quot;&gt;애플 개발자 계정…&lt;/h2&gt;
+
+&lt;p&gt;&lt;img width=&quot;1053&quot; alt=&quot;KakaoTalk_Photo_2022-01-08-19-15-55&quot; src=&quot;https://user-images.githubusercontent.com/55919701/148640524-69dab640-8b56-4189-9437-53cadb4bf36c.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;애플 개발자 계정을 등록했습니다…&lt;/p&gt;
+
+&lt;p&gt;사실 이전에 하려고 마음먹은적이 있었습니다. 그런데 평생도 아니고 연간 플랜이 129,000 원 인걸 알고 바로 그만뒀었는데….&lt;/p&gt;
+
+&lt;p&gt;이제 Swift 공부를 진짜로 해야겠다 마음 먹은 것도 있고, 아주 작고 보잘것 없는 앱이라도 앱 하나쯤은 스스로의 힘으로 릴리즈 해보고 싶은 마음이 있었기에 그냥 등록해버렸습니다~!~!&lt;/p&gt;
+
+&lt;p&gt;물론 결제 버튼을 누를때 식은땀이 나고 손발이 벌벌 떨리고 호흡이 가빠지고 머리가 어질어질하기도 했지만 제 미래를 위한 투자라면 이런것쯤은 아까워하지 않아도 된다는 마인드로 간신히 진정했네요.&lt;/p&gt;
+
+&lt;p&gt;1월 초에 이렇게 계정을 등록하다보니 뭐 자연스럽게 2022년 목표가 생기는것 같기도 하네요.&lt;/p&gt;
+
+&lt;p&gt;공부 열심히 해서 기초를 가다듬고 취업하는것도 하나의 목표이기도 했지만, 개발자 계정 등록을 기념으로 목표 하나 더 잡도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;2022 년 내로 앱스토어에 제 이름이 달린 앱 하나쯤 릴리즈해보고 싶네요.&lt;/p&gt;
+
+&lt;p&gt;이번년도 내로 릴리즈하지 못할수도 있고, 앱 퀄리티가 매우 떨어질 수도 있지만 도전한다는 것 자체에 의의를 두고 열심히 해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;그럼 하나 둘 셋 하면 화이팅 한번 외치고 마무리하도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;자, 하나 둘 셋!&lt;/p&gt;
+
+&lt;p&gt;화이팅!!!&lt;/p&gt;</content><author><name>장재훈</name></author><category term="ETC" /><summary type="html">애플 개발자 계정…</summary></entry><entry><title type="html">[알고리즘] 탐욕법 Greedy</title><link href="http://localhost:4000/algorithm/1/" rel="alternate" type="text/html" title="[알고리즘] 탐욕법 Greedy" /><published>2022-01-06T09:00:00+09:00</published><updated>2022-01-06T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/1</id><content type="html" xml:base="http://localhost:4000/algorithm/1/">&lt;h2 id=&quot;탐욕법&quot;&gt;탐욕법&lt;/h2&gt;
 
 &lt;p&gt;오늘은 탐욕법, Greedy 알고리즘에 대해 알아보도록 하겠습니다.&lt;/p&gt;
 
@@ -316,30 +434,7 @@ NavigationLink(destination: SomeView()) { // destination -&amp;gt; 목표화면
 
 &lt;p&gt;오늘은 직접적인 개발에 대한 내용을 적어보진 않았지만, 다른 카테고리에 글을 올릴만큼 내용이 없는 날이면 이렇게 아주 소소하게나마 제가 오늘 기획했거나 배운 내용들에 대해 정리해볼 생각입니다.&lt;/p&gt;
 
-&lt;p&gt;BDG 앱에 대해서는 우선적으로 Swift UI 를 학습하며 구현해볼 예정이며, 더욱 상세한 기획이나 플로우를 작성할 수 있는 여유시간이 생기면 추가적으로 업로드 할 계획입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="TIL" /><summary type="html">BDG - 해외 거주 한국인을 위한 역 배대지 사이트</summary></entry><entry><title type="html">[Flutter] iOS - Firestore 추가 시 빌드 에러</title><link href="http://localhost:4000/flutter/4/" rel="alternate" type="text/html" title="[Flutter] iOS - Firestore 추가 시 빌드 에러" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/4</id><content type="html" xml:base="http://localhost:4000/flutter/4/">&lt;h2 id=&quot;ios---firestore-추가-시-빌드-에러&quot;&gt;iOS - Firestore 추가 시 빌드 에러&lt;/h2&gt;
-
-&lt;p&gt;pubspec.yaml 파일 dependencies 부분에 cloud_firestore 추가 후 flutter run 커맨드로 빌드 시 iOS 빌드가 굉장히 느려지는 이슈가 발생했습니다.&lt;/p&gt;
-
-&lt;p&gt;따로 에러 메세지가 출력되지는 않았고, Xcode build 부분에서 로딩이 약 5분 이상으로 매우 오래 지속되었습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;문제-원인-및-해결법-탐색&quot;&gt;문제 원인 및 해결법 탐색&lt;/h2&gt;
-
-&lt;p&gt;일단 저는 Podfile 에 Cocoapods 관련 dependencies 가 제대로 추가되지 않아서 발생하는 문제라고 생각했고, 이 부분을 수정해준다면 문제가 해결될 것이라고 생각했습니다.&lt;/p&gt;
-
-&lt;p&gt;관련 키워드로 구글링 도중 해결법을 발견하였는데,&lt;/p&gt;
-
-&lt;p&gt;Podfile 의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;target 'Runner' do&lt;/code&gt; 하위에&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod 'FirebaseFirestore', :git =&amp;gt; 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag =&amp;gt; '8.9.1'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;라인을 추가하는 것으로 문제를 해결하였습니다.&lt;/p&gt;
-
-&lt;p&gt;현재 firestore 코드가 50만 줄이 넘어가는 C++ 코드에 의존하고 있어서 빌드하는데 시간이 매우 오래 걸린다고 합니다.&lt;/p&gt;
-
-&lt;p&gt;하지만 추가한 코드 맨 끝에 버전이 명시되어 있음과 firebase 정식 레포를 가리키지 않는다는 점에서 해당 문제의 원인과 해결방안이 100% 맞는지는 확신할 수 없습니다.&lt;/p&gt;
-
-&lt;p&gt;관련 에러에 대해서 더 나은 해결방안을 찾게되는 즉시 포스트를 업데이트할 예정입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">iOS - Firestore 추가 시 빌드 에러</summary></entry><entry><title type="html">[Flutter] Null Safety</title><link href="http://localhost:4000/flutter/3/" rel="alternate" type="text/html" title="[Flutter] Null Safety" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/3</id><content type="html" xml:base="http://localhost:4000/flutter/3/">&lt;h2 id=&quot;flutter---null-safety&quot;&gt;Flutter - null safety&lt;/h2&gt;
+&lt;p&gt;BDG 앱에 대해서는 우선적으로 Swift UI 를 학습하며 구현해볼 예정이며, 더욱 상세한 기획이나 플로우를 작성할 수 있는 여유시간이 생기면 추가적으로 업로드 할 계획입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="TIL" /><summary type="html">BDG - 해외 거주 한국인을 위한 역 배대지 사이트</summary></entry><entry><title type="html">[Flutter] Null Safety</title><link href="http://localhost:4000/flutter/3/" rel="alternate" type="text/html" title="[Flutter] Null Safety" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/3</id><content type="html" xml:base="http://localhost:4000/flutter/3/">&lt;h2 id=&quot;flutter---null-safety&quot;&gt;Flutter - null safety&lt;/h2&gt;
 
 &lt;p&gt;Flutter 2.0 에 들어서면서부터 null safety 가 적용되었다고 합니다. 오늘은 null safety 가 무엇이며 어떻게 쓰이는지 알아보도록 하겠습니다.&lt;/p&gt;
 
@@ -424,7 +519,30 @@ int length = nullable?.length;
 
 &lt;p&gt;오늘은 null safety 와 이를 효과적으로 사용하는 방법에 대해 알아보았습니다.&lt;/p&gt;
 
-&lt;p&gt;타 언어에서도 ? 와 ! 연산자등을 이용해 본적이 있어 이해하는데 도움이 많이 되었던 것 같습니다. 어떤 언어로 된 프로그램이던 간에 코드를 작성하다 보면 null 로 인한 에러가 발생하는 경우가 굉장히 많기 때문에 null safety 에 대해 잘 이해하는 것이 좋을 것 같습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Flutter - null safety</summary></entry><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/2/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/2</id><content type="html" xml:base="http://localhost:4000/flutter/2/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
+&lt;p&gt;타 언어에서도 ? 와 ! 연산자등을 이용해 본적이 있어 이해하는데 도움이 많이 되었던 것 같습니다. 어떤 언어로 된 프로그램이던 간에 코드를 작성하다 보면 null 로 인한 에러가 발생하는 경우가 굉장히 많기 때문에 null safety 에 대해 잘 이해하는 것이 좋을 것 같습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Flutter - null safety</summary></entry><entry><title type="html">[Flutter] iOS - Firestore 추가 시 빌드 에러</title><link href="http://localhost:4000/flutter/4/" rel="alternate" type="text/html" title="[Flutter] iOS - Firestore 추가 시 빌드 에러" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/4</id><content type="html" xml:base="http://localhost:4000/flutter/4/">&lt;h2 id=&quot;ios---firestore-추가-시-빌드-에러&quot;&gt;iOS - Firestore 추가 시 빌드 에러&lt;/h2&gt;
+
+&lt;p&gt;pubspec.yaml 파일 dependencies 부분에 cloud_firestore 추가 후 flutter run 커맨드로 빌드 시 iOS 빌드가 굉장히 느려지는 이슈가 발생했습니다.&lt;/p&gt;
+
+&lt;p&gt;따로 에러 메세지가 출력되지는 않았고, Xcode build 부분에서 로딩이 약 5분 이상으로 매우 오래 지속되었습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;문제-원인-및-해결법-탐색&quot;&gt;문제 원인 및 해결법 탐색&lt;/h2&gt;
+
+&lt;p&gt;일단 저는 Podfile 에 Cocoapods 관련 dependencies 가 제대로 추가되지 않아서 발생하는 문제라고 생각했고, 이 부분을 수정해준다면 문제가 해결될 것이라고 생각했습니다.&lt;/p&gt;
+
+&lt;p&gt;관련 키워드로 구글링 도중 해결법을 발견하였는데,&lt;/p&gt;
+
+&lt;p&gt;Podfile 의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;target 'Runner' do&lt;/code&gt; 하위에&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod 'FirebaseFirestore', :git =&amp;gt; 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag =&amp;gt; '8.9.1'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;라인을 추가하는 것으로 문제를 해결하였습니다.&lt;/p&gt;
+
+&lt;p&gt;현재 firestore 코드가 50만 줄이 넘어가는 C++ 코드에 의존하고 있어서 빌드하는데 시간이 매우 오래 걸린다고 합니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 추가한 코드 맨 끝에 버전이 명시되어 있음과 firebase 정식 레포를 가리키지 않는다는 점에서 해당 문제의 원인과 해결방안이 100% 맞는지는 확신할 수 없습니다.&lt;/p&gt;
+
+&lt;p&gt;관련 에러에 대해서 더 나은 해결방안을 찾게되는 즉시 포스트를 업데이트할 예정입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">iOS - Firestore 추가 시 빌드 에러</summary></entry><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/2/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/2</id><content type="html" xml:base="http://localhost:4000/flutter/2/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
 
 &lt;p&gt;Flutter 의 Lifecycle, 생명주기를 이해하기 위해서는 Stateless Widget 과 Stateful Widget 의 차이점을 알아야 합니다.&lt;/p&gt;
 
@@ -582,82 +700,4 @@ git reset --soft HEAD~n
 
 &lt;p&gt;혹시나 사용할 경우가 생기더라도 자신의 상황에 맞춰 신중하게 사용하시길 바랍니다.&lt;/p&gt;
 
-&lt;p&gt;간혹가다 기본적인 기능들이 아닌 신기하거나 헷갈리는 git 명령어들을 정리해볼 생각입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="ETC" /><summary type="html">git reset</summary></entry><entry><title type="html">[Flutter] minimum OS Version 에러 발생</title><link href="http://localhost:4000/flutter/1/" rel="alternate" type="text/html" title="[Flutter] minimum OS Version 에러 발생" /><published>2021-12-07T07:57:17+09:00</published><updated>2021-12-07T07:57:17+09:00</updated><id>http://localhost:4000/flutter/1</id><content type="html" xml:base="http://localhost:4000/flutter/1/">&lt;h3 id=&quot;error&quot;&gt;ERROR?&lt;/h3&gt;
-
-&lt;p&gt;Runner.app/Frameworks/Flutter.framework does not support the minimum OS Version specified in the Info.plist&lt;/p&gt;
-
-&lt;h2 id=&quot;문제-상황&quot;&gt;문제 상황&lt;/h2&gt;
-
-&lt;p&gt;Flutter 를 이용한 첫 프로젝트 릴리즈를 위해 Xcode 에서 Archive 를 진행하던 도중, 다음과 같은 에러가 발생했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/144858991-d8f5c829-2298-4109-9f6f-edef8b5b3a62.png&quot; alt=&quot;KakaoTalk_Photo_2021-12-06-22-55-17&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;flutter-runnerappframeworksflutterframework-does-not-support-the-minimum-os-version-specified-in-the-infoplist&quot;&gt;[Flutter] Runner.app/Frameworks/Flutter.framework does not support the minimum OS Version specified in the Info.plist&lt;/h4&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;처음에는 에러의 첫 부분을 제대로 읽지 않아서 단순하게 Info.plist 파일의 최소 OS 버전이 맞지 않는다고 생각했다.&lt;/p&gt;
-
-&lt;p&gt;동시에 &lt;em&gt;Info.plist 파일에는 OS 버전을 지정해주는 부분이 없을텐데?&lt;/em&gt; 라는 생각을 했지만,&lt;/p&gt;
-
-&lt;p&gt;이전에 React Native 를 이용한 릴리즈 당시 OS 버전을 통일해주지 않아 에러가 발생한적이 있어 우선 프로젝트의 타겟 버전을 확인해보기로 했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://trumanfromkorea.tistory.com/20&quot;&gt;관련 링크&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;분석-및-과정&quot;&gt;분석 및 과정&lt;/h2&gt;
-
-&lt;p&gt;먼저 Runner.xcworkspace 파일에서 프로젝트 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TARGETS &amp;gt; Deployment Info&lt;/code&gt; 부분을 확인했다.&lt;/p&gt;
-
-&lt;p&gt;요즘 지원되는 최소 iOS 버전이 9.0 이상이어야 하는데 나는 이 부분을 11.0 으로 통일시켜주기로 했다.&lt;/p&gt;
-
-&lt;p&gt;두번째로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PROJECT &amp;gt; Deployment Target &amp;gt; iOS Deployment Target&lt;/code&gt; 또한 11.0 으로 설정해주었다.&lt;/p&gt;
-
-&lt;p&gt;마지막으로 PodFile 의 2번째 라인에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;platform: ios, '11.0'&lt;/code&gt; 부분 또한 버전을 통일시켜주었다.&lt;/p&gt;
-
-&lt;p&gt;이후 빌드를 진행했지만 똑같은 에러가 발생했다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;두 번째로 에러가 발생하고 나서야 비로소 에러의 첫 줄이 눈에 들어왔는데,&lt;/p&gt;
-
-&lt;p&gt;Frameworks/Flutter.Framework 의 Info.plist 에 문제가 생겼다는 것이었다.&lt;/p&gt;
-
-&lt;p&gt;그런데 내 디렉토리에는 해당 파일이 존재하지 않았고, 구글링 결과 해당 경로는 Xcode 내에서&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Runner &amp;gt; Flutter &amp;gt; AppFrameworkInfo&lt;/code&gt; 부분을 뜻한다는 것을 알았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/flutter/flutter/issues/58200&quot;&gt;관련 Github 이슈&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img width=&quot;849&quot; alt=&quot;KakaoTalk_Photo_2021-12-06-23-12-26&quot; src=&quot;https://user-images.githubusercontent.com/55919701/144861162-9e5fe51e-b508-499f-8aaf-3ff66339ece8.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;파일 맨 아래 부분에 MinimumOSVersion 부분을 11.0 으로 설정하고 다시 빌드를 시도하였지만, 똑같은 에러가 한번 더 발생했다.&lt;/p&gt;
-
-&lt;h2 id=&quot;해결-방법&quot;&gt;해결 방법&lt;/h2&gt;
-
-&lt;p&gt;Flutter 캐시와 Cocoapods 도 재설정 해보며 여러 차례 시도하였지만 에러는 해결되지 않았다.&lt;/p&gt;
-
-&lt;p&gt;나는 Flutter dev 채널을 이용하고 있었는데, 혹시 Flutter 버전에 문제가 있나 싶어 stable 채널로 변경 후 릴리즈를 시도해보고자 하였다.&lt;/p&gt;
-
-&lt;p&gt;Flutter 공식 문서에서는 stable 채널을 이용할 것을 권장하고 있지만, 최신 버전의 빌드를 이용하고 싶다면 dev 채널을 이용할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;stable 채널로 변경하고 나니 dart 가 버전을 충족하지 못해서 pubspec.yaml 파일의&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;environment:
-  sdk: &quot;&amp;gt;=2.12.0 &amp;lt;3.0.0&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;의 sdk 부분을 내 dart 버전에 맞게 수정해주었다.&lt;/p&gt;
-
-&lt;p&gt;이후 릴리즈 빌드가 정상적으로 진행되는 것을 확인할 수 있었다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;dev 채널이 테스트가 완료된 최신 빌드라고는 하지만 bad build 가 있다는 걸로 보아서는 완전하진 않은 모양이다.&lt;/p&gt;
-
-&lt;p&gt;공식 문서에서도 권장하는 만큼 앞으로는 최대한 stable 채널에서 작업을 하는게 나은것 같다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">ERROR?</summary></entry><entry><title type="html">Hello World!</title><link href="http://localhost:4000/etc/first-post/" rel="alternate" type="text/html" title="Hello World!" /><published>2021-12-07T07:30:57+09:00</published><updated>2021-12-07T07:30:57+09:00</updated><id>http://localhost:4000/etc/first-post</id><content type="html" xml:base="http://localhost:4000/etc/first-post/">&lt;h2 id=&quot;안녕&quot;&gt;안녕!&lt;/h2&gt;
-
-&lt;p&gt;개발을 진행하며 생기는 이런저런 문제들과 해결방안들,&lt;/p&gt;
-
-&lt;p&gt;새롭게 적용해본 기술들, 습득한 지식들,&lt;/p&gt;
-
-&lt;p&gt;내가 꼭 기억해야겠다 싶은 내용들을 열심히 적어보자!&lt;/p&gt;</content><author><name>장재훈</name></author><category term="ETC" /><summary type="html">안녕!</summary></entry></feed>
+&lt;p&gt;간혹가다 기본적인 기능들이 아닌 신기하거나 헷갈리는 git 명령어들을 정리해볼 생각입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="ETC" /><summary type="html">git reset</summary></entry></feed>

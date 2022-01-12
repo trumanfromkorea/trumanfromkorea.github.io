@@ -1,4 +1,4 @@
-I"W<h2 id="dfs-깊이-우선-탐색--bfs-너비-우선-탐색">DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)</h2>
+I"D<h2 id="dfs-깊이-우선-탐색--bfs-너비-우선-탐색">DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)</h2>
 
 <p>그래프는 정점 (node, vertex) 과 정점들 사이를 연결하는 간선 (edge) 로 이루어진 자료구조입니다.</p>
 
@@ -128,7 +128,6 @@ func BFS_list(x: Int) {
 
     while !queue.isEmpty {
         let now: Int = queue.dequeue()!
-        print(now)
 
         for i in 0 ..&lt; graphList[now].count {
             let next: Int = graphList[now][i]
