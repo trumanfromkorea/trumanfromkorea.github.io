@@ -20,14 +20,14 @@
             <!--전체 글 수-->
             <li>
                 📂 <b><span style="font-size:0.8rem;">전체 글 수 <span
-                            style="font-size:1rem; color : #008fe8;">{{sum}}</span> 개</span></b>
+                            style="font-size:1rem; color : #4e89f0;">{{sum}}</span> 개</span></b>
             </li>
 
             <li>
                 <!--여기가 카테고리 대분류 -->
 
                 <!-- 앱 카테고리 -->
-                <span class="nav__sub-title">App</span>
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">App</span>
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "Flutter" %}
@@ -41,7 +41,7 @@
                     <li><a href="/categories/DesignPattern" class="nav__sub-title_sub">디자인패턴 ({{category[1].size}})</a></li> -->
                     <!-- {% endif %} {% endfor %} -->
                 </ul>
-                <span class="nav__sub-title">Studies</span>
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Studies</span>
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "TIL" %}
