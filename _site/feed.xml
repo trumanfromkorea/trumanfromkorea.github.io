@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-12T22:44:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] Dynamic Programming - 동적 계획법</title><link href="http://localhost:4000/algorithm/3/" rel="alternate" type="text/html" title="[알고리즘] Dynamic Programming - 동적 계획법" /><published>2022-01-12T09:00:00+09:00</published><updated>2022-01-12T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/3</id><content type="html" xml:base="http://localhost:4000/algorithm/3/">&lt;h2 id=&quot;dynamic-programming---동적-계획법&quot;&gt;Dynamic Programming - 동적 계획법&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-16T00:22:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">오래하길 바래</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">프로그래머스 - 네트워크 (Swift)</title><link href="http://localhost:4000/algorithm/4/" rel="alternate" type="text/html" title="프로그래머스 - 네트워크 (Swift)" /><published>2022-01-15T09:00:00+09:00</published><updated>2022-01-15T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/4</id><content type="html" xml:base="http://localhost:4000/algorithm/4/">&lt;h2 id=&quot;프로그래머스---네트워크-swift&quot;&gt;프로그래머스 - 네트워크 (Swift)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43162&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h2&gt;
+
+&lt;h3 id=&quot;본문&quot;&gt;본문&lt;/h3&gt;
+
+&lt;p&gt;네트워크란 컴퓨터 상호 간에 정보를 교환할 수 있도록 연결된 형태를 의미합니다. 예를 들어, 컴퓨터 A와 컴퓨터 B가 직접적으로 연결되어있고, 컴퓨터 B와 컴퓨터 C가 직접적으로 연결되어 있을 때 컴퓨터 A와 컴퓨터 C도 간접적으로 연결되어 정보를 교환할 수 있습니다. 따라서 컴퓨터 A, B, C는 모두 같은 네트워크 상에 있다고 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;컴퓨터의 개수 n, 연결에 대한 정보가 담긴 2차원 배열 computers가 매개변수로 주어질 때, 네트워크의 개수를 return 하도록 solution 함수를 작성하시오.&lt;/p&gt;
+
+&lt;p&gt;제한사항&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;컴퓨터의 개수 n은 1 이상 200 이하인 자연수입니다.&lt;/li&gt;
+  &lt;li&gt;각 컴퓨터는 0부터 n-1인 정수로 표현합니다.&lt;/li&gt;
+  &lt;li&gt;i번 컴퓨터와 j번 컴퓨터가 연결되어 있으면 computers[i][j]를 1로 표현합니다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;computer[i][i]&lt;/code&gt;는 항상 1입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;이해&quot;&gt;이해&lt;/h3&gt;
+
+&lt;p&gt;이전에 DFS 와 BFS 에 대해 학습한 적이 있습니다. 해당 문제는 인접행렬로 표현된 그래프를 탐색하는 문제로써 인접행렬 안에 표현된 그래프가 몇 개인지 찾아내면 해결되는 문제입니다.&lt;/p&gt;
+
+&lt;p&gt;DFS 와 BFS 모두 모든 노드를 방문하기도 하고 인접행렬로 표현된 그래프를 탐색한다면 시간복잡도는 O(n^2) 로 동일하지만, DFS 는 모든 노드를 탐색하고자 하는 경우에 더 많이 사용되고 BFS 는 일반적으로 두 노드 사이의 최단 경로를 탐색하는 경우 더 많이 사용되기 때문에 DFS 를 이용하여 문제풀이를 진행해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;풀이&quot;&gt;풀이&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 프로그래머스 - 네트워크
+
+import Foundation
+
+// 방문 정보를 저장할 배열, 그래프의 최대 크기인 200 으로 설정
+var visited: [Bool] = Array(repeating: false, count: 200)
+
+// 그래프를 탐색하게 될 DFS 함수
+func DFS(x: Int, n: Int, computers: [[Int]]) {
+    // 실행 시 먼저 해당 노드 방문 처리
+    visited[x] = true
+    
+    for i in 0 ..&amp;lt; n {
+        // 다음으로 탐색할 노드를 방문했던적이 없으면
+        if visited[i] == false &amp;amp;&amp;amp; computers[x][i] == 1 {
+            // DFS 함수 재귀
+            DFS(x: i, n: n, computers: computers)
+        }
+    }
+}
+
+func solution(_ n: Int, _ computers: [[Int]]) -&amp;gt; Int {
+    var answer: Int = 0
+    
+    // 반복문은 어차피 그래프의 크기만큼 실행되기 때문에 visited 배열의 크기는 매우 커도 됨
+    for i in 0 ..&amp;lt; n {
+        // 방문 정보가 없을 시 DFS 진행
+        if visited[i] == false {
+            DFS(x: i, n: n, computers: computers)
+            answer += 1
+        }
+    }
+
+    return answer
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;1-dfs&quot;&gt;1. DFS&lt;/h3&gt;
+
+&lt;p&gt;먼저 모든 노드를 탐색하게 될 DFS 함수입니다.&lt;/p&gt;
+
+&lt;p&gt;visited 배열은 모두 false 로 초기화 되어있고, 각 인덱스는 해당 노드의 방문 정보를 저장합니다. DFS 함수의 인자 x 는 현재 방문한 노드를 나타내고 있기 때문에 함수 실행 시 바로 방문 상태로 처리해줍니다.&lt;/p&gt;
+
+&lt;p&gt;해당 노드와 연결된 노드들을 검사하며 연결된 노드 중 방문하지 않은 노드가 있다면 DFS 함수를 재귀로 실행하여 다음 노드 방문을 반복합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-여러-그래프-검사&quot;&gt;2. 여러 그래프 검사&lt;/h3&gt;
+
+&lt;p&gt;위 DFS 함수를 이용하면 한 그래프를 모두 탐색할 수 있게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;solution 함수에서 방문하지 않은 노드를 선택해 DFS 를 실행한다면 무조건 인덱스가 0 인 노드의 탐색부터 시작할 것입니다. 노드 0 이 포함된 그래프는 탐색이 끝나고, 이후 방문처리되지 않은 노드가 존재한다면 해당 노드가 포함된 그래프를 탐색합니다.&lt;/p&gt;
+
+&lt;p&gt;그래프 탐색이 진행되는 횟수를 리턴하면 문제는 해결됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+
+&lt;p&gt;이전에 DFS, BFS 를 이론적으로 학습한 뒤 처음으로 문제를 풀어봤습니다. 이번 문제는 DFS 를 변형하거나 응용하지 않고 거의 그대로 적용한 문제였기 때문에 엄청 큰 어려움은 없었던 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;또한 Swift 언어를 이용해 처음으로 해결한 문제입니다. 앞으로도 왠만하면 Swift 언어를 이용해 문제 풀이를 진행해보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">프로그래머스 - 네트워크 (Swift)</summary></entry><entry><title type="html">[알고리즘] Dynamic Programming - 동적 계획법</title><link href="http://localhost:4000/algorithm/3/" rel="alternate" type="text/html" title="[알고리즘] Dynamic Programming - 동적 계획법" /><published>2022-01-12T09:00:00+09:00</published><updated>2022-01-12T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/3</id><content type="html" xml:base="http://localhost:4000/algorithm/3/">&lt;h2 id=&quot;dynamic-programming---동적-계획법&quot;&gt;Dynamic Programming - 동적 계획법&lt;/h2&gt;
 
 &lt;p&gt;이전에 올렸던 탐욕법 알고리즘에 이어 오늘은 동적 계획법, Dynamic Programming 에 대해서 알아보도록 하겠습니다.&lt;/p&gt;
 
@@ -93,7 +178,31 @@
 
 &lt;p&gt;하지만 탐욕법은 현재 상황에서의 최적해를 쫓는 방법이기 때문에 항상 옳은 결과를 장담하지는 않는다는 특징이 있습니다.&lt;/p&gt;
 
-&lt;p&gt;두 방식은 서로 대비되는 알고리즘이기 때문에 알맞은 문제에 적절하게 사용할 수 있도록 판단하는 능력이 중요하다고 생각됩니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">Dynamic Programming - 동적 계획법</summary></entry><entry><title type="html">[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)</title><link href="http://localhost:4000/algorithm/2/" rel="alternate" type="text/html" title="[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)" /><published>2022-01-08T09:00:00+09:00</published><updated>2022-01-08T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/2</id><content type="html" xml:base="http://localhost:4000/algorithm/2/">&lt;h2 id=&quot;dfs-깊이-우선-탐색--bfs-너비-우선-탐색&quot;&gt;DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)&lt;/h2&gt;
+&lt;p&gt;두 방식은 서로 대비되는 알고리즘이기 때문에 알맞은 문제에 적절하게 사용할 수 있도록 판단하는 능력이 중요하다고 생각됩니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">Dynamic Programming - 동적 계획법</summary></entry><entry><title type="html">애플 개발자 계정을 등록하다</title><link href="http://localhost:4000/etc/3/" rel="alternate" type="text/html" title="애플 개발자 계정을 등록하다" /><published>2022-01-08T09:00:00+09:00</published><updated>2022-01-08T09:00:00+09:00</updated><id>http://localhost:4000/etc/3</id><content type="html" xml:base="http://localhost:4000/etc/3/">&lt;h2 id=&quot;애플-개발자-계정&quot;&gt;애플 개발자 계정…&lt;/h2&gt;
+
+&lt;p&gt;&lt;img width=&quot;1053&quot; alt=&quot;KakaoTalk_Photo_2022-01-08-19-15-55&quot; src=&quot;https://user-images.githubusercontent.com/55919701/148640524-69dab640-8b56-4189-9437-53cadb4bf36c.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;애플 개발자 계정을 등록했습니다…&lt;/p&gt;
+
+&lt;p&gt;사실 이전에 하려고 마음먹은적이 있었습니다. 그런데 평생도 아니고 연간 플랜이 129,000 원 인걸 알고 바로 그만뒀었는데….&lt;/p&gt;
+
+&lt;p&gt;이제 Swift 공부를 진짜로 해야겠다 마음 먹은 것도 있고, 아주 작고 보잘것 없는 앱이라도 앱 하나쯤은 스스로의 힘으로 릴리즈 해보고 싶은 마음이 있었기에 그냥 등록해버렸습니다~!~!&lt;/p&gt;
+
+&lt;p&gt;물론 결제 버튼을 누를때 식은땀이 나고 손발이 벌벌 떨리고 호흡이 가빠지고 머리가 어질어질하기도 했지만 제 미래를 위한 투자라면 이런것쯤은 아까워하지 않아도 된다는 마인드로 간신히 진정했네요.&lt;/p&gt;
+
+&lt;p&gt;1월 초에 이렇게 계정을 등록하다보니 뭐 자연스럽게 2022년 목표가 생기는것 같기도 하네요.&lt;/p&gt;
+
+&lt;p&gt;공부 열심히 해서 기초를 가다듬고 취업하는것도 하나의 목표이기도 했지만, 개발자 계정 등록을 기념으로 목표 하나 더 잡도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;2022 년 내로 앱스토어에 제 이름이 달린 앱 하나쯤 릴리즈해보고 싶네요.&lt;/p&gt;
+
+&lt;p&gt;이번년도 내로 릴리즈하지 못할수도 있고, 앱 퀄리티가 매우 떨어질 수도 있지만 도전한다는 것 자체에 의의를 두고 열심히 해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;그럼 하나 둘 셋 하면 화이팅 한번 외치고 마무리하도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;자, 하나 둘 셋!&lt;/p&gt;
+
+&lt;p&gt;화이팅!!!&lt;/p&gt;</content><author><name>장재훈</name></author><category term="ETC" /><summary type="html">애플 개발자 계정…</summary></entry><entry><title type="html">[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)</title><link href="http://localhost:4000/algorithm/2/" rel="alternate" type="text/html" title="[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)" /><published>2022-01-08T09:00:00+09:00</published><updated>2022-01-08T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/2</id><content type="html" xml:base="http://localhost:4000/algorithm/2/">&lt;h2 id=&quot;dfs-깊이-우선-탐색--bfs-너비-우선-탐색&quot;&gt;DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)&lt;/h2&gt;
 
 &lt;p&gt;그래프는 정점 (node, vertex) 과 정점들 사이를 연결하는 간선 (edge) 로 이루어진 자료구조입니다.&lt;/p&gt;
 
@@ -246,31 +355,7 @@ func BFS_list(x: Int) {
 
 &lt;p&gt;물론 오늘 한번으로 100% 이해하기는 어렵겠지만, 꾸준히 관련 문제들을 반복해서 풀어보며 빠르게 익숙해져야겠다는 생각을 했습니다.&lt;/p&gt;
 
-&lt;p&gt;다음에는 DFS 와 BFS 관련 문제 풀이를 해보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)</summary></entry><entry><title type="html">애플 개발자 계정을 등록하다</title><link href="http://localhost:4000/etc/3/" rel="alternate" type="text/html" title="애플 개발자 계정을 등록하다" /><published>2022-01-08T09:00:00+09:00</published><updated>2022-01-08T09:00:00+09:00</updated><id>http://localhost:4000/etc/3</id><content type="html" xml:base="http://localhost:4000/etc/3/">&lt;h2 id=&quot;애플-개발자-계정&quot;&gt;애플 개발자 계정…&lt;/h2&gt;
-
-&lt;p&gt;&lt;img width=&quot;1053&quot; alt=&quot;KakaoTalk_Photo_2022-01-08-19-15-55&quot; src=&quot;https://user-images.githubusercontent.com/55919701/148640524-69dab640-8b56-4189-9437-53cadb4bf36c.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;애플 개발자 계정을 등록했습니다…&lt;/p&gt;
-
-&lt;p&gt;사실 이전에 하려고 마음먹은적이 있었습니다. 그런데 평생도 아니고 연간 플랜이 129,000 원 인걸 알고 바로 그만뒀었는데….&lt;/p&gt;
-
-&lt;p&gt;이제 Swift 공부를 진짜로 해야겠다 마음 먹은 것도 있고, 아주 작고 보잘것 없는 앱이라도 앱 하나쯤은 스스로의 힘으로 릴리즈 해보고 싶은 마음이 있었기에 그냥 등록해버렸습니다~!~!&lt;/p&gt;
-
-&lt;p&gt;물론 결제 버튼을 누를때 식은땀이 나고 손발이 벌벌 떨리고 호흡이 가빠지고 머리가 어질어질하기도 했지만 제 미래를 위한 투자라면 이런것쯤은 아까워하지 않아도 된다는 마인드로 간신히 진정했네요.&lt;/p&gt;
-
-&lt;p&gt;1월 초에 이렇게 계정을 등록하다보니 뭐 자연스럽게 2022년 목표가 생기는것 같기도 하네요.&lt;/p&gt;
-
-&lt;p&gt;공부 열심히 해서 기초를 가다듬고 취업하는것도 하나의 목표이기도 했지만, 개발자 계정 등록을 기념으로 목표 하나 더 잡도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;2022 년 내로 앱스토어에 제 이름이 달린 앱 하나쯤 릴리즈해보고 싶네요.&lt;/p&gt;
-
-&lt;p&gt;이번년도 내로 릴리즈하지 못할수도 있고, 앱 퀄리티가 매우 떨어질 수도 있지만 도전한다는 것 자체에 의의를 두고 열심히 해보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;그럼 하나 둘 셋 하면 화이팅 한번 외치고 마무리하도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;자, 하나 둘 셋!&lt;/p&gt;
-
-&lt;p&gt;화이팅!!!&lt;/p&gt;</content><author><name>장재훈</name></author><category term="ETC" /><summary type="html">애플 개발자 계정…</summary></entry><entry><title type="html">[알고리즘] 탐욕법 Greedy</title><link href="http://localhost:4000/algorithm/1/" rel="alternate" type="text/html" title="[알고리즘] 탐욕법 Greedy" /><published>2022-01-06T09:00:00+09:00</published><updated>2022-01-06T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/1</id><content type="html" xml:base="http://localhost:4000/algorithm/1/">&lt;h2 id=&quot;탐욕법&quot;&gt;탐욕법&lt;/h2&gt;
+&lt;p&gt;다음에는 DFS 와 BFS 관련 문제 풀이를 해보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)</summary></entry><entry><title type="html">[알고리즘] 탐욕법 Greedy</title><link href="http://localhost:4000/algorithm/1/" rel="alternate" type="text/html" title="[알고리즘] 탐욕법 Greedy" /><published>2022-01-06T09:00:00+09:00</published><updated>2022-01-06T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/1</id><content type="html" xml:base="http://localhost:4000/algorithm/1/">&lt;h2 id=&quot;탐욕법&quot;&gt;탐욕법&lt;/h2&gt;
 
 &lt;p&gt;오늘은 탐욕법, Greedy 알고리즘에 대해 알아보도록 하겠습니다.&lt;/p&gt;
 
@@ -628,76 +713,4 @@ int length = nullable?.length;
 
 &lt;h3 id=&quot;9-reassemble&quot;&gt;9. reassemble()&lt;/h3&gt;
 
-&lt;p&gt;reassemble() 메소드는 hot reload 를 실행하면 호출됩니다. 이 때 당연히 build() 도 호출됩니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Stateless / Stateful Widget</summary></entry><entry><title type="html">[Git] 커밋 취소하기, 되돌리기</title><link href="http://localhost:4000/etc/1/" rel="alternate" type="text/html" title="[Git] 커밋 취소하기, 되돌리기" /><published>2021-12-29T09:00:00+09:00</published><updated>2021-12-29T09:00:00+09:00</updated><id>http://localhost:4000/etc/1</id><content type="html" xml:base="http://localhost:4000/etc/1/">&lt;h2 id=&quot;git-reset&quot;&gt;git reset&lt;/h2&gt;
-
-&lt;p&gt;Git 레포지토리를 이용하다 보면 commit 후 push 를 잘못 진행하거나, 브랜치 병합 후 push 과정에서 오류가 발생해 브랜치를 이전 commit 으로 되돌려야 하는 상황이 종종 발생합니다.&lt;/p&gt;
-
-&lt;p&gt;저같은 경우 이러한 상황이 자주 발생하지는 않지만 간혹 commit 을 되돌려야 할 때마다 커맨드가 헷갈리곤 해 확실히 정리하고자 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;사용법&quot;&gt;사용법&lt;/h2&gt;
-
-&lt;p&gt;원하는 commit 으로 해당 브랜치를 되돌리고 싶다면 commit ID 를 알고 있거나 HEAD 로부터 몇번째 commit 인지 알고 있어야 합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;commit-id-를-이용할-때&quot;&gt;commit ID 를 이용할 때&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset {commit ID}&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;commit ID 를 이용할 때는 위와 같이 명령어 뒤에 commit ID 를 적어두면 됩니다.&lt;/p&gt;
-
-&lt;p&gt;commit ID 를 알고 싶다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git log&lt;/code&gt; 명령어를 이용하여 commit ID 를 복사하거나 Github 사이트를 이용하여 복사할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;head-로부터-n-번째-commit-일-때&quot;&gt;HEAD 로부터 n 번째 commit 일 때&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset HEAD~n&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;이는 HEAD 로부터 n 번째 커밋을 의미합니다. 저는 이 방법을 딱히 선호하지 않습니다&lt;/p&gt;
-
-&lt;p&gt;다만 HEAD 로부터 딱 하나의 커밋만을 되돌리길 원한다면 아래와 같은 방법을 이용할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset HEAD^&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;옵션&quot;&gt;옵션&lt;/h2&gt;
-
-&lt;p&gt;git reset 명령어에는 3가지 옵션이 존재합니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;–soft
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset --soft {commit ID}
-git reset --soft HEAD~n
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;soft 는 commit 된 파일들을 staged 된 상태로 돌려놓습니다.&lt;/p&gt;
-
-&lt;p&gt;staged 된 상태는 commit 직전의 상태로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add&lt;/code&gt; 명령어를 사용한 상태라고 생각하시면 됩니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;–mixed (default)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset --mixed ...&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;mixed 는 default 옵션으로 아무 옵션도 붙이지 않았을 때 자동 적용됩니다.&lt;/p&gt;
-
-&lt;p&gt;이 옵션은 Commit 된 파일들을 add 되기 전 상태, 즉 working directory 로 돌려놓습니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;–hard&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset --hard ...&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;hard 는 되돌리고자 하는 (tracked) 파일들을 working directory 에서조차 삭제해버립니다.&lt;/p&gt;
-
-&lt;p&gt;다시 말해 그 어디에도 tracked 된 파일들이 남지 않는다는 소리입니다.&lt;/p&gt;
-
-&lt;p&gt;저는 대부분의 경우에 이 옵션을 사용하는데, hard 를 사용한 후 잘못 push 할 경우 대참사가 일어날 수 있으니 각별히 주의하시길 바랍니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;사실 reset 명령어를 사용한다는 것 자체가 뭔가 잘못되었다는 뜻이기 때문에… 사용할 일 자체를 만들지 않는게 제일 좋은 것 같습니다.&lt;/p&gt;
-
-&lt;p&gt;혹시나 사용할 경우가 생기더라도 자신의 상황에 맞춰 신중하게 사용하시길 바랍니다.&lt;/p&gt;
-
-&lt;p&gt;간혹가다 기본적인 기능들이 아닌 신기하거나 헷갈리는 git 명령어들을 정리해볼 생각입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="ETC" /><summary type="html">git reset</summary></entry></feed>
+&lt;p&gt;reassemble() 메소드는 hot reload 를 실행하면 호출됩니다. 이 때 당연히 build() 도 호출됩니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Stateless / Stateful Widget</summary></entry></feed>
