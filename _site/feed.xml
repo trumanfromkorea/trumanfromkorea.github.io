@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-16T00:47:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] 프로그래머스 - 네트워크 (Swift)</title><link href="http://localhost:4000/algorithm/4/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 네트워크 (Swift)" /><published>2022-01-15T09:00:00+09:00</published><updated>2022-01-15T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/4</id><content type="html" xml:base="http://localhost:4000/algorithm/4/">&lt;h2 id=&quot;프로그래머스---네트워크-swift&quot;&gt;프로그래머스 - 네트워크 (Swift)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-19T23:53:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Swift] 클로저 Closures</title><link href="http://localhost:4000/swift/1md/" rel="alternate" type="text/html" title="[Swift] 클로저 Closures" /><published>2022-01-18T09:00:00+09:00</published><updated>2022-01-18T09:00:00+09:00</updated><id>http://localhost:4000/swift/1md</id><content type="html" xml:base="http://localhost:4000/swift/1md/">&lt;h2 id=&quot;클로저-closures&quot;&gt;클로저 (Closures)&lt;/h2&gt;
+
+&lt;p&gt;클로저는 코드블럭으로 C, Objective-C 의 block 과 다른 언어의 lambdas 와 비슷합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;클로저는 사용자의 코드 안에서 전달되어 사용할 수 있는 로직을 가진 중괄호로 구분된 코드 블럭이며, 일급 객체의 역할을 할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;일급 객체는 전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달할 수 있으며, 함수의 리턴값이 될 수도 있습니다.&lt;/li&gt;
+  &lt;li&gt;참조 타입입니다.&lt;/li&gt;
+  &lt;li&gt;함수는 클로저의 한 형태로, 이름이 있는 클로저입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;클로저-표현-closure-expressions&quot;&gt;클로저 표현 (Closure Expressions)&lt;/h2&gt;
+
+&lt;p&gt;함수로 따로 정의된 형태가 아닌 인자로 들어가 있는 형태의 클로저를 인라인 클로저라고 부릅니다.&lt;/p&gt;
+
+&lt;p&gt;클로저 표현은 인라인 클로저를 명확하게 표현하는 방법으로 문법에 초점이 맞춰져 있습니다. 클로저 표현은 코드의 명확성과 의도를 잃지 않으면서도 문법을 축약해 사용할 수 있는 다양한 문법의 최적화 방법을 제공합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;정렬-메소드&quot;&gt;정렬 메소드&lt;/h3&gt;
+
+&lt;p&gt;Swift 표준 라이브러리에서 제공하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(by:)&lt;/code&gt; 메소드를 이용해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(by:)&lt;/code&gt; 메소드는 2개의 인자를 갖는 클로저를 인자로 사용합니다. 타입이 T 인 배열은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(T, T) -&amp;gt; Bool&lt;/code&gt; 타입의 클로저를 사용해야 합니다.&lt;/p&gt;
+
+&lt;p&gt;클로저를 제공하는 일반적인 방법은 함수 하나를 직접 만들어 인자로 사용하는 것입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let numArray: [Int] = [5, 7, 9, 2, 6]
+
+func desc(n1: Int, n2: Int) -&amp;gt; Bool {
+    return n1 &amp;gt; n2
+}
+
+var sortedArray: [Int] = numArray.sorted(by: desc)
+// --&amp;gt; [9, 7, 6, 5, 2]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;desc 클로저를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(by:)&lt;/code&gt; 메소드의 인자로 사용하면 배열이 내림차순으로 정렬된 것을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;클로저-표현-문법&quot;&gt;클로저 표현 문법&lt;/h3&gt;
+
+&lt;p&gt;클로저 표현 문법은 일반적으로 아래의 형태를 하고 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ (parameters) -&amp;gt; return type in
+    statements
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;인자로 사용할 parameters, 처리할 내용을 기술하는 statements, return type 을 가지고 있습니다. 앞서 작성한 desc 클로저를 이용한 sorted 메소드는 다음과 같이 작성할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sortedArray = numArray.sorted(by: { (n1: Int, n2: Int) -&amp;gt; Bool in
+    return n1 &amp;gt; n2
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이렇게 함수로 따로 정의된 형태가 아닌 인자로 들어가 있는 형태의 클로저를 인라인 클로저라고 부릅니다. 예시와 같이 클로저의 body 부분이 짧을 시에는 한줄에 적을 수도 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;문맥에서-타입-추론--암시적-반환&quot;&gt;문맥에서 타입 추론 &amp;amp; 암시적 반환&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(by:)&lt;/code&gt; 메소드에서 이미 (Int, Int) -&amp;gt; Bool 타입의 인자가 들어와야 하는지 알기 때문에 클로저에서 이 타입들은 생략될 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sortedArray = numArray.sorted(by: { n1, n2 in return n1 &amp;gt; n2})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;또한 단일 표현 클로저에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt; 키워드를 생략할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sortedArray = numArray.sorted(by: { n1, n2 in n1 &amp;gt; n2 })
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;인자-이름-축약&quot;&gt;인자 이름 축약&lt;/h3&gt;
+
+&lt;p&gt;Swift 는 인라인 클로저에 자동으로 축약 인자 이름을 제공합니다. 해당 인자를 사용하면 인자 값을 순서대로 $0, $1, $2 등으로 사용할 수 있습니다. 축약 인자 이름을 사용하면 인자 값과 그 인자로 처리할 때 사용하는 인자가 같다는 것을 알기 때문에 인자를 입력받는 부분과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;in&lt;/code&gt; 키워드 부분을 생략할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sortedArray = numArray.sorted(by: { $0 &amp;gt; $1 })
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;저는 아직 이 방식에 익숙하지 않습니다… Swift 를 더 공부하다 보면 익숙해지겠죠 ㅠㅠ&lt;/p&gt;
+
+&lt;h3 id=&quot;연산자-메소드&quot;&gt;연산자 메소드&lt;/h3&gt;
+
+&lt;p&gt;여기서 더 간단하게 축약이 가능합니다. Swift 는 타입 연산자끼리 비교 가능한 (Comparable 할 때) 비교 연산자 &amp;gt; 를 구현해 두었습니다. 그렇기 때문에 이 연산자를 바로 사용할 수도 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sortedArray = numArray.sorted(by: &amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;후위-클로저-trailing-closures&quot;&gt;후위 클로저 (Trailing Closures)&lt;/h2&gt;
+
+&lt;p&gt;만약 함수의 마지막 인자로 클로저를 넣고 그 클로저가 길다면 후위 클로저를 사용할 수 있습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Swift" /><summary type="html">클로저 (Closures)</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 네트워크 (Swift)</title><link href="http://localhost:4000/algorithm/4/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 네트워크 (Swift)" /><published>2022-01-15T09:00:00+09:00</published><updated>2022-01-15T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/4</id><content type="html" xml:base="http://localhost:4000/algorithm/4/">&lt;h2 id=&quot;프로그래머스---네트워크-swift&quot;&gt;프로그래머스 - 네트워크 (Swift)&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43162&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
 
@@ -627,90 +711,4 @@ int length = nullable?.length;
 
 &lt;p&gt;하지만 추가한 코드 맨 끝에 버전이 명시되어 있음과 firebase 정식 레포를 가리키지 않는다는 점에서 해당 문제의 원인과 해결방안이 100% 맞는지는 확신할 수 없습니다.&lt;/p&gt;
 
-&lt;p&gt;관련 에러에 대해서 더 나은 해결방안을 찾게되는 즉시 포스트를 업데이트할 예정입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">iOS - Firestore 추가 시 빌드 에러</summary></entry><entry><title type="html">[Flutter] Stateless, Stateful Widget, LifeCycle</title><link href="http://localhost:4000/flutter/2/" rel="alternate" type="text/html" title="[Flutter] Stateless, Stateful Widget, LifeCycle" /><published>2021-12-31T07:00:20+09:00</published><updated>2021-12-31T07:00:20+09:00</updated><id>http://localhost:4000/flutter/2</id><content type="html" xml:base="http://localhost:4000/flutter/2/">&lt;h2 id=&quot;stateless--stateful-widget&quot;&gt;Stateless / Stateful Widget&lt;/h2&gt;
-
-&lt;p&gt;Flutter 의 Lifecycle, 생명주기를 이해하기 위해서는 Stateless Widget 과 Stateful Widget 의 차이점을 알아야 합니다.&lt;/p&gt;
-
-&lt;p&gt;여기서 State 란 위젯의 상태를 의미합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;stateless-widget&quot;&gt;Stateless Widget&lt;/h3&gt;
-
-&lt;p&gt;Stateless Widget 은 변경 가능한 State 가 필요하지 않은 Widget 을 뜻합니다.&lt;/p&gt;
-
-&lt;p&gt;다시 말해 Stateless Widget 도 State 를 가지긴 하지만, 한 번 생성된 이후에 변경될 일이 없는 값이라는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;그렇다고 해서 Stateless Widget 이 전혀 변경되지 않는다는 것은 아닙니다. 상위 위젯이 전달해주는 값에 따라 Stateless Widget 의 값이 변경될 수도 있습니다.&lt;/p&gt;
-
-&lt;p&gt;Stateless Widget 이 빌드 될 때는 build 메소드가 호출됩니다. 그렇기 때문에 Stateful Widget 과는 다르게 다른 생명주기 메소드에 신경을 써줄 필요가 없습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;stateful-widget&quot;&gt;Stateful Widget&lt;/h3&gt;
-
-&lt;p&gt;Stateful Widget 은 State 의 변화에 따라 빌드가 결정되는 위젯입니다. setState 메소드를 이용하면 State 의 값을 변경해줄 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;Stateful Widget 은 화면을 계속하여 그려주기 때문에 복잡한 생명주기를 가지고 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;lifecycle&quot;&gt;LifeCycle&lt;/h2&gt;
-
-&lt;p&gt;Stateful Widget 의 생명주기를 순서대로 알아보도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/147754074-ae28d073-cd50-4b8f-b56d-3ef8126cbd9e.png&quot; alt=&quot;프레젠테이션1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;0-constructor&quot;&gt;0. constructor&lt;/h3&gt;
-
-&lt;p&gt;Stateful Widget 이 빌드될 때 제일 처음 실행되는 것은 당연하게도 constructor 입니다.&lt;/p&gt;
-
-&lt;p&gt;하지만 constructor 가 실행될 때 위젯 속성은 비어있는 상태이기 때문에 생명주기의 일부분으로 취급되지는 않습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-createstate&quot;&gt;1. createState()&lt;/h3&gt;
-
-&lt;p&gt;constructor 가 실행된 후 곧바로 createState() 가 호출됩니다.&lt;/p&gt;
-
-&lt;p&gt;이 메소드는 말 그대로 State 객체를 생성하며, 이 State 객체 내에서는 변경 가능한 모든 State 를 관리할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-initstate&quot;&gt;2. initState()&lt;/h3&gt;
-
-&lt;p&gt;initState() 메소드는 State 객체가 최초 생성될 때 호출되는 메소드입니다. 해당 메소드는 한번만 호출됩니다.&lt;/p&gt;
-
-&lt;p&gt;initState() 메소드는 context 가 형성되기 전에 실행되기 때문에 해당 메소드에서는 BuildContext 를 사용할 수 없으니 주의하시길 바랍니다.&lt;/p&gt;
-
-&lt;p&gt;저는 initState() 메소드를 이용해 주로 http request 를 관리합니다. 서버에서 받아온 데이터를 즉각 setState 메소드를 이용해 화면에 표시 가능한 상태로 만들어줍니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;3-didchangedependencies&quot;&gt;3. didChangeDependencies()&lt;/h3&gt;
-
-&lt;p&gt;initState() 가 호출된 이후에 호출되는 메소드입니다. initState() 는 State 객체가 생성될 때 최초 한번만 실행되지만 didChangeDependencies() 메소드는 말 그대로 해당 위젯이 의존하는 위젯이 변경되면 호출됩니다.&lt;/p&gt;
-
-&lt;p&gt;대표적인 예는 inheritedWidget 을 사용하는 경우라고들 하는데, 해당 부분에 대해서는 추후에 더 추가적으로 알아보도록 하겠습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;4-build&quot;&gt;4. build()&lt;/h3&gt;
-
-&lt;p&gt;build() 메소드는 바로 위젯을 그려주는 메소드입니다. build() 는 위젯을 그려주는 필수적인 역할을 하기 때문에 State 가 변경될때마다 호출됩니다.&lt;/p&gt;
-
-&lt;p&gt;앞서 말씀드렸듯이 State 는 setState 메소드를 통해 변경해줄 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;5-setstate&quot;&gt;5. setState()&lt;/h3&gt;
-
-&lt;p&gt;setState() 메소드는 State 를 변경해주는 메소드이며 State 객체의 상태가 변경될 때마다 프레임워크에 알려줍니다.&lt;/p&gt;
-
-&lt;p&gt;이 상태를 ‘dirty’ 한 상태라고 하며 변경된 State 에 따라 UI 를 재구성하기 위해 build() 메소드가 호출되어 위젯이 다시 빌드됩니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;6-didupdatewidget&quot;&gt;6. didUpdateWidget()&lt;/h3&gt;
-
-&lt;p&gt;didUpdateWidget() 메소드는 부모 위젯이 다시 빌드되어 해당 위젯을 다시 빌드해야하는 경우에 호출됩니다.&lt;/p&gt;
-
-&lt;p&gt;이 때 새 위젯과 비교해볼 수 있도록 이전 위젯을 인자로 받습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;7-deactivate&quot;&gt;7. deactivate()&lt;/h3&gt;
-
-&lt;p&gt;State 객체가 제거될 때마다 호출됩니다.&lt;/p&gt;
-
-&lt;p&gt;어떤 경우에는 프레임워크가 제거된 State 객체를 트리의 다른 부분에 다시 삽입하기도 합니다. 이 경우 State 객체가 트리의 새로운 위치에 적응할 수 있는 기회를 주기 위헤 build() 를 호출합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;8-dispose&quot;&gt;8. dispose()&lt;/h3&gt;
-
-&lt;p&gt;State 객체가 영구적으로 제거될 때 호출됩니다.&lt;/p&gt;
-
-&lt;p&gt;State 객체 내에서 생성된 listener 들이나 timer 객체 등을 해제시켜줄 경우에 dispose() 메소드를 이용할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;9-reassemble&quot;&gt;9. reassemble()&lt;/h3&gt;
-
-&lt;p&gt;reassemble() 메소드는 hot reload 를 실행하면 호출됩니다. 이 때 당연히 build() 도 호출됩니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Stateless / Stateful Widget</summary></entry></feed>
+&lt;p&gt;관련 에러에 대해서 더 나은 해결방안을 찾게되는 즉시 포스트를 업데이트할 예정입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">iOS - Firestore 추가 시 빌드 에러</summary></entry></feed>
