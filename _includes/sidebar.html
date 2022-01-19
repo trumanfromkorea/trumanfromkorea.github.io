@@ -36,6 +36,16 @@
                     {% endfor %}
                 </ul>
 
+                <!-- 문법 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Languages</span>
+                <ul>
+                    {% for category in site.categories %}
+                    {% if category[0] == "Swift" %}
+                    <li><a href="/categories/Swift" class="nav__sub-title_sub">Swift ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+
                 <!-- 스터디 카테고리 -->
                 <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Studies</span>
                 <ul>
@@ -58,16 +68,7 @@
                     {% endfor %}
                     
                 </ul>
-
-                 <!-- 문법 카테고리 -->
-                 <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Languages</span>
-                 <ul>
-                     {% for category in site.categories %}
-                     {% if category[0] == "Swift" %}
-                     <li><a href="/categories/Swift" class="nav__sub-title_sub">Swift ({{category[1].size}})</a></li>
-                     {% endif %}
-                     {% endfor %}
-                 </ul>
+                 
             </li>
 
         </ul>
