@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-19T23:53:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Swift] 클로저 Closures</title><link href="http://localhost:4000/swift/1md/" rel="alternate" type="text/html" title="[Swift] 클로저 Closures" /><published>2022-01-18T09:00:00+09:00</published><updated>2022-01-18T09:00:00+09:00</updated><id>http://localhost:4000/swift/1md</id><content type="html" xml:base="http://localhost:4000/swift/1md/">&lt;h2 id=&quot;클로저-closures&quot;&gt;클로저 (Closures)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-20T01:19:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Swift] 클로저 Closures (1/2)</title><link href="http://localhost:4000/swift/1/" rel="alternate" type="text/html" title="[Swift] 클로저 Closures (1/2)" /><published>2022-01-18T09:00:00+09:00</published><updated>2022-01-18T09:00:00+09:00</updated><id>http://localhost:4000/swift/1</id><content type="html" xml:base="http://localhost:4000/swift/1/">&lt;h2 id=&quot;클로저-closures-12&quot;&gt;클로저 Closures (1/2)&lt;/h2&gt;
 
 &lt;p&gt;클로저는 코드블럭으로 C, Objective-C 의 block 과 다른 언어의 lambdas 와 비슷합니다.&lt;/p&gt;
 
@@ -82,7 +82,71 @@ var sortedArray: [Int] = numArray.sorted(by: desc)
 
 &lt;h2 id=&quot;후위-클로저-trailing-closures&quot;&gt;후위 클로저 (Trailing Closures)&lt;/h2&gt;
 
-&lt;p&gt;만약 함수의 마지막 인자로 클로저를 넣고 그 클로저가 길다면 후위 클로저를 사용할 수 있습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Swift" /><summary type="html">클로저 (Closures)</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 네트워크 (Swift)</title><link href="http://localhost:4000/algorithm/4/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 네트워크 (Swift)" /><published>2022-01-15T09:00:00+09:00</published><updated>2022-01-15T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/4</id><content type="html" xml:base="http://localhost:4000/algorithm/4/">&lt;h2 id=&quot;프로그래머스---네트워크-swift&quot;&gt;프로그래머스 - 네트워크 (Swift)&lt;/h2&gt;
+&lt;p&gt;만약 함수의 마지막 인자로 클로저를 넣고 그 클로저가 길다면 후위 클로저를 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 아래와 같은 클로저가 존재할 때
+
+func someFunctionThatTakesAClosure(closure: () -&amp;gt; Void) {
+    // function body goes here
+}
+
+// 인자 값 입력 부분과 리턴 타입 부분을 생략
+
+someFunctionThatTakesAClosure(closure: {
+    // closure's body goes here
+})
+
+// 후위 클로저로 표현
+
+someFunctionThatTakesAClosure() {
+    // trailing closure's body goes here
+}
+
+// 일반적인 전역함수 형태
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 정렬 예제를 후위 클로저를 이용해 표현하면 이렇게 표현할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sortedArray = numArray.sorted() { $0 &amp;gt; $1 }
+// 만약 함수의 마지막 인자가 클로저이고 후위 클로저를 사용하면 괄호 생락 가능
+sortedArray = numArray.sorted { $0 &amp;gt; $1 }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;escaping-closures&quot;&gt;Escaping Closures&lt;/h2&gt;
+
+&lt;p&gt;클로저를 함수의 파라미터로 넣을 수 있는데, 함수 밖에서 실행되는 클로저는 파라미터 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@escaping&lt;/code&gt; 키워드를 명시합니다. Escaping Closure 에서는 self 를 명시적으로 언급해주어야 합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct Heap&amp;lt;T&amp;gt; {
+    var arr: [T]
+    var compare: (T, T) -&amp;gt; Bool
+
+    mutating func isMaxHeap() -&amp;gt; Bool {
+        return compare(arr[0], arr[1])
+    }
+
+    init(arr: [T] = [], compare: @escaping (T, T) -&amp;gt; Bool) {
+        self.arr = arr
+        self.compare = compare
+    }
+}
+
+var maxHeap = Heap&amp;lt;Int&amp;gt; { $0 &amp;gt; $1 }
+var minHeap = Heap&amp;lt;Int&amp;gt; { $0 &amp;lt; $1 }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위와 같이 compare 클로저를 다른 함수 밖에서 실행시키기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@escaping&lt;/code&gt; 키워드를 사용했습니다. (아직 Escaping Closure 에 대해 완벽한 이해를 하지 못해 더 괜찮은 샘플 코드와 설명을 생각해내게 된다면 업데이트 하겠습니다..)&lt;/p&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@escaping&lt;/code&gt; 키워드에 대해 알아보려다가 여기까지 왔습니다.. 항상 공부하기 시작한 것보다 더 깊은 레벨로 들어와서 학습하게 되는 것 같습니다. 그만큼 기본기가 많이 부족하다는 뜻이겠죠..ㅠㅠ&lt;/p&gt;
+
+&lt;p&gt;Capturing Values 와 Auto Closures 에 대한 개념을 정리하기에는 조금 벅찬 것 같아서 오늘은 여기까지 정리해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;정리하자면 클로저는 실행 가능한 코드 블럭으로 1급 객체의 역할을 할 수 있습니다. 인라인 클로저는 따로 정의된 형태가 아닌 인자로 사용된 형태의 클로저로써 여러 상황에 따라 아주 간단하게 축약이 가능하기도 합니다.&lt;/p&gt;
+
+&lt;p&gt;만약 함수의 마지막 인자로 클로저를 사용한다면 일반적인 전역함수 형태로 이용할 수도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;다음 시간에는 Capturing Values 를 이용하여 클로저가 참조 타입임을 학습하고 Auto Closures 에 대해 알아보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Swift" /><summary type="html">클로저 Closures (1/2)</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 네트워크 (Swift)</title><link href="http://localhost:4000/algorithm/4/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 네트워크 (Swift)" /><published>2022-01-15T09:00:00+09:00</published><updated>2022-01-15T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/4</id><content type="html" xml:base="http://localhost:4000/algorithm/4/">&lt;h2 id=&quot;프로그래머스---네트워크-swift&quot;&gt;프로그래머스 - 네트워크 (Swift)&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43162&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
 

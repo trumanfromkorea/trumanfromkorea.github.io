@@ -77,9 +77,9 @@ var store = [{
         "url": "/algorithm/4/",
         "teaser": null
       },{
-        "title": "[Swift] 클로저 Closures",
-        "excerpt":"클로저 (Closures) 클로저는 코드블럭으로 C, Objective-C 의 block 과 다른 언어의 lambdas 와 비슷합니다. 클로저는 사용자의 코드 안에서 전달되어 사용할 수 있는 로직을 가진 중괄호로 구분된 코드 블럭이며, 일급 객체의 역할을 할 수 있습니다. 일급 객체는 전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달할 수 있으며, 함수의 리턴값이 될...","categories": ["Swift"],
+        "title": "[Swift] 클로저 Closures (1/2)",
+        "excerpt":"클로저 Closures (1/2) 클로저는 코드블럭으로 C, Objective-C 의 block 과 다른 언어의 lambdas 와 비슷합니다. 클로저는 사용자의 코드 안에서 전달되어 사용할 수 있는 로직을 가진 중괄호로 구분된 코드 블럭이며, 일급 객체의 역할을 할 수 있습니다. 일급 객체는 전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달할 수 있으며, 함수의 리턴값이...","categories": ["Swift"],
         "tags": [],
-        "url": "/swift/1md/",
+        "url": "/swift/1/",
         "teaser": null
       }]
