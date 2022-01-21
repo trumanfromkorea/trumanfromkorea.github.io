@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[알고리즘] 탐욕법 Greedy - 꽁치대디의 개발일기 💻</title>
-<meta name="description" content="탐욕법">
+<!-- begin _includes/seo.html --><title>[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift) - 꽁치대디의 개발일기 💻</title>
+<meta name="description" content="[알고리즘] 백준:1655 - 가운데를 말해요">
 
 
   <meta name="author" content="장재훈">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="꽁치대디의 개발일기 💻">
-<meta property="og:title" content="[알고리즘] 탐욕법 Greedy">
-<meta property="og:url" content="http://localhost:4000/algorithm/1/">
+<meta property="og:title" content="[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift)">
+<meta property="og:url" content="http://localhost:4000/algorithm/5/">
 
 
-  <meta property="og:description" content="탐욕법">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-01-06T09:00:00+09:00">
+  <meta property="og:description" content="[알고리즘] 백준:1655 - 가운데를 말해요">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-01-22T09:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/algorithm/1/">
+
+<link rel="canonical" href="http://localhost:4000/algorithm/5/">
 
 
 
@@ -375,16 +375,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[알고리즘] 탐욕법 Greedy">
-    <meta itemprop="description" content="탐욕법">
-    <meta itemprop="datePublished" content="2022-01-06T09:00:00+09:00">
+    <meta itemprop="headline" content="[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift)">
+    <meta itemprop="description" content="[알고리즘] 백준:1655 - 가운데를 말해요">
+    <meta itemprop="datePublished" content="2022-01-22T09:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/algorithm/1/" class="u-url" itemprop="url">[알고리즘] 탐욕법 Greedy
+            <a href="http://localhost:4000/algorithm/5/" class="u-url" itemprop="url">[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift)
 </a>
           </h1>
 <!--          
@@ -401,7 +401,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          5 minute read
         
       </span>
     
@@ -436,68 +436,279 @@
 
                   
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-06T09:00:00+09:00">January 6, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-22T09:00:00+09:00">January 22, 2022</time></p>
 
               </span>
       
               
       <section class="page__content e-content" itemprop="text">
         
-        <h2 id="탐욕법">탐욕법</h2>
+        <h2 id="알고리즘-백준1655---가운데를-말해요">[알고리즘] 백준:1655 - 가운데를 말해요</h2>
 
-<p>오늘은 탐욕법, Greedy 알고리즘에 대해 알아보도록 하겠습니다.</p>
+<p><a href="https://www.acmicpc.net/problem/1655">클릭해서 문제 바로가기</a></p>
 
-<p>탐욕법이란 현재 상황에서의 최적해를 쫓는 알고리즘입니다. 하지만 현재 상황에서의 최적해만을 추구하는 것이 전체적으로 어떤 영향을 끼칠지는 고려하지 않기 때문에 항상 옳은 결과를 장담하지는 않습니다.</p>
+<h2 id="문제-설명">문제 설명</h2>
 
-<h2 id="local-minimum--global-minimum">Local minimum &amp; Global minimum</h2>
+<h3 id="본문">본문</h3>
 
-<p><img src="https://user-images.githubusercontent.com/55919701/148390866-844350b0-11a2-4b30-a132-02b4d1fdecfc.jpg" alt="연습장-123" /></p>
+<p>백준이는 동생에게 “가운데를 말해요” 게임을 가르쳐주고 있다. 백준이가 정수를 하나씩 외칠때마다 동생은 지금까지 백준이가 말한 수 중에서 중간값을 말해야 한다. 만약, 그동안 백준이가 외친 수의 개수가 짝수개라면 중간에 있는 두 수 중에서 작은 수를 말해야 한다.</p>
 
-<p>그래프 위 시작점 X 에서 최소값을 찾는 프로그램을 작성한다고 할 때, 탐욕법을 이용한다고 가정해보겠습니다.</p>
+<p>예를 들어 백준이가 동생에게 1, 5, 2, 10, -99, 7, 5를 순서대로 외쳤다고 하면, 동생은 1, 1, 2, 2, 2, 2, 5를 차례대로 말해야 한다. 백준이가 외치는 수가 주어졌을 때, 동생이 말해야 하는 수를 구하는 프로그램을 작성하시오.</p>
 
-<p>탐욕법은 앞서 말했듯이 현재 상황에서의 최적해를 찾는 알고리즘이기 때문에 시작점 X 에서 최소값을 찾으려면 무조건 지금의 값보다 낮은 왼쪽으로 향하게 될 것입니다.</p>
-
-<p>왼쪽으로 진행하던 점 X 는 어느 순간 값이 커지는 변곡점을 맞게 될 것이고, 프로그램은 해당 변곡점을 그래프의 최소값이라고 생각할 것입니다.</p>
-
-<p>하지만 위 그래프를 전체적으로 봤을때 그 변곡점은 local minimum 에 해당하는 점 A 일 것이며, 그래프의 실제 최소값은 global minimum 에 해당하는 점 B 일 것입니다.</p>
-
-<p>탐욕법은 전체적인 부분을 고려하지 않고 현재 상황에서의 최적해만을 쫓기 때문에 위와 같은 예제에서는 알맞은 풀이법이 아니라고 볼 수 있습니다.]</p>
-
-<h2 id="그렇다면-어떤-경우에-탐욕법을-사용하는-것이-좋을까">그렇다면 어떤 경우에 탐욕법을 사용하는 것이 좋을까?</h2>
-
-<p>탐욕법은 탐욕 선택 속성 (Greedy Choice Property) 와 최적 부분 구조 (Optimal Substructure) 의 특성을 가지는 문제들을 해결할 때 활용할 수 있습니다.</p>
-
-<h3 id="--탐욕-선택-속성-greedy-choice-property">- 탐욕 선택 속성 (Greedy Choice Property)</h3>
-
-<p>탐욕 선택 속성은 이전의 선택이 이후의 선택에 영향을 끼치지 않아야 한다는 조건입니다. 즉 탐욕적인 접근이 항상 옳은 선택이라는게 보장되어야 한다는 의미입니다.</p>
-
-<h3 id="--최적-부분-구조-optimal-substructure">- 최적 부분 구조 (Optimal Substructure)</h3>
-
-<p>최적 부분 구조는 전체 문제의 최적해가 부분 문제들의 최적해로 이루어진 경우를 얘기합니다. 이 말은 전체 문제를 부분적인 문제들로 나누었을 때, 부분적인 문제들의 최적해가 전체적으로 보았을 때 마찬가지로 최적해를 구성해야 한다는 의미입니다.</p>
-
-<h2 id="동전-문제">동전 문제</h2>
-
-<p>가장 보편적인 문제는 동전 문제입니다.</p>
+<ul>
+  <li>입력</li>
+</ul>
 
 <blockquote>
-  <p>500원, 100원, 50원, 10원 짜리 동전만을 이용해서 주어진 금액 N 원을 구성해야 한다고 할 때, 구성할 수 있는 동전의 최소 개수를 구하라. N 은 항상 10의 배수이다.</p>
+  <p>첫째 줄에는 백준이가 외치는 정수의 개수 N이 주어진다. N은 1보다 크거나 같고, 100,000보다 작거나 같은 자연수이다. 그 다음 N줄에 걸쳐서 백준이가 외치는 정수가 차례대로 주어진다. 정수는 -10,000보다 크거나 같고, 10,000보다 작거나 같다.</p>
 </blockquote>
 
-<p>가장 적은 수의 동전을 이용하여 N 원을 구성하기 위해서는 동전 중 가장 큰 동전으로 구성할 수 있는 최대값을 고려한 후, 해당 값을 뺀 나머지에서 다음 단위의 동전으로 구성할 수 있는 최대값을 고려해야 합니다.</p>
+<ul>
+  <li>출력</li>
+</ul>
 
-<p>이와 같이 가장 큰 단위의 동전부터 이용해 N 원을 구상한다면 탐욕법을 이용하여 문제를 해결할 수 있습니다.</p>
+<blockquote>
+  <p>한 줄에 하나씩 N줄에 걸쳐 백준이의 동생이 말해야 하는 수를 순서대로 출력한다.</p>
+</blockquote>
 
-<p>(코드는 추후에 첨부하도록 하겠습니다)</p>
+<h2 id="이해">이해</h2>
 
-<p>해당 문제를 탐욕법으로 접근할 수 있는 이유는 가지고 있는 동전 중 큰 단위의 동전이 항상 작은 단위의 동전의 배수이기 때문입니다. 그렇기 때문에 작은 단위의 동전을 조합해 이 중 큰 단위가 아닌 다른 단위의 금액을 도출해낼 수 없습니다.</p>
+<p>우선순위 큐, 힙을 이용하여 해결할 수 있는 문제입니다. 아직 알고리즘 개념들에 대해 완벽한 이해가 없기도 하고, 많은 문제를 풀어보지 않아 처음에는 무작정 배열과 반복문을 이용하여 중간값을 뽑아주었습니다.</p>
+
+<p>하지만 시간복잡도를 전혀 고려하지 않은 코드였기에 시간 초과로 통과하지 못하였고, 몇 번의 검색 끝에 힙을 이용하여 문제를 해결하기로 했습니다.</p>
+
+<h3 id="1-힙-heap">1. 힙 Heap</h3>
+
+<p>힙은 트리 형태로 이루어진 자료구조로써 최대힙과 최소힙이 있습니다. 최대힙과 최소힙의 루트 노드는 각각 힙을 구성하고 있는 원소들의 최대값, 최소값입니다.</p>
+
+<p>힙의 삽입은 트리의 가장 아래부분에서 이루어지며 최대힙의 경우 부모가 자기 자신보다 큰 원소일때까지 값을 교환해주며 올라가고, 최소힙의 경우 부모가 자기 자신보다 작은 원소일때까지 값을 교환해주며 올라갑니다.</p>
+
+<p>힙에서의 삭제는 루트 노드에서 이루어지며 루트의 공백은 임시적으로 가장 마지막 노드로 채우게 됩니다. 이후 해당 노드가 제대로 된 자리를 찾아갈 수 있도록 자식 노드와 값을 교환해주며 내려갑니다. 힙에 대한 더욱 자세한 설명은 나중에 따로 포스트를 작성하도록 하겠습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct Heap&lt;T: Comparable&gt; {
+    var heap: [T]
+    
+    // 부모, 자식간 비교를 위한 클로저
+    // 최대힙은 &gt;, 최소힙은 &lt;
+    var compare: (T, T) -&gt; Bool
+    
+    var root: T? {
+        if heap.isEmpty {
+            return nil
+        } else {
+            return heap[0]
+        }
+    }
+    
+    init(compare: @escaping (T, T) -&gt; Bool) {
+        heap = []
+        self.compare = compare
+    }
+    
+    // 원소 삽입
+    mutating func insert(n: T) {
+        heap.append(n) // 삽입은 가장 마지막 노드에서 이루어지고
+        shiftUp(i: heap.count - 1) // 자리 찾을때까지 올라간다
+    }
+    
+    // 삽입 시 노드 상승
+    mutating func shiftUp(i: Int) {
+        var now = i
+        
+        // 현재 노드가 루트 노드보다 하위 노드일때
+        while now &gt; 0 {
+            // 부모 노드 인덱스
+            let parent = (now - 1) / 2
+            
+            // 부모 노드와 대소비교, 교환 필요 시
+            if compare(heap[now], heap[parent]) {
+                heap.swapAt(now, parent)
+                // 교환 후 현재 노드를 원래 부모 노드가 있던 자리로 옮겨줌
+                now = parent
+            } else {
+                break
+            }
+        }
+    }
+    
+    // 루트노드 값 제자리 찾기 (원래 원소 삭제 시 많이 쓰임)
+    mutating func shiftDown(i: Int) {
+        var now: Int = i
+        // 자식 노드 인덱스
+        var child: Int = 2 * now + 1
+        let count: Int = heap.count
+        
+        // 자식 노드가 트리 범위안에 있을때
+        while child &lt; count {
+            // 왼쪽 자식, 오른쪽 자식 둘다 있을때
+            if child + 1 &lt; count {
+                child = compare(heap[child], heap[child + 1]) ? child : child + 1
+            }
+            // 자식 노드와 대소비교 후 교환
+            if compare(heap[child], heap[now]) {
+                heap.swapAt(now, child)
+                now = child // 현재 노드를 자식노드 인덱스로
+                child = 2 * now + 1
+            } else {
+                break
+            }
+        }
+    }
+}
+</code></pre></div></div>
+
+<h3 id="2-활용">2. 활용</h3>
+
+<p>문제 풀이에는 최대힙과 최소힙을 모두 사용합니다. 최대힙과 최소힙에 번갈아가며 원소를 삽입하고 최대힙의 루트노드가 최소힙의 루트노드보다 큰 값을 가지고 있을 때 서로의 루트를 교환하는 것을 반복합니다.</p>
+
+<p>그렇게 되면 최대힙의 모든 원소는 최소힙의 모든 원소보다 항상 작은 값을 가지고 있고 최대힙의 루트 노드는 전체의 중간값을 유지하게 됩니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var maxHeap: Heap&lt;Int&gt; = Heap(compare: &gt;)
+var minHeap: Heap&lt;Int&gt; = Heap(compare: &lt;)
+
+let n: Int = Int(readLine()!)!
+var answer: String = ""
+
+for i in 1 ... n {
+    let input: Int = Int(readLine()!)!
+    
+    // 번갈아가면서 최대힙, 최소힙에 원소삽입
+    if i % 2 == 0 {
+        minHeap.insert(n: input)
+    } else {
+        maxHeap.insert(n: input)
+    }
+    
+    if minHeap.root == nil {
+        answer += "\(maxHeap.root!)\n"
+        continue
+    }
+    
+    let maxRoot: Int = maxHeap.root!
+    let minRoot: Int = minHeap.root!
+    
+    // 최대힙 루트값이 최소힙 루트값보다 클때 교환
+    if maxRoot &gt; minRoot {
+        minHeap.heap[0] = maxRoot
+        maxHeap.heap[0] = minRoot
+    }
+    
+    if i % 2 == 0 { maxHeap.shiftDown(i: 0) }
+    else { minHeap.shiftDown(i: 0) }
+
+    answer += "\(maxHeap.root!)\n"
+}
+</code></pre></div></div>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import Foundation
+
+struct Heap&lt;T: Comparable&gt; {
+    var heap: [T]
+    
+    var compare: (T, T) -&gt; Bool
+    
+    var root: T? {
+        if heap.isEmpty {
+            return nil
+        } else {
+            return heap[0]
+        }
+    }
+    
+    init(compare: @escaping (T, T) -&gt; Bool) {
+        heap = []
+        self.compare = compare
+    }
+    
+    mutating func insert(n: T) {
+        heap.append(n)
+        shiftUp(i: heap.count - 1)
+    }
+    
+    mutating func shiftUp(i: Int) {
+        var now = i
+        
+        while now &gt; 0 {
+            let parent = (now - 1) / 2
+            
+            if compare(heap[now], heap[parent]) {
+                heap.swapAt(now, parent)
+                now = parent
+            } else {
+                break
+            }
+        }
+    }
+    
+    mutating func shiftDown(i: Int) {
+        var now: Int = i
+        var child: Int = 2 * now + 1
+        let count: Int = heap.count
+        
+        while child &lt; count {
+            if child + 1 &lt; count {
+                child = compare(heap[child], heap[child + 1]) ? child : child + 1
+            }
+            if compare(heap[child], heap[now]) {
+                heap.swapAt(now, child)
+                now = child
+                child = 2 * now + 1
+            } else {
+                break
+            }
+        }
+    }
+}
+
+var maxHeap: Heap&lt;Int&gt; = Heap(compare: &gt;)
+var minHeap: Heap&lt;Int&gt; = Heap(compare: &lt;)
+
+let n: Int = Int(readLine()!)!
+var answer: String = ""
+
+for i in 1 ... n {
+    let input: Int = Int(readLine()!)!
+    
+    if i % 2 == 0 {
+        minHeap.insert(n: input)
+    } else {
+        maxHeap.insert(n: input)
+    }
+    
+    if minHeap.root == nil {
+        answer += "\(maxHeap.root!)\n"
+        continue
+    }
+    
+    let maxRoot: Int = maxHeap.root!
+    let minRoot: Int = minHeap.root!
+    
+    if maxRoot &gt; minRoot {
+        minHeap.heap[0] = maxRoot
+        maxHeap.heap[0] = minRoot
+    }
+    
+    if i % 2 == 0 { maxHeap.shiftDown(i: 0) }
+    else { minHeap.shiftDown(i: 0) }
+
+    answer += "\(maxHeap.root!)\n"
+}
+
+print(answer)
+
+</code></pre></div></div>
 
 <h2 id="마무리">마무리</h2>
 
-<p>오늘은 탐욕법에 대해 알아보았습니다.</p>
+<p>분명 힙은 되게 기초적인 자료구조라서 엄청 예전에 배웠던 기억이 있는데 개념도 잘 기억이 안나고 구현도 제대로 하지 못해 애를 많이 먹었습니다.. 또 시간복잡도를 제대로 고려하지 않아 시간초과도 많이 나오고 여러 이유로 오래 걸린 문제 풀이였습니다.</p>
 
-<p>탐욕법은 매우 정리하기 간단할 것이라 생각했는데 전혀 아니었네요.. 알고리즘의 개념에 대한 학습이 얼마나 중요한지 다시 한번 느끼게 되었습니다.</p>
+<p>현재 시간이 100ms 로 나오기도 하고 온전히 처음부터 끝까지 제가 작성한 코드는 아니기 때문에 언젠가는 꼭 다시한번 풀어보는 시간을 가져야 할 것 같습니다.</p>
 
-<p>다음에는 탐욕법과 많이 비교되는 Dynamic Programming 에 대해 알아보는 시간을 갖도록 하겠습니다.</p>
+<p>이론적인 부분을 다잡기 위해서 다음에는 우선순위 큐와 힙에 대한 개념을 한번 정리해보는 시간을 가져보도록 하겠습니다.</p>
+
+<p><em>해당 풀이에 쓰인 코드는 BOJ 1655 번 beddl 님의 풀이를 참고하여 작성하였습니다.</em></p>
 
         
       </section>
@@ -524,7 +735,7 @@
 -->
 <!--        
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-06T09:00:00+09:00">January 6, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-22T09:00:00+09:00">January 22, 2022</time></p>
 -->
       </footer>
 
@@ -533,12 +744,11 @@
       
   <nav class="pagination">
     
-      <a href="/til/2/" class="pagination--pager" title="[iOS] SwiftUI - Navigation Link
+      <a href="/swift/1/" class="pagination--pager" title="[Swift] 클로저 Closures (1/2)
 ">Previous</a>
     
     
-      <a href="/algorithm/2/" class="pagination--pager" title="[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -552,30 +762,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm/5/" rel="permalink">[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift)
-</a>
-      
-
-      
-            <span class="page__meta" style="margin-left:0.5rem">
-                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-                2022-01-22
-            </span> 
-        
-    </h2>
-  </article>
-</div>
         
           
 
@@ -643,6 +829,30 @@
             <span class="page__meta" style="margin-left:0.5rem">
                 <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
                 2022-01-12
+            </span> 
+        
+    </h2>
+  </article>
+</div>
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/etc/3/" rel="permalink">애플 개발자 계정을 등록하다
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-01-08
             </span> 
         
     </h2>

@@ -1,4 +1,269 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-20T01:36:43+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Swift] 클로저 Closures (1/2)</title><link href="http://localhost:4000/swift/1/" rel="alternate" type="text/html" title="[Swift] 클로저 Closures (1/2)" /><published>2022-01-19T09:00:00+09:00</published><updated>2022-01-19T09:00:00+09:00</updated><id>http://localhost:4000/swift/1</id><content type="html" xml:base="http://localhost:4000/swift/1/">&lt;h2 id=&quot;클로저-closures-12&quot;&gt;클로저 Closures (1/2)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-22T00:55:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift)</title><link href="http://localhost:4000/algorithm/5/" rel="alternate" type="text/html" title="[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift)" /><published>2022-01-22T09:00:00+09:00</published><updated>2022-01-22T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/5</id><content type="html" xml:base="http://localhost:4000/algorithm/5/">&lt;h2 id=&quot;알고리즘-백준1655---가운데를-말해요&quot;&gt;[알고리즘] 백준:1655 - 가운데를 말해요&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1655&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h2&gt;
+
+&lt;h3 id=&quot;본문&quot;&gt;본문&lt;/h3&gt;
+
+&lt;p&gt;백준이는 동생에게 “가운데를 말해요” 게임을 가르쳐주고 있다. 백준이가 정수를 하나씩 외칠때마다 동생은 지금까지 백준이가 말한 수 중에서 중간값을 말해야 한다. 만약, 그동안 백준이가 외친 수의 개수가 짝수개라면 중간에 있는 두 수 중에서 작은 수를 말해야 한다.&lt;/p&gt;
+
+&lt;p&gt;예를 들어 백준이가 동생에게 1, 5, 2, 10, -99, 7, 5를 순서대로 외쳤다고 하면, 동생은 1, 1, 2, 2, 2, 2, 5를 차례대로 말해야 한다. 백준이가 외치는 수가 주어졌을 때, 동생이 말해야 하는 수를 구하는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;입력&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;첫째 줄에는 백준이가 외치는 정수의 개수 N이 주어진다. N은 1보다 크거나 같고, 100,000보다 작거나 같은 자연수이다. 그 다음 N줄에 걸쳐서 백준이가 외치는 정수가 차례대로 주어진다. 정수는 -10,000보다 크거나 같고, 10,000보다 작거나 같다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;출력&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;한 줄에 하나씩 N줄에 걸쳐 백준이의 동생이 말해야 하는 수를 순서대로 출력한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;이해&quot;&gt;이해&lt;/h2&gt;
+
+&lt;p&gt;우선순위 큐, 힙을 이용하여 해결할 수 있는 문제입니다. 아직 알고리즘 개념들에 대해 완벽한 이해가 없기도 하고, 많은 문제를 풀어보지 않아 처음에는 무작정 배열과 반복문을 이용하여 중간값을 뽑아주었습니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 시간복잡도를 전혀 고려하지 않은 코드였기에 시간 초과로 통과하지 못하였고, 몇 번의 검색 끝에 힙을 이용하여 문제를 해결하기로 했습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-힙-heap&quot;&gt;1. 힙 Heap&lt;/h3&gt;
+
+&lt;p&gt;힙은 트리 형태로 이루어진 자료구조로써 최대힙과 최소힙이 있습니다. 최대힙과 최소힙의 루트 노드는 각각 힙을 구성하고 있는 원소들의 최대값, 최소값입니다.&lt;/p&gt;
+
+&lt;p&gt;힙의 삽입은 트리의 가장 아래부분에서 이루어지며 최대힙의 경우 부모가 자기 자신보다 큰 원소일때까지 값을 교환해주며 올라가고, 최소힙의 경우 부모가 자기 자신보다 작은 원소일때까지 값을 교환해주며 올라갑니다.&lt;/p&gt;
+
+&lt;p&gt;힙에서의 삭제는 루트 노드에서 이루어지며 루트의 공백은 임시적으로 가장 마지막 노드로 채우게 됩니다. 이후 해당 노드가 제대로 된 자리를 찾아갈 수 있도록 자식 노드와 값을 교환해주며 내려갑니다. 힙에 대한 더욱 자세한 설명은 나중에 따로 포스트를 작성하도록 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct Heap&amp;lt;T: Comparable&amp;gt; {
+    var heap: [T]
+    
+    // 부모, 자식간 비교를 위한 클로저
+    // 최대힙은 &amp;gt;, 최소힙은 &amp;lt;
+    var compare: (T, T) -&amp;gt; Bool
+    
+    var root: T? {
+        if heap.isEmpty {
+            return nil
+        } else {
+            return heap[0]
+        }
+    }
+    
+    init(compare: @escaping (T, T) -&amp;gt; Bool) {
+        heap = []
+        self.compare = compare
+    }
+    
+    // 원소 삽입
+    mutating func insert(n: T) {
+        heap.append(n) // 삽입은 가장 마지막 노드에서 이루어지고
+        shiftUp(i: heap.count - 1) // 자리 찾을때까지 올라간다
+    }
+    
+    // 삽입 시 노드 상승
+    mutating func shiftUp(i: Int) {
+        var now = i
+        
+        // 현재 노드가 루트 노드보다 하위 노드일때
+        while now &amp;gt; 0 {
+            // 부모 노드 인덱스
+            let parent = (now - 1) / 2
+            
+            // 부모 노드와 대소비교, 교환 필요 시
+            if compare(heap[now], heap[parent]) {
+                heap.swapAt(now, parent)
+                // 교환 후 현재 노드를 원래 부모 노드가 있던 자리로 옮겨줌
+                now = parent
+            } else {
+                break
+            }
+        }
+    }
+    
+    // 루트노드 값 제자리 찾기 (원래 원소 삭제 시 많이 쓰임)
+    mutating func shiftDown(i: Int) {
+        var now: Int = i
+        // 자식 노드 인덱스
+        var child: Int = 2 * now + 1
+        let count: Int = heap.count
+        
+        // 자식 노드가 트리 범위안에 있을때
+        while child &amp;lt; count {
+            // 왼쪽 자식, 오른쪽 자식 둘다 있을때
+            if child + 1 &amp;lt; count {
+                child = compare(heap[child], heap[child + 1]) ? child : child + 1
+            }
+            // 자식 노드와 대소비교 후 교환
+            if compare(heap[child], heap[now]) {
+                heap.swapAt(now, child)
+                now = child // 현재 노드를 자식노드 인덱스로
+                child = 2 * now + 1
+            } else {
+                break
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-활용&quot;&gt;2. 활용&lt;/h3&gt;
+
+&lt;p&gt;문제 풀이에는 최대힙과 최소힙을 모두 사용합니다. 최대힙과 최소힙에 번갈아가며 원소를 삽입하고 최대힙의 루트노드가 최소힙의 루트노드보다 큰 값을 가지고 있을 때 서로의 루트를 교환하는 것을 반복합니다.&lt;/p&gt;
+
+&lt;p&gt;그렇게 되면 최대힙의 모든 원소는 최소힙의 모든 원소보다 항상 작은 값을 가지고 있고 최대힙의 루트 노드는 전체의 중간값을 유지하게 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var maxHeap: Heap&amp;lt;Int&amp;gt; = Heap(compare: &amp;gt;)
+var minHeap: Heap&amp;lt;Int&amp;gt; = Heap(compare: &amp;lt;)
+
+let n: Int = Int(readLine()!)!
+var answer: String = &quot;&quot;
+
+for i in 1 ... n {
+    let input: Int = Int(readLine()!)!
+    
+    // 번갈아가면서 최대힙, 최소힙에 원소삽입
+    if i % 2 == 0 {
+        minHeap.insert(n: input)
+    } else {
+        maxHeap.insert(n: input)
+    }
+    
+    if minHeap.root == nil {
+        answer += &quot;\(maxHeap.root!)\n&quot;
+        continue
+    }
+    
+    let maxRoot: Int = maxHeap.root!
+    let minRoot: Int = minHeap.root!
+    
+    // 최대힙 루트값이 최소힙 루트값보다 클때 교환
+    if maxRoot &amp;gt; minRoot {
+        minHeap.heap[0] = maxRoot
+        maxHeap.heap[0] = minRoot
+    }
+    
+    if i % 2 == 0 { maxHeap.shiftDown(i: 0) }
+    else { minHeap.shiftDown(i: 0) }
+
+    answer += &quot;\(maxHeap.root!)\n&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;전체-코드&quot;&gt;전체 코드&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Foundation
+
+struct Heap&amp;lt;T: Comparable&amp;gt; {
+    var heap: [T]
+    
+    var compare: (T, T) -&amp;gt; Bool
+    
+    var root: T? {
+        if heap.isEmpty {
+            return nil
+        } else {
+            return heap[0]
+        }
+    }
+    
+    init(compare: @escaping (T, T) -&amp;gt; Bool) {
+        heap = []
+        self.compare = compare
+    }
+    
+    mutating func insert(n: T) {
+        heap.append(n)
+        shiftUp(i: heap.count - 1)
+    }
+    
+    mutating func shiftUp(i: Int) {
+        var now = i
+        
+        while now &amp;gt; 0 {
+            let parent = (now - 1) / 2
+            
+            if compare(heap[now], heap[parent]) {
+                heap.swapAt(now, parent)
+                now = parent
+            } else {
+                break
+            }
+        }
+    }
+    
+    mutating func shiftDown(i: Int) {
+        var now: Int = i
+        var child: Int = 2 * now + 1
+        let count: Int = heap.count
+        
+        while child &amp;lt; count {
+            if child + 1 &amp;lt; count {
+                child = compare(heap[child], heap[child + 1]) ? child : child + 1
+            }
+            if compare(heap[child], heap[now]) {
+                heap.swapAt(now, child)
+                now = child
+                child = 2 * now + 1
+            } else {
+                break
+            }
+        }
+    }
+}
+
+var maxHeap: Heap&amp;lt;Int&amp;gt; = Heap(compare: &amp;gt;)
+var minHeap: Heap&amp;lt;Int&amp;gt; = Heap(compare: &amp;lt;)
+
+let n: Int = Int(readLine()!)!
+var answer: String = &quot;&quot;
+
+for i in 1 ... n {
+    let input: Int = Int(readLine()!)!
+    
+    if i % 2 == 0 {
+        minHeap.insert(n: input)
+    } else {
+        maxHeap.insert(n: input)
+    }
+    
+    if minHeap.root == nil {
+        answer += &quot;\(maxHeap.root!)\n&quot;
+        continue
+    }
+    
+    let maxRoot: Int = maxHeap.root!
+    let minRoot: Int = minHeap.root!
+    
+    if maxRoot &amp;gt; minRoot {
+        minHeap.heap[0] = maxRoot
+        maxHeap.heap[0] = minRoot
+    }
+    
+    if i % 2 == 0 { maxHeap.shiftDown(i: 0) }
+    else { minHeap.shiftDown(i: 0) }
+
+    answer += &quot;\(maxHeap.root!)\n&quot;
+}
+
+print(answer)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+
+&lt;p&gt;분명 힙은 되게 기초적인 자료구조라서 엄청 예전에 배웠던 기억이 있는데 개념도 잘 기억이 안나고 구현도 제대로 하지 못해 애를 많이 먹었습니다.. 또 시간복잡도를 제대로 고려하지 않아 시간초과도 많이 나오고 여러 이유로 오래 걸린 문제 풀이였습니다.&lt;/p&gt;
+
+&lt;p&gt;현재 시간이 100ms 로 나오기도 하고 온전히 처음부터 끝까지 제가 작성한 코드는 아니기 때문에 언젠가는 꼭 다시한번 풀어보는 시간을 가져야 할 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;이론적인 부분을 다잡기 위해서 다음에는 우선순위 큐와 힙에 대한 개념을 한번 정리해보는 시간을 가져보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;해당 풀이에 쓰인 코드는 BOJ 1655 번 beddl 님의 풀이를 참고하여 작성하였습니다.&lt;/em&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">[알고리즘] 백준:1655 - 가운데를 말해요</summary></entry><entry><title type="html">[Swift] 클로저 Closures (1/2)</title><link href="http://localhost:4000/swift/1/" rel="alternate" type="text/html" title="[Swift] 클로저 Closures (1/2)" /><published>2022-01-19T09:00:00+09:00</published><updated>2022-01-19T09:00:00+09:00</updated><id>http://localhost:4000/swift/1</id><content type="html" xml:base="http://localhost:4000/swift/1/">&lt;h2 id=&quot;클로저-closures-12&quot;&gt;클로저 Closures (1/2)&lt;/h2&gt;
 
 &lt;p&gt;클로저는 코드블럭으로 C, Objective-C 의 block 과 다른 언어의 lambdas 와 비슷합니다.&lt;/p&gt;
 
@@ -148,8 +413,9 @@ var minHeap = Heap&amp;lt;Int&amp;gt; { $0 &amp;lt; $1 }
 
 &lt;p&gt;다음 시간에는 Capturing Values 를 이용하여 클로저가 참조 타입임을 학습하고 Auto Closures 에 대해 알아보도록 하겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://jusung.gitbook.io/the-swift-language-guide/language-guide/07-closures&quot;&gt;참고 링크 (1)&lt;/a&gt;
-&lt;a href=&quot;https://docs.swift.org/swift-book/LanguageGuide/Closures.html&quot;&gt;참고 링크 (2)&lt;/a&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Swift" /><summary type="html">클로저 Closures (1/2)</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 네트워크 (Swift)</title><link href="http://localhost:4000/algorithm/4/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 네트워크 (Swift)" /><published>2022-01-15T09:00:00+09:00</published><updated>2022-01-15T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/4</id><content type="html" xml:base="http://localhost:4000/algorithm/4/">&lt;h2 id=&quot;프로그래머스---네트워크-swift&quot;&gt;프로그래머스 - 네트워크 (Swift)&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://jusung.gitbook.io/the-swift-language-guide/language-guide/07-closures&quot;&gt;참고 링크 (1)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.swift.org/swift-book/LanguageGuide/Closures.html&quot;&gt;참고 링크 (2)&lt;/a&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Swift" /><summary type="html">클로저 Closures (1/2)</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 네트워크 (Swift)</title><link href="http://localhost:4000/algorithm/4/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 네트워크 (Swift)" /><published>2022-01-15T09:00:00+09:00</published><updated>2022-01-15T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/4</id><content type="html" xml:base="http://localhost:4000/algorithm/4/">&lt;h2 id=&quot;프로그래머스---네트워크-swift&quot;&gt;프로그래머스 - 네트워크 (Swift)&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43162&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
 
@@ -670,92 +936,7 @@ NavigationLink(destination: SomeView()) { // destination -&amp;gt; 목표화면
 
 &lt;p&gt;오늘은 직접적인 개발에 대한 내용을 적어보진 않았지만, 다른 카테고리에 글을 올릴만큼 내용이 없는 날이면 이렇게 아주 소소하게나마 제가 오늘 기획했거나 배운 내용들에 대해 정리해볼 생각입니다.&lt;/p&gt;
 
-&lt;p&gt;BDG 앱에 대해서는 우선적으로 Swift UI 를 학습하며 구현해볼 예정이며, 더욱 상세한 기획이나 플로우를 작성할 수 있는 여유시간이 생기면 추가적으로 업로드 할 계획입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="TIL" /><summary type="html">BDG - 해외 거주 한국인을 위한 역 배대지 사이트</summary></entry><entry><title type="html">[Flutter] Null Safety</title><link href="http://localhost:4000/flutter/3/" rel="alternate" type="text/html" title="[Flutter] Null Safety" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/3</id><content type="html" xml:base="http://localhost:4000/flutter/3/">&lt;h2 id=&quot;flutter---null-safety&quot;&gt;Flutter - null safety&lt;/h2&gt;
-
-&lt;p&gt;Flutter 2.0 에 들어서면서부터 null safety 가 적용되었다고 합니다. 오늘은 null safety 가 무엇이며 어떻게 쓰이는지 알아보도록 하겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;null-safety-&quot;&gt;null safety ?&lt;/h2&gt;
-
-&lt;p&gt;null safety 는 null 로 인해서 발생하는 에러들을 방지하기 위해 도입되었습니다.&lt;/p&gt;
-
-&lt;p&gt;실제로 코드를 작성하다가 보면 null 이 아니어야 하는 값에 null 이 삽입된다거나, 리턴된다거나 하는 null 참조 에러가 빈번히 발생합니다.&lt;/p&gt;
-
-&lt;p&gt;null safety 는 코드가 실행되기 전 컴파일러가 이를 잡아줌으로써 에러에 대응할 수 있게 해줍니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;nullable--non-nullable&quot;&gt;nullable &amp;amp; non-nullable&lt;/h2&gt;
-
-&lt;p&gt;null safety 적용 이전에는 모든 데이터 타입은 null 클래스의 슈퍼클래스였습니다. Dart 코드에서 int 등의 자료형에 null 을 대입한다면 int 클래스에 null 클레스의 인스턴스를 대입한 것이고 null 클래스에는 아무런 메소드가 정의되지 않았기 때문에 런타임 에러가 발생합니다.&lt;/p&gt;
-
-&lt;p&gt;그래서 null safety 적용 이후에는 null 클래스가 자료형들과 분리되었습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/147852564-e44efe67-940c-4a8c-b672-3a776ee62ea6.jpeg&quot; alt=&quot;KakaoTalk_Photo_2022-01-01-23-14-12&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;null safety 를 효과적으로 이용할 수 있으려면 nullable 과 non-nullable 의 차이를 알아야 합니다. 말 그대로 nullable 은 null 을 포함할 수 있는 변수이고, non-nullable 은 null 을 포함할 수 없는 변수입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;String? nullable = &quot;nullable&quot;;
-String nonNullable = &quot;non nullable&quot;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 nullable 변수의 타입에 ? 을 붙여줌으로써 해당 변수에 null 을 대입할 수 있게 됩니다. 반면 ? 를 붙이지 않은 non-nullbale 변수에 null 을 대입할 시 에러가 발생하게 됩니다.&lt;/p&gt;
-
-&lt;p&gt;다만 dynamic 타입의 변수는 nullable 임을 암시하고 있기에 ? 을 붙이지 않아도 null 을 대입할 수 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;null-연산자&quot;&gt;null 연산자&lt;/h2&gt;
-
-&lt;h3 id=&quot;--null-조건-연산자&quot;&gt;- null 조건 연산자&lt;/h3&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;String? nullable = null;
-int length = nullable?.length; 
-// --&amp;gt; null
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;nullable 변수가 null 인지 아닌지를 확인하고 싶다면 ? 연산자를 붙여줄 수 있고, 해당 변수가 null 이라면 연산자 이후의 작업을 시행하지 않고 바로 null 을 반환합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;--null-보증-연산자&quot;&gt;- null 보증 연산자&lt;/h3&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;String token = await FirebaseAuth.instance.currentUser!.getIdToken();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;nullable 변수뒤의 ! 연산자는 해당 변수가 null 이 아닌 값을 가지고 있다고 확신할 때 사용됩니다. 저같은 경우는 위 예시와 같이 currentUser 가 null 이 아닐때 (로그인하지 않으면 도달할 수 없는 화면일 때) 주로 사용하곤 합니다.&lt;/p&gt;
-
-&lt;p&gt;하지만 해당 변수에 null 일 시에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null check operator used in null value&lt;/code&gt; 라는 에러가 발생하기 때문에 주의하여 사용해야 합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;--null-인식-연산자&quot;&gt;- null 인식 연산자&lt;/h3&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (someVar == null) {
-  ...
-} else {
-  ...
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;어떤 변수가 null 일 경우와 null 이 아닐 경우를 나누어 예외처리를 해야할 일이 생길수도 있습니다. 이 때 if else 문으로 처리해줄 수도 있겠지만, null 인식 연산자를 사용하면 코드를 훨씬 간결하게 작성할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;String newString = someString ?? &quot;is null&quot;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;null 인지 확인하고자 하는 변수 뒤에 ?? 연산자를 붙이면, 해당 변수가 null 인 경우에 연산자 뒤의 작업을 수행하게 됩니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;--late-연산자&quot;&gt;- late 연산자&lt;/h3&gt;
-
-&lt;p&gt;지역 변수에서는 non-nullable 변수가 선언과 동시에 초기화 되지 않아도 됩니다. 하지만 최상위 변수와 클래스 멤버 변수의 경우 non-nullable 이라면 선언과 동시에 초기화 되어야 합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Person{
-  late String name;
-  
-  void setName() =&amp;gt; name=&quot;my name&quot;;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이렇게 non-nullable 변수를 선언하고 해당 변수를 사용하기 직전에 값을 할당하고 싶다면 late 연산자를 사용할 수 있습니다. late 연산자를 붙인 변수는 초기화를 늦춰주는 것 뿐이지 null 을 대입할 수는 없다는 점을 주의해야 합니다.&lt;/p&gt;
-
-&lt;p&gt;그렇다면 애초에 nullable 변수를 사용하면 되지 않을까? 라는 의문을 가질수도 있지만, null 을 사용할 일이 절대 없는 경우라면 null 로 인한 잠재적인 에러를 방지하기 위하여 late 연산자를 사용하는 것이 훨씬 좋습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;오늘은 null safety 와 이를 효과적으로 사용하는 방법에 대해 알아보았습니다.&lt;/p&gt;
-
-&lt;p&gt;타 언어에서도 ? 와 ! 연산자등을 이용해 본적이 있어 이해하는데 도움이 많이 되었던 것 같습니다. 어떤 언어로 된 프로그램이던 간에 코드를 작성하다 보면 null 로 인한 에러가 발생하는 경우가 굉장히 많기 때문에 null safety 에 대해 잘 이해하는 것이 좋을 것 같습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Flutter" /><summary type="html">Flutter - null safety</summary></entry><entry><title type="html">[Flutter] iOS - Firestore 추가 시 빌드 에러</title><link href="http://localhost:4000/flutter/4/" rel="alternate" type="text/html" title="[Flutter] iOS - Firestore 추가 시 빌드 에러" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/4</id><content type="html" xml:base="http://localhost:4000/flutter/4/">&lt;h2 id=&quot;ios---firestore-추가-시-빌드-에러&quot;&gt;iOS - Firestore 추가 시 빌드 에러&lt;/h2&gt;
+&lt;p&gt;BDG 앱에 대해서는 우선적으로 Swift UI 를 학습하며 구현해볼 예정이며, 더욱 상세한 기획이나 플로우를 작성할 수 있는 여유시간이 생기면 추가적으로 업로드 할 계획입니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="TIL" /><summary type="html">BDG - 해외 거주 한국인을 위한 역 배대지 사이트</summary></entry><entry><title type="html">[Flutter] iOS - Firestore 추가 시 빌드 에러</title><link href="http://localhost:4000/flutter/4/" rel="alternate" type="text/html" title="[Flutter] iOS - Firestore 추가 시 빌드 에러" /><published>2022-01-02T09:00:00+09:00</published><updated>2022-01-02T09:00:00+09:00</updated><id>http://localhost:4000/flutter/4</id><content type="html" xml:base="http://localhost:4000/flutter/4/">&lt;h2 id=&quot;ios---firestore-추가-시-빌드-에러&quot;&gt;iOS - Firestore 추가 시 빌드 에러&lt;/h2&gt;
 
 &lt;p&gt;pubspec.yaml 파일 dependencies 부분에 cloud_firestore 추가 후 flutter run 커맨드로 빌드 시 iOS 빌드가 굉장히 느려지는 이슈가 발생했습니다.&lt;/p&gt;
 
