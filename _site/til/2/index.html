@@ -94,6 +94,8 @@
 
 <!-- end custom head snippets -->
 
+
+    <link rel="stylesheet" href="/assets/css/syntax.css">
   </head>
 
   <body class="layout--single">
@@ -276,7 +278,7 @@
 
             <!--전체 글 수-->
             <li>
-                📂 <b><span style="font-size:0.8rem;">전체 글 수 <span
+                🚀 <b><span style="font-size:0.8rem;"> 전체 글 수 <span
                             style="font-size:1rem; color : #4e89f0;">15</span> 개</span></b>
             </li>
 
@@ -465,24 +467,24 @@
 
 <p>공식 문서에 따르면 NavigationLink 는 네비게이션을 제어해주는 하나의 View 라고 합니다. 그렇기에 다른 View 들과 함께 body 부분에서 사용해주면 됩니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct NavigationLink&lt;Label, Destination&gt; where Label : View, Destination : View
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">NavigationLink</span><span class="o">&lt;</span><span class="kt">Label</span><span class="p">,</span> <span class="kt">Destination</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Label</span> <span class="p">:</span> <span class="kt">View</span><span class="p">,</span> <span class="kt">Destination</span> <span class="p">:</span> <span class="kt">View</span>
 </code></pre></div></div>
 
 <p>NavigationLink 에는 2가지 속성이 있는데, 첫번째는 목표 View 를 나타내는 destination 입니다. 저는 어떤 시스템을 작성하던간에 로그인과 회원가입 화면부터 작성하는 버릇이 있기 때문에 NavigationLink 는 로그인 화면에, destiantion 은 회원가입 화면에 두었습니다.</p>
 
 <p>두번째는 클릭할 수 있는 자식 컴포넌트를 나타내는 Label 입니다. Label 에 단독으로 String 을 사용할 경우 텍스트 버튼처럼 사용할 수 있게 됩니다. Label 속성에 아무것도 할당하지 않은 후 {} 를 이용하여 Text 를 집어넣은 다음 스타일링도 가능합니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// navigation link 예제
-NavigationLink(destination: SomeView()) { // destination -&gt; 목표화면
-    Text("Navigate to SomeView") // 버튼 스타일
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color.blue)
-                .frame(width: windowSize.width * 0.9)
-        )
-        .foregroundColor(Color.white)
-}
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// navigation link 예제</span>
+<span class="kt">NavigationLink</span><span class="p">(</span><span class="nv">destination</span><span class="p">:</span> <span class="kt">SomeView</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// destination -&gt; 목표화면</span>
+    <span class="kt">Text</span><span class="p">(</span><span class="s">"Navigate to SomeView"</span><span class="p">)</span> <span class="c1">// 버튼 스타일</span>
+        <span class="o">.</span><span class="nf">padding</span><span class="p">()</span>
+        <span class="o">.</span><span class="nf">background</span><span class="p">(</span>
+            <span class="kt">RoundedRectangle</span><span class="p">(</span><span class="nv">cornerRadius</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">fill</span><span class="p">(</span><span class="kt">Color</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="n">windowSize</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.9</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="kt">Color</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <h2 id="마무리">마무리</h2>
@@ -559,14 +561,14 @@ NavigationLink(destination: SomeView()) { // destination -&gt; 목표화면
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm/5/" rel="permalink">[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift)
+        <a href="/algorithm/5/" rel="permalink">[알고리즘] 백준:1655 - 가운데를 말해요(Swift)
 </a>
       
 
       
             <span class="page__meta" style="margin-left:0.5rem">
                 <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-                2022-01-22
+                2022-01-21
             </span> 
         
     </h2>

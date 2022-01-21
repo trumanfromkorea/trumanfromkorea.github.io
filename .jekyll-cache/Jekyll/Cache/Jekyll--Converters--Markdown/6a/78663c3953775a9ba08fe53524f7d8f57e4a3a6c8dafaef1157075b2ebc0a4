@@ -1,4 +1,4 @@
-I"D<h2 id="dfs-깊이-우선-탐색--bfs-너비-우선-탐색">DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)</h2>
+I"� <h2 id="dfs-깊이-우선-탐색--bfs-너비-우선-탐색">DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)</h2>
 
 <p>그래프는 정점 (node, vertex) 과 정점들 사이를 연결하는 간선 (edge) 로 이루어진 자료구조입니다.</p>
 
@@ -57,34 +57,34 @@
 
 <h3 id="인접-행렬">인접 행렬</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// DFS - 인접행렬
-func DFS_table(x: Int) {
-    visited[x] = true
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// DFS - 인접행렬</span>
+<span class="kd">func</span> <span class="kt">DFS_table</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">visited</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
 		
-    for i in 0 ..&lt; graphTable.count {
-        if graphTable[x][i] == 1 &amp;&amp; !visited[i] {
-            DFS_table(x: i)
-        }
-    }
-}
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">graphTable</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">graphTable</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">{</span>
+            <span class="kt">DFS_table</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="n">i</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>V 개의 노드를 모두 방문하는데, 방문 시 크기가 V 인 반복문이 실행됨으로 시간복잡도는 O(V²) 입니다.</p>
 
 <h3 id="인접-리스트">인접 리스트</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// DFS - 인접리스트
-func DFS_list(x: Int) {
-    visited[x] = true
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// DFS - 인접리스트</span>
+<span class="kd">func</span> <span class="kt">DFS_list</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">visited</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
 
-    for i in 0 ..&lt; graphList[x].count {
-        let next: Int = graphList[x][i]
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">graphList</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">next</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">graphList</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
 
-        if !visited[next] {
-            DFS_list(x: next)
-        }
-    }
-}
+        <span class="k">if</span> <span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="p">{</span>
+            <span class="kt">DFS_list</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="n">next</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>인접리스트의 경우 자신과 연결되어있지 않은 노드들은 고려하지 않습니다.</p>

@@ -1,0 +1,154 @@
+I"_)<h2 id="클로저-closures-12">클로저 Closures (1/2)</h2>
+
+<p>클로저는 코드블럭으로 C, Objective-C 의 block 과 다른 언어의 lambdas 와 비슷합니다.</p>
+
+<ul>
+  <li>클로저는 사용자의 코드 안에서 전달되어 사용할 수 있는 로직을 가진 중괄호로 구분된 코드 블럭이며, 일급 객체의 역할을 할 수 있습니다.</li>
+  <li>일급 객체는 전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달할 수 있으며, 함수의 리턴값이 될 수도 있습니다.</li>
+  <li>참조 타입입니다.</li>
+  <li>함수는 클로저의 한 형태로, 이름이 있는 클로저입니다.</li>
+</ul>
+
+<h2 id="클로저-표현-closure-expressions">클로저 표현 (Closure Expressions)</h2>
+
+<p>함수로 따로 정의된 형태가 아닌 인자로 들어가 있는 형태의 클로저를 인라인 클로저라고 부릅니다.</p>
+
+<p>클로저 표현은 인라인 클로저를 명확하게 표현하는 방법으로 문법에 초점이 맞춰져 있습니다. 클로저 표현은 코드의 명확성과 의도를 잃지 않으면서도 문법을 축약해 사용할 수 있는 다양한 문법의 최적화 방법을 제공합니다.</p>
+
+<h3 id="정렬-메소드">정렬 메소드</h3>
+
+<p>Swift 표준 라이브러리에서 제공하는 <code class="language-plaintext highlighter-rouge">sorted(by:)</code> 메소드를 이용해보겠습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">sorted(by:)</code> 메소드는 2개의 인자를 갖는 클로저를 인자로 사용합니다. 타입이 T 인 배열은 <code class="language-plaintext highlighter-rouge">(T, T) -&gt; Bool</code> 타입의 클로저를 사용해야 합니다.</p>
+
+<p>클로저를 제공하는 일반적인 방법은 함수 하나를 직접 만들어 인자로 사용하는 것입니다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">let</span> <span class="nl">numArray:</span> <span class="o">[</span><span class="nc">Int</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span><span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">9</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">6</span><span class="o">]</span>
+
+<span class="n">func</span> <span class="nf">desc</span><span class="o">(</span><span class="nl">n1:</span> <span class="nc">Int</span><span class="o">,</span> <span class="nl">n2:</span> <span class="nc">Int</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="nc">Bool</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">n1</span> <span class="o">&gt;</span> <span class="n">n2</span>
+<span class="o">}</span>
+
+<span class="kt">var</span> <span class="nl">sortedArray:</span> <span class="o">[</span><span class="nc">Int</span><span class="o">]</span> <span class="o">=</span> <span class="n">numArray</span><span class="o">.</span><span class="na">sorted</span><span class="o">(</span><span class="nl">by:</span> <span class="n">desc</span><span class="o">)</span>
+<span class="c1">// --&gt; [9, 7, 6, 5, 2]</span>
+</code></pre></div></div>
+<p>desc 클로저를 <code class="language-plaintext highlighter-rouge">sorted(by:)</code> 메소드의 인자로 사용하면 배열이 내림차순으로 정렬된 것을 확인할 수 있습니다.</p>
+
+<h3 id="클로저-표현-문법">클로저 표현 문법</h3>
+
+<p>클로저 표현 문법은 일반적으로 아래의 형태를 하고 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ (parameters) -&gt; return type in
+    statements
+}
+</code></pre></div></div>
+
+<p>인자로 사용할 parameters, 처리할 내용을 기술하는 statements, return type 을 가지고 있습니다. 앞서 작성한 desc 클로저를 이용한 sorted 메소드는 다음과 같이 작성할 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sortedArray = numArray.sorted(by: { (n1: Int, n2: Int) -&gt; Bool in
+    return n1 &gt; n2
+})
+</code></pre></div></div>
+
+<p>이렇게 함수로 따로 정의된 형태가 아닌 인자로 들어가 있는 형태의 클로저를 인라인 클로저라고 부릅니다. 예시와 같이 클로저의 body 부분이 짧을 시에는 한줄에 적을 수도 있습니다.</p>
+
+<h3 id="문맥에서-타입-추론--암시적-반환">문맥에서 타입 추론 &amp; 암시적 반환</h3>
+
+<p><code class="language-plaintext highlighter-rouge">sorted(by:)</code> 메소드에서 이미 (Int, Int) -&gt; Bool 타입의 인자가 들어와야 하는지 알기 때문에 클로저에서 이 타입들은 생략될 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sortedArray = numArray.sorted(by: { n1, n2 in return n1 &gt; n2})
+</code></pre></div></div>
+
+<p>또한 단일 표현 클로저에서는 <code class="language-plaintext highlighter-rouge">return</code> 키워드를 생략할 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sortedArray = numArray.sorted(by: { n1, n2 in n1 &gt; n2 })
+</code></pre></div></div>
+
+<h3 id="인자-이름-축약">인자 이름 축약</h3>
+
+<p>Swift 는 인라인 클로저에 자동으로 축약 인자 이름을 제공합니다. 해당 인자를 사용하면 인자 값을 순서대로 $0, $1, $2 등으로 사용할 수 있습니다. 축약 인자 이름을 사용하면 인자 값과 그 인자로 처리할 때 사용하는 인자가 같다는 것을 알기 때문에 인자를 입력받는 부분과 <code class="language-plaintext highlighter-rouge">in</code> 키워드 부분을 생략할 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sortedArray = numArray.sorted(by: { $0 &gt; $1 })
+</code></pre></div></div>
+
+<p>저는 아직 이 방식에 익숙하지 않습니다… Swift 를 더 공부하다 보면 익숙해지겠죠 ㅠㅠ</p>
+
+<h3 id="연산자-메소드">연산자 메소드</h3>
+
+<p>여기서 더 간단하게 축약이 가능합니다. Swift 는 타입 연산자끼리 비교 가능한 (Comparable 할 때) 비교 연산자 &gt; 를 구현해 두었습니다. 그렇기 때문에 이 연산자를 바로 사용할 수도 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sortedArray = numArray.sorted(by: &gt;)
+</code></pre></div></div>
+
+<h2 id="후위-클로저-trailing-closures">후위 클로저 (Trailing Closures)</h2>
+
+<p>만약 함수의 마지막 인자로 클로저를 넣고 그 클로저가 길다면 후위 클로저를 사용할 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 아래와 같은 클로저가 존재할 때
+
+func someFunctionThatTakesAClosure(closure: () -&gt; Void) {
+    // function body goes here
+}
+
+// 인자 값 입력 부분과 리턴 타입 부분을 생략
+
+someFunctionThatTakesAClosure(closure: {
+    // closure's body goes here
+})
+
+// 후위 클로저로 표현
+
+someFunctionThatTakesAClosure() {
+    // trailing closure's body goes here
+}
+
+// 일반적인 전역함수 형태
+</code></pre></div></div>
+
+<p>위의 정렬 예제를 후위 클로저를 이용해 표현하면 이렇게 표현할 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sortedArray = numArray.sorted() { $0 &gt; $1 }
+// 만약 함수의 마지막 인자가 클로저이고 후위 클로저를 사용하면 괄호 생락 가능
+sortedArray = numArray.sorted { $0 &gt; $1 }
+</code></pre></div></div>
+
+<h2 id="escaping-closures">Escaping Closures</h2>
+
+<p>클로저를 함수의 파라미터로 넣을 수 있는데, 함수 밖에서 실행되는 클로저는 파라미터 앞에 <code class="language-plaintext highlighter-rouge">@escaping</code> 키워드를 명시합니다. Escaping Closure 에서는 self 를 명시적으로 언급해주어야 합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct Heap&lt;T&gt; {
+    var arr: [T]
+    var compare: (T, T) -&gt; Bool
+
+    mutating func isMaxHeap() -&gt; Bool {
+        return compare(arr[0], arr[1])
+    }
+
+    init(arr: [T] = [], compare: @escaping (T, T) -&gt; Bool) {
+        self.arr = arr
+        self.compare = compare
+    }
+}
+
+var maxHeap = Heap&lt;Int&gt; { $0 &gt; $1 }
+var minHeap = Heap&lt;Int&gt; { $0 &lt; $1 }
+</code></pre></div></div>
+
+<p>위와 같이 compare 클로저를 다른 함수 밖에서 실행시키기 위해 <code class="language-plaintext highlighter-rouge">@escaping</code> 키워드를 사용했습니다. (아직 Escaping Closure 에 대해 완벽한 이해를 하지 못해 더 괜찮은 샘플 코드와 설명을 생각해내게 된다면 업데이트 하겠습니다..)</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p><code class="language-plaintext highlighter-rouge">@escaping</code> 키워드에 대해 알아보려다가 여기까지 왔습니다.. 항상 공부하기 시작한 것보다 더 깊은 레벨로 들어와서 학습하게 되는 것 같습니다. 그만큼 기본기가 많이 부족하다는 뜻이겠죠..ㅠㅠ</p>
+
+<p>Capturing Values 와 Auto Closures 에 대한 개념을 정리하기에는 조금 벅찬 것 같아서 오늘은 여기까지 정리해보도록 하겠습니다.</p>
+
+<p>정리하자면 클로저는 실행 가능한 코드 블럭으로 1급 객체의 역할을 할 수 있습니다. 인라인 클로저는 따로 정의된 형태가 아닌 인자로 사용된 형태의 클로저로써 여러 상황에 따라 아주 간단하게 축약이 가능하기도 합니다.</p>
+
+<p>만약 함수의 마지막 인자로 클로저를 사용한다면 일반적인 전역함수 형태로 이용할 수도 있습니다.</p>
+
+<p>다음 시간에는 Capturing Values 를 이용하여 클로저가 참조 타입임을 학습하고 Auto Closures 에 대해 알아보도록 하겠습니다.</p>
+
+<p><a href="https://jusung.gitbook.io/the-swift-language-guide/language-guide/07-closures">참고 링크 (1)</a></p>
+
+<p><a href="https://docs.swift.org/swift-book/LanguageGuide/Closures.html">참고 링크 (2)</a></p>
+:ET
