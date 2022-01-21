@@ -1,0 +1,87 @@
+I"g<h2 id="flutter---null-safety">Flutter - null safety</h2>
+
+<p>Flutter 2.0 에 들어서면서부터 null safety 가 적용되었다고 합니다. 오늘은 null safety 가 무엇이며 어떻게 쓰이는지 알아보도록 하겠습니다.</p>
+
+<h2 id="null-safety-">null safety ?</h2>
+
+<p>null safety 는 null 로 인해서 발생하는 에러들을 방지하기 위해 도입되었습니다.</p>
+
+<p>실제로 코드를 작성하다가 보면 null 이 아니어야 하는 값에 null 이 삽입된다거나, 리턴된다거나 하는 null 참조 에러가 빈번히 발생합니다.</p>
+
+<p>null safety 는 코드가 실행되기 전 컴파일러가 이를 잡아줌으로써 에러에 대응할 수 있게 해줍니다.</p>
+
+<h2 id="nullable--non-nullable">nullable &amp; non-nullable</h2>
+
+<p>null safety 적용 이전에는 모든 데이터 타입은 null 클래스의 슈퍼클래스였습니다. Dart 코드에서 int 등의 자료형에 null 을 대입한다면 int 클래스에 null 클레스의 인스턴스를 대입한 것이고 null 클래스에는 아무런 메소드가 정의되지 않았기 때문에 런타임 에러가 발생합니다.</p>
+
+<p>그래서 null safety 적용 이후에는 null 클래스가 자료형들과 분리되었습니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/55919701/147852564-e44efe67-940c-4a8c-b672-3a776ee62ea6.jpeg" alt="KakaoTalk_Photo_2022-01-01-23-14-12" /></p>
+
+<p>null safety 를 효과적으로 이용할 수 있으려면 nullable 과 non-nullable 의 차이를 알아야 합니다. 말 그대로 nullable 은 null 을 포함할 수 있는 변수이고, non-nullable 은 null 을 포함할 수 없는 변수입니다.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">String</span><span class="o">?</span> <span class="n">nullable</span> <span class="o">=</span> <span class="s">"nullable"</span><span class="o">;</span>
+<span class="kt">String</span> <span class="n">nonNullable</span> <span class="o">=</span> <span class="s">"non nullable"</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>위와 같이 nullable 변수의 타입에 ? 을 붙여줌으로써 해당 변수에 null 을 대입할 수 있게 됩니다. 반면 ? 를 붙이지 않은 non-nullbale 변수에 null 을 대입할 시 에러가 발생하게 됩니다.</p>
+
+<p>다만 dynamic 타입의 변수는 nullable 임을 암시하고 있기에 ? 을 붙이지 않아도 null 을 대입할 수 있습니다.</p>
+
+<h2 id="null-연산자">null 연산자</h2>
+
+<h3 id="--null-조건-연산자">- null 조건 연산자</h3>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">String</span><span class="o">?</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">nullable</span><span class="o">?.</span><span class="na">length</span><span class="o">;</span> 
+<span class="c1">// --&gt; null</span>
+</code></pre></div></div>
+
+<p>nullable 변수가 null 인지 아닌지를 확인하고 싶다면 ? 연산자를 붙여줄 수 있고, 해당 변수가 null 이라면 연산자 이후의 작업을 시행하지 않고 바로 null 을 반환합니다.</p>
+
+<h3 id="--null-보증-연산자">- null 보증 연산자</h3>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">await</span> <span class="n">FirebaseAuth</span><span class="o">.</span><span class="na">instance</span><span class="o">.</span><span class="na">currentUser</span><span class="o">!.</span><span class="na">getIdToken</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>nullable 변수뒤의 ! 연산자는 해당 변수가 null 이 아닌 값을 가지고 있다고 확신할 때 사용됩니다. 저같은 경우는 위 예시와 같이 currentUser 가 null 이 아닐때 (로그인하지 않으면 도달할 수 없는 화면일 때) 주로 사용하곤 합니다.</p>
+
+<p>하지만 해당 변수에 null 일 시에는 <code class="language-plaintext highlighter-rouge">null check operator used in null value</code> 라는 에러가 발생하기 때문에 주의하여 사용해야 합니다.</p>
+
+<h3 id="--null-인식-연산자">- null 인식 연산자</h3>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">someVar</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+  <span class="o">...</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+  <span class="o">...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>어떤 변수가 null 일 경우와 null 이 아닐 경우를 나누어 예외처리를 해야할 일이 생길수도 있습니다. 이 때 if else 문으로 처리해줄 수도 있겠지만, null 인식 연산자를 사용하면 코드를 훨씬 간결하게 작성할 수 있습니다.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">String</span> <span class="n">newString</span> <span class="o">=</span> <span class="n">someString</span> <span class="o">??</span> <span class="s">"is null"</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>null 인지 확인하고자 하는 변수 뒤에 ?? 연산자를 붙이면, 해당 변수가 null 인 경우에 연산자 뒤의 작업을 수행하게 됩니다.</p>
+
+<h3 id="--late-연산자">- late 연산자</h3>
+
+<p>지역 변수에서는 non-nullable 변수가 선언과 동시에 초기화 되지 않아도 됩니다. 하지만 최상위 변수와 클래스 멤버 변수의 경우 non-nullable 이라면 선언과 동시에 초기화 되어야 합니다.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span><span class="o">{</span>
+  <span class="n">late</span> <span class="kt">String</span> <span class="n">name</span><span class="o">;</span>
+  
+  <span class="kt">void</span> <span class="n">setName</span><span class="o">()</span> <span class="o">=&gt;</span> <span class="n">name</span><span class="o">=</span><span class="s">"my name"</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>이렇게 non-nullable 변수를 선언하고 해당 변수를 사용하기 직전에 값을 할당하고 싶다면 late 연산자를 사용할 수 있습니다. late 연산자를 붙인 변수는 초기화를 늦춰주는 것 뿐이지 null 을 대입할 수는 없다는 점을 주의해야 합니다.</p>
+
+<p>그렇다면 애초에 nullable 변수를 사용하면 되지 않을까? 라는 의문을 가질수도 있지만, null 을 사용할 일이 절대 없는 경우라면 null 로 인한 잠재적인 에러를 방지하기 위하여 late 연산자를 사용하는 것이 훨씬 좋습니다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>오늘은 null safety 와 이를 효과적으로 사용하는 방법에 대해 알아보았습니다.</p>
+
+<p>타 언어에서도 ? 와 ! 연산자등을 이용해 본적이 있어 이해하는데 도움이 많이 되었던 것 같습니다. 어떤 언어로 된 프로그램이던 간에 코드를 작성하다 보면 null 로 인한 에러가 발생하는 경우가 굉장히 많기 때문에 null safety 에 대해 잘 이해하는 것이 좋을 것 같습니다.</p>
+:ET

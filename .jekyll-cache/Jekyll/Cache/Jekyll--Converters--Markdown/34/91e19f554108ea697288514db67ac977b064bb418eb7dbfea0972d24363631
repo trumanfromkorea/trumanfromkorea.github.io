@@ -1,0 +1,74 @@
+I"I<h2 id="git-reset">git reset</h2>
+
+<p>Git 레포지토리를 이용하다 보면 commit 후 push 를 잘못 진행하거나, 브랜치 병합 후 push 과정에서 오류가 발생해 브랜치를 이전 commit 으로 되돌려야 하는 상황이 종종 발생합니다.</p>
+
+<p>저같은 경우 이러한 상황이 자주 발생하지는 않지만 간혹 commit 을 되돌려야 할 때마다 커맨드가 헷갈리곤 해 확실히 정리하고자 합니다.</p>
+
+<h2 id="사용법">사용법</h2>
+
+<p>원하는 commit 으로 해당 브랜치를 되돌리고 싶다면 commit ID 를 알고 있거나 HEAD 로부터 몇번째 commit 인지 알고 있어야 합니다.</p>
+
+<h3 id="commit-id-를-이용할-때">commit ID 를 이용할 때</h3>
+
+<p><code class="language-plaintext highlighter-rouge">git reset {commit ID}</code></p>
+
+<p>commit ID 를 이용할 때는 위와 같이 명령어 뒤에 commit ID 를 적어두면 됩니다.</p>
+
+<p>commit ID 를 알고 싶다면 <code class="language-plaintext highlighter-rouge">git log</code> 명령어를 이용하여 commit ID 를 복사하거나 Github 사이트를 이용하여 복사할 수 있습니다.</p>
+
+<h3 id="head-로부터-n-번째-commit-일-때">HEAD 로부터 n 번째 commit 일 때</h3>
+
+<p><code class="language-plaintext highlighter-rouge">git reset HEAD~n</code></p>
+
+<p>이는 HEAD 로부터 n 번째 커밋을 의미합니다. 저는 이 방법을 딱히 선호하지 않습니다</p>
+
+<p>다만 HEAD 로부터 딱 하나의 커밋만을 되돌리길 원한다면 아래와 같은 방법을 이용할 수 있습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git reset HEAD^</code></p>
+
+<h2 id="옵션">옵션</h2>
+
+<p>git reset 명령어에는 3가지 옵션이 존재합니다.</p>
+
+<ol>
+  <li>–soft
+    <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span><span class="w"> </span><span class="n">reset</span><span class="w"> </span><span class="o">--</span><span class="n">soft</span><span class="w"> </span><span class="p">{</span><span class="n">commit</span><span class="w"> </span><span class="n">ID</span><span class="p">}</span><span class="w">
+</span><span class="n">git</span><span class="w"> </span><span class="n">reset</span><span class="w"> </span><span class="o">--</span><span class="n">soft</span><span class="w"> </span><span class="n">HEAD</span><span class="o">~</span><span class="n">n</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>soft 는 commit 된 파일들을 staged 된 상태로 돌려놓습니다.</p>
+
+<p>staged 된 상태는 commit 직전의 상태로 <code class="language-plaintext highlighter-rouge">git add</code> 명령어를 사용한 상태라고 생각하시면 됩니다.</p>
+
+<ol>
+  <li>–mixed (default)</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">git reset --mixed ...</code></p>
+
+<p>mixed 는 default 옵션으로 아무 옵션도 붙이지 않았을 때 자동 적용됩니다.</p>
+
+<p>이 옵션은 Commit 된 파일들을 add 되기 전 상태, 즉 working directory 로 돌려놓습니다.</p>
+
+<ol>
+  <li>–hard</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">git reset --hard ...</code></p>
+
+<p>hard 는 되돌리고자 하는 (tracked) 파일들을 working directory 에서조차 삭제해버립니다.</p>
+
+<p>다시 말해 그 어디에도 tracked 된 파일들이 남지 않는다는 소리입니다.</p>
+
+<p>저는 대부분의 경우에 이 옵션을 사용하는데, hard 를 사용한 후 잘못 push 할 경우 대참사가 일어날 수 있으니 각별히 주의하시길 바랍니다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>사실 reset 명령어를 사용한다는 것 자체가 뭔가 잘못되었다는 뜻이기 때문에… 사용할 일 자체를 만들지 않는게 제일 좋은 것 같습니다.</p>
+
+<p>혹시나 사용할 경우가 생기더라도 자신의 상황에 맞춰 신중하게 사용하시길 바랍니다.</p>
+
+<p>간혹가다 기본적인 기능들이 아닌 신기하거나 헷갈리는 git 명령어들을 정리해볼 생각입니다.</p>
+:ET

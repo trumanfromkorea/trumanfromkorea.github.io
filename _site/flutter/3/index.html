@@ -94,6 +94,8 @@
 
 <!-- end custom head snippets -->
 
+
+    <link rel="stylesheet" href="/assets/css/syntax.css">
   </head>
 
   <body class="layout--single">
@@ -276,7 +278,7 @@
 
             <!--전체 글 수-->
             <li>
-                📂 <b><span style="font-size:0.8rem;">전체 글 수 <span
+                🚀 <b><span style="font-size:0.8rem;"> 전체 글 수 <span
                             style="font-size:1rem; color : #4e89f0;">15</span> 개</span></b>
             </li>
 
@@ -465,8 +467,8 @@
 
 <p>null safety 를 효과적으로 이용할 수 있으려면 nullable 과 non-nullable 의 차이를 알아야 합니다. 말 그대로 nullable 은 null 을 포함할 수 있는 변수이고, non-nullable 은 null 을 포함할 수 없는 변수입니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String? nullable = "nullable";
-String nonNullable = "non nullable";
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">String</span><span class="o">?</span> <span class="n">nullable</span> <span class="o">=</span> <span class="s">"nullable"</span><span class="o">;</span>
+<span class="kt">String</span> <span class="n">nonNullable</span> <span class="o">=</span> <span class="s">"non nullable"</span><span class="o">;</span>
 </code></pre></div></div>
 
 <p>위와 같이 nullable 변수의 타입에 ? 을 붙여줌으로써 해당 변수에 null 을 대입할 수 있게 됩니다. 반면 ? 를 붙이지 않은 non-nullbale 변수에 null 을 대입할 시 에러가 발생하게 됩니다.</p>
@@ -477,16 +479,16 @@ String nonNullable = "non nullable";
 
 <h3 id="--null-조건-연산자">- null 조건 연산자</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String? nullable = null;
-int length = nullable?.length; 
-// --&gt; null
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">String</span><span class="o">?</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">nullable</span><span class="o">?.</span><span class="na">length</span><span class="o">;</span> 
+<span class="c1">// --&gt; null</span>
 </code></pre></div></div>
 
 <p>nullable 변수가 null 인지 아닌지를 확인하고 싶다면 ? 연산자를 붙여줄 수 있고, 해당 변수가 null 이라면 연산자 이후의 작업을 시행하지 않고 바로 null 을 반환합니다.</p>
 
 <h3 id="--null-보증-연산자">- null 보증 연산자</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String token = await FirebaseAuth.instance.currentUser!.getIdToken();
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">await</span> <span class="n">FirebaseAuth</span><span class="o">.</span><span class="na">instance</span><span class="o">.</span><span class="na">currentUser</span><span class="o">!.</span><span class="na">getIdToken</span><span class="o">();</span>
 </code></pre></div></div>
 
 <p>nullable 변수뒤의 ! 연산자는 해당 변수가 null 이 아닌 값을 가지고 있다고 확신할 때 사용됩니다. 저같은 경우는 위 예시와 같이 currentUser 가 null 이 아닐때 (로그인하지 않으면 도달할 수 없는 화면일 때) 주로 사용하곤 합니다.</p>
@@ -495,16 +497,16 @@ int length = nullable?.length;
 
 <h3 id="--null-인식-연산자">- null 인식 연산자</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (someVar == null) {
-  ...
-} else {
-  ...
-}
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">someVar</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+  <span class="o">...</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+  <span class="o">...</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>어떤 변수가 null 일 경우와 null 이 아닐 경우를 나누어 예외처리를 해야할 일이 생길수도 있습니다. 이 때 if else 문으로 처리해줄 수도 있겠지만, null 인식 연산자를 사용하면 코드를 훨씬 간결하게 작성할 수 있습니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String newString = someString ?? "is null";
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">String</span> <span class="n">newString</span> <span class="o">=</span> <span class="n">someString</span> <span class="o">??</span> <span class="s">"is null"</span><span class="o">;</span>
 </code></pre></div></div>
 
 <p>null 인지 확인하고자 하는 변수 뒤에 ?? 연산자를 붙이면, 해당 변수가 null 인 경우에 연산자 뒤의 작업을 수행하게 됩니다.</p>
@@ -513,11 +515,11 @@ int length = nullable?.length;
 
 <p>지역 변수에서는 non-nullable 변수가 선언과 동시에 초기화 되지 않아도 됩니다. 하지만 최상위 변수와 클래스 멤버 변수의 경우 non-nullable 이라면 선언과 동시에 초기화 되어야 합니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Person{
-  late String name;
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span><span class="o">{</span>
+  <span class="n">late</span> <span class="kt">String</span> <span class="n">name</span><span class="o">;</span>
   
-  void setName() =&gt; name="my name";
-}
+  <span class="kt">void</span> <span class="n">setName</span><span class="o">()</span> <span class="o">=&gt;</span> <span class="n">name</span><span class="o">=</span><span class="s">"my name"</span><span class="o">;</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>이렇게 non-nullable 변수를 선언하고 해당 변수를 사용하기 직전에 값을 할당하고 싶다면 late 연산자를 사용할 수 있습니다. late 연산자를 붙인 변수는 초기화를 늦춰주는 것 뿐이지 null 을 대입할 수는 없다는 점을 주의해야 합니다.</p>
@@ -594,14 +596,14 @@ int length = nullable?.length;
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm/5/" rel="permalink">[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift)
+        <a href="/algorithm/5/" rel="permalink">[알고리즘] 백준:1655 - 가운데를 말해요(Swift)
 </a>
       
 
       
             <span class="page__meta" style="margin-left:0.5rem">
                 <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-                2022-01-22
+                2022-01-21
             </span> 
         
     </h2>

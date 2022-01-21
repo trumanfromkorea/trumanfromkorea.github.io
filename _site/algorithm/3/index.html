@@ -94,6 +94,8 @@
 
 <!-- end custom head snippets -->
 
+
+    <link rel="stylesheet" href="/assets/css/syntax.css">
   </head>
 
   <body class="layout--single">
@@ -276,7 +278,7 @@
 
             <!--전체 글 수-->
             <li>
-                📂 <b><span style="font-size:0.8rem;">전체 글 수 <span
+                🚀 <b><span style="font-size:0.8rem;"> 전체 글 수 <span
                             style="font-size:1rem; color : #4e89f0;">15</span> 개</span></b>
             </li>
 
@@ -477,18 +479,18 @@
 
 <p>n 번째 피보나치 수를 구하는 함수를 <code class="language-plaintext highlighter-rouge">fib(n)</code> 이라고 정의할 때, 이는 다음과 같이 나타낼 수 있습니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fib(n) = fib(n-1) + fib(n-2)
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>우리는 이러한 식을 간단한 재귀 함수로 표현할 수 있을 것입니다. 아래는 피보나치 수열을 재귀함수로 이용해 작성한 코드입니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>func fib(n: Int) -&gt; Int {
-    if n == 0 || n == 1 {
-        return 1
-    } else {
-        return fib_naive(n: n - 1) + fib_naive(n: n - 2)
-    }
-}
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">fib</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nf">fib_naive</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nf">fib_naive</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>피보나치 수열의 개념만 이해한다면 재귀함수로 구현하는건 그닥 어렵지 않은 일일것입니다.</p>
@@ -511,19 +513,19 @@
 
 <p>이렇게 한번 실행된 함수의 결과를 저장해두었다가 사용하는 방식으로 중복 호출을 줄이는 것을 Memoization 이라고 합니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>func fib(n: Int) -&gt; Int {
-    if n == 0 || n == 1 {
-        return 1
-    }
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">fib</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="p">}</span>
 
-    var fib_array: [Int] = [1, 1]
+    <span class="k">var</span> <span class="nv">fib_array</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 
-    for i in 2 ... n {
-        let num: Int = fib_array[i - 1] + fib_array[i - 2]
-        fib_array.append(num)
-    }
-    return fib_array[n]
-}
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">2</span> <span class="o">...</span> <span class="n">n</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">num</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">fib_array</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">fib_array</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="n">fib_array</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">fib_array</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>위는 Memoization 을 활용해 다시 구성한 피보나치 수열 메소드입니다.</p>
@@ -604,14 +606,14 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm/5/" rel="permalink">[알고리즘] [알고리즘] 백준:1655 - 가운데를 말해요(Swift)
+        <a href="/algorithm/5/" rel="permalink">[알고리즘] 백준:1655 - 가운데를 말해요(Swift)
 </a>
       
 
       
             <span class="page__meta" style="margin-left:0.5rem">
                 <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-                2022-01-22
+                2022-01-21
             </span> 
         
     </h2>
