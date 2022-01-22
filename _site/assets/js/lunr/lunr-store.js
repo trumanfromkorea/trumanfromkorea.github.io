@@ -88,4 +88,10 @@ var store = [{
         "tags": [],
         "url": "/algorithm/5/",
         "teaser": null
+      },{
+        "title": "[알고리즘] 프로그래머스 - 다리를 지나는 트럭(Swift)",
+        "excerpt":"[알고리즘] 프로그래머스 - 다리를 지나는 트럭 클릭해서 문제 바로가기 문제 설명 본문 트럭 여러 대가 강을 가로지르는 일차선 다리를 정해진 순으로 건너려 합니다. 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 알아내야 합니다. 다리에는 트럭이 최대 bridge_length 대 올라갈 수 있으며, 다리는 weight 이하까지의 무게를 견딜 수 있습니다. 단, 다리에...","categories": ["Algorithm"],
+        "tags": [],
+        "url": "/algorithm/6/",
+        "teaser": null
       }]

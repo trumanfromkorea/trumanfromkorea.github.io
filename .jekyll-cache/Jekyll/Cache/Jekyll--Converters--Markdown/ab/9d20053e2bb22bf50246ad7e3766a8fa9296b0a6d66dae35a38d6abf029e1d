@@ -1,0 +1,136 @@
+I"\+<h2 id="알고리즘-프로그래머스---다리를-지나는-트럭">[알고리즘] 프로그래머스 - 다리를 지나는 트럭</h2>
+
+<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42583">클릭해서 문제 바로가기</a></p>
+
+<h2 id="문제-설명">문제 설명</h2>
+
+<h3 id="본문">본문</h3>
+
+<p>트럭 여러 대가 강을 가로지르는 일차선 다리를 정해진 순으로 건너려 합니다. 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 알아내야 합니다. 다리에는 트럭이 최대 bridge_length 대 올라갈 수 있으며, 다리는 weight 이하까지의 무게를 견딜 수 있습니다. 단, 다리에 완전히 오르지 않은 트럭의 무게는 무시합니다.</p>
+
+<p>예를 들어, 트럭 2대가 올라갈 수 있고 무게를 10kg까지 견디는 다리가 있습니다. 무게가 [7, 4, 5, 6]kg인 트럭이 순서대로 최단 시간 안에 다리를 건너려면 다음과 같이 건너야 합니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>경과시간</th>
+      <th>다리를 지난 트럭</th>
+      <th>다리를 건너는 트럭</th>
+      <th>대기 트럭</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[7,4,5,6]</td>
+    </tr>
+    <tr>
+      <td>1~2</td>
+      <td>[]</td>
+      <td>[7]</td>
+      <td>[4,5,6]</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>[7]</td>
+      <td>[4]</td>
+      <td>[5,6]</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>[7]</td>
+      <td>[4,5]</td>
+      <td>[6]</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>[7,4]</td>
+      <td>[5]</td>
+      <td>[6]</td>
+    </tr>
+    <tr>
+      <td>6~7</td>
+      <td>[7,4,5]</td>
+      <td>[6]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>[7,4,5,6]</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>따라서, 모든 트럭이 다리를 지나려면 최소 8초가 걸립니다.</p>
+
+<p>solution 함수의 매개변수로 다리에 올라갈 수 있는 트럭 수 bridge_length, 다리가 견딜 수 있는 무게 weight, 트럭 별 무게 truck_weights가 주어집니다. 이때 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 return 하도록 solution 함수를 완성하세요.</p>
+
+<h2 id="이해">이해</h2>
+
+<h3 id="1-다리">1. 다리</h3>
+
+<p>현재 다리 위에 어떤 트럭들이 올라가 있는지에 대한 정보를 저장할 수 있는 자료구조가 필요했습니다. 먼저 다리를 건너기 시작한 트럭이 먼저 다리를 다 건너기 때문에 큐를 활용할까 생각했지만, 각 트럭이 다리에 머물러 있는 시간을 세는 방식이 애매하다고 생각하였습니다.</p>
+
+<p>다리의 길이만큼 배열을 선언하기로 하였습니다. 배열의 모든 원소를 0 으로 초기화시켜 트럭을 삽입한 후 인덱스를 한 칸씩 옮겨주게 되면 다리를 건너는 모양새를 만들 수 있었습니다.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">길이가</span> <span class="mi">5</span> <span class="nx">인</span> <span class="nx">다리를</span> <span class="nx">무게가</span> <span class="mi">1</span> <span class="nx">인</span> <span class="nx">트럭이</span> <span class="nx">건너는</span> <span class="nx">모습</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="2-무게">2. 무게</h3>
+
+<p>다리는 버틸 수 있는 최대 무게가 정해져있기 때문에 현재 다리에 올라가있는 트럭들의 무게 합과 다음에 다리에 올라갈 트럭의 무게 합이 최대 무게보다 작거나 같아야 했습니다. 이전에 파이썬으로 문제를 풀이할 때는 sum() 함수를 이용하여 이를 처리하였는데, 이는 O(n) 만큼의 시간이 소요되기 때문에 더 효율적인 방법이 필요했습니다.</p>
+
+<p>그래서 다리의 무게를 담아주는 변수를 선언하고 계속해서 값을 업데이트 시켜주었습니다. 다리에 트럭이 올라간다면 변수에 트럭의 무게를 더해주고, 트럭이 다리를 다 건널 때에는 변수에서 해당 트럭의 무게를 빼주었습니다.</p>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="kd">func</span> <span class="nf">solution</span><span class="p">(</span><span class="n">_</span> <span class="nv">bridge_length</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">weight</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">truck_weights</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">time</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1">// 다리에 올라가 있는 트럭의 무게 총합</span>
+    <span class="k">var</span> <span class="nv">bridgeWeight</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1">// 다리를 표현한 배열, 모두 0으로 초기화</span>
+    <span class="k">var</span> <span class="nv">bridge</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">(</span><span class="nv">repeating</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="n">bridge_length</span><span class="p">)</span>
+    <span class="k">var</span> <span class="nv">trucks</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="n">truck_weights</span>
+    
+    <span class="c1">// 다리에 올라가 있는 트럭이 존재하거나</span>
+    <span class="c1">// 대기하고 있는 트럭이 존재하는 동안에</span>
+    <span class="k">while</span> <span class="n">bridgeWeight</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">||</span> <span class="o">!</span><span class="n">trucks</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+        <span class="n">time</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">// 시간 +1</span>
+        <span class="n">bridgeWeight</span> <span class="o">-=</span> <span class="n">bridge</span><span class="o">.</span><span class="nf">removeFirst</span><span class="p">()</span> <span class="c1">// 다리를 다 건넌 트럭의 무게를 더해줌</span>
+        
+        <span class="c1">// 대기하고 있는 트럭이 있다면</span>
+        <span class="k">if</span> <span class="o">!</span><span class="n">trucks</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">nextTruck</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">trucks</span><span class="o">.</span><span class="n">first</span><span class="o">!</span>
+            <span class="c1">// 트럭 무게의 총합이 최대무게 이하일때</span>
+            <span class="k">if</span> <span class="n">bridgeWeight</span> <span class="o">+</span> <span class="n">nextTruck</span> <span class="o">&lt;=</span> <span class="n">weight</span> <span class="p">{</span>
+                <span class="n">bridgeWeight</span> <span class="o">+=</span> <span class="n">nextTruck</span> <span class="c1">// 다리 위 트럭 무게 더해주고</span>
+                <span class="n">bridge</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">nextTruck</span><span class="p">)</span> <span class="c1">// 다리 위에 트럭 올려줌</span>
+                <span class="n">trucks</span><span class="o">.</span><span class="nf">removeFirst</span><span class="p">()</span> <span class="c1">// 트럭 배열에서 제거</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">// 다리에 트럭이 못 올라가는 경우 0 추가해서 인덱스 밀어주기</span>
+                <span class="n">bridge</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">time</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="마무리">마무리</h2>
+
+<p>예전에 파이썬으로 풀었을 때는 시간</p>
+:ET
