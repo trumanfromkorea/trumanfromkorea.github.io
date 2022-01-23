@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[알고리즘] 탐욕법 Greedy - 꽁치대디의 개발일기 💻</title>
-<meta name="description" content="탐욕법">
+<!-- begin _includes/seo.html --><title>[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬 - 꽁치대디의 개발일기 💻</title>
+<meta name="description" content="정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬">
 
 
   <meta name="author" content="장재훈">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="꽁치대디의 개발일기 💻">
-<meta property="og:title" content="[알고리즘] 탐욕법 Greedy">
-<meta property="og:url" content="http://localhost:4000/algorithm/1/">
+<meta property="og:title" content="[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬">
+<meta property="og:url" content="http://localhost:4000/algorithm/8/">
 
 
-  <meta property="og:description" content="탐욕법">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-01-06T09:00:00+09:00">
+  <meta property="og:description" content="정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-01-23T09:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/algorithm/1/">
+
+<link rel="canonical" href="http://localhost:4000/algorithm/8/">
 
 
 
@@ -377,16 +377,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[알고리즘] 탐욕법 Greedy">
-    <meta itemprop="description" content="탐욕법">
-    <meta itemprop="datePublished" content="2022-01-06T09:00:00+09:00">
+    <meta itemprop="headline" content="[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬">
+    <meta itemprop="description" content="정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬">
+    <meta itemprop="datePublished" content="2022-01-23T09:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/algorithm/1/" class="u-url" itemprop="url">[알고리즘] 탐욕법 Greedy
+            <a href="http://localhost:4000/algorithm/8/" class="u-url" itemprop="url">[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬
 </a>
           </h1>
 <!--          
@@ -403,7 +403,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -438,68 +438,144 @@
 
                   
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-06T09:00:00+09:00">January 6, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-23T09:00:00+09:00">January 23, 2022</time></p>
 
               </span>
       
               
       <section class="page__content e-content" itemprop="text">
         
-        <h2 id="탐욕법">탐욕법</h2>
+        <h2 id="정렬-알고리즘-1---선택-정렬-삽입-정렬">정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬</h2>
 
-<p>오늘은 탐욕법, Greedy 알고리즘에 대해 알아보도록 하겠습니다.</p>
+<p>오늘은 알고리즘들 중 가장 기초이면서도 방법이 많아 헷갈리기도 하는 정렬에 대해 학습해보도록 하겠습니다.</p>
 
-<p>탐욕법이란 현재 상황에서의 최적해를 쫓는 알고리즘입니다. 하지만 현재 상황에서의 최적해만을 추구하는 것이 전체적으로 어떤 영향을 끼칠지는 고려하지 않기 때문에 항상 옳은 결과를 장담하지는 않습니다.</p>
+<p>정렬 알고리즘이 굉장히 많기 때문에 한 포스트에 정리하게 된다면 내용이 너무 길어질 것 같아 오늘은 선택 정렬과 삽입 정렬에 대해서만 알아보도록 하겠습니다.</p>
 
-<h2 id="local-minimum--global-minimum">Local minimum &amp; Global minimum</h2>
+<h2 id="선택-정렬">선택 정렬</h2>
 
-<p><img src="https://user-images.githubusercontent.com/55919701/148390866-844350b0-11a2-4b30-a132-02b4d1fdecfc.jpg" alt="연습장-123" /></p>
+<p>선택 정렬은 처리되지 않은 데이터 중 가장 작은 데이터를 선택해 맨 앞에 있는 데이터와 바꾸는 것을 반복합니다.</p>
 
-<p>그래프 위 시작점 X 에서 최소값을 찾는 프로그램을 작성한다고 할 때, 탐욕법을 이용한다고 가정해보겠습니다.</p>
+<h3 id="동작-예시">동작 예시</h3>
 
-<p>탐욕법은 앞서 말했듯이 현재 상황에서의 최적해를 찾는 알고리즘이기 때문에 시작점 X 에서 최소값을 찾으려면 무조건 지금의 값보다 낮은 왼쪽으로 향하게 될 것입니다.</p>
+<ol>
+  <li>정렬할 데이터를 준비합니다.</li>
+</ol>
 
-<p>왼쪽으로 진행하던 점 X 는 어느 순간 값이 커지는 변곡점을 맞게 될 것이고, 프로그램은 해당 변곡점을 그래프의 최소값이라고 생각할 것입니다.</p>
+<p><img src="https://user-images.githubusercontent.com/55919701/150670202-77607baf-9833-445e-8132-dad7472fa094.png" alt="1" /></p>
 
-<p>하지만 위 그래프를 전체적으로 봤을때 그 변곡점은 local minimum 에 해당하는 점 A 일 것이며, 그래프의 실제 최소값은 global minimum 에 해당하는 점 B 일 것입니다.</p>
+<ol>
+  <li>첫번째 인덱스인 7 과 나머지 데이터들을 비교하여 그 중 최소값인 0 을 선택해 교환해줍니다.</li>
+</ol>
 
-<p>탐욕법은 전체적인 부분을 고려하지 않고 현재 상황에서의 최적해만을 쫓기 때문에 위와 같은 예제에서는 알맞은 풀이법이 아니라고 볼 수 있습니다.]</p>
+<p><img src="https://user-images.githubusercontent.com/55919701/150670203-de2d0042-4b32-40a1-9095-c201bd526022.png" alt="2" /></p>
 
-<h2 id="그렇다면-어떤-경우에-탐욕법을-사용하는-것이-좋을까">그렇다면 어떤 경우에 탐욕법을 사용하는 것이 좋을까?</h2>
+<ol>
+  <li>두번째 인덱스 5 와 처리되지 않은 데이터들 중 최소값인 1 을 선택해 교환해줍니다.</li>
+</ol>
 
-<p>탐욕법은 탐욕 선택 속성 (Greedy Choice Property) 와 최적 부분 구조 (Optimal Substructure) 의 특성을 가지는 문제들을 해결할 때 활용할 수 있습니다.</p>
+<p><img src="https://user-images.githubusercontent.com/55919701/150670205-819b1116-7fe0-4ee6-9e9d-7f0d910de659.png" alt="3" /></p>
 
-<h3 id="--탐욕-선택-속성-greedy-choice-property">- 탐욕 선택 속성 (Greedy Choice Property)</h3>
+<ol>
+  <li>계속해서 처리되지 않은 데이터들 중 가장 첫번째 값과 나머지 데이터들 중 최소값을 선택하여 교환해줍니다.</li>
+</ol>
 
-<p>탐욕 선택 속성은 이전의 선택이 이후의 선택에 영향을 끼치지 않아야 한다는 조건입니다. 즉 탐욕적인 접근이 항상 옳은 선택이라는게 보장되어야 한다는 의미입니다.</p>
+<p><img src="https://user-images.githubusercontent.com/55919701/150670207-bb81ba33-8da2-42ac-b3aa-053048db58a8.png" alt="4" /></p>
 
-<h3 id="--최적-부분-구조-optimal-substructure">- 최적 부분 구조 (Optimal Substructure)</h3>
+<ol>
+  <li>위 과정을 마지막 인덱스까지 반복하면 정렬이 완료됩니다.</li>
+</ol>
 
-<p>최적 부분 구조는 전체 문제의 최적해가 부분 문제들의 최적해로 이루어진 경우를 얘기합니다. 이 말은 전체 문제를 부분적인 문제들로 나누었을 때, 부분적인 문제들의 최적해가 전체적으로 보았을 때 마찬가지로 최적해를 구성해야 한다는 의미입니다.</p>
+<p><img src="https://user-images.githubusercontent.com/55919701/150670209-1551b7c8-3ee5-41b4-9096-c1f400fd7aaf.png" alt="6" /></p>
 
-<h2 id="동전-문제">동전 문제</h2>
+<h3 id="시간복잡도">시간복잡도</h3>
 
-<p>가장 보편적인 문제는 동전 문제입니다.</p>
+<p>선택정렬은 구현하기 비교적 쉽지만 그다지 효율적인 방법은 아닙니다.</p>
 
-<blockquote>
-  <p>500원, 100원, 50원, 10원 짜리 동전만을 이용해서 주어진 금액 N 원을 구성해야 한다고 할 때, 구성할 수 있는 동전의 최소 개수를 구하라. N 은 항상 10의 배수이다.</p>
-</blockquote>
+<p>전체 원소의 개수가 N 개일 때 선택정렬은 N 번 만큼 최소값을 찾아 교환해주어야 하기 때문에 시간 복잡도는 O(N²) 입니다.</p>
 
-<p>가장 적은 수의 동전을 이용하여 N 원을 구성하기 위해서는 동전 중 가장 큰 동전으로 구성할 수 있는 최대값을 고려한 후, 해당 값을 뺀 나머지에서 다음 단위의 동전으로 구성할 수 있는 최대값을 고려해야 합니다.</p>
+<h3 id="코드">코드</h3>
 
-<p>이와 같이 가장 큰 단위의 동전부터 이용해 N 원을 구상한다면 탐욕법을 이용하여 문제를 해결할 수 있습니다.</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
 
-<p>(코드는 추후에 첨부하도록 하겠습니다)</p>
+<span class="k">var</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 
-<p>해당 문제를 탐욕법으로 접근할 수 있는 이유는 가지고 있는 동전 중 큰 단위의 동전이 항상 작은 단위의 동전의 배수이기 때문입니다. 그렇기 때문에 작은 단위의 동전을 조합해 이 중 큰 단위가 아닌 다른 단위의 금액을 도출해낼 수 없습니다.</p>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">items</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">minIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">i</span>
+    
+    <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="n">i</span> <span class="o">..&lt;</span> <span class="n">items</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">{</span>
+            <span class="n">minIndex</span> <span class="o">=</span> <span class="n">j</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="n">items</span><span class="o">.</span><span class="nf">swapAt</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">minIndex</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="삽입-정렬">삽입 정렬</h2>
+
+<p>삽입 정렬은 선택 정렬과는 반대로 처리되지 않은 데이터를 하나씩만 골라 처리된 데이터들 사이 적절한 위치로 삽입해줍니다.</p>
+
+<h3 id="동작-예시-1">동작 예시</h3>
+
+<ol>
+  <li>첫번째 인덱스인 7 은 이미 처리된 데이터라고 가정하고 그 다음 인덱스인 5 가 처리된 데이터 7 과 비교했을때 어떤 위치로 들어가는 것이 적절한지 판단하여 삽입합니다. 이 경우에 5 는 7 보다 작기 때문에 7 의 왼쪽에 삽입됩니다.</li>
+</ol>
+
+<p><img src="https://user-images.githubusercontent.com/55919701/150670804-5cf6ac42-5228-4fdc-84d2-d67ac5ad5ceb.png" alt="1" /></p>
+
+<ol>
+  <li>그 다음 인덱스인 9 를 처리된 데이터 5, 7 중 어떤 위치로 삽입해줘야 하는지 판단하여 삽입해줍니다.</li>
+</ol>
+
+<p><img src="https://user-images.githubusercontent.com/55919701/150670805-a332eabd-2d0b-49a0-b163-2cbcad9a15f9.png" alt="2" /></p>
+
+<ol>
+  <li>마찬가지로 0 이 5, 7, 9 중 어떤 위치로 들어가야 하는지 판단하여 삽입합니다.</li>
+</ol>
+
+<p><img src="https://user-images.githubusercontent.com/55919701/150670806-63b0e59e-035a-4750-9c27-ad31682724a0.png" alt="3" /></p>
+
+<ol>
+  <li>위 과정을 마지막 인덱스까지 반복하면 정렬이 완료됩니다.</li>
+</ol>
+
+<p><img src="https://user-images.githubusercontent.com/55919701/150670807-4a076738-9d32-41b0-9ea2-63ab0c98f6a4.png" alt="4" /></p>
+
+<h3 id="시간복잡도-1">시간복잡도</h3>
+
+<p>삽입 정렬도 선택정렬과 마찬가지로 N 번 만큼 원소의 자리를 찾아주어야 하기 때문에 O(N²) 의 시간복잡도를 가집니다.</p>
+
+<p>또한 삽입 정렬은 데이터가 정렬되어있는 등 최선의 경우 O(N) 의 시간복잡도를 가지지만, 데이터 상태나 크기에 따라 시간복잡도가 달라질 수 있습니다.</p>
+
+<h2 id="코드-1">코드</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="k">var</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">..&lt;</span> <span class="n">items</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="nf">stride</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">by</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="p">{</span>
+            <span class="n">items</span><span class="o">.</span><span class="nf">swapAt</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h2 id="마무리">마무리</h2>
 
-<p>오늘은 탐욕법에 대해 알아보았습니다.</p>
+<p>오늘은 선택 정렬과 삽입 정렬에 대해 알아보았습니다.</p>
 
-<p>탐욕법은 매우 정리하기 간단할 것이라 생각했는데 전혀 아니었네요.. 알고리즘의 개념에 대한 학습이 얼마나 중요한지 다시 한번 느끼게 되었습니다.</p>
+<p>이렇게 하나 둘씩 정리하다 보니까 예전에 학교에서 알고리즘을 배울때가 생각이 나네요. 그때 좀만 더 열심히 했었더라면 어땠을까 라는 생각을 하루에 수십번도 더 합니다.ㅎㅎ</p>
 
-<p>다음에는 탐욕법과 많이 비교되는 Dynamic Programming 에 대해 알아보는 시간을 갖도록 하겠습니다.</p>
+<p>다음에는 퀵 정렬과 합병 정렬에 대해 알아보도록 하겠습니다.</p>
 
         
       </section>
@@ -526,7 +602,7 @@
 -->
 <!--        
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-06T09:00:00+09:00">January 6, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-23T09:00:00+09:00">January 23, 2022</time></p>
 -->
       </footer>
 
@@ -535,12 +611,11 @@
       <!-- 
   <nav class="pagination">
     
-      <a href="/til/2/" class="pagination--pager" title="[iOS] SwiftUI - Navigation Link
+      <a href="/algorithm/7/" class="pagination--pager" title="[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)
 ">Previous</a>
     
     
-      <a href="/algorithm/2/" class="pagination--pager" title="[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
  -->
@@ -554,30 +629,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm/8/" rel="permalink">[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬
-</a>
-      
-
-      
-            <span class="page__meta" style="margin-left:0.5rem">
-                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-                2022-01-23
-            </span> 
-        
-    </h2>
-  </article>
-</div>
         
           
 
@@ -645,6 +696,30 @@
             <span class="page__meta" style="margin-left:0.5rem">
                 <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
                 2022-01-21
+            </span> 
+        
+    </h2>
+  </article>
+</div>
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/swift/1/" rel="permalink">[Swift] 클로저 Closures (1/2)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-01-19
             </span> 
         
     </h2>

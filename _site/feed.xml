@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-23T02:10:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)</title><link href="http://localhost:4000/algorithm/7/" rel="alternate" type="text/html" title="[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)" /><published>2022-01-23T09:00:00+09:00</published><updated>2022-01-23T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/7</id><content type="html" xml:base="http://localhost:4000/algorithm/7/">&lt;h2 id=&quot;알고리즘-백준1158---요세푸스-문제&quot;&gt;[알고리즘] 백준:1158 - 요세푸스 문제&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-23T18:03:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬</title><link href="http://localhost:4000/algorithm/8/" rel="alternate" type="text/html" title="[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬" /><published>2022-01-23T09:00:00+09:00</published><updated>2022-01-23T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/8</id><content type="html" xml:base="http://localhost:4000/algorithm/8/">&lt;h2 id=&quot;정렬-알고리즘-1---선택-정렬-삽입-정렬&quot;&gt;정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬&lt;/h2&gt;
+
+&lt;p&gt;오늘은 알고리즘들 중 가장 기초이면서도 방법이 많아 헷갈리기도 하는 정렬에 대해 학습해보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;정렬 알고리즘이 굉장히 많기 때문에 한 포스트에 정리하게 된다면 내용이 너무 길어질 것 같아 오늘은 선택 정렬과 삽입 정렬에 대해서만 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;선택-정렬&quot;&gt;선택 정렬&lt;/h2&gt;
+
+&lt;p&gt;선택 정렬은 처리되지 않은 데이터 중 가장 작은 데이터를 선택해 맨 앞에 있는 데이터와 바꾸는 것을 반복합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;동작-예시&quot;&gt;동작 예시&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;정렬할 데이터를 준비합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/150670202-77607baf-9833-445e-8132-dad7472fa094.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;첫번째 인덱스인 7 과 나머지 데이터들을 비교하여 그 중 최소값인 0 을 선택해 교환해줍니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/150670203-de2d0042-4b32-40a1-9095-c201bd526022.png&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;두번째 인덱스 5 와 처리되지 않은 데이터들 중 최소값인 1 을 선택해 교환해줍니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/150670205-819b1116-7fe0-4ee6-9e9d-7f0d910de659.png&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;계속해서 처리되지 않은 데이터들 중 가장 첫번째 값과 나머지 데이터들 중 최소값을 선택하여 교환해줍니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/150670207-bb81ba33-8da2-42ac-b3aa-053048db58a8.png&quot; alt=&quot;4&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;위 과정을 마지막 인덱스까지 반복하면 정렬이 완료됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/150670209-1551b7c8-3ee5-41b4-9096-c1f400fd7aaf.png&quot; alt=&quot;6&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;시간복잡도&quot;&gt;시간복잡도&lt;/h3&gt;
+
+&lt;p&gt;선택정렬은 구현하기 비교적 쉽지만 그다지 효율적인 방법은 아닙니다.&lt;/p&gt;
+
+&lt;p&gt;전체 원소의 개수가 N 개일 때 선택정렬은 N 번 만큼 최소값을 찾아 교환해주어야 하기 때문에 시간 복잡도는 O(N²) 입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;코드&quot;&gt;코드&lt;/h3&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;minIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;swapAt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;삽입-정렬&quot;&gt;삽입 정렬&lt;/h2&gt;
+
+&lt;p&gt;삽입 정렬은 선택 정렬과는 반대로 처리되지 않은 데이터를 하나씩만 골라 처리된 데이터들 사이 적절한 위치로 삽입해줍니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;동작-예시-1&quot;&gt;동작 예시&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;첫번째 인덱스인 7 은 이미 처리된 데이터라고 가정하고 그 다음 인덱스인 5 가 처리된 데이터 7 과 비교했을때 어떤 위치로 들어가는 것이 적절한지 판단하여 삽입합니다. 이 경우에 5 는 7 보다 작기 때문에 7 의 왼쪽에 삽입됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/150670804-5cf6ac42-5228-4fdc-84d2-d67ac5ad5ceb.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;그 다음 인덱스인 9 를 처리된 데이터 5, 7 중 어떤 위치로 삽입해줘야 하는지 판단하여 삽입해줍니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/150670805-a332eabd-2d0b-49a0-b163-2cbcad9a15f9.png&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;마찬가지로 0 이 5, 7, 9 중 어떤 위치로 들어가야 하는지 판단하여 삽입합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/150670806-63b0e59e-035a-4750-9c27-ad31682724a0.png&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;위 과정을 마지막 인덱스까지 반복하면 정렬이 완료됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/150670807-4a076738-9d32-41b0-9ea2-63ab0c98f6a4.png&quot; alt=&quot;4&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;시간복잡도-1&quot;&gt;시간복잡도&lt;/h3&gt;
+
+&lt;p&gt;삽입 정렬도 선택정렬과 마찬가지로 N 번 만큼 원소의 자리를 찾아주어야 하기 때문에 O(N²) 의 시간복잡도를 가집니다.&lt;/p&gt;
+
+&lt;p&gt;또한 삽입 정렬은 데이터가 정렬되어있는 등 최선의 경우 O(N) 의 시간복잡도를 가지지만, 데이터 상태나 크기에 따라 시간복잡도가 달라질 수 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;코드-1&quot;&gt;코드&lt;/h2&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stride&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;swapAt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+
+&lt;p&gt;오늘은 선택 정렬과 삽입 정렬에 대해 알아보았습니다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 하나 둘씩 정리하다 보니까 예전에 학교에서 알고리즘을 배울때가 생각이 나네요. 그때 좀만 더 열심히 했었더라면 어땠을까 라는 생각을 하루에 수십번도 더 합니다.ㅎㅎ&lt;/p&gt;
+
+&lt;p&gt;다음에는 퀵 정렬과 합병 정렬에 대해 알아보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬</summary></entry><entry><title type="html">[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)</title><link href="http://localhost:4000/algorithm/7/" rel="alternate" type="text/html" title="[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)" /><published>2022-01-23T09:00:00+09:00</published><updated>2022-01-23T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/7</id><content type="html" xml:base="http://localhost:4000/algorithm/7/">&lt;h2 id=&quot;알고리즘-백준1158---요세푸스-문제&quot;&gt;[알고리즘] 백준:1158 - 요세푸스 문제&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1158&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
 
@@ -1049,54 +1179,4 @@
 
 &lt;p&gt;탐욕법은 매우 정리하기 간단할 것이라 생각했는데 전혀 아니었네요.. 알고리즘의 개념에 대한 학습이 얼마나 중요한지 다시 한번 느끼게 되었습니다.&lt;/p&gt;
 
-&lt;p&gt;다음에는 탐욕법과 많이 비교되는 Dynamic Programming 에 대해 알아보는 시간을 갖도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">탐욕법</summary></entry><entry><title type="html">[iOS] SwiftUI - Navigation Link</title><link href="http://localhost:4000/til/2/" rel="alternate" type="text/html" title="[iOS] SwiftUI - Navigation Link" /><published>2022-01-05T09:00:00+09:00</published><updated>2022-01-05T09:00:00+09:00</updated><id>http://localhost:4000/til/2</id><content type="html" xml:base="http://localhost:4000/til/2/">&lt;h2 id=&quot;화면-전환&quot;&gt;화면 전환&lt;/h2&gt;
-
-&lt;p&gt;오늘은 소소하게 화면 간 전환을 학습했습니다. 당연히 목표한 학습량은 훨씬 거대했지만 확실히 새롭게 무언가를 시작하는것은 어렵네요. 이전에 사용했던 Flutter, React Native 와는 상이한 점이 많아 헷갈렸습니다.&lt;/p&gt;
-
-&lt;p&gt;오늘 학습한 내용 정리해보도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;(아직 SwiftUI 용어들에 익숙하지 않아 마구잡이로 단어를 사용하고 있으니 틀린부분이 상당히 많을 수도 있습니다..)&lt;/p&gt;
-
-&lt;h2 id=&quot;navigationlink&quot;&gt;NavigationLink&lt;/h2&gt;
-
-&lt;p&gt;SwiftUI 에서는 NavigationLink 를 이용하여 화면을 전환합니다.&lt;/p&gt;
-
-&lt;p&gt;처음에는 NavigationLink 가 화면 전환을 담당하는 하나의 메소드라고 생각했습니다. Flutter, React Native 에서는 클릭이 가능한 컴포넌트의 콜백에서 메소드 처리를 해주었기 때문에 당연히도 그렇게 생각했던 것 같습니다.&lt;/p&gt;
-
-&lt;p&gt;그래서 마찬가지로 버튼을 하나 생성하고 콜백부분에서 NavigationLink 를 사용하려니 계속 에러가 발생하기에 적잖이 당황했습니다. 이 모든건 NavigationLink 에 대해 자세히 알아보지 않고 어림짐작으로 넘겨서였겠죠. 다시 한번 무엇이든 꼼꼼하게 읽어보자고 반성해봅니다..&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A view that controls a navigation presentation.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;공식 문서에 따르면 NavigationLink 는 네비게이션을 제어해주는 하나의 View 라고 합니다. 그렇기에 다른 View 들과 함께 body 부분에서 사용해주면 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NavigationLink&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Destination&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Label&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Destination&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;NavigationLink 에는 2가지 속성이 있는데, 첫번째는 목표 View 를 나타내는 destination 입니다. 저는 어떤 시스템을 작성하던간에 로그인과 회원가입 화면부터 작성하는 버릇이 있기 때문에 NavigationLink 는 로그인 화면에, destiantion 은 회원가입 화면에 두었습니다.&lt;/p&gt;
-
-&lt;p&gt;두번째는 클릭할 수 있는 자식 컴포넌트를 나타내는 Label 입니다. Label 에 단독으로 String 을 사용할 경우 텍스트 버튼처럼 사용할 수 있게 됩니다. Label 속성에 아무것도 할당하지 않은 후 {} 를 이용하여 Text 를 집어넣은 다음 스타일링도 가능합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// navigation link 예제&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NavigationLink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// destination -&amp;gt; 목표화면&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Navigate to SomeView&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 버튼 스타일&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;RoundedRectangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cornerRadius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;windowSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;foregroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;오늘은 시간이 많지 않아 여기까지 학습하도록 하겠습니다. 역시 퇴근 후에 무언가를 한다는건 거의 불가능에 가깝다는 점을 다시 한번 느끼게 되네요. 하지만 이렇게라도 꾸준히 하다 보면 언젠가는 실력이 늘어있을꺼라 믿습니다.&lt;/p&gt;
-
-&lt;p&gt;Flutter 에서는 Container 와 GestureDetector 를, React Native 에서는 View 와 GestureDetector 를 많이 활용해서 버튼들을 만들곤 했었는데, Swift UI 에서 이에 해당하는게 뭔지 아직도 찾지 못했습니다 ㅜㅜ&lt;/p&gt;
-
-&lt;p&gt;Swift UI 에서는 Container 와 View 가 각각 다른 의미로 쓰이고 있어 검색 키워드를 어떻게 설정해야할지 도통 모르겠네요..&lt;/p&gt;
-
-&lt;p&gt;그럼 이김에 다음 목표는 이를 꼭 알아오는 것으로 하도록 하겠습니다. 목표 생기고 좋네요. 감사합니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="TIL" /><summary type="html">화면 전환</summary></entry></feed>
+&lt;p&gt;다음에는 탐욕법과 많이 비교되는 Dynamic Programming 에 대해 알아보는 시간을 갖도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">탐욕법</summary></entry></feed>
