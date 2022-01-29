@@ -1,0 +1,663 @@
+I"Wp<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>장 재 훈 </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="53d70adf-9109-406a-a9e5-33b88db1ac1e" class="page sans"><header><img class="page-cover-image" src="%E1%84%8C%E1%85%A1%E1%86%BC%20%E1%84%8C%E1%85%A2%20%E1%84%92%E1%85%AE%E1%86%AB%20765b60d182804530b78df0ecfd41a45b/IMG_0257.png" style="object-position:center 50%" /><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="%E1%84%8C%E1%85%A1%E1%86%BC%20%E1%84%8C%E1%85%A2%20%E1%84%92%E1%85%AE%E1%86%AB%20765b60d182804530b78df0ecfd41a45b/125c8dc093a8e4f4a2092b4fe1705d8d-sticker.png" /></div><h1 class="page-title">장 재 훈 </h1></header><div class="page-body"><h2 id="28de0c78-8512-42de-9db0-b0c19a72615e" class="">👋 Introduction</h2><hr id="9ef08022-333f-4642-aa96-a6a394a4aa13" /><div id="655449e0-ce1c-43b8-a4be-e6cf24d31218" class="column-list"><div id="56cfaaf5-643c-4f66-8663-6cab3f47bd04" style="width:37.5%" class="column"><figure id="765b60d1-8280-4530-b78d-f0ecfd41a45b" class="image"><a href="%E1%84%8C%E1%85%A1%E1%86%BC%20%E1%84%8C%E1%85%A2%20%E1%84%92%E1%85%AE%E1%86%AB%20765b60d182804530b78df0ecfd41a45b/003D30A4-0575-4476-A37F-B56D0E0CDED1.jpeg"><img style="width:413px" src="%E1%84%8C%E1%85%A1%E1%86%BC%20%E1%84%8C%E1%85%A2%20%E1%84%92%E1%85%AE%E1%86%AB%20765b60d182804530b78df0ecfd41a45b/003D30A4-0575-4476-A37F-B56D0E0CDED1.jpeg" /></a></figure></div><div id="d2a762b4-a51d-475d-8fb1-0468180617bf" style="width:62.5%" class="column"><h1 id="792288f7-6af5-408d-b98e-680a2b7d57a4" class="">안녕하세요!  주니어 개발자, 장재훈입니다!</h1><p id="26eac8e8-2886-4dc5-9c8c-eaf70e071130" class=""> 이제 막 사회에 첫 발걸음을 내딛기 시작한 주니어 개발자입니다. 누군가는 저의 전공을 &#x27;코딩&#x27; 이라는 단어 하나로 정의 내릴수도 있습니다. 하지만, 저에게 <mark class="highlight-blue"><strong>개발이란 하나의 문제를 창의적인 방법으로 해결해나갈 수 있는 매력적인 분야</strong></mark><strong> </strong>라고 생각합니다. 저와 같은 생각을 가진 분들과 함께 우리 사회의 크고작은 문제들을 해결해나가고 싶습니다.</p><p id="82a1361e-2b48-4162-a682-3dfd14048139" class=""><code>iOS</code> <code>React Native</code> <code>Swift</code> <code>Flutter</code> <code>App</code></p></div></div><h2 id="7331871f-9620-4839-bf1f-d86c7b9cace2" class="">💁🏻‍♂️ Informations</h2><hr id="5f263ce5-422c-486d-9592-4b0bd1951a45" /><div id="bc33c3ee-4c08-4e7d-8900-92208aa04ce7" class="column-list"><div id="eb5af286-aef5-472d-9c62-3394e4a8ba80" style="width:50%" class="column"><p id="4c178085-543c-4151-9304-c5ca2cc0c29f" class=""> IT 전공자로써 C 언어 기반으로 자료구조와 알고리즘 등을 학습하였고, HTML / CSS / Javascript 를 이용하여 간단한 웹 게임을 개발하기도 하였습니다. </p><p id="29f80e13-a2d9-4d37-a48f-e995e971cf0e" class=""> 크고 작은 프로젝트들을 진행하다보니, 사람들이 일상 속에서 가지는 문제점들을 해결하고 싶다는 생각이 들었습니다. 그래서 가장 많은 사용자가 가장 많이 사용하게 되는 App 개발자가 되기로 결심하였습니다.</p><p id="dd131d1a-6219-4dca-8e2a-88dd2c254163" class=""> 이런 결심과 지금 제가 가지고 있는 능력을 향상시켜 문제를 해결할 수 있는 개발자가 되고 싶습니다.</p></div><div id="f44ca398-8c55-4a6d-a44a-fe4ed97821c3" style="width:50%" class="column"><p id="82d9e461-bc40-4508-9c1b-e2c3aa5d4f98" class="">🗓  1997.10.08</p><p id="edb1750a-cf37-46d2-be1d-314d182de068" class="">🗺  서울특별시 광진구 화양동</p><p id="9cae7b6b-dbc2-4008-b5c4-4c2e9c704c05" class="">🎓  세종대학교 소프트웨어학과 4학년 졸업예정</p><p id="1404c555-f280-4e63-89e4-d51173d35996" class="">
+</p><p id="e80f8031-8cdb-4dca-9a96-74bc0e3686b4" class=""><code>2016</code> 세종대학교 입학</p><p id="efe16e4d-04a4-4820-acdf-126d521a583f" class=""><code>2019</code> 육군 22사단 병장 만기전역</p><p id="3b8ab011-e3e2-48b1-9d56-2093096df428" class=""><code>2021</code> 스타트업 &#x27;Glokool&#x27; 앱 개발자 입사</p><p id="1fef760a-1023-4bde-af77-5130502a8f1e" class=""><code>2022</code> 세종대학교 소프트웨어학과 졸업예정 </p><p id="2fd67071-ed25-4588-9e76-37e26f992d0b" class="">
+</p></div></div><h2 id="98513ac0-94f2-45a5-8b72-00057761a7ca" class="">💻 Skills</h2><hr id="e98ef74b-5fce-4306-85e4-69ea2c6820df" /><div id="f1bbe898-e944-49de-811b-9a4190c183a0" class="column-list"><div id="0378ef59-4e04-4a27-b797-228d2a78b1e8" style="width:50%" class="column"><p id="5673008d-f9f5-43b0-80bd-ac05b0d9a92a" class=""> React Native 나 Flutter 등의 크로스 플랫폼 앱 개발을 진행하고 있습니다. 그러다 보니 최근에는 iOS 네이티브 언어인 Swift 에 관심을 가지고 있습니다.</p><p id="8a48e051-d982-4b7f-9b02-9882af60c605" class=""> 백엔드 개발자들과의 원활한 소통을 위해 관련 지식을 공부하던 와중, Spring 프레임워크에 대한 관심이 생겨 간단한 학습 계획을 가지고 있습니다.</p></div><div id="40617152-6878-429b-8302-d204aca34a15" style="width:50%" class="column"><ul id="01a8e4e6-71c4-4ad6-9fe9-f99861078760" class="bulleted-list"><li style="list-style-type:disc">프로젝트를 진행해 봤어요</li></ul><p id="c8470119-c61e-400d-9f58-eec5f84de843" class=""><code>React Native</code> <code>Flutter</code> <code>Firebase</code></p><ul id="951f9a03-d0c2-4304-a04a-3e937bfa06d2" class="bulleted-list"><li style="list-style-type:disc">익숙해요</li></ul><p id="4fe5c6a4-39a8-4468-906b-87b2b75ff69d" class=""><code>C</code> <code>Python</code> <code>HTML &amp; CSS</code> <code>Typescript</code> <code>Dart</code></p><ul id="74dc6e8b-bf93-4100-b020-485e0f131e40" class="bulleted-list"><li style="list-style-type:disc">잘하고 싶어요</li></ul><p id="01d0f9a5-4f66-4f58-9b8d-93e04b780a4e" class=""><code>Swift</code> <code>Java</code> </p></div></div><h2 id="4869da34-cc4e-4e28-9399-f84f7928c82f" class="">🧑🏻‍💻 Projects</h2><hr id="475380fd-510c-40be-84f4-2c0010c65428" /><p id="b9411178-8d57-4d3e-87a2-a1df1ee24d5b" class="">👇 <mark class="highlight-gray">더 자세한 내용은 클릭!</mark></p><h3 id="bda7bc00-c1d5-4594-b1f9-64efafe5c7a5" class=""><mark class="highlight-blue">교외 프로젝트</mark></h3><figure id="9764e9c4-4429-4c16-b4bf-e3a8279ad5bb" class="link-to-page"><a href="https://www.notion.so/9764e9c444294c16b4bfe3a8279ad5bb"><span class="icon">🌐</span>모바일 앱 ‘우주펫’ 클라이언트 개발 및 릴리즈</a></figure><figure id="712b1efe-4c64-407a-ae23-09dee365e6d1" class="link-to-page"><a href="https://www.notion.so/712b1efe4c64407aae2309dee365e6d1"><span class="icon">🌐</span>모바일 앱 ‘글로쿨 가이드’ 클라이언트 개발 및 릴리즈</a></figure><figure id="4784fa8f-c20b-455f-9eb5-2172fea31bf4" class="link-to-page"><a href="https://www.notion.so/Glokool-4784fa8fc20b455f9eb52172fea31bf4"><span class="icon">🌐</span>모바일 앱 ‘Glokool’ 유지 및 보수</a></figure><h3 id="7db8a292-aff1-445e-aaec-fc5d57cc836c" class=""><mark class="highlight-yellow">교내 프로젝트</mark></h3><figure id="0b727ad9-72dc-40d3-8709-619cba1516f2" class="link-to-page"><a href="https://www.notion.so/Capstone-Design-0b727ad972dc40d38709619cba1516f2"><span class="icon">🏛️</span>세종대학교 Capstone Design 졸업연구 프로젝트</a></figure><figure id="11520e0f-b829-45f4-860f-dddf49b35281" class="link-to-page"><a href="https://www.notion.so/11520e0fb82945f4860fdddf49b35281"><span class="icon">🏛️</span>세종대학교 자기주도 창의전공 </a></figure><figure id="fd504eaf-e9a3-4ecd-a1af-2dd5e2617c47" class="link-to-page"><a href="https://www.notion.so/SW-AI-fd504eafe9a34ecda1af2dd5e2617c47"><span class="icon">🏛️</span>세종대학교 SW / AI 해커톤</a></figure><h2 id="55299ced-86d7-479e-b564-74b41f5ee45b" class="">🛠 Studying</h2><hr id="b5c84e9b-70c6-414e-a5d2-b925eb560c59" /><p id="8b2a8305-159c-42dd-85c2-aef78e3a3f2e" class="">👇 <mark class="highlight-gray">더 자세한 내용은 클릭!</mark></p><ul id="bc0e9f20-e69e-419a-9be7-80fa7a16b3ba" class="toggle"><li><details open=""><summary>Programmers Coding Test</summary><ul id="91768264-349d-4b0a-8505-422b6b3233a3" class="bulleted-list"><li style="list-style-type:disc">언어 : <code>Python3</code></li></ul><ul id="34b650d0-f5ac-49c9-aeb6-afc8df72d908" class="bulleted-list"><li style="list-style-type:disc">인턴 및 취업을 준비하며 매주 프로그래머스 홈페이지 코딩테스트 문제 2~3 개 씩 풀이</li></ul><ul id="cb6d68c6-b091-447e-a456-9e312aee69cb" class="bulleted-list"><li style="list-style-type:disc">스터디원들과 함께 매주 토요일 리뷰, 오답풀이 진행</li></ul><ul id="89b853dd-9af9-4d22-9a92-90296689ac85" class="bulleted-list"><li style="list-style-type:disc">문제 풀이를 마크다운으로 작성하여 블로그에 업로드</li></ul><ul id="b7a0ae79-04d7-4371-a5f4-d72351489c11" class="bulleted-list"><li style="list-style-type:disc">방학 기간에 진행, 개강 후에는 잠시 진행 중단. 여름 방학 기간에 다시 진행할 예정</li></ul></details></li></ul><ul id="28b324a2-3bde-4ce9-b1d0-4503d8f27bb6" class="toggle"><li><details open=""><summary>Swift, iOS 프로그래밍 기초</summary><ul id="98e016a8-1a74-4554-9f24-95f65c0d82c7" class="bulleted-list"><li style="list-style-type:disc">부스트코스에서 Swift 언어와 iOS 프로그래밍 기초 강좌 이수</li></ul><ul id="5546ea1c-95df-45de-8c7d-91953e3baea8" class="bulleted-list"><li style="list-style-type:disc">굵직한 경험이 없어 숙련도는 높지 않음</li></ul><ul id="e5ea9b42-f498-4665-bd4f-2516c1193937" class="bulleted-list"><li style="list-style-type:disc">앱의 흐름에 대한 이해가 부족했는데, 졸업연구 프로젝트로 RN 을 이용하여 앱 개발을 진행하다보니 앱 구조에 대한 이해도가 높아짐. 해당 경험을 바탕으로 다시 한번 Swift 개발에 도전해볼 예정</li></ul></details></li></ul><ul id="a0e3ba72-e362-4c29-aad1-99c4269b61cd" class="toggle"><li><details open=""><summary>Flutter 학습을 위한 사이드 프로젝트</summary><ul id="73cd8fd1-2398-4b98-ac24-c27996bf27fd" class="bulleted-list"><li style="list-style-type:disc">갑작스럽게 Flutter 를 이용하여 프로젝트를 진행해야 하는 경우가 생겨 학습을 위해 시작</li></ul><ul id="35d54af0-f1e1-46b4-b1b5-124fb05f252a" class="bulleted-list"><li style="list-style-type:disc">중고거래 물품 경매 앱 클라이언트 제작</li></ul><ul id="ef490d1d-7c16-41a0-a4c5-f8ec3cd4ce67" class="bulleted-list"><li style="list-style-type:disc">기본적인 Flutter 앱 구조와 Dart 언어의 기초 문법을 학습함</li></ul><ul id="5c05fc81-af44-459f-b94c-0b019d05a12d" class="bulleted-list"><li style="list-style-type:disc">최근 Spring 프레임워크에 관심이 생겨 API 제작 후 연결 고려중</li></ul></details></li></ul><p id="978dd71d-def7-45e4-bae4-bd701f453250" class="">
+</p><h2 id="e12c3197-4951-4b3c-9c2e-82688718287b" class="">🧏🏻 About Me</h2><hr id="1628a914-3423-4122-846b-b86e4d8b2762" /><h3 id="547a9c41-34ee-420a-8310-9e0f824ad64a" class="">🚀 <mark class="highlight-yellow">빠른 습득력</mark></h3><p id="27a3eceb-94f5-4cf7-b273-57def117d2b1" class="">제 가장 큰 장점 중 첫 번째는 빠른 습득력과 응용력입니다.</p><p id="470482d3-6944-4549-b58c-56c267b86fad" class="">갑작스럽게 진행이 결정된 프로젝트에서 처음 사용해보는 환경인 Flutter 를 이용하게 된 적이 있었습니다.</p><p id="1f698fe9-ebd8-4db1-86aa-ac35a9efdd9e" class="">바로 개발을 진행했어야 했지만 관련 지식이 매우 부족했어서 걱정이 앞섰습니다.</p><p id="33642b25-dc87-40c3-9218-cb1a995d6626" class="">새로운 환경에 빠르게 적응하기 위해 매일 퇴근 후 관련 문서를 읽으며 사이드 프로젝트와 학습을 진행했고, </p><p id="e3788600-4571-48f1-82c7-f97bd0bfd7a7" class="">결과적으로 메인 프로젝트의 첫 버전을 큰 난관 없이 끝마칠 수 있었습니다.</p><p id="b5344c33-d828-44a3-9c32-fdd7f4499942" class="">이러한 경험을 통해 새로운 기술 환경에 빠르게 적응하고 응용할 수 있는 습득력을 향상시킬 수 있었습니다.</p><h3 id="9c20c5b2-46ce-4705-8eff-47eac75d8701" class="">🔍 <mark class="highlight-purple">문제 해결 능력</mark></h3><p id="648d7bd8-cc01-4e43-a922-c41fd680ea43" class="">두 번째는 뛰어난 문제 해결 능력입니다.</p><p id="d89a7f63-7870-4129-bdb1-51f81202cc27" class="">프로젝트를 진행하다 보면 전혀 예상치 못한 부분에서 에러가 발생하는 경우가 있습니다.</p><p id="004e0c32-3f5d-43b0-a800-9907fd79ad68" class="">같이 프로젝트를 진행하던 팀원이 유니버셜 링크 관련 에러를 겪어 해당 기능을 보류하게 된 적이 있었습니다.</p><p id="4c615a1d-13f7-43e7-b270-236646f077f3" class="">시간적 여유가 되었던 저는 해당 부분의 코드를 살펴보고 에러메세지를 분석해 문제의 원인을 찾고자 하였습니다.</p><p id="ffe8477d-c413-4cee-b4d2-d214433e29ae" class="">문제의 원인은 네비게이션 구조였고, 구조를 조정하여 에러를 해결해 팀원의 어려움을 해소해 준 경험이 있습니다.</p><p id="baa7f339-3e9f-4949-8ef9-c2f513244f38" class="">그 때의 실수를 다시 반복하지 않기 위해 문제 원인과 해결방법을 따로 적어놓기도 하였습니다.</p><p id="ec5f6020-a20f-477e-85f1-5434b2139d1a" class="">이러한 방식으로 저는 문제를 발견하고 해결하는 능력을 향상시킬 수 있었습니다.</p><p id="e962ebd2-e307-4422-b124-220a62c11971" class="">
+</p><h2 id="b571f0e0-f386-443b-9968-50cd073a1022" class="">🤙 Contact</h2><hr id="4bf62d3f-a7d0-4b3a-8f66-f99e51507a53" /><p id="47f63102-54fe-41af-9a5b-d5b7f988b801" class=""><code>Email</code> jangjh971008@naver.com</p><p id="164e7c6d-b397-487c-91b6-327ec49533fa" class=""><code>Phone</code> 010-8724-5922</p><p id="796e3110-43bc-4e5e-82a1-c59e4701c5f2" class=""><code>Github</code> <a href="https://github.com/trumanfromkorea">https://github.com/trumanfromkorea</a></p><p id="f6cc1da2-8066-472e-9e93-d4e1fef2e7f5" class=""><code>Blog</code> <a href="https://trumanfromkorea.tistory.com/">https://trumanfromkorea.tistory.com/</a></p><p id="7bc3e75f-ca33-432f-9490-3c81fcd24351" class="">
+</p></div></article></body></html>
+:ET
