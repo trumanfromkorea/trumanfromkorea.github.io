@@ -114,7 +114,7 @@ var store = [{
         "teaser": null
       },{
         "title": "창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템",
-        "excerpt":"  2020.07 - 2020.12  ","categories": ["Projects"],
+        "excerpt":"2020.07 - 2020.12 Pallete 💄 Personal Color Diagnosis with AI and Recommending Cosmetics AI 기반 퍼스널컬러 진단 및 화장품 추천 시스템 개발 🧑🏻‍💻 구성원 2020-2 세종대학교 창의학기제 3분과 Team 5H Name Role 장재훈 📊 팀장, 메인로직 이일환 🛠 메인로직, 앱 개발 박세환 📄 크롤링, 앱 개발 최락현 🖌 UI/UX, 인터페이스...","categories": ["Projects"],
         "tags": [],
         "url": "/projects/2/",
         "teaser": null

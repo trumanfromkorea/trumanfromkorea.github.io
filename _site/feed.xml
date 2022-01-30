@@ -1,8 +1,132 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-30T17:26:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">우주펫 - 지역 기반 반려동물 커뮤니티 앱</title><link href="http://localhost:4000/projects/6/" rel="alternate" type="text/html" title="우주펫 - 지역 기반 반려동물 커뮤니티 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/6</id><content type="html" xml:base="http://localhost:4000/projects/6/">&lt;p&gt;&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-31T00:24:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">우주펫 - 지역 기반 반려동물 커뮤니티 앱</title><link href="http://localhost:4000/projects/6/" rel="alternate" type="text/html" title="우주펫 - 지역 기반 반려동물 커뮤니티 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/6</id><content type="html" xml:base="http://localhost:4000/projects/6/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.11 - 2022.01&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.11 - 2022.01</summary></entry><entry><title type="html">Glokool - 외국인 여행객 대상 가이드 앱</title><link href="http://localhost:4000/projects/4/" rel="alternate" type="text/html" title="Glokool - 외국인 여행객 대상 가이드 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/4</id><content type="html" xml:base="http://localhost:4000/projects/4/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.07 - 2021.10&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.07 - 2021.10</summary></entry><entry><title type="html">졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 시스템</title><link href="http://localhost:4000/projects/3/" rel="alternate" type="text/html" title="졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/3</id><content type="html" xml:base="http://localhost:4000/projects/3/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.03 - 2021.06&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.03 - 2021.06</summary></entry><entry><title type="html">창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템</title><link href="http://localhost:4000/projects/2/" rel="alternate" type="text/html" title="창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/2</id><content type="html" xml:base="http://localhost:4000/projects/2/">&lt;p&gt;&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2020.07 - 2020.12&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2020.07 - 2020.12</summary></entry><entry><title type="html">SW·AI 해커톤 - 얼굴인식을 통한 식단추천 시스템</title><link href="http://localhost:4000/projects/1/" rel="alternate" type="text/html" title="SW·AI 해커톤 - 얼굴인식을 통한 식단추천 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/1</id><content type="html" xml:base="http://localhost:4000/projects/1/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2020.07 - 2020.12&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;pallete&quot;&gt;Pallete&lt;/h1&gt;
+
+&lt;h3 id=&quot;-personal-color-diagnosis-with-ai-and-recommending-cosmetics&quot;&gt;💄 Personal Color Diagnosis with AI and Recommending Cosmetics&lt;/h3&gt;
+
+&lt;p&gt;AI 기반 퍼스널컬러 진단 및 화장품 추천 시스템 개발&lt;/p&gt;
+
+&lt;h2 id=&quot;-구성원&quot;&gt;🧑🏻‍💻 구성원&lt;/h2&gt;
+&lt;h3 id=&quot;2020-2-세종대학교-창의학기제-3분과-team-5h&quot;&gt;2020-2 세종대학교 창의학기제 3분과 Team 5H&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Role&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/trumanfromkorea&quot;&gt;장재훈&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;📊 팀장, 메인로직&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/&quot;&gt;이일환&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;🛠 메인로직, 앱 개발&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/&quot;&gt;박세환&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;📄 크롤링, 앱 개발&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/&quot;&gt;최락현&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;🖌 UI/UX, 인터페이스 개발&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/Jaeyooou&quot;&gt;안재현&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;📂 DB, 백엔드 개발&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;-프로젝트-소개&quot;&gt;📢 프로젝트 소개&lt;/h2&gt;
+
+&lt;h3 id=&quot;당신의-퍼스널컬러는-무엇인가요&quot;&gt;당신의 퍼스널컬러는 무엇인가요?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Palette 는 A4 용지만 있다면 간편하게 무료로 퍼스널컬러를 진단해주는 앱입니다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=aIS0EnDxnnE&quot;&gt;프로젝트 영상&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;퍼스널컬러란&quot;&gt;퍼스널컬러란?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;퍼스널컬러는 사람마다의 고유한 피부톤을 계절의 이름을 따 크게 4가지로 분류한 것입니다.&lt;/li&gt;
+  &lt;li&gt;따뜻하고 주황빛을 띄는 웜톤에는 봄 웜톤과 가을 웜톤이 있고, 차갑고 분홍빛을 띄는 쿨톤에는 여름 쿨톤과 겨울 쿨톤이 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;왜-필요한가요&quot;&gt;왜 필요한가요?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;스마트폰 사용률이 제일 높은 10대 20대 사이에서 퍼스널 컬러는 선풍적인 인기를 끌고 있습니다. 하지만 퍼스널컬러 진단 비용은 적게는 30,000 원에서 많게는 150,000 원까지 부담스러운 가격대로 형성되어 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;퍼스널컬러 앱이 존재하지 않는건 아니지만, 화이트 밸런싱이 제대로 이루어지지 않아 정확하지 않은 진단이 이루어지는 것을 확인할 수 있었습니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-구현&quot;&gt;💻 구현&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;기술 스택&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;언어&lt;/td&gt;
+      &lt;td&gt;Java, PHP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;데이터베이스&lt;/td&gt;
+      &lt;td&gt;MySQL&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;지원 OS&lt;/td&gt;
+      &lt;td&gt;Android&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;자료-수집&quot;&gt;자료 수집&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;정확한 진단을 위해 약 500인의 유명인 사진을 수집하여 퍼스널컬러를 분석하고 피부톤의 색상값을 추출하였습니다.&lt;/li&gt;
+  &lt;li&gt;HSV 색역과 Lab 색역의 특징을 이용하여 퍼스널컬러 진단의 기준점이 될 수 있는 식을 설계하였습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;화이트밸런싱&quot;&gt;화이트밸런싱&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;빛의 양과 여러가지 환경적인 요인에 의하여 같은 하얀색이라도 실제 색상값은 다르게 보일 수 있다는 문제점이 있었습니다.&lt;/li&gt;
+  &lt;li&gt;그렇기 때문에 이미지 전체의 색상값을 표준으로 잡아줄 수 있는 화이트 밸런싱이 필요했고 저희는 이를 주변에서 쉽게 구할 수 있는 A4 용지를 이용하기로 했습니다.&lt;/li&gt;
+  &lt;li&gt;A4 용지와 함께 사진을 찍으면 A4 용지의 색상을 기준삼아 이미지 전체의 값을 표준치로 수정해 준 다음 사용자의 피부톤을 추출해 퍼스널컬러를 진단하였습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-사용방법&quot;&gt;📝 사용방법&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;앱 사용을 위해 네트워크 연결과 하얀색 A4 용지가 필요합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;회원가입을 완료한 후 로그인 합니다.&lt;/li&gt;
+  &lt;li&gt;퍼스널컬러 진단을 위해서 사진을 찍어야 합니다. 사용자는 앱 내에서 카메라를 구동시키거나 앨범 내 이미지를 업로드할 수 있습니다.
+ 1) 사진을 찍을 때는 빛의 양이 풍부한 곳에서 시도해주세요.
+ 2) 색이 있는 조명이 있는 곳은 최대한 피해주세요.
+ 3) 얼굴에 그림자가 지지 않도록 하고 얼굴의 왼편에 A4 용지를 나란히 한 다음 사진을 찍어주세요.&lt;/li&gt;
+  &lt;li&gt;진단이 완료된 후 사용자의 퍼스널 컬러와 어울리는 화장품 추천 화면이 출력됩니다.&lt;/li&gt;
+  &lt;li&gt;구매 버튼을 누를 시 구매 페이지로 바로 이동할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;게시판에서 다른 사용자들과 의견을 주고받을 수 있습니다.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2020.07 - 2020.12</summary></entry><entry><title type="html">SW·AI 해커톤 - 얼굴인식을 통한 식단추천 시스템</title><link href="http://localhost:4000/projects/1/" rel="alternate" type="text/html" title="SW·AI 해커톤 - 얼굴인식을 통한 식단추천 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/1</id><content type="html" xml:base="http://localhost:4000/projects/1/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2020.07&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2020.07</summary></entry><entry><title type="html">Glokool 가이드 - Glokool 의 가이드용 앱</title><link href="http://localhost:4000/projects/5/" rel="alternate" type="text/html" title="Glokool 가이드 - Glokool 의 가이드용 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/5</id><content type="html" xml:base="http://localhost:4000/projects/5/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.09 - 2021.11&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.09 - 2021.11</summary></entry><entry><title type="html">[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)</title><link href="http://localhost:4000/algorithm/7/" rel="alternate" type="text/html" title="[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)" /><published>2022-01-23T09:00:00+09:00</published><updated>2022-01-23T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/7</id><content type="html" xml:base="http://localhost:4000/algorithm/7/">&lt;h2 id=&quot;알고리즘-백준1158---요세푸스-문제&quot;&gt;[알고리즘] 백준:1158 - 요세푸스 문제&lt;/h2&gt;
 
