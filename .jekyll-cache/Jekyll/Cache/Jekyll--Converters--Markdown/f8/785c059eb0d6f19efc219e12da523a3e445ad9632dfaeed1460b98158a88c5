@@ -1,31 +1,49 @@
----
-title: "창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템"
-date: 2022-01-30T00:00:00z
-categories: Projects
----
+I"#<p><br />
+<code class="language-plaintext highlighter-rouge">2020.07 - 2020.12</code></p>
 
-<br>
-`2020.07 - 2020.12`
+<h1 id="pallete">Pallete</h1>
 
-# Pallete
+<h3 id="-personal-color-diagnosis-with-ai-and-recommending-cosmetics">💄 Personal Color Diagnosis with AI and Recommending Cosmetics</h3>
 
-### 💄 Personal Color Diagnosis with AI and Recommending Cosmetics
+<p>AI 기반 퍼스널컬러 진단 및 화장품 추천 시스템 개발</p>
 
-AI 기반 퍼스널컬러 진단 및 화장품 추천 시스템 개발
+<h2 id="-team">🧑🏻‍💻 Team</h2>
+<h3 id="2020-2-세종대학교-창의학기제-3분과-team-5h">2020-2 세종대학교 창의학기제 3분과 Team 5H</h3>
 
-## 🧑🏻‍💻 구성원
-### 2020-2 세종대학교 창의학기제 3분과 Team 5H
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/trumanfromkorea">장재훈</a></td>
+      <td>📊 팀장, 메인로직</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/">이일환</a></td>
+      <td>🛠 메인로직, 앱 개발</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/">박세환</a></td>
+      <td>📄 크롤링, 앱 개발</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/">최락현</a></td>
+      <td>🖌 UI/UX, 인터페이스 개발</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Jaeyooou">안재현</a></td>
+      <td>📂 DB, 백엔드 개발</td>
+    </tr>
+  </tbody>
+</table>
 
-|Name|Role|
-|---|---|
-|<a href="https://github.com/trumanfromkorea">장재훈</a>|📊 팀장, 메인로직|
-|<a href="https://github.com/">이일환</a>|🛠 메인로직, 앱 개발|
-|<a href="https://github.com/">박세환</a>|📄 크롤링, 앱 개발|
-|<a href="https://github.com/">최락현</a>|🖌 UI/UX, 인터페이스 개발|
-|<a href="https://github.com/Jaeyooou">안재현</a>|📂 DB, 백엔드 개발|
+<h2 id="-프로젝트-소개">📢 프로젝트 소개</h2>
 
-## 📢 프로젝트 소개
-
+<h3>
 ### 당신의 퍼스널컬러는 무엇인가요?
 
 - Palette 는 A4 용지만 있다면 간편하게 무료로 퍼스널컬러를 진단해주는 앱입니다. 
@@ -63,7 +81,7 @@ AI 기반 퍼스널컬러 진단 및 화장품 추천 시스템 개발
 
 ## 📝 사용방법
 
-> 앱 사용을 위해 네트워크 연결과 하얀색 A4 용지가 필요합니다.
+&gt; 앱 사용을 위해 네트워크 연결과 하얀색 A4 용지가 필요합니다.
 
 1. 회원가입을 완료한 후 로그인 합니다.
 2. 퍼스널컬러 진단을 위해서 사진을 찍어야 합니다. 사용자는 앱 내에서 카메라를 구동시키거나 앨범 내 이미지를 업로드할 수 있습니다.
@@ -74,3 +92,5 @@ AI 기반 퍼스널컬러 진단 및 화장품 추천 시스템 개발
 4. 구매 버튼을 누를 시 구매 페이지로 바로 이동할 수 있습니다.
 5. 게시판에서 다른 사용자들과 의견을 주고받을 수 있습니다.
 
+</h3>
+:ET
