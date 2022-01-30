@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-29T21:41:43+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬</title><link href="http://localhost:4000/algorithm/8/" rel="alternate" type="text/html" title="[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬" /><published>2022-01-23T09:00:00+09:00</published><updated>2022-01-23T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/8</id><content type="html" xml:base="http://localhost:4000/algorithm/8/">&lt;h2 id=&quot;정렬-알고리즘-1---선택-정렬-삽입-정렬&quot;&gt;정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-30T17:26:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">우주펫 - 지역 기반 반려동물 커뮤니티 앱</title><link href="http://localhost:4000/projects/6/" rel="alternate" type="text/html" title="우주펫 - 지역 기반 반려동물 커뮤니티 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/6</id><content type="html" xml:base="http://localhost:4000/projects/6/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.11 - 2022.01&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.11 - 2022.01</summary></entry><entry><title type="html">Glokool - 외국인 여행객 대상 가이드 앱</title><link href="http://localhost:4000/projects/4/" rel="alternate" type="text/html" title="Glokool - 외국인 여행객 대상 가이드 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/4</id><content type="html" xml:base="http://localhost:4000/projects/4/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.07 - 2021.10&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.07 - 2021.10</summary></entry><entry><title type="html">졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 시스템</title><link href="http://localhost:4000/projects/3/" rel="alternate" type="text/html" title="졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/3</id><content type="html" xml:base="http://localhost:4000/projects/3/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.03 - 2021.06&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.03 - 2021.06</summary></entry><entry><title type="html">창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템</title><link href="http://localhost:4000/projects/2/" rel="alternate" type="text/html" title="창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/2</id><content type="html" xml:base="http://localhost:4000/projects/2/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2020.07 - 2020.12&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2020.07 - 2020.12</summary></entry><entry><title type="html">SW·AI 해커톤 - 얼굴인식을 통한 식단추천 시스템</title><link href="http://localhost:4000/projects/1/" rel="alternate" type="text/html" title="SW·AI 해커톤 - 얼굴인식을 통한 식단추천 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/1</id><content type="html" xml:base="http://localhost:4000/projects/1/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2020.07&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2020.07</summary></entry><entry><title type="html">Glokool 가이드 - Glokool 의 가이드용 앱</title><link href="http://localhost:4000/projects/5/" rel="alternate" type="text/html" title="Glokool 가이드 - Glokool 의 가이드용 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/5</id><content type="html" xml:base="http://localhost:4000/projects/5/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.09 - 2021.11&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.09 - 2021.11</summary></entry><entry><title type="html">[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)</title><link href="http://localhost:4000/algorithm/7/" rel="alternate" type="text/html" title="[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)" /><published>2022-01-23T09:00:00+09:00</published><updated>2022-01-23T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/7</id><content type="html" xml:base="http://localhost:4000/algorithm/7/">&lt;h2 id=&quot;알고리즘-백준1158---요세푸스-문제&quot;&gt;[알고리즘] 백준:1158 - 요세푸스 문제&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1158&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+
+&lt;p&gt;요세푸스 문제는 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;1번부터 N번까지 N명의 사람이 원을 이루면서 앉아있고, 양의 정수 K(≤ N)가 주어진다. 이제 순서대로 K번째 사람을 제거한다. 한 사람이 제거되면 남은 사람들로 이루어진 원을 따라 이 과정을 계속해 나간다. 이 과정은 N명의 사람이 모두 제거될 때까지 계속된다. 원에서 사람들이 제거되는 순서를 (N, K)-요세푸스 순열이라고 한다. 예를 들어 (7, 3)-요세푸스 순열은 &amp;lt;3, 6, 2, 7, 5, 1, 4&amp;gt;이다.&lt;/p&gt;
+
+&lt;p&gt;N과 K가 주어지면 (N, K)-요세푸스 순열을 구하는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;h2 id=&quot;이해---원형-큐&quot;&gt;이해 - 원형 큐&lt;/h2&gt;
+
+&lt;p&gt;문제에서도 나와 있듯이 사람들은 원을 따라 둘러앉아 있습니다. 계속해서 입력값 k 만큼씩 자리를 건너뛰어가며 원소를 뽑아내야 하는데, 순환을 위해서는 원형 큐가 제일 적당하다고 생각했습니다.&lt;/p&gt;
+
+&lt;p&gt;큐의 삽입과 삭제는 모두 O(1) 의 시간복잡도를 가지기 때문에 조금 단순하게 값을 비교하고 큐를 탐색해도 무난하게 문제를 해결할 수 있을 것이라고 생각했지만 큰 오산이었습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 먼저 제일 앞쪽 원소를 꺼내고&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dequeue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// k 번째 원소라면 answer 문자열에 추가&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;, &quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 아니라면 다시 뒤쪽으로 삽입&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;계속해서 dequeue 한 값을 비교하여 맞다면 정답에 추가하고, 아니라면 다시 enqueue 해주는 방식으로 원형 큐의 개념을 구현하였습니다. 하지만 k 가 작을수록 소요 시간은 적어지겠지만 k 가 커질수록 소요 시간이 오래 걸린다는 단점이 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;remove(at:) 메소드의 시간복잡도가 O(n) 이기 때문에 사용하는 것을 최대한 지양하려고 했지만 별다른 방법이 없는 것 같아 사용해보기로 했습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;문제해결-및-전체코드&quot;&gt;문제해결 및 전체코드&lt;/h2&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;separator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeFirst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeFirst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 뽑으려는 인덱스가 queue 범위 내일때&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 원소 뽑은 다음 정답에 추가&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;, &quot;&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 다음 인덱스에 k 만큼 더해주고, 방금 원소 하나 삭제했으니 1 빼줍니다&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 뽑으려는 인덱스가 queue 범위보다 클때&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;더 단순하게 생각하기로 했습니다. k 번째 원소를 뽑고, k*2 번째 원소를 뽑고, …&lt;/p&gt;
+
+&lt;p&gt;결과적으로 첫번째 풀이는 틀렸고 두번째 풀이는 맞았습니다. 이번엔 오히려 조금 어렵게 풀려고 했던 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;제 나름대로 이유를 분석해본 결과, 첫번째 풀이에서 k 가 커질수록 큐를 전체적으로 탐색하는 시간이 너무 많이 걸렸던 것 같습니다. 반면 두번째 풀이는 고정적으로 O(n^2) 정도의 시간복잡도를 가지는 것 같아 k 값의 크기에 따라 소요되는 시간의 변동이 큰 첫번째 풀이보다 두번째 풀이가 더 안정적인 방법이 아니었나 싶습니다. (제 개인적인 생각이기 때문에 틀린 추측일 가능성이 높습니다)&lt;/p&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+
+&lt;p&gt;알고리즘 스터디를 진행하고 있습니다. 스터디에서는 어느정도 난이도가 있는 문제들을 선정하고 있는데 아직은 실력이 받쳐주지 않아 따라가기가 벅찬 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 저 혼자 조금씩 기초적인 문제들을 풀어나가면 나중에는 어려운 문제들도 하나 둘 씩 풀게될 수 있지 않을까 희망을 가져봅니다..&lt;/p&gt;
+
+&lt;p&gt;예전에는 모르는 문제가 있으면 무작정 풀이부터 찾아보고 코드를 따라해보기만 급급했던 것 같습니다. 이제는 코드보다는 문제 푸는 방식에 더욱 초점을 두고 풀이를 찾아보더라도 더욱 깊은 이해를 하는게 맞다는 생각이 듭니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">[알고리즘] 백준:1158 - 요세푸스 문제</summary></entry><entry><title type="html">[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬</title><link href="http://localhost:4000/algorithm/8/" rel="alternate" type="text/html" title="[알고리즘] 정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬" /><published>2022-01-23T09:00:00+09:00</published><updated>2022-01-23T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/8</id><content type="html" xml:base="http://localhost:4000/algorithm/8/">&lt;h2 id=&quot;정렬-알고리즘-1---선택-정렬-삽입-정렬&quot;&gt;정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬&lt;/h2&gt;
 
 &lt;p&gt;오늘은 알고리즘들 중 가장 기초이면서도 방법이 많아 헷갈리기도 하는 정렬에 대해 학습해보도록 하겠습니다.&lt;/p&gt;
 
@@ -128,92 +219,7 @@
 
 &lt;p&gt;이렇게 하나 둘씩 정리하다 보니까 예전에 학교에서 알고리즘을 배울때가 생각이 나네요. 그때 좀만 더 열심히 했었더라면 어땠을까 라는 생각을 하루에 수십번도 더 합니다.ㅎㅎ&lt;/p&gt;
 
-&lt;p&gt;다음에는 퀵 정렬과 합병 정렬에 대해 알아보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬</summary></entry><entry><title type="html">[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)</title><link href="http://localhost:4000/algorithm/7/" rel="alternate" type="text/html" title="[알고리즘] 백준:1158 - 요세푸스 문제 (Swift)" /><published>2022-01-23T09:00:00+09:00</published><updated>2022-01-23T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/7</id><content type="html" xml:base="http://localhost:4000/algorithm/7/">&lt;h2 id=&quot;알고리즘-백준1158---요세푸스-문제&quot;&gt;[알고리즘] 백준:1158 - 요세푸스 문제&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1158&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
-
-&lt;p&gt;요세푸스 문제는 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;1번부터 N번까지 N명의 사람이 원을 이루면서 앉아있고, 양의 정수 K(≤ N)가 주어진다. 이제 순서대로 K번째 사람을 제거한다. 한 사람이 제거되면 남은 사람들로 이루어진 원을 따라 이 과정을 계속해 나간다. 이 과정은 N명의 사람이 모두 제거될 때까지 계속된다. 원에서 사람들이 제거되는 순서를 (N, K)-요세푸스 순열이라고 한다. 예를 들어 (7, 3)-요세푸스 순열은 &amp;lt;3, 6, 2, 7, 5, 1, 4&amp;gt;이다.&lt;/p&gt;
-
-&lt;p&gt;N과 K가 주어지면 (N, K)-요세푸스 순열을 구하는 프로그램을 작성하시오.&lt;/p&gt;
-
-&lt;h2 id=&quot;이해---원형-큐&quot;&gt;이해 - 원형 큐&lt;/h2&gt;
-
-&lt;p&gt;문제에서도 나와 있듯이 사람들은 원을 따라 둘러앉아 있습니다. 계속해서 입력값 k 만큼씩 자리를 건너뛰어가며 원소를 뽑아내야 하는데, 순환을 위해서는 원형 큐가 제일 적당하다고 생각했습니다.&lt;/p&gt;
-
-&lt;p&gt;큐의 삽입과 삭제는 모두 O(1) 의 시간복잡도를 가지기 때문에 조금 단순하게 값을 비교하고 큐를 탐색해도 무난하게 문제를 해결할 수 있을 것이라고 생각했지만 큰 오산이었습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 먼저 제일 앞쪽 원소를 꺼내고&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dequeue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;// k 번째 원소라면 answer 문자열에 추가&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;, &quot;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 아니라면 다시 뒤쪽으로 삽입&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;계속해서 dequeue 한 값을 비교하여 맞다면 정답에 추가하고, 아니라면 다시 enqueue 해주는 방식으로 원형 큐의 개념을 구현하였습니다. 하지만 k 가 작을수록 소요 시간은 적어지겠지만 k 가 커질수록 소요 시간이 오래 걸린다는 단점이 있었습니다.&lt;/p&gt;
-
-&lt;p&gt;remove(at:) 메소드의 시간복잡도가 O(n) 이기 때문에 사용하는 것을 최대한 지양하려고 했지만 별다른 방법이 없는 것 같아 사용해보기로 했습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;문제해결-및-전체코드&quot;&gt;문제해결 및 전체코드&lt;/h2&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;separator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeFirst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeFirst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 뽑으려는 인덱스가 queue 범위 내일때&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 원소 뽑은 다음 정답에 추가&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;, &quot;&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 다음 인덱스에 k 만큼 더해주고, 방금 원소 하나 삭제했으니 1 빼줍니다&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 뽑으려는 인덱스가 queue 범위보다 클때&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;더 단순하게 생각하기로 했습니다. k 번째 원소를 뽑고, k*2 번째 원소를 뽑고, …&lt;/p&gt;
-
-&lt;p&gt;결과적으로 첫번째 풀이는 틀렸고 두번째 풀이는 맞았습니다. 이번엔 오히려 조금 어렵게 풀려고 했던 것 같습니다.&lt;/p&gt;
-
-&lt;p&gt;제 나름대로 이유를 분석해본 결과, 첫번째 풀이에서 k 가 커질수록 큐를 전체적으로 탐색하는 시간이 너무 많이 걸렸던 것 같습니다. 반면 두번째 풀이는 고정적으로 O(n^2) 정도의 시간복잡도를 가지는 것 같아 k 값의 크기에 따라 소요되는 시간의 변동이 큰 첫번째 풀이보다 두번째 풀이가 더 안정적인 방법이 아니었나 싶습니다. (제 개인적인 생각이기 때문에 틀린 추측일 가능성이 높습니다)&lt;/p&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;알고리즘 스터디를 진행하고 있습니다. 스터디에서는 어느정도 난이도가 있는 문제들을 선정하고 있는데 아직은 실력이 받쳐주지 않아 따라가기가 벅찬 것 같습니다.&lt;/p&gt;
-
-&lt;p&gt;그래서 저 혼자 조금씩 기초적인 문제들을 풀어나가면 나중에는 어려운 문제들도 하나 둘 씩 풀게될 수 있지 않을까 희망을 가져봅니다..&lt;/p&gt;
-
-&lt;p&gt;예전에는 모르는 문제가 있으면 무작정 풀이부터 찾아보고 코드를 따라해보기만 급급했던 것 같습니다. 이제는 코드보다는 문제 푸는 방식에 더욱 초점을 두고 풀이를 찾아보더라도 더욱 깊은 이해를 하는게 맞다는 생각이 듭니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">[알고리즘] 백준:1158 - 요세푸스 문제</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 다리를 지나는 트럭 (Swift)</title><link href="http://localhost:4000/algorithm/6/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 다리를 지나는 트럭 (Swift)" /><published>2022-01-22T09:00:00+09:00</published><updated>2022-01-22T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/6</id><content type="html" xml:base="http://localhost:4000/algorithm/6/">&lt;h2 id=&quot;알고리즘-프로그래머스---다리를-지나는-트럭&quot;&gt;[알고리즘] 프로그래머스 - 다리를 지나는 트럭&lt;/h2&gt;
+&lt;p&gt;다음에는 퀵 정렬과 합병 정렬에 대해 알아보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">정렬 알고리즘 (1) - 선택 정렬, 삽입 정렬</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 다리를 지나는 트럭 (Swift)</title><link href="http://localhost:4000/algorithm/6/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 다리를 지나는 트럭 (Swift)" /><published>2022-01-22T09:00:00+09:00</published><updated>2022-01-22T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/6</id><content type="html" xml:base="http://localhost:4000/algorithm/6/">&lt;h2 id=&quot;알고리즘-프로그래머스---다리를-지나는-트럭&quot;&gt;[알고리즘] 프로그래머스 - 다리를 지나는 트럭&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42583&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
 
@@ -616,567 +622,4 @@
 
 &lt;p&gt;이론적인 부분을 다잡기 위해서 다음에는 우선순위 큐와 힙에 대한 개념을 한번 정리해보는 시간을 가져보도록 하겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;해당 풀이에 쓰인 코드는 BOJ 1655 번 beddl 님의 풀이를 참고하여 작성하였습니다.&lt;/em&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">[알고리즘] 백준:1655 - 가운데를 말해요</summary></entry><entry><title type="html">[Swift] 클로저 Closures (1/2)</title><link href="http://localhost:4000/swift/1/" rel="alternate" type="text/html" title="[Swift] 클로저 Closures (1/2)" /><published>2022-01-19T09:00:00+09:00</published><updated>2022-01-19T09:00:00+09:00</updated><id>http://localhost:4000/swift/1</id><content type="html" xml:base="http://localhost:4000/swift/1/">&lt;h2 id=&quot;클로저-closures-12&quot;&gt;클로저 Closures (1/2)&lt;/h2&gt;
-
-&lt;p&gt;클로저는 코드블럭으로 C, Objective-C 의 block 과 다른 언어의 lambdas 와 비슷합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;클로저는 사용자의 코드 안에서 전달되어 사용할 수 있는 로직을 가진 중괄호로 구분된 코드 블럭이며, 일급 객체의 역할을 할 수 있습니다.&lt;/li&gt;
-  &lt;li&gt;일급 객체는 전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달할 수 있으며, 함수의 리턴값이 될 수도 있습니다.&lt;/li&gt;
-  &lt;li&gt;참조 타입입니다.&lt;/li&gt;
-  &lt;li&gt;함수는 클로저의 한 형태로, 이름이 있는 클로저입니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;클로저-표현-closure-expressions&quot;&gt;클로저 표현 (Closure Expressions)&lt;/h2&gt;
-
-&lt;p&gt;함수로 따로 정의된 형태가 아닌 인자로 들어가 있는 형태의 클로저를 인라인 클로저라고 부릅니다.&lt;/p&gt;
-
-&lt;p&gt;클로저 표현은 인라인 클로저를 명확하게 표현하는 방법으로 문법에 초점이 맞춰져 있습니다. 클로저 표현은 코드의 명확성과 의도를 잃지 않으면서도 문법을 축약해 사용할 수 있는 다양한 문법의 최적화 방법을 제공합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;정렬-메소드&quot;&gt;정렬 메소드&lt;/h3&gt;
-
-&lt;p&gt;Swift 표준 라이브러리에서 제공하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(by:)&lt;/code&gt; 메소드를 이용해보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(by:)&lt;/code&gt; 메소드는 2개의 인자를 갖는 클로저를 인자로 사용합니다. 타입이 T 인 배열은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(T, T) -&amp;gt; Bool&lt;/code&gt; 타입의 클로저를 사용해야 합니다.&lt;/p&gt;
-
-&lt;p&gt;클로저를 제공하는 일반적인 방법은 함수 하나를 직접 만들어 인자로 사용하는 것입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;numArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;n1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sortedArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// --&amp;gt; [9, 7, 6, 5, 2]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;desc 클로저를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(by:)&lt;/code&gt; 메소드의 인자로 사용하면 배열이 내림차순으로 정렬된 것을 확인할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;클로저-표현-문법&quot;&gt;클로저 표현 문법&lt;/h3&gt;
-
-&lt;p&gt;클로저 표현 문법은 일반적으로 아래의 형태를 하고 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parameters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;statements&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;인자로 사용할 parameters, 처리할 내용을 기술하는 statements, return type 을 가지고 있습니다. 앞서 작성한 desc 클로저를 이용한 sorted 메소드는 다음과 같이 작성할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sortedArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;n1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이렇게 함수로 따로 정의된 형태가 아닌 인자로 들어가 있는 형태의 클로저를 인라인 클로저라고 부릅니다. 예시와 같이 클로저의 body 부분이 짧을 시에는 한줄에 적을 수도 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;문맥에서-타입-추론--암시적-반환&quot;&gt;문맥에서 타입 추론 &amp;amp; 암시적 반환&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(by:)&lt;/code&gt; 메소드에서 이미 (Int, Int) -&amp;gt; Bool 타입의 인자가 들어와야 하는지 알기 때문에 클로저에서 이 타입들은 생략될 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sortedArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;또한 단일 표현 클로저에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt; 키워드를 생략할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sortedArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;인자-이름-축약&quot;&gt;인자 이름 축약&lt;/h3&gt;
-
-&lt;p&gt;Swift 는 인라인 클로저에 자동으로 축약 인자 이름을 제공합니다. 해당 인자를 사용하면 인자 값을 순서대로 $0, $1, $2 등으로 사용할 수 있습니다. 축약 인자 이름을 사용하면 인자 값과 그 인자로 처리할 때 사용하는 인자가 같다는 것을 알기 때문에 인자를 입력받는 부분과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;in&lt;/code&gt; 키워드 부분을 생략할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sortedArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;저는 아직 이 방식에 익숙하지 않습니다… Swift 를 더 공부하다 보면 익숙해지겠죠 ㅠㅠ&lt;/p&gt;
-
-&lt;h3 id=&quot;연산자-메소드&quot;&gt;연산자 메소드&lt;/h3&gt;
-
-&lt;p&gt;여기서 더 간단하게 축약이 가능합니다. Swift 는 타입 연산자끼리 비교 가능한 (Comparable 할 때) 비교 연산자 &amp;gt; 를 구현해 두었습니다. 그렇기 때문에 이 연산자를 바로 사용할 수도 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sortedArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;후위-클로저-trailing-closures&quot;&gt;후위 클로저 (Trailing Closures)&lt;/h2&gt;
-
-&lt;p&gt;만약 함수의 마지막 인자로 클로저를 넣고 그 클로저가 길다면 후위 클로저를 사용할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 아래와 같은 클로저가 존재할 때&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;someFunctionThatTakesAClosure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;closure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// function body goes here&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 인자 값 입력 부분과 리턴 타입 부분을 생략&lt;/span&gt;
-
-&lt;span class=&quot;nf&quot;&gt;someFunctionThatTakesAClosure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;closure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// closure's body goes here&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 후위 클로저로 표현&lt;/span&gt;
-
-&lt;span class=&quot;nf&quot;&gt;someFunctionThatTakesAClosure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// trailing closure's body goes here&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 일반적인 전역함수 형태&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위의 정렬 예제를 후위 클로저를 이용해 표현하면 이렇게 표현할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sortedArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 만약 함수의 마지막 인자가 클로저이고 후위 클로저를 사용하면 괄호 생락 가능&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sortedArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sorted&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;escaping-closures&quot;&gt;Escaping Closures&lt;/h2&gt;
-
-&lt;p&gt;클로저를 함수의 파라미터로 넣을 수 있는데, 함수 밖에서 실행되는 클로저는 파라미터 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@escaping&lt;/code&gt; 키워드를 명시합니다. Escaping Closure 에서는 self 를 명시적으로 언급해주어야 합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Heap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;compare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;mutating&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isMaxHeap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;compare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;compare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;@escaping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compare&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;compare&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;maxHeap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Heap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;minHeap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Heap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 compare 클로저를 다른 함수 밖에서 실행시키기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@escaping&lt;/code&gt; 키워드를 사용했습니다. (아직 Escaping Closure 에 대해 완벽한 이해를 하지 못해 더 괜찮은 샘플 코드와 설명을 생각해내게 된다면 업데이트 하겠습니다..)&lt;/p&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@escaping&lt;/code&gt; 키워드에 대해 알아보려다가 여기까지 왔습니다.. 항상 공부하기 시작한 것보다 더 깊은 레벨로 들어와서 학습하게 되는 것 같습니다. 그만큼 기본기가 많이 부족하다는 뜻이겠죠..ㅠㅠ&lt;/p&gt;
-
-&lt;p&gt;Capturing Values 와 Auto Closures 에 대한 개념을 정리하기에는 조금 벅찬 것 같아서 오늘은 여기까지 정리해보도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;정리하자면 클로저는 실행 가능한 코드 블럭으로 1급 객체의 역할을 할 수 있습니다. 인라인 클로저는 따로 정의된 형태가 아닌 인자로 사용된 형태의 클로저로써 여러 상황에 따라 아주 간단하게 축약이 가능하기도 합니다.&lt;/p&gt;
-
-&lt;p&gt;만약 함수의 마지막 인자로 클로저를 사용한다면 일반적인 전역함수 형태로 이용할 수도 있습니다.&lt;/p&gt;
-
-&lt;p&gt;다음 시간에는 Capturing Values 를 이용하여 클로저가 참조 타입임을 학습하고 Auto Closures 에 대해 알아보도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jusung.gitbook.io/the-swift-language-guide/language-guide/07-closures&quot;&gt;참고 링크 (1)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.swift.org/swift-book/LanguageGuide/Closures.html&quot;&gt;참고 링크 (2)&lt;/a&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Swift" /><summary type="html">클로저 Closures (1/2)</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 네트워크 (Swift)</title><link href="http://localhost:4000/algorithm/4/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 네트워크 (Swift)" /><published>2022-01-15T09:00:00+09:00</published><updated>2022-01-15T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/4</id><content type="html" xml:base="http://localhost:4000/algorithm/4/">&lt;h2 id=&quot;프로그래머스---네트워크-swift&quot;&gt;프로그래머스 - 네트워크 (Swift)&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43162&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h2&gt;
-
-&lt;h3 id=&quot;본문&quot;&gt;본문&lt;/h3&gt;
-
-&lt;p&gt;네트워크란 컴퓨터 상호 간에 정보를 교환할 수 있도록 연결된 형태를 의미합니다. 예를 들어, 컴퓨터 A와 컴퓨터 B가 직접적으로 연결되어있고, 컴퓨터 B와 컴퓨터 C가 직접적으로 연결되어 있을 때 컴퓨터 A와 컴퓨터 C도 간접적으로 연결되어 정보를 교환할 수 있습니다. 따라서 컴퓨터 A, B, C는 모두 같은 네트워크 상에 있다고 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;컴퓨터의 개수 n, 연결에 대한 정보가 담긴 2차원 배열 computers가 매개변수로 주어질 때, 네트워크의 개수를 return 하도록 solution 함수를 작성하시오.&lt;/p&gt;
-
-&lt;p&gt;제한사항&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;컴퓨터의 개수 n은 1 이상 200 이하인 자연수입니다.&lt;/li&gt;
-  &lt;li&gt;각 컴퓨터는 0부터 n-1인 정수로 표현합니다.&lt;/li&gt;
-  &lt;li&gt;i번 컴퓨터와 j번 컴퓨터가 연결되어 있으면 computers[i][j]를 1로 표현합니다.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;computer[i][i]&lt;/code&gt;는 항상 1입니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;이해&quot;&gt;이해&lt;/h3&gt;
-
-&lt;p&gt;이전에 DFS 와 BFS 에 대해 학습한 적이 있습니다. 해당 문제는 인접행렬로 표현된 그래프를 탐색하는 문제로써 인접행렬 안에 표현된 그래프가 몇 개인지 찾아내면 해결되는 문제입니다.&lt;/p&gt;
-
-&lt;p&gt;DFS 와 BFS 모두 모든 노드를 방문하기도 하고 인접행렬로 표현된 그래프를 탐색한다면 시간복잡도는 O(n^2) 로 동일하지만, DFS 는 모든 노드를 탐색하고자 하는 경우에 더 많이 사용되고 BFS 는 일반적으로 두 노드 사이의 최단 경로를 탐색하는 경우 더 많이 사용되기 때문에 DFS 를 이용하여 문제풀이를 진행해보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;풀이&quot;&gt;풀이&lt;/h2&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 프로그래머스 - 네트워크&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 방문 정보를 저장할 배열, 그래프의 최대 크기인 200 으로 설정&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;repeating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 그래프를 탐색하게 될 DFS 함수&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DFS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;computers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 실행 시 먼저 해당 노드 방문 처리&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 다음으로 탐색할 노드를 방문했던적이 없으면&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;computers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// DFS 함수 재귀&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;DFS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;computers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;computers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;computers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;// 반복문은 어차피 그래프의 크기만큼 실행되기 때문에 visited 배열의 크기는 매우 커도 됨&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 방문 정보가 없을 시 DFS 진행&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;DFS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;computers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;computers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;1-dfs&quot;&gt;1. DFS&lt;/h3&gt;
-
-&lt;p&gt;먼저 모든 노드를 탐색하게 될 DFS 함수입니다.&lt;/p&gt;
-
-&lt;p&gt;visited 배열은 모두 false 로 초기화 되어있고, 각 인덱스는 해당 노드의 방문 정보를 저장합니다. DFS 함수의 인자 x 는 현재 방문한 노드를 나타내고 있기 때문에 함수 실행 시 바로 방문 상태로 처리해줍니다.&lt;/p&gt;
-
-&lt;p&gt;해당 노드와 연결된 노드들을 검사하며 연결된 노드 중 방문하지 않은 노드가 있다면 DFS 함수를 재귀로 실행하여 다음 노드 방문을 반복합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-여러-그래프-검사&quot;&gt;2. 여러 그래프 검사&lt;/h3&gt;
-
-&lt;p&gt;위 DFS 함수를 이용하면 한 그래프를 모두 탐색할 수 있게 됩니다.&lt;/p&gt;
-
-&lt;p&gt;solution 함수에서 방문하지 않은 노드를 선택해 DFS 를 실행한다면 무조건 인덱스가 0 인 노드의 탐색부터 시작할 것입니다. 노드 0 이 포함된 그래프는 탐색이 끝나고, 이후 방문처리되지 않은 노드가 존재한다면 해당 노드가 포함된 그래프를 탐색합니다.&lt;/p&gt;
-
-&lt;p&gt;그래프 탐색이 진행되는 횟수를 리턴하면 문제는 해결됩니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;이전에 DFS, BFS 를 이론적으로 학습한 뒤 처음으로 문제를 풀어봤습니다. 이번 문제는 DFS 를 변형하거나 응용하지 않고 거의 그대로 적용한 문제였기 때문에 엄청 큰 어려움은 없었던 것 같습니다.&lt;/p&gt;
-
-&lt;p&gt;또한 Swift 언어를 이용해 처음으로 해결한 문제입니다. 앞으로도 왠만하면 Swift 언어를 이용해 문제 풀이를 진행해보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">프로그래머스 - 네트워크 (Swift)</summary></entry><entry><title type="html">[알고리즘] Dynamic Programming - 동적 계획법</title><link href="http://localhost:4000/algorithm/3/" rel="alternate" type="text/html" title="[알고리즘] Dynamic Programming - 동적 계획법" /><published>2022-01-12T09:00:00+09:00</published><updated>2022-01-12T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/3</id><content type="html" xml:base="http://localhost:4000/algorithm/3/">&lt;h2 id=&quot;dynamic-programming---동적-계획법&quot;&gt;Dynamic Programming - 동적 계획법&lt;/h2&gt;
-
-&lt;p&gt;이전에 올렸던 탐욕법 알고리즘에 이어 오늘은 동적 계획법, Dynamic Programming 에 대해서 알아보도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;해당 포스트에 등장하는 메소드는 모두 Swift 코드로 작성되었습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;어떤-경우에-사용할까&quot;&gt;어떤 경우에 사용할까?&lt;/h2&gt;
-
-&lt;p&gt;다이나믹 프로그래밍은 하나의 큰 문제를 여러개의 작은 문제들로 나눠서 해결하는 방식입니다.&lt;/p&gt;
-
-&lt;p&gt;그렇기 때문에 다이나믹 프로그래밍을 이용하여 문제를 해결하려면 2 가지 조건을 만족해야 합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;--부분-반복-문제-overlapping-subproblem&quot;&gt;- 부분 반복 문제 (Overlapping Subproblem)&lt;/h3&gt;
-
-&lt;p&gt;다이나믹 프로그래밍은 전체 문제를 여러개의 작은 문제들로 나눈 다음 그 결과값들을 이용해 전체의 답을 도출해냅니다.&lt;/p&gt;
-
-&lt;p&gt;그렇기 때문에 동일한 작은 문제들이 반복하여 나타나는 경우에 사용 가능합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;--최적-부분-구조-optimal-substructure&quot;&gt;- 최적 부분 구조 (Optimal Substructure)&lt;/h3&gt;
-
-&lt;p&gt;최적 부분 구조는 전체 문제의 최적해가 부분 문제들의 최적해로 이루어진 경우를 말합니다. 그렇기 때문에 특정 문제의 정답은 문제의 크기에 상관없이 항상 동일합니다.&lt;/p&gt;
-
-&lt;p&gt;최적 부분 구조 조건은 탐욕법에도 해당하는 조건입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;개념과-설명&quot;&gt;개념과 설명&lt;/h2&gt;
-
-&lt;p&gt;오늘은 피보나치 수열을 예로 들어 다이나믹 프로그래밍을 학습해 보도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/148966788-ed9fcc74-56e4-491d-a7aa-efe2ac705652.jpeg&quot; alt=&quot;06-1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;피보나치 수열은 다음과 같이 앞의 두 항의 합이 뒤의 항이 되어있는 수열입니다.&lt;/p&gt;
-
-&lt;p&gt;n 번째 피보나치 수를 구하는 함수를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fib(n)&lt;/code&gt; 이라고 정의할 때, 이는 다음과 같이 나타낼 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;우리는 이러한 식을 간단한 재귀 함수로 표현할 수 있을 것입니다. 아래는 피보나치 수열을 재귀함수로 이용해 작성한 코드입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib_naive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib_naive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;피보나치 수열의 개념만 이해한다면 재귀함수로 구현하는건 그닥 어렵지 않은 일일것입니다.&lt;/p&gt;
-
-&lt;p&gt;하지만 위 함수가 한번 실행될 때마다 같은 함수가 새롭게 두번씩 호출될 것이고, 그 과정에서 분명히 중복되는 호출들이 있을 것입니다.&lt;/p&gt;
-
-&lt;p&gt;만약 5 번째 피보나치 수를 구한다고 했을 때, 그 과정을 트리로 그려본다면 아래 그림과 같을 것입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/149143933-bd048c70-7d8c-416b-8e9b-c083b6269a31.png&quot; alt=&quot;프레젠테ㅁㄴㅇㄹ이션1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위 그림에서 확인할 수 있는 사실은 2가지 입니다.&lt;/p&gt;
-
-&lt;p&gt;첫번째는 시간복잡도 입니다. 피보나치 수열을 재귀함수로 구현하면 위와 같은 트리 형태의 연산이 실행되기 때문에 시간복잡도는 O(n^2) 입니다.&lt;/p&gt;
-
-&lt;p&gt;두번째는 중복 호출입니다. 5번째 피보나치 수열을 구하는 과정에서도 중복 호출되는 함수가 여러 개 있는 것을 확인할 수 있었습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;memoization&quot;&gt;Memoization&lt;/h2&gt;
-
-&lt;p&gt;위 특징들을 더 개선할 수 있는 방향은 중복 호출되는 함수들의 리턴값을 기억하고 있다가 해당 값이 필요할 경우 다시 함수를 호출할 필요 없이 필요한 값을 가져다가 사용하는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;이렇게 한번 실행된 함수의 결과를 저장해두었다가 사용하는 방식으로 중복 호출을 줄이는 것을 Memoization 이라고 합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;fib_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fib_array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위는 Memoization 을 활용해 다시 구성한 피보나치 수열 메소드입니다.&lt;/p&gt;
-
-&lt;p&gt;fib_array 에 연산에 필요한 가장 앞쪽의 값 두개인 1 을 넣어주고 1번째 피보나치 수 부터 구해나가는 방식입니다. 해당 방식의 시간복잡도는 코드에서도 간단하게 알아볼 수 있듯이 O(n) 입니다.&lt;/p&gt;
-
-&lt;p&gt;재귀로 구현한 방식은 값이 높은쪽부터 시작해 점차적으로 내려오는 Top-Down 방식이고, Memoization 을 이용해 구현한 방식은 값이 낮은쪽부터 시작해 점차적으로 올라가는 Bottom-Up 방식입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;다이나믹 프로그래밍은 모든 방법을 일일히 검토하여 최적해를 찾아내는 방식의 알고리즘으로 탐욕법보다 조금 더 오랜 시간이 걸린다는 특징이 있습니다.&lt;/p&gt;
-
-&lt;p&gt;하지만 탐욕법은 현재 상황에서의 최적해를 쫓는 방법이기 때문에 항상 옳은 결과를 장담하지는 않는다는 특징이 있습니다.&lt;/p&gt;
-
-&lt;p&gt;두 방식은 서로 대비되는 알고리즘이기 때문에 알맞은 문제에 적절하게 사용할 수 있도록 판단하는 능력이 중요하다고 생각됩니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">Dynamic Programming - 동적 계획법</summary></entry><entry><title type="html">애플 개발자 계정을 등록하다</title><link href="http://localhost:4000/etc/3/" rel="alternate" type="text/html" title="애플 개발자 계정을 등록하다" /><published>2022-01-08T09:00:00+09:00</published><updated>2022-01-08T09:00:00+09:00</updated><id>http://localhost:4000/etc/3</id><content type="html" xml:base="http://localhost:4000/etc/3/">&lt;h2 id=&quot;애플-개발자-계정&quot;&gt;애플 개발자 계정…&lt;/h2&gt;
-
-&lt;p&gt;&lt;img width=&quot;1053&quot; alt=&quot;KakaoTalk_Photo_2022-01-08-19-15-55&quot; src=&quot;https://user-images.githubusercontent.com/55919701/148640524-69dab640-8b56-4189-9437-53cadb4bf36c.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;애플 개발자 계정을 등록했습니다…&lt;/p&gt;
-
-&lt;p&gt;사실 이전에 하려고 마음먹은적이 있었습니다. 그런데 평생도 아니고 연간 플랜이 129,000 원 인걸 알고 바로 그만뒀었는데….&lt;/p&gt;
-
-&lt;p&gt;이제 Swift 공부를 진짜로 해야겠다 마음 먹은 것도 있고, 아주 작고 보잘것 없는 앱이라도 앱 하나쯤은 스스로의 힘으로 릴리즈 해보고 싶은 마음이 있었기에 그냥 등록해버렸습니다~!~!&lt;/p&gt;
-
-&lt;p&gt;물론 결제 버튼을 누를때 식은땀이 나고 손발이 벌벌 떨리고 호흡이 가빠지고 머리가 어질어질하기도 했지만 제 미래를 위한 투자라면 이런것쯤은 아까워하지 않아도 된다는 마인드로 간신히 진정했네요.&lt;/p&gt;
-
-&lt;p&gt;1월 초에 이렇게 계정을 등록하다보니 뭐 자연스럽게 2022년 목표가 생기는것 같기도 하네요.&lt;/p&gt;
-
-&lt;p&gt;공부 열심히 해서 기초를 가다듬고 취업하는것도 하나의 목표이기도 했지만, 개발자 계정 등록을 기념으로 목표 하나 더 잡도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;2022 년 내로 앱스토어에 제 이름이 달린 앱 하나쯤 릴리즈해보고 싶네요.&lt;/p&gt;
-
-&lt;p&gt;이번년도 내로 릴리즈하지 못할수도 있고, 앱 퀄리티가 매우 떨어질 수도 있지만 도전한다는 것 자체에 의의를 두고 열심히 해보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;그럼 하나 둘 셋 하면 화이팅 한번 외치고 마무리하도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;자, 하나 둘 셋!&lt;/p&gt;
-
-&lt;p&gt;화이팅!!!&lt;/p&gt;</content><author><name>장재훈</name></author><category term="ETC" /><summary type="html">애플 개발자 계정…</summary></entry><entry><title type="html">[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)</title><link href="http://localhost:4000/algorithm/2/" rel="alternate" type="text/html" title="[알고리즘] DFS (깊이우선탐색) / BFS (너비우선탐색)" /><published>2022-01-08T09:00:00+09:00</published><updated>2022-01-08T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/2</id><content type="html" xml:base="http://localhost:4000/algorithm/2/">&lt;h2 id=&quot;dfs-깊이-우선-탐색--bfs-너비-우선-탐색&quot;&gt;DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)&lt;/h2&gt;
-
-&lt;p&gt;그래프는 정점 (node, vertex) 과 정점들 사이를 연결하는 간선 (edge) 로 이루어진 자료구조입니다.&lt;/p&gt;
-
-&lt;p&gt;오늘은 이 그래프를 탐색하는 방법 중 DFS 와 BFS 에 대해 알아보도록 하겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;dfs-depth-first-search-깊이-우선-탐색&quot;&gt;DFS (Depth First Search, 깊이 우선 탐색)&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/148635241-242751f7-3ea7-42ec-a806-1e8caadedbe4.gif&quot; alt=&quot;R1280x0&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;DFS 는 깊이 우선 탐색으로, 루트 노드에서 시작해서 다음 분기로 넘어가기 전에 해당 분기를 완벽하게 탐색하는 방법을 말합니다.&lt;/p&gt;
-
-&lt;p&gt;DFS 는 일반적으로 재귀함수 혹은 스택을 이용하여 구현합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;모든 노드를 탐색하고자 하는 경우 사용&lt;/li&gt;
-  &lt;li&gt;각 노드 방문 시 방문 여부를 반드시 검사해야 함&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;bfs-breadth-firsh-search-너비-우선-탐색&quot;&gt;BFS (Breadth Firsh Search, 너비 우선 탐색)&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/148635415-46ca3813-af67-401a-87b3-b97a97544b66.gif&quot; alt=&quot;R1280x0-2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;BFS 는 너비 우선 탐색으로, 루트 노드에서 가장 인접한 노드를 먼저 탐색하여 멀리 있는 노드를 나중에 탐색하는 방법을 말합니다.&lt;/p&gt;
-
-&lt;p&gt;BFS 는 일반적으로 큐를 이용하여 구현합니다.&lt;/p&gt;
-
-&lt;p&gt;###특징&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;두 노드 사이의 최단 경로를 탐색하고자 하는 경우 사용&lt;/li&gt;
-  &lt;li&gt;혹은 두 노드 사이의 임의의 경로를 탐색하고자 하는 경우 사용&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;시간복잡도&quot;&gt;시간복잡도&lt;/h2&gt;
-
-&lt;p&gt;DFS 와 BFS 는 모든 노드를 방문한다는 점이 동일하기 때문에 시간복잡도는 동일합니다.&lt;/p&gt;
-
-&lt;p&gt;하지만 그래프를 인접행렬로 구현하였느냐, 인접리스트로 구현하였느냐에 따라 시간 복잡도가 달라집니다.&lt;/p&gt;
-
-&lt;p&gt;V 를 노드, E 를 간선이라고 하였을때 DFS 와 BFS 의 시간복잡도는 아래와 같습니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;인접 행렬 : O(V²)
-인접 리스트 : O(V+E)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;일반적으로 V² 에 비해 E 가 상대적으로 훨씬 작기 때문에 인접 리스트 방식이 더욱 효율적입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;dfs-구현&quot;&gt;DFS 구현&lt;/h2&gt;
-
-&lt;p&gt;코드는 swift 언어로 작성되었습니다.&lt;/p&gt;
-
-&lt;p&gt;x : 루트 노드의 인덱스&lt;/p&gt;
-
-&lt;p&gt;visited : 노드의 방문 여부를 체크하는 배열&lt;/p&gt;
-
-&lt;h3 id=&quot;인접-행렬&quot;&gt;인접 행렬&lt;/h3&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// DFS - 인접행렬&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DFS_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-		
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphTable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;DFS_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;V 개의 노드를 모두 방문하는데, 방문 시 크기가 V 인 반복문이 실행됨으로 시간복잡도는 O(V²) 입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;인접-리스트&quot;&gt;인접 리스트&lt;/h3&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// DFS - 인접리스트&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DFS_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;DFS_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;인접리스트의 경우 자신과 연결되어있지 않은 노드들은 고려하지 않습니다.&lt;/p&gt;
-
-&lt;p&gt;그렇기 때문에 함수가 종료되는 시점에서는 모든 노드와 간선을 한번씩 방문한 상태고 그러므로 시간복잡도는 O(V+E) 입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;bfs-구현&quot;&gt;BFS 구현&lt;/h2&gt;
-
-&lt;h3 id=&quot;인접-행렬-1&quot;&gt;인접 행렬&lt;/h3&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// BFS - 인접행렬&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BFS_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphTable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위 DFS 에서 설명한것과 같은 이유로 시간복잡도는 O(V²) 입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;인접-리스트-1&quot;&gt;인접 리스트&lt;/h3&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// BFS - 인접리스트&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BFS_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graphList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위 DFS 에서 설명한것과 같은 이유로 시간복잡도는 O(V+E) 입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;원래는 BFS 관련 코딩테스트 문제를 풀려고 했는데, 문득 DFS 와 BFS 에 대해 제대로 알지 못한다는 생각이 들어 공부하기 시작한게 여기까지 와버렸습니다.&lt;/p&gt;
-
-&lt;p&gt;덕분에 잘 정리가 되어있지 않던 DFS 와 BFS 의 개념에 대해 다시 한번 짚고 넘어가게 된 것 같습니다.&lt;/p&gt;
-
-&lt;p&gt;물론 오늘 한번으로 100% 이해하기는 어렵겠지만, 꾸준히 관련 문제들을 반복해서 풀어보며 빠르게 익숙해져야겠다는 생각을 했습니다.&lt;/p&gt;
-
-&lt;p&gt;다음에는 DFS 와 BFS 관련 문제 풀이를 해보도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">DFS (깊이 우선 탐색) , BFS (너비 우선 탐색)</summary></entry><entry><title type="html">[알고리즘] 탐욕법 Greedy</title><link href="http://localhost:4000/algorithm/1/" rel="alternate" type="text/html" title="[알고리즘] 탐욕법 Greedy" /><published>2022-01-06T09:00:00+09:00</published><updated>2022-01-06T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/1</id><content type="html" xml:base="http://localhost:4000/algorithm/1/">&lt;h2 id=&quot;탐욕법&quot;&gt;탐욕법&lt;/h2&gt;
-
-&lt;p&gt;오늘은 탐욕법, Greedy 알고리즘에 대해 알아보도록 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;탐욕법이란 현재 상황에서의 최적해를 쫓는 알고리즘입니다. 하지만 현재 상황에서의 최적해만을 추구하는 것이 전체적으로 어떤 영향을 끼칠지는 고려하지 않기 때문에 항상 옳은 결과를 장담하지는 않습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;local-minimum--global-minimum&quot;&gt;Local minimum &amp;amp; Global minimum&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/148390866-844350b0-11a2-4b30-a132-02b4d1fdecfc.jpg&quot; alt=&quot;연습장-123&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;그래프 위 시작점 X 에서 최소값을 찾는 프로그램을 작성한다고 할 때, 탐욕법을 이용한다고 가정해보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;탐욕법은 앞서 말했듯이 현재 상황에서의 최적해를 찾는 알고리즘이기 때문에 시작점 X 에서 최소값을 찾으려면 무조건 지금의 값보다 낮은 왼쪽으로 향하게 될 것입니다.&lt;/p&gt;
-
-&lt;p&gt;왼쪽으로 진행하던 점 X 는 어느 순간 값이 커지는 변곡점을 맞게 될 것이고, 프로그램은 해당 변곡점을 그래프의 최소값이라고 생각할 것입니다.&lt;/p&gt;
-
-&lt;p&gt;하지만 위 그래프를 전체적으로 봤을때 그 변곡점은 local minimum 에 해당하는 점 A 일 것이며, 그래프의 실제 최소값은 global minimum 에 해당하는 점 B 일 것입니다.&lt;/p&gt;
-
-&lt;p&gt;탐욕법은 전체적인 부분을 고려하지 않고 현재 상황에서의 최적해만을 쫓기 때문에 위와 같은 예제에서는 알맞은 풀이법이 아니라고 볼 수 있습니다.]&lt;/p&gt;
-
-&lt;h2 id=&quot;그렇다면-어떤-경우에-탐욕법을-사용하는-것이-좋을까&quot;&gt;그렇다면 어떤 경우에 탐욕법을 사용하는 것이 좋을까?&lt;/h2&gt;
-
-&lt;p&gt;탐욕법은 탐욕 선택 속성 (Greedy Choice Property) 와 최적 부분 구조 (Optimal Substructure) 의 특성을 가지는 문제들을 해결할 때 활용할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;--탐욕-선택-속성-greedy-choice-property&quot;&gt;- 탐욕 선택 속성 (Greedy Choice Property)&lt;/h3&gt;
-
-&lt;p&gt;탐욕 선택 속성은 이전의 선택이 이후의 선택에 영향을 끼치지 않아야 한다는 조건입니다. 즉 탐욕적인 접근이 항상 옳은 선택이라는게 보장되어야 한다는 의미입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;--최적-부분-구조-optimal-substructure&quot;&gt;- 최적 부분 구조 (Optimal Substructure)&lt;/h3&gt;
-
-&lt;p&gt;최적 부분 구조는 전체 문제의 최적해가 부분 문제들의 최적해로 이루어진 경우를 얘기합니다. 이 말은 전체 문제를 부분적인 문제들로 나누었을 때, 부분적인 문제들의 최적해가 전체적으로 보았을 때 마찬가지로 최적해를 구성해야 한다는 의미입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;동전-문제&quot;&gt;동전 문제&lt;/h2&gt;
-
-&lt;p&gt;가장 보편적인 문제는 동전 문제입니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;500원, 100원, 50원, 10원 짜리 동전만을 이용해서 주어진 금액 N 원을 구성해야 한다고 할 때, 구성할 수 있는 동전의 최소 개수를 구하라. N 은 항상 10의 배수이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;가장 적은 수의 동전을 이용하여 N 원을 구성하기 위해서는 동전 중 가장 큰 동전으로 구성할 수 있는 최대값을 고려한 후, 해당 값을 뺀 나머지에서 다음 단위의 동전으로 구성할 수 있는 최대값을 고려해야 합니다.&lt;/p&gt;
-
-&lt;p&gt;이와 같이 가장 큰 단위의 동전부터 이용해 N 원을 구상한다면 탐욕법을 이용하여 문제를 해결할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;(코드는 추후에 첨부하도록 하겠습니다)&lt;/p&gt;
-
-&lt;p&gt;해당 문제를 탐욕법으로 접근할 수 있는 이유는 가지고 있는 동전 중 큰 단위의 동전이 항상 작은 단위의 동전의 배수이기 때문입니다. 그렇기 때문에 작은 단위의 동전을 조합해 이 중 큰 단위가 아닌 다른 단위의 금액을 도출해낼 수 없습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
-
-&lt;p&gt;오늘은 탐욕법에 대해 알아보았습니다.&lt;/p&gt;
-
-&lt;p&gt;탐욕법은 매우 정리하기 간단할 것이라 생각했는데 전혀 아니었네요.. 알고리즘의 개념에 대한 학습이 얼마나 중요한지 다시 한번 느끼게 되었습니다.&lt;/p&gt;
-
-&lt;p&gt;다음에는 탐욕법과 많이 비교되는 Dynamic Programming 에 대해 알아보는 시간을 갖도록 하겠습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">탐욕법</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;해당 풀이에 쓰인 코드는 BOJ 1655 번 beddl 님의 풀이를 참고하여 작성하였습니다.&lt;/em&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">[알고리즘] 백준:1655 - 가운데를 말해요</summary></entry></feed>
