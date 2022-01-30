@@ -106,4 +106,40 @@ var store = [{
         "tags": [],
         "url": "/algorithm/8/",
         "teaser": null
+      },{
+        "title": "SW·AI 해커톤 - 얼굴인식을 통한 식단추천 시스템",
+        "excerpt":"  2020.07  ","categories": ["Projects"],
+        "tags": [],
+        "url": "/projects/1/",
+        "teaser": null
+      },{
+        "title": "창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템",
+        "excerpt":"  2020.07 - 2020.12  ","categories": ["Projects"],
+        "tags": [],
+        "url": "/projects/2/",
+        "teaser": null
+      },{
+        "title": "졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 시스템",
+        "excerpt":"  2021.03 - 2021.06  ","categories": ["Projects"],
+        "tags": [],
+        "url": "/projects/3/",
+        "teaser": null
+      },{
+        "title": "Glokool - 외국인 여행객 대상 가이드 앱",
+        "excerpt":"  2021.07 - 2021.10  ","categories": ["Projects"],
+        "tags": [],
+        "url": "/projects/4/",
+        "teaser": null
+      },{
+        "title": "Glokool 가이드 - Glokool 의 가이드용 앱",
+        "excerpt":"  2021.09 - 2021.11  ","categories": ["Projects"],
+        "tags": [],
+        "url": "/projects/5/",
+        "teaser": null
+      },{
+        "title": "우주펫 - 지역 기반 반려동물 커뮤니티 앱",
+        "excerpt":"  2021.11 - 2022.01  ","categories": ["Projects"],
+        "tags": [],
+        "url": "/projects/6/",
+        "teaser": null
       }]
