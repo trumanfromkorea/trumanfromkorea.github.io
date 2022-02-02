@@ -108,13 +108,13 @@ var store = [{
         "teaser": null
       },{
         "title": "SW·AI 해커톤 - 얼굴인식을 통한 식단추천 시스템",
-        "excerpt":"  2020.07  ","categories": ["Projects"],
+        "excerpt":"2020.07 AI 표정인식 식단추천 시스템 세종대학교 SW AI 해커톤 금상 🏅 🧑🏻‍💻 구성원 Name Role 장재훈 📊 팀장, 표정인식 이일환 🛠 메인로직, 백엔드 개발 박세환 📄 크롤링, DB 구축 최락현 🖌 시스템 프론트, 인터페이스 개발 안재현 📂 크롤링, 백엔드 개발 📢 프로젝트 소개 설명 주어진 주제는 식단추천이었습니다. 색다른 아이디어를 AI...","categories": ["Projects"],
         "tags": [],
         "url": "/projects/1/",
         "teaser": null
       },{
         "title": "창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템",
-        "excerpt":"2020.07 - 2020.12 Pallete 💄 Personal Color Diagnosis with AI and Recommending Cosmetics AI 기반 퍼스널컬러 진단 및 화장품 추천 시스템 개발 🧑🏻‍💻 구성원 2020-2 세종대학교 창의학기제 3분과 Team 5H Name Role 장재훈 📊 팀장, 메인로직 이일환 🛠 메인로직, 앱 개발 박세환 📄 크롤링, 앱 개발 최락현 🖌 UI/UX, 인터페이스...","categories": ["Projects"],
+        "excerpt":"2020.07 - 2020.12 Pallete 세종대학교 창의설계 경진대화 장려상, 인기상 🏅 💄 Personal Color Diagnosis with AI and Recommending Cosmetics AI 기반 퍼스널컬러 진단 및 화장품 추천 시스템 개발 🧑🏻‍💻 구성원 2020-2 세종대학교 창의학기제 3분과 Team 5H Name Role 장재훈 📊 팀장, 메인로직 이일환 🛠 메인로직, 앱 개발 박세환 📄 크롤링,...","categories": ["Projects"],
         "tags": [],
         "url": "/projects/2/",
         "teaser": null
@@ -141,5 +141,11 @@ var store = [{
         "excerpt":"  2021.11 - 2022.01  ","categories": ["Projects"],
         "tags": [],
         "url": "/projects/6/",
+        "teaser": null
+      },{
+        "title": "[알고리즘] 백준:10830 - 행렬 제곱 (Swift, Java)",
+        "excerpt":"[알고리즘] 백준:10830 - 행렬 제곱 (Swift, Java) 클릭해서 문제 바로가기 문제 크기가 N*N인 행렬 A가 주어진다. 이때, A의 B제곱을 구하는 프로그램을 작성하시오. 수가 매우 커질 수 있으니, A^B의 각 원소를 1,000으로 나눈 나머지를 출력한다. 첫째 줄에 행렬의 크기 N과 B가 주어진다. (2 ≤ N ≤ 5, 1 ≤ B ≤...","categories": ["Algorithm"],
+        "tags": [],
+        "url": "/algorithm/9/",
         "teaser": null
       }]
