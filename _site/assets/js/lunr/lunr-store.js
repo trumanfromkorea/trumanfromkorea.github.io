@@ -148,4 +148,10 @@ var store = [{
         "tags": [],
         "url": "/algorithm/9/",
         "teaser": null
+      },{
+        "title": "[알고리즘] 백준:1976 - 여행 가자 (Swift, Java)",
+        "excerpt":"[알고리즘] 백준:1976 - 여행 가자 (Swift, Java) 클릭해서 문제 바로가기 문제 동혁이는 친구들과 함께 여행을 가려고 한다. 한국에는 도시가 N개 있고 임의의 두 도시 사이에 길이 있을 수도, 없을 수도 있다. 동혁이의 여행 일정이 주어졌을 때, 이 여행 경로가 가능한 것인지 알아보자. 물론 중간에 다른 도시를 경유해서 여행을 할 수도...","categories": ["Algorithm"],
+        "tags": [],
+        "url": "/algorithm/10/",
+        "teaser": null
       }]
