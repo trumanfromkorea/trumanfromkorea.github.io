@@ -119,8 +119,8 @@ var store = [{
         "url": "/projects/2/",
         "teaser": null
       },{
-        "title": "졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 시스템",
-        "excerpt":"  2021.03 - 2021.06  ","categories": ["Projects"],
+        "title": "졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템",
+        "excerpt":"2021.03 - 2021.06 Track Me - 블록체인과 블루투스 기반 역학조사 자동화 시스템 2021-1 세종대학교 Capstone Design 졸업연구 프로젝트 🧑🏻‍💻 구성원 Name Role 장재훈 📊 팀장, 앱 클라이언트 개발 이일환 🛠 블록체인 생성, 블루투스 통신 개발 박세환 📄 Push 알림, DB 개발 송현석 🖌 웹 프론트엔드 개발 🔍 프로젝트 소개 역학조사...","categories": ["Projects"],
         "tags": [],
         "url": "/projects/3/",
         "teaser": null
