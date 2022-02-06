@@ -166,4 +166,10 @@ var store = [{
         "tags": [],
         "url": "/algorithm/12/",
         "teaser": null
+      },{
+        "title": "[알고리즘] 백준:1316 - 그룹 단어 체커 (Swift, Java)",
+        "excerpt":"[알고리즘] 백준:1316 - 그룹 단어 체커 (Swift, Java) 클릭해서 문제 바로가기 문제 그룹 단어란 단어에 존재하는 모든 문자에 대해서, 각 문자가 연속해서 나타나는 경우만을 말한다. 예를 들면, ccazzzzbb는 c, a, z, b가 모두 연속해서 나타나고, kin도 k, i, n이 연속해서 나타나기 때문에 그룹 단어이지만, aabbbccb는 b가 떨어져서 나타나기 때문에 그룹...","categories": ["Algorithm"],
+        "tags": [],
+        "url": "/algorithm/13/",
+        "teaser": null
       }]
