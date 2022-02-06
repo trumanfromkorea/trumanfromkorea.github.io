@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-06T15:18:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] 백준:1316 - 그룹 단어 체커 (Swift, Java)</title><link href="http://localhost:4000/algorithm/13/" rel="alternate" type="text/html" title="[알고리즘] 백준:1316 - 그룹 단어 체커 (Swift, Java)" /><published>2022-02-06T09:00:00+09:00</published><updated>2022-02-06T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/13</id><content type="html" xml:base="http://localhost:4000/algorithm/13/">&lt;h2 id=&quot;알고리즘-백준1316---그룹-단어-체커-swift-java&quot;&gt;[알고리즘] 백준:1316 - 그룹 단어 체커 (Swift, Java)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-06T16:38:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] 백준:1316 - 그룹 단어 체커 (Swift, Java)</title><link href="http://localhost:4000/algorithm/13/" rel="alternate" type="text/html" title="[알고리즘] 백준:1316 - 그룹 단어 체커 (Swift, Java)" /><published>2022-02-06T09:00:00+09:00</published><updated>2022-02-06T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/13</id><content type="html" xml:base="http://localhost:4000/algorithm/13/">&lt;h2 id=&quot;알고리즘-백준1316---그룹-단어-체커-swift-java&quot;&gt;[알고리즘] 백준:1316 - 그룹 단어 체커 (Swift, Java)&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1316&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
 
@@ -782,8 +782,262 @@
 
 &lt;p&gt;아직은 문법에 익숙치 않아 Swift 로 한번 문제를 풀어본 후 Java 로 다시 옮겨적어보고 있지만, 언젠가는 아예 Java 로 코딩테스트 문제들을 슥슥 풀어낼 수 있는 날이 오면 좋겠네요.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">[알고리즘] 백준:10830 - 행렬 제곱 (Swift, Java)</summary></entry><entry><title type="html">Glokool 가이드 - Glokool 의 가이드용 앱</title><link href="http://localhost:4000/projects/5/" rel="alternate" type="text/html" title="Glokool 가이드 - Glokool 의 가이드용 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/5</id><content type="html" xml:base="http://localhost:4000/projects/5/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.09 - 2021.11&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.09 - 2021.11</summary></entry><entry><title type="html">Glokool - 외국인 여행객 대상 가이드 앱</title><link href="http://localhost:4000/projects/4/" rel="alternate" type="text/html" title="Glokool - 외국인 여행객 대상 가이드 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/4</id><content type="html" xml:base="http://localhost:4000/projects/4/">&lt;p&gt;&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.07 - 2021.10&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.07 - 2021.10</summary></entry><entry><title type="html">졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 시스템</title><link href="http://localhost:4000/projects/3/" rel="alternate" type="text/html" title="졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/3</id><content type="html" xml:base="http://localhost:4000/projects/3/">&lt;p&gt;&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.03 - 2021.06&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.03 - 2021.06</summary></entry><entry><title type="html">창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템</title><link href="http://localhost:4000/projects/2/" rel="alternate" type="text/html" title="창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/2</id><content type="html" xml:base="http://localhost:4000/projects/2/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.07 - 2021.10&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.07 - 2021.10</summary></entry><entry><title type="html">졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템</title><link href="http://localhost:4000/projects/3/" rel="alternate" type="text/html" title="졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/3</id><content type="html" xml:base="http://localhost:4000/projects/3/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.03 - 2021.06&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;track-me---블록체인과-블루투스-기반-역학조사-자동화-시스템&quot;&gt;Track Me - 블록체인과 블루투스 기반 역학조사 자동화 시스템&lt;/h2&gt;
+
+&lt;p&gt;2021-1 세종대학교 Capstone Design 졸업연구 프로젝트&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122284572-b1967080-cf28-11eb-81d1-db081417c8f8.png&quot; alt=&quot;ta&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;-구성원&quot;&gt;🧑🏻‍💻 구성원&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Role&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/trumanfromkorea&quot;&gt;장재훈&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;📊 팀장, 앱 클라이언트 개발&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/&quot;&gt;이일환&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;🛠 블록체인 생성, 블루투스 통신 개발&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/&quot;&gt;박세환&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;📄 Push 알림, DB 개발&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/&quot;&gt;송현석&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;🖌 웹 프론트엔드 개발&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;-프로젝트-소개&quot;&gt;🔍 프로젝트 소개&lt;/h2&gt;
+
+&lt;h3 id=&quot;역학조사-자동화-시스템&quot;&gt;역학조사 자동화 시스템?&lt;/h3&gt;
+
+&lt;p&gt;Track Me 는 코로나 바이러스 초반 역학조사에 제대로 참여하지 않는 경우를 방지하기 위해, 그리고 비효율적인 역학조사 방식을 개선하기 위해 기획된 역학조사 자동화 시스템입니다.&lt;/p&gt;
+
+&lt;p&gt;사용자 App, 사업자 App, 관리자 (보건국) Web 으로 이루어진 Track Me 는 블루투스를 이용한 빠르고 편리한 체크인 방식을 제공합니다. 이때 생성된 체크인 정보는 블록 형태로 안전하게 저장되어 삭제 혹은 위변조가 불가능합니다.&lt;/p&gt;
+
+&lt;p&gt;사용자가 체크인 한 정보는 사용자와 사업자 앱에서 확인 가능합니다. 사용자는 자신이 체크인한 장소를 지도 위의 마커, 혹은 리스트 형태로 확인할 수 있고 사업자는 별도의 기기 없이 휴대폰만으로 시간대별로 체크인한 고객들을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;사용자 확진 시 사용자와 사업자의 동의 하에 2주간의 확진자 동선 정보가 관리자용 웹으로 전송됩니다. 관리자용 웹에서는 확진자와 같은 시간대에 같은 매장에 방문한 밀접 접촉자들을 분류할 수 있는 기능과 사용자들에게 Push 알림을 전송하는 기능을 이용할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;또한 테이블 형태로 확진자 정보와 밀접 접촉자 정보, 확진자 방문 매장 정보를 손쉽게 관리할 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=b_RCOxxr6vw&quot;&gt;소개 영상 바로가기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/trumanfromkorea/Track-Me&quot;&gt;Github Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-구현&quot;&gt;💻 구현&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;사용 기술&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;언어&lt;/td&gt;
+      &lt;td&gt;Javascript&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;프레임워크&lt;/td&gt;
+      &lt;td&gt;React, React Native, NodeJS&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;데이터베이스&lt;/td&gt;
+      &lt;td&gt;Firebase FireStore&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Push 알림&lt;/td&gt;
+      &lt;td&gt;Firebase Cloud Messaging&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;지도 API&lt;/td&gt;
+      &lt;td&gt;Google Maps API&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;지원 OS&lt;/td&gt;
+      &lt;td&gt;iOS, Android&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;-시스템-전체-구조&quot;&gt;🧬 시스템 전체 구조&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;체크인 시스템 구조&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122286447-d25fc580-cf2a-11eb-947c-da3fd331a39e.png&quot; alt=&quot;구조도1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;프로젝트 구조&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122286496-e1df0e80-cf2a-11eb-81a8-fb85021dd193.png&quot; alt=&quot;구조도2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;-사용자-app&quot;&gt;📱 사용자 App&lt;/h2&gt;
+
+&lt;h3 id=&quot;소개&quot;&gt;소개&lt;/h3&gt;
+
+&lt;p&gt;Track Me 사용자용 앱입니다. 블루투스를 통한 빠른 체크인을 진행할 수 있으며 자신이 체크인 한 매장의 정보를 지도위의 마커, 혹은 리스트 형태로 조회할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;지도 위에서 자신의 방문 정보뿐만 아닌 확진자 방문 장소 정보또한 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;사용자 확진 시 블록 형태로 저장된 체크인 데이터가 보건국에 공유됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;구조도&quot;&gt;구조도&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122285949-4a79bb80-cf2a-11eb-92e6-781e3ba71fa8.png&quot; alt=&quot;사용자앱흐름도&quot; /&gt;&lt;/p&gt;
+
+&lt;details&gt;
+&lt;summary&gt; 시연 화면 (펼치기) &lt;/summary&gt;
+&lt;div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;앱 소개 화면&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122285978-54032380-cf2a-11eb-8e02-2a1892b1f931.png&quot; alt=&quot;그림1&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;회원가입 및 로그인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122286031-63826c80-cf2a-11eb-963c-9ab20db35847.png&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;지도 위 방문장소 및 동선 파악 / 메뉴&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122286065-6e3d0180-cf2a-11eb-9a05-0e655d953324.png&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;블루투스 체크인 화면 / 체크인 기록 확인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122286150-83199500-cf2a-11eb-8ab0-8a45d84e16ca.png&quot; alt=&quot;4&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;알림 / 프로필 / 환경 설정&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122286196-90cf1a80-cf2a-11eb-8ce1-bd3277b12aaf.png&quot; alt=&quot;5&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;공유 옵션&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122286279-a47a8100-cf2a-11eb-9175-44987337c957.png&quot; alt=&quot;6&quot; /&gt;&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&quot;-사업자-app-매장용&quot;&gt;🧮 사업자 App (매장용)&lt;/h2&gt;
+
+&lt;h3 id=&quot;소개-1&quot;&gt;소개&lt;/h3&gt;
+
+&lt;p&gt;사업자용 앱은 매장 방문자 정보를 관리합니다. 방문자가 블루투스를 이용하여 체크인 한 데이터를 수신하여 날짜, 시간대별 방문자를 조회할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;방문자 확진 시, 확진자와 동시간대 매장에 방문한 접촉자들의 데이터를 자동으로 분류하여 보건국에 전송합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;구조도-1&quot;&gt;구조도&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122285381-9841f400-cf29-11eb-8149-23979ce7a4d3.png&quot; alt=&quot;사업자앱흐름도&quot; /&gt;&lt;/p&gt;
+
+&lt;details&gt;
+&lt;summary&gt; 시연 화면 (펼치기) &lt;/summary&gt;
+&lt;div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;회원가입 및 로그인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122285414-a4c64c80-cf29-11eb-9c37-64c5af2e01b6.png&quot; alt=&quot;7&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;홈 화면 / 메뉴 / 프로필&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122285431-ab54c400-cf29-11eb-9448-313d412ba146.png&quot; alt=&quot;8&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;방문자 조회 / 환경설정&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122285448-b27bd200-cf29-11eb-9e1f-8aa50d674dae.png&quot; alt=&quot;9&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;공유 옵션&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122285473-b90a4980-cf29-11eb-8291-a7b38ccf138f.png&quot; alt=&quot;6&quot; /&gt;&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&quot;-관리자-웹-보건국&quot;&gt;👩🏻‍💻 관리자 웹 (보건국)&lt;/h2&gt;
+
+&lt;h3 id=&quot;소개-2&quot;&gt;소개&lt;/h3&gt;
+
+&lt;p&gt;관리자 웹은 확진자 및 방문 매장에서 받은 블록 형태의 데이터를 분류하여 이를 테이블 형태로 관리합니다.&lt;/p&gt;
+
+&lt;p&gt;확진자 방문 장소의 방역 정보를 관리할 수도 있으며 사용자들에게 확진자 방문 장소에 관한 데이터들을 전송하고 Push 알림을 발송할 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;구조도-2&quot;&gt;구조도&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/122286884-4dc17700-cf2b-11eb-92e8-be77907ee27b.png&quot; alt=&quot;웹 흐름도&quot; /&gt;&lt;/p&gt;
+
+&lt;details&gt;
+&lt;summary&gt; 시연 화면 (펼치기) &lt;/summary&gt;
+&lt;div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;로그인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img width=&quot;1674&quot; alt=&quot;스크린샷 2021-06-16 오전 3 35 55&quot; src=&quot;https://user-images.githubusercontent.com/55919701/122286922-5ca82980-cf2b-11eb-98a4-2905d179eb19.png&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;확진자 관리&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img width=&quot;1674&quot; alt=&quot;스크린샷 2021-06-16 오전 3 36 10&quot; src=&quot;https://user-images.githubusercontent.com/55919701/122286974-692c8200-cf2b-11eb-978e-805dc38620f3.png&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;자가격리자 관리&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img width=&quot;1674&quot; alt=&quot;스크린샷 2021-06-16 오전 3 36 18&quot; src=&quot;https://user-images.githubusercontent.com/55919701/122287001-734e8080-cf2b-11eb-9d39-96a6cf270df0.png&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;알림 관리&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img width=&quot;1674&quot; alt=&quot;스크린샷 2021-06-16 오전 3 36 24&quot; src=&quot;https://user-images.githubusercontent.com/55919701/122287043-7d707f00-cf2b-11eb-9038-4702128677f2.png&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;확진자 방문장소 관리&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img width=&quot;1674&quot; alt=&quot;스크린샷 2021-06-16 오전 3 36 28&quot; src=&quot;https://user-images.githubusercontent.com/55919701/122287088-87927d80-cf2b-11eb-8a88-c2e20e2767b2.png&quot; /&gt;&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/details&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.03 - 2021.06</summary></entry><entry><title type="html">창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템</title><link href="http://localhost:4000/projects/2/" rel="alternate" type="text/html" title="창의학기제 - AI 를 이용한 퍼스널컬러 진단 및 화장품 추천 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/2</id><content type="html" xml:base="http://localhost:4000/projects/2/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2020.07 - 2020.12&lt;/code&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;pallete&quot;&gt;Pallete&lt;/h1&gt;
@@ -833,6 +1087,7 @@
 &lt;ul&gt;
   &lt;li&gt;Palette 는 A4 용지만 있다면 간편하게 무료로 퍼스널컬러를 진단해주는 앱입니다.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=aIS0EnDxnnE&quot;&gt;프로젝트 영상&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/trumanfromkorea/Pallete&quot;&gt;Github Repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;퍼스널컬러란&quot;&gt;퍼스널컬러란?&lt;/h3&gt;
@@ -954,6 +1209,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;주어진 주제는 식단추천이었습니다. 색다른 아이디어를 AI 와 함께 녹여내고 싶었기 때문에 사용자의 표정을 인식한 후 피로도에 따라 식단을 추천하는 것이 어떨까 생각했습니다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/trumanfromkorea/Sejong-AI-Hackathon&quot;&gt;Github Repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;사용방법&quot;&gt;사용방법&lt;/h3&gt;
@@ -970,4 +1226,33 @@
 &lt;ul&gt;
   &lt;li&gt;쉬운 접근성과 흥미 유발로 많은 관심을 끌 수 있을 것이라 예상합니다.&lt;/li&gt;
   &lt;li&gt;향후 식당과의 제휴 및 쿠폰 서비스 등을 추가할 수 있을 것으로 예상합니다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2020.07</summary></entry></feed>
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-구현&quot;&gt;💻 구현&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;기술 스택&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;언어&lt;/td&gt;
+      &lt;td&gt;Python&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;인터페이스&lt;/td&gt;
+      &lt;td&gt;PyQT&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;얼굴인식&lt;/td&gt;
+      &lt;td&gt;OpenCV&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;데이터베이스&lt;/td&gt;
+      &lt;td&gt;MySQL&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2020.07</summary></entry></feed>

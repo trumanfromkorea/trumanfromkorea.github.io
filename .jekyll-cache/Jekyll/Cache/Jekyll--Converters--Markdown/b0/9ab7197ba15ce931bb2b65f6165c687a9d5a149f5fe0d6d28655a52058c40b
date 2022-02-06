@@ -1,0 +1,66 @@
+I"8
+<p><br />
+<code class="language-plaintext highlighter-rouge">2020.07</code></p>
+
+<h2 id="ai-표정인식-식단추천-시스템">AI 표정인식 식단추천 시스템</h2>
+
+<h3 id="세종대학교-sw-ai-해커톤-금상-">세종대학교 SW AI 해커톤 금상 🏅</h3>
+
+<h2 id="-구성원">🧑🏻‍💻 구성원</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/trumanfromkorea">장재훈</a></td>
+      <td>📊 팀장, 표정인식</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/">이일환</a></td>
+      <td>🛠 메인로직, 백엔드 개발</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/">박세환</a></td>
+      <td>📄 크롤링, DB 구축</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/">최락현</a></td>
+      <td>🖌 시스템 프론트, 인터페이스 개발</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Jaeyooou">안재현</a></td>
+      <td>📂 크롤링, 백엔드 개발</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-프로젝트-소개">📢 프로젝트 소개</h2>
+
+<h3 id="설명">설명</h3>
+
+<ul>
+  <li>주어진 주제는 식단추천이었습니다. 색다른 아이디어를 AI 와 함께 녹여내고 싶었기 때문에 사용자의 표정을 인식한 후 피로도에 따라 식단을 추천하는 것이 어떨까 생각했습니다.</li>
+  <li><a href="https://github.com/trumanfromkorea/Sejong-AI-Hackathon">Github Repository</a></li>
+</ul>
+
+<h3 id="사용방법">사용방법</h3>
+<ol>
+  <li>사용자는 자신의 정보를 입력합니다. (성별, 키, 몸무게, 이전 끼니에 섭취한 식사 등)</li>
+  <li>프로그램은 사용자의 정보를 이용해 대사량을 측정합니다.</li>
+  <li>이후 프로그램은 사용자의 얼굴 표정을 인식하여 피로도를 분석합니다.</li>
+  <li>분석한 결과들을 합산한 값으로 다음 끼니에 적합한 식사를 사용자에게 추천합니다.</li>
+  <li>실시간 날씨 혹은 현재 시각에 따른 음식을 같이 추천하기도 합니다. (ex. 비 오는 날엔 파전 &amp; 막걸리, 아침엔 샌드위치 &amp; 커피)</li>
+  <li>결과 클릭 시 관련 메뉴를 판매하는 인근 식당들을 확인할 수 있습니다.</li>
+</ol>
+
+<h3 id="기대효과">기대효과</h3>
+<ul>
+  <li>쉬운 접근성과 흥미 유발로 많은 관심을 끌 수 있을 것이라 예상합니다.</li>
+  <li>향후 식당과의 제휴 및 쿠폰 서비스 등을 추가할 수 있을 것으로 예상합니다.</li>
+</ul>
+:ET
