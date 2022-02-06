@@ -1,0 +1,145 @@
+I"�8<h2 id="알고리즘-백준9012---괄호-swift-java">[알고리즘] 백준:9012 - 괄호 (Swift, Java)</h2>
+
+<p><a href="https://www.acmicpc.net/problem/9012">클릭해서 문제 바로가기</a></p>
+
+<h2 id="문제">문제</h2>
+
+<p>괄호 문자열(Parenthesis String, PS)은 두 개의 괄호 기호인 ‘(’ 와 ‘)’ 만으로 구성되어 있는 문자열이다. 그 중에서 괄호의 모양이 바르게 구성된 문자열을 올바른 괄호 문자열(Valid PS, VPS)이라고 부른다. 한 쌍의 괄호 기호로 된 “( )” 문자열은 기본 VPS 이라고 부른다.</p>
+
+<p>만일 x 가 VPS 라면 이것을 하나의 괄호에 넣은 새로운 문자열 “(x)”도 VPS 가 된다. 그리고 두 VPS x 와 y를 접합(concatenation)시킨 새로운 문자열 xy도 VPS 가 된다. 예를 들어 “(())()”와 “((()))” 는 VPS 이지만 “(()(”, “(())()))” , 그리고 “(()” 는 모두 VPS 가 아닌 문자열이다.</p>
+
+<p>여러분은 입력으로 주어진 괄호 문자열이 VPS 인지 아닌지를 판단해서 그 결과를 YES 와 NO 로 나타내어야 한다.</p>
+
+<h3 id="입력">입력</h3>
+
+<p>입력 데이터는 표준 입력을 사용한다. 입력은 T개의 테스트 데이터로 주어진다. 입력의 첫 번째 줄에는 입력 데이터의 수를 나타내는 정수 T가 주어진다. 각 테스트 데이터의 첫째 줄에는 괄호 문자열이 한 줄에 주어진다. 하나의 괄호 문자열의 길이는 2 이상 50 이하이다.</p>
+
+<h3 id="출력">출력</h3>
+
+<p>출력은 표준 출력을 사용한다. 만일 입력 괄호 문자열이 올바른 괄호 문자열(VPS)이면 “YES”, 아니면 “NO”를 한 줄에 하나씩 차례대로 출력해야 한다.</p>
+
+<h2 id="이해">이해</h2>
+
+<p>스택을 처음 배울때 괄호에 대한 예시를 너무 많이 봐와서 그런지 이제는 괄호를 보기만 해도 스택이 먼저 떠오릅니다. 해당 문제도 마찬가지로 스택을 이용해 해결할 수 있는 간단한 문제입니다.</p>
+
+<p>괄호는 무조건 한 쌍으로 이루어져야 하며 괄호가 열리면 무조건 괄호는 닫혀야 합니다. 스택을 이용해 괄호의 유효성을 판단하는것은 굉장히 간단합니다.</p>
+
+<p>( 가 나오면 스택에 push 하고 ) 가 나오면 pop 하는 것이 전부입니다. 하지만 pop 할 시 스택이 비어있다면 해당 괄호 set 은 유효하지 않습니다. 혹은 모든 push 와 pop 이 끝나고 난 후에도 스택에 남아있는 원소가 존재한다면 해당 괄호 set 또한 유효하지 않다고 볼 수 있습니다.</p>
+
+<p>이번 문제에서는 문자열의 문자들을 하나씩 탐색하며 위 방법을 반복하면 문제를 해결할 수 있습니다.</p>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<h3 id="swift">Swift</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="k">var</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="nf">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">)</span><span class="o">!</span>
+<span class="k">var</span> <span class="nv">answer</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+<span class="k">var</span> <span class="nv">stack</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">var</span> <span class="nv">isVPS</span><span class="p">:</span> <span class="kt">Bool</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+    <span class="n">isVPS</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="n">stack</span><span class="o">.</span><span class="nf">removeAll</span><span class="p">()</span>
+    
+    <span class="k">let</span> <span class="nv">bracket</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="nf">readLine</span><span class="p">()</span><span class="o">!</span>
+    
+    <span class="k">for</span> <span class="n">b</span> <span class="k">in</span> <span class="n">bracket</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="s">"("</span> <span class="p">{</span> <span class="c1">// ( 나오면 push</span>
+            <span class="n">stack</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"("</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// ) 나왔는데</span>
+            <span class="k">if</span> <span class="n">stack</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span> <span class="c1">// 비었으면 false 저장 후 break</span>
+                <span class="n">isVPS</span> <span class="o">=</span> <span class="kc">false</span>
+                <span class="k">break</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// 정상이면 pop</span>
+                <span class="n">stack</span><span class="o">.</span><span class="nf">removeLast</span><span class="p">()</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">if</span> <span class="o">!</span><span class="n">stack</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+        <span class="n">answer</span> <span class="o">+=</span> <span class="s">"NO</span><span class="se">\n</span><span class="s">"</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">isVPS</span> <span class="p">{</span>
+        <span class="n">answer</span> <span class="o">+=</span> <span class="s">"YES</span><span class="se">\n</span><span class="s">"</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">answer</span> <span class="o">+=</span> <span class="s">"NO</span><span class="se">\n</span><span class="s">"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h3 id="java">Java</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">brackets</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">,</span> <span class="nc">NumberFormatException</span> <span class="o">{</span>
+        <span class="nc">BufferedReader</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+
+        <span class="kt">boolean</span> <span class="n">isVPS</span><span class="o">;</span>
+        <span class="nc">String</span> <span class="n">answer</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="nc">Stack</span><span class="o">&lt;</span><span class="nc">Character</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Stack</span><span class="o">&lt;&gt;();</span>
+
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">input</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">isVPS</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+            <span class="n">stack</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+
+            <span class="nc">String</span> <span class="n">inputBracket</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+            <span class="n">brackets</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">inputBracket</span><span class="o">);</span>
+
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">inputBracket</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">inputBracket</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">)</span> <span class="o">==</span> <span class="sc">'('</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="sc">'('</span><span class="o">);</span>
+                <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                    <span class="k">if</span> <span class="o">(</span><span class="n">stack</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+                        <span class="n">isVPS</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+                        <span class="k">break</span><span class="o">;</span>
+                    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                        <span class="n">stack</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+
+            <span class="k">if</span> <span class="o">(!</span><span class="n">stack</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="n">answer</span> <span class="o">+=</span> <span class="s">"NO\n"</span><span class="o">;</span>
+            <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">isVPS</span><span class="o">)</span> <span class="n">answer</span> <span class="o">+=</span> <span class="s">"YES\n"</span><span class="o">;</span>
+            <span class="k">else</span> <span class="n">answer</span> <span class="o">+=</span> <span class="s">"NO\n"</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">answer</span><span class="o">);</span>
+        <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="til">TIL</h2>
+
+<ul>
+  <li>Swift 스택 자료구조</li>
+</ul>
+
+<p>Swift 에선 스택 자료구조가없는 것으로 알고 있습니다. Stack 이라고 하면 VStack 이나 HStack 이나 뭐…</p>
+
+<p>여튼 그래서 그냥 배열로 구현했습니다. append 를 이용하면 배열의 가장 마지막에 추가하고 removeLast 를 이용하면 가장 마지막 값을 제거하니 LIFO 를 만족하기 때문에 스택과 같이 활용할 수 있었습니다.</p>
+
+<ul>
+  <li>Java 리스트에서 값 삭제</li>
+</ul>
+
+<p>Java 는 역시 스택 라이브러리가 존재했습니다. push, pop, clear 등을 사용했는데 보편적인 기능이라 그런지 사용하는데 별다른 어려움은 없었던 것 같습니다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>알고리즘 문제를 해결하고 바로바로 블로그 글을 쓰려고 했었는데 어쩌다보니 문제를 밤에 풀고 다음날 아침에 일어나서 포스트를 작성하게 되었습니다.</p>
+
+<p>생각보다 이 방법이 바로 포스트를 작성하는 것보다 괜찮은 것 같습니다. 어제 푼 문제를 다시 회고할 수 있다는게 복습을 하게 만들달까.. 여튼 이제 포스트는 문제를 해결한 다음날에 쓰는 패턴을 가져가볼 생각입니다.</p>
+:ET
