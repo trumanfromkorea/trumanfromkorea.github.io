@@ -172,4 +172,10 @@ var store = [{
         "tags": [],
         "url": "/algorithm/13/",
         "teaser": null
+      },{
+        "title": "[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기",
+        "excerpt":"키보드 숨기기 많은 앱들은 키보드 이용 시 키보드 외의 화면을 터치하면 키보드를 숨기게 해주는 기능을 지원합니다. 저도 React Native 나 Flutter 프로젝트를 진행하며 항상 해당 기능을 구현해왔고, SwiftUI 프로젝트를 진행하면서도 해당 기능을 구현하기로 했습니다. 방법 - 1 SwiftUI 는 프레임워크 내에서 자체적으로 키보드 관련 메커니즘을 지원하지 않기 때문에 UIKit 을...","categories": ["iOS"],
+        "tags": [],
+        "url": "/ios/1/",
+        "teaser": null
       }]
