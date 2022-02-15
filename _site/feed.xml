@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-15T22:51:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기</title><link href="http://localhost:4000/ios/1/" rel="alternate" type="text/html" title="[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기" /><published>2022-02-13T07:57:17+09:00</published><updated>2022-02-13T07:57:17+09:00</updated><id>http://localhost:4000/ios/1</id><content type="html" xml:base="http://localhost:4000/ios/1/">&lt;h2 id=&quot;키보드-숨기기&quot;&gt;키보드 숨기기&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-16T00:40:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기</title><link href="http://localhost:4000/ios/1/" rel="alternate" type="text/html" title="[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기" /><published>2022-02-13T07:57:17+09:00</published><updated>2022-02-13T07:57:17+09:00</updated><id>http://localhost:4000/ios/1</id><content type="html" xml:base="http://localhost:4000/ios/1/">&lt;h2 id=&quot;키보드-숨기기&quot;&gt;키보드 숨기기&lt;/h2&gt;
 
 &lt;p&gt;많은 앱들은 키보드 이용 시 키보드 외의 화면을 터치하면 키보드를 숨기게 해주는 기능을 지원합니다. 저도 React Native 나 Flutter 프로젝트를 진행하며 항상 해당 기능을 구현해왔고, SwiftUI 프로젝트를 진행하면서도 해당 기능을 구현하기로 했습니다.&lt;/p&gt;
 
@@ -916,8 +916,130 @@
 &lt;p&gt;이제는 Java 로도 코딩테스트를 풀려고 합니다. Spring 을 공부해보고 싶은 마음도 있고, Java 를 아는게 이후의 개발 인생에도 도움이 많이 될 것 같아서 이런 결정을 내렸습니다.&lt;/p&gt;
 
 &lt;p&gt;아직은 문법에 익숙치 않아 Swift 로 한번 문제를 풀어본 후 Java 로 다시 옮겨적어보고 있지만, 언젠가는 아예 Java 로 코딩테스트 문제들을 슥슥 풀어낼 수 있는 날이 오면 좋겠네요.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">[알고리즘] 백준:10830 - 행렬 제곱 (Swift, Java)</summary></entry><entry><title type="html">Glokool 가이드 - Glokool 의 가이드용 앱</title><link href="http://localhost:4000/projects/5/" rel="alternate" type="text/html" title="Glokool 가이드 - Glokool 의 가이드용 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/5</id><content type="html" xml:base="http://localhost:4000/projects/5/">&lt;p&gt;&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.09 - 2021.11&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.09 - 2021.11</summary></entry><entry><title type="html">Glokool - 외국인 여행객 대상 가이드 앱</title><link href="http://localhost:4000/projects/4/" rel="alternate" type="text/html" title="Glokool - 외국인 여행객 대상 가이드 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/4</id><content type="html" xml:base="http://localhost:4000/projects/4/">&lt;p&gt;&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.07 - 2021.10&lt;/code&gt;&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.07 - 2021.10</summary></entry><entry><title type="html">졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템</title><link href="http://localhost:4000/projects/3/" rel="alternate" type="text/html" title="졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/3</id><content type="html" xml:base="http://localhost:4000/projects/3/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.09 - 2021.11&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;glokool-가이드---glokool-의-가이드용-앱&quot;&gt;Glokool 가이드 - Glokool 의 가이드용 앱&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://apps.apple.com/kr/app/글로쿨-가이드/id1591879981&quot;&gt;아이폰 앱 스토어&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.glokool_guide&amp;amp;hl=ko&amp;amp;gl=US&quot;&gt;안드로이드 플레이 스토어&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;업무&quot;&gt;업무&lt;/h2&gt;
+
+&lt;h3 id=&quot;앱-클라이언트-개발&quot;&gt;앱 클라이언트 개발&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;사용 언어&lt;/td&gt;
+      &lt;td&gt;TypeScript&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;프레임워크&lt;/td&gt;
+      &lt;td&gt;React Native&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;협업툴&lt;/td&gt;
+      &lt;td&gt;Git&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개발
+    &lt;ul&gt;
+      &lt;li&gt;채팅 외 앱의 전반적인 부분 개발&lt;/li&gt;
+      &lt;li&gt;앱 구조 설계 및 구현&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;iOS 관리
+    &lt;ul&gt;
+      &lt;li&gt;앱 스토어 릴리즈 및 버전 업데이트 관리&lt;/li&gt;
+      &lt;li&gt;Reject 사유에 대응하여 기능 수정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;경험&quot;&gt;경험&lt;/h2&gt;
+
+&lt;h3 id=&quot;앱-릴리즈&quot;&gt;앱 릴리즈&lt;/h3&gt;
+
+&lt;p&gt;이전에 참여했던 Glokool 앱은 이미 출시되어 있는 앱이었기에 버전 업데이트에 큰 문제가 발생한 적은 없었습니다. 하지만 가이드용 앱은 완전히 새로운 앱이었으며 저에게는 구조 설계부터 릴리즈까지 모두 참여하게 된 첫번째 프로젝트가 되었습니다.&lt;/p&gt;
+
+&lt;p&gt;iOS 릴리즈를 담당하며 수 차례 심사를 통과하지 못하였는데, 이 과정에서 애플의 Human Interface Guideline 을 숙지하게 되었습니다. 회원 탈퇴 기능은 꼭 존재해야 한다는 점, 사용자 간 커뮤니케이션을 필요로 하는 앱은 신고 및 차단 기능이 존재해야 한다는 점, 욕설 필터링이 존재해야 한다는 점 등등… 이런저런 리젝 사유들에 대응하여 기능을 수정하곤 했습니다.&lt;/p&gt;
+
+&lt;p&gt;이 과정에서 앱을 처음 설계할 때 앱의 구조와 코드 작성뿐만이 아닌 스토어 릴리즈와 그 가이드라인에 대해서 꼭 명시하고 있어야 한다는 점을 배우게 되었습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.09 - 2021.11</summary></entry><entry><title type="html">Glokool - 외국인 여행객 대상 가이드 앱</title><link href="http://localhost:4000/projects/4/" rel="alternate" type="text/html" title="Glokool - 외국인 여행객 대상 가이드 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/4</id><content type="html" xml:base="http://localhost:4000/projects/4/">&lt;p&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.07 - 2021.10&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;glokool---외국인-여행객-대상-가이드-앱&quot;&gt;Glokool - 외국인 여행객 대상 가이드 앱&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://apps.apple.com/kr/app/glokool-seoul-travel-guide/id1558793884&quot;&gt;아이폰 앱 스토어&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.glokool&amp;amp;hl=ko&amp;amp;gl=US&quot;&gt;안드로이드 플레이 스토어&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;업무&quot;&gt;업무&lt;/h2&gt;
+
+&lt;h3 id=&quot;앱-클라이언트-개발&quot;&gt;앱 클라이언트 개발&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;사용 언어&lt;/td&gt;
+      &lt;td&gt;TypeScript&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;프레임워크&lt;/td&gt;
+      &lt;td&gt;React Native&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;협업툴&lt;/td&gt;
+      &lt;td&gt;Git&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개발
+    &lt;ul&gt;
+      &lt;li&gt;이미 출시되어있는 앱 클라이언트 부분 전담하여 기능개발 및 유지보수&lt;/li&gt;
+      &lt;li&gt;컨텐츠 로딩 시 무한스크롤 구현&lt;/li&gt;
+      &lt;li&gt;스크롤에 반응하는 상단 탭 구현&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;업데이트 관리
+    &lt;ul&gt;
+      &lt;li&gt;앱 스토어, 플레이 스토어 릴리즈 및 버전 업데이트 관리&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;경험&quot;&gt;경험&lt;/h2&gt;
+
+&lt;h3 id=&quot;무한-스크롤-스크롤-반응형-상단-탭&quot;&gt;무한 스크롤, 스크롤 반응형 상단 탭&lt;/h3&gt;
+
+&lt;p&gt;화면에 표시해야 할 내용이 많아짐에 따라 이를 Grid 형태로 출력하고자 하였습니다. 한 화면 안에 최대한 많은 데이터를 출력하되 사용성은 해치지 않게 하기 위하여 상단 탭은 스크롤에 반응하여 숨겨지거나 나타나게 구현하였고, 데이터는 한 번에 다 받아오지 않고 나눠서 처리하도록 구현하였습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/154092358-30fafe2a-976c-4e4a-a10d-ebd511fbcc46.png&quot; alt=&quot;ㄴㅎㄹㅇㄹㅇㅁㄴ&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;코드-분석&quot;&gt;코드 분석&lt;/h3&gt;
+
+&lt;p&gt;누군가가 구현해놓은 프로젝트의 코드를 분석하는 것은 처음이었습니다. 코드를 작성한 사람이 없는 상태에서 저 혼자 앱 클라이언트 개발을 시작해야 했던 상황이었습니다. 빠르게 기능을 개발하기 위해서 코드를 분석하고 어떤 식으로 작동하는지 천천히 살펴보며 메모하기도 하였습니다.&lt;/p&gt;
+
+&lt;p&gt;직접 앱을 작동시켜보며 어느 부분의 코드가 어느 기능에 해당하는지 분석하는 것도 많은 도움이 되었지만, 직접 기능을 개발하면서 코드를 이해하는 것이 많은 도움이 되었습니다. 요구사항에 명시된 기능들 중 간단해 보이는 기능을 선정하여 구현해보았고, 구현하는 부분의 다른 코드들도 잘 이해하게 될 수 있었던 것 같습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.07 - 2021.10</summary></entry><entry><title type="html">졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템</title><link href="http://localhost:4000/projects/3/" rel="alternate" type="text/html" title="졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/3</id><content type="html" xml:base="http://localhost:4000/projects/3/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.03 - 2021.06&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;track-me---블록체인과-블루투스-기반-역학조사-자동화-시스템&quot;&gt;Track Me - 블록체인과 블루투스 기반 역학조사 자동화 시스템&lt;/h2&gt;

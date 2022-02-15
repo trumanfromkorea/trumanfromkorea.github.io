@@ -126,13 +126,13 @@ var store = [{
         "teaser": null
       },{
         "title": "Glokool - 외국인 여행객 대상 가이드 앱",
-        "excerpt":"  2021.07 - 2021.10  ","categories": ["Projects"],
+        "excerpt":"2021.07 - 2021.10 Glokool - 외국인 여행객 대상 가이드 앱 아이폰 앱 스토어 안드로이드 플레이 스토어 업무 앱 클라이언트 개발     사용 언어 TypeScript 프레임워크 React Native 협업툴 Git 개발 이미 출시되어있는 앱 클라이언트 부분 전담하여 기능개발 및 유지보수 컨텐츠 로딩 시 무한스크롤 구현 스크롤에 반응하는 상단 탭 구현...","categories": ["Projects"],
         "tags": [],
         "url": "/projects/4/",
         "teaser": null
       },{
         "title": "Glokool 가이드 - Glokool 의 가이드용 앱",
-        "excerpt":"  2021.09 - 2021.11  ","categories": ["Projects"],
+        "excerpt":"2021.09 - 2021.11 Glokool 가이드 - Glokool 의 가이드용 앱 아이폰 앱 스토어 안드로이드 플레이 스토어 업무 앱 클라이언트 개발     사용 언어 TypeScript 프레임워크 React Native 협업툴 Git 개발 채팅 외 앱의 전반적인 부분 개발 앱 구조 설계 및 구현 iOS 관리 앱 스토어 릴리즈 및 버전 업데이트...","categories": ["Projects"],
         "tags": [],
         "url": "/projects/5/",
         "teaser": null
