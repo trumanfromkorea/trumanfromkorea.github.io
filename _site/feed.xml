@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-16T00:40:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기</title><link href="http://localhost:4000/ios/1/" rel="alternate" type="text/html" title="[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기" /><published>2022-02-13T07:57:17+09:00</published><updated>2022-02-13T07:57:17+09:00</updated><id>http://localhost:4000/ios/1</id><content type="html" xml:base="http://localhost:4000/ios/1/">&lt;h2 id=&quot;키보드-숨기기&quot;&gt;키보드 숨기기&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-17T00:32:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기</title><link href="http://localhost:4000/ios/1/" rel="alternate" type="text/html" title="[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기" /><published>2022-02-13T07:57:17+09:00</published><updated>2022-02-13T07:57:17+09:00</updated><id>http://localhost:4000/ios/1</id><content type="html" xml:base="http://localhost:4000/ios/1/">&lt;h2 id=&quot;키보드-숨기기&quot;&gt;키보드 숨기기&lt;/h2&gt;
 
 &lt;p&gt;많은 앱들은 키보드 이용 시 키보드 외의 화면을 터치하면 키보드를 숨기게 해주는 기능을 지원합니다. 저도 React Native 나 Flutter 프로젝트를 진행하며 항상 해당 기능을 구현해왔고, SwiftUI 프로젝트를 진행하면서도 해당 기능을 구현하기로 했습니다.&lt;/p&gt;
 
@@ -975,7 +975,11 @@
 
 &lt;p&gt;iOS 릴리즈를 담당하며 수 차례 심사를 통과하지 못하였는데, 이 과정에서 애플의 Human Interface Guideline 을 숙지하게 되었습니다. 회원 탈퇴 기능은 꼭 존재해야 한다는 점, 사용자 간 커뮤니케이션을 필요로 하는 앱은 신고 및 차단 기능이 존재해야 한다는 점, 욕설 필터링이 존재해야 한다는 점 등등… 이런저런 리젝 사유들에 대응하여 기능을 수정하곤 했습니다.&lt;/p&gt;
 
-&lt;p&gt;이 과정에서 앱을 처음 설계할 때 앱의 구조와 코드 작성뿐만이 아닌 스토어 릴리즈와 그 가이드라인에 대해서 꼭 명시하고 있어야 한다는 점을 배우게 되었습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.09 - 2021.11</summary></entry><entry><title type="html">Glokool - 외국인 여행객 대상 가이드 앱</title><link href="http://localhost:4000/projects/4/" rel="alternate" type="text/html" title="Glokool - 외국인 여행객 대상 가이드 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/4</id><content type="html" xml:base="http://localhost:4000/projects/4/">&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;이 과정에서 앱을 처음 설계할 때 앱의 구조와 코드 작성뿐만이 아닌 스토어 릴리즈와 그 가이드라인에 대해서 꼭 명시하고 있어야 한다는 점을 배우게 되었습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;코드-재활용&quot;&gt;코드 재활용&lt;/h3&gt;
+
+&lt;p&gt;처음부터 진행한 프로젝트였기 때문에 최대한 효율적인 코드를 작성하고 싶은 마음이 컸습니다. 그래서 규칙적으로 컴포넌트와 메소드를 분리하여 이를 적재적소에 재활용 하는 능력을 향상시키고자 하였습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.09 - 2021.11</summary></entry><entry><title type="html">Glokool - 외국인 여행객 대상 가이드 앱</title><link href="http://localhost:4000/projects/4/" rel="alternate" type="text/html" title="Glokool - 외국인 여행객 대상 가이드 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/4</id><content type="html" xml:base="http://localhost:4000/projects/4/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.07 - 2021.10&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;glokool---외국인-여행객-대상-가이드-앱&quot;&gt;Glokool - 외국인 여행객 대상 가이드 앱&lt;/h2&gt;
@@ -1039,7 +1043,15 @@
 
 &lt;p&gt;누군가가 구현해놓은 프로젝트의 코드를 분석하는 것은 처음이었습니다. 코드를 작성한 사람이 없는 상태에서 저 혼자 앱 클라이언트 개발을 시작해야 했던 상황이었습니다. 빠르게 기능을 개발하기 위해서 코드를 분석하고 어떤 식으로 작동하는지 천천히 살펴보며 메모하기도 하였습니다.&lt;/p&gt;
 
-&lt;p&gt;직접 앱을 작동시켜보며 어느 부분의 코드가 어느 기능에 해당하는지 분석하는 것도 많은 도움이 되었지만, 직접 기능을 개발하면서 코드를 이해하는 것이 많은 도움이 되었습니다. 요구사항에 명시된 기능들 중 간단해 보이는 기능을 선정하여 구현해보았고, 구현하는 부분의 다른 코드들도 잘 이해하게 될 수 있었던 것 같습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.07 - 2021.10</summary></entry><entry><title type="html">졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템</title><link href="http://localhost:4000/projects/3/" rel="alternate" type="text/html" title="졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/3</id><content type="html" xml:base="http://localhost:4000/projects/3/">&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;직접 앱을 작동시켜보며 어느 부분의 코드가 어느 기능에 해당하는지 분석하는 것도 많은 도움이 되었지만, 직접 기능을 개발하면서 코드를 이해하는 것이 많은 도움이 되었습니다. 요구사항에 명시된 기능들 중 간단해 보이는 기능을 선정하여 구현해보았고, 구현하는 부분의 다른 코드들도 잘 이해하게 될 수 있었던 것 같습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;비동기-처리&quot;&gt;비동기 처리&lt;/h3&gt;
+
+&lt;p&gt;http 통신을 주고받는 코드를 작성하며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;async&lt;/code&gt; 와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;await&lt;/code&gt; 명령어를 이용한 비동기 처리에 익숙해졌습니다. 또한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;try catch&lt;/code&gt; 구문을 이용하여 에러를 핸들링하는 능력이 향상되었습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;협업-능력&quot;&gt;협업 능력&lt;/h3&gt;
+
+&lt;p&gt;이전에는 Git 을 저장소 정도로만 생각했는데, Git 을 이용하여 팀원들과 협업하고 버전을 관리하는 것에 익숙해졌습니다. Git Flow 모델을 이용하여 릴리즈 버전을 관리하고 기능 개발을 진행하기도 하였습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.07 - 2021.10</summary></entry><entry><title type="html">졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템</title><link href="http://localhost:4000/projects/3/" rel="alternate" type="text/html" title="졸업연구 프로젝트 - 블록체인과 블루투스 기반 역학조사 자동화 시스템" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/3</id><content type="html" xml:base="http://localhost:4000/projects/3/">&lt;p&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.03 - 2021.06&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;track-me---블록체인과-블루투스-기반-역학조사-자동화-시스템&quot;&gt;Track Me - 블록체인과 블루투스 기반 역학조사 자동화 시스템&lt;/h2&gt;
