@@ -1,0 +1,883 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Swift] 지정한 달의 요일 수 구하기 - 꽁치대디의 개발일기 💻</title>
+<meta name="description" content="[Swift] 지정한 달의 요일 수 구하기">
+
+
+  <meta name="author" content="장재훈">
+  
+  <meta property="article:author" content="장재훈">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="꽁치대디의 개발일기 💻">
+<meta property="og:title" content="[Swift] 지정한 달의 요일 수 구하기">
+<meta property="og:url" content="http://localhost:4000/swift/2/">
+
+
+  <meta property="og:description" content="[Swift] 지정한 달의 요일 수 구하기">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-02-20T09:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/swift/2/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "trumanfromkorea",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="꽁치대디의 개발일기 💻 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          꽁치대디의 개발일기 💻
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+<div class="sidebar sticky">
+    
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/avatar.jpeg" alt="장재훈" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">장재훈</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>쥬쥬쥬니어 개발자</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="trumanfromkorea@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/trumanfromkorea" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/trumanfromkorea/" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div> 
+
+    <!-- 카테고리 파트 -->
+    
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+    
+    <nav class="nav__list" style="margin-top:1.5rem;">
+        <input id="ac-toc" name="accordion-toc" type="checkbox" />
+        <label for="ac-toc">Toggle menu</label>
+        <ul class="nav__items" id="category_tag_menu">
+            <style>
+                .hits {
+                    width: auto;
+                    height: auto;
+                    max-width: 120px;
+                    max-height: 30px;
+                    margin-bottom: 20px;
+                }
+            </style>
+
+            <!-- 방문자 수
+            <a href="https://hits.seeyoufarm.com"><img class="hits"
+                    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftrumanfromkorea.github.io&count_bg=%23007DFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=%F0%9F%8C%90+방문자수&edge_flat=false" /></a>
+            -->
+
+            <li style="border-bottom:1px
+            solid #cecece;border-top:1px
+            solid #cecece;">
+                <ul>
+                    <a href="/about_me"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        ABOUT ME
+                    </a>
+                </ul>
+                <ul>
+                    <a href="/projects"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        PROJECTS
+                    </a>
+                </ul>
+            </li>
+
+            <!--전체 글 수-->
+            <li style="padding-top: 1rem;">
+                🚀 <b><span style="font-size:0.8rem;"> 전체 글 수 <span
+                            style="font-size:1rem; color : #4e89f0;">32</span> 개</span></b>
+            </li>
+
+            <li>
+                <!--여기가 카테고리 대분류 -->
+                <!-- <span class="nav__sub-title" style="font-size:1rem; color : #1b4387;">Categories</span> -->
+                <!-- 앱 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">App</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/flutter" class="nav__sub-title_sub">Flutter (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/ios" class="nav__sub-title_sub">iOS (1)</a></li>
+                    
+                    
+                </ul>
+
+                <!-- 문법 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Languages</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Swift" class="nav__sub-title_sub">Swift (2)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- 스터디 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Studies</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/TIL" class="nav__sub-title_sub">TIL (2)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm (13)</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    <li><a href="/categories/ETC" class="nav__sub-title_sub">ETC (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </ul>
+
+            </li>
+
+        </ul>
+    </nav>
+    
+</div>
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Swift] 지정한 달의 요일 수 구하기">
+    <meta itemprop="description" content="[Swift] 지정한 달의 요일 수 구하기">
+    <meta itemprop="datePublished" content="2022-02-20T09:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/swift/2/" class="u-url" itemprop="url">[Swift] 지정한 달의 요일 수 구하기
+</a>
+          </h1>
+<!--          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+-->
+
+        </header>
+      
+      
+
+<!--      날짜-->
+      
+              <span class="page__meta" style="font-size : 0.8rem">
+                  
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#swift" class="page__taxonomy-item p-category" rel="tag">Swift</a>
+    
+    </span>
+  </p>
+
+
+                  
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-02-20T09:00:00+09:00">February 20, 2022</time></p>
+
+              </span>
+      
+              
+      <section class="page__content e-content" itemprop="text">
+        
+        <h2 id="swift-지정한-달의-요일-수-구하기">[Swift] 지정한 달의 요일 수 구하기</h2>
+
+<p>프로젝트를 진행하면서 임의의 날짜가 속해있는 달의 특정 요일 개수를 구해야 하는 상황이 생겼습니다.</p>
+
+<p>Date 와 Calendar 를 이용하여 평일의 개수를 구한다던지 주말의 개수를 구하는 알고리즘은 찾아볼 수 있었지만, 특정 요일의 개수를 구하는 알고리즘은 없어서 직접 만들어봤습니다.</p>
+
+<h2 id="방법">방법</h2>
+
+<h3 id="접근">접근</h3>
+
+<p>처음에는 원하는 날짜에 해당하는 요일의 개수를 구하는 방법을 생각해보려 했습니다. 예를 들어 오늘 날짜인 2022년 2월 20일은 일요일입니다. 입력값으로 2022년 2월 22일이 주어진다면 2022년 2월의 일요일 수를 반환하도록 하고 싶었습니다.</p>
+
+<p>그래서 오늘 날짜를 기준으로 유효한 값이 성립하는 동안 7을 빼주고 더해주며 해결하려고 했지만, 그러느니 차라리 2022년 2월에 해당하는 모든 요일의 수를 구하면 더 편하고 활용하기 좋지 않을까 라는 생각이 들었습니다.</p>
+
+<p><img width="1025" alt="스크린샷 2022-02-20 오후 3 47 15" src="https://user-images.githubusercontent.com/55919701/154831900-888d6d17-159a-4956-bb4b-f5768f1458dd.png" /></p>
+
+<p>2022년 3월 달력입니다. 3월의 전체 요일 수는 일요일 4개, 월요일 4개, 화요일 5개, 수요일 5개, 목요일 5개, 금요일 4개, 토요일 4개입니다.</p>
+
+<p>3월의 첫번째 요일은 화요일이고 전체일수는 31일입니다. 여기서 전체일수를 7로 나누면 요일의 수 중 최소값을 갖는 요일의 수가 나오는 것을 알 수 있습니다. 이는 모든 달의 경우 4이기 때문에 먼저 기본적으로 모든 요일은 최소 4개씩 있다고 생각할 수 있습니다.</p>
+
+<p>하지만 3월의 경우 화, 수, 목 이 각각 5개씩 존재합니다. 전체일수를 7로 나눈 나머지가 3이기 때문에 3월의 시작요일인 화요일부터 3개의 요일에 1씩을 더해주면 됩니다.</p>
+
+<h3 id="필요한-정보">필요한 정보</h3>
+
+<p>위의 접근에서 필요한 정보는</p>
+
+<ol>
+  <li>해당 월의 시작 요일</li>
+  <li>해당 월의 전체일수</li>
+</ol>
+
+<p>입니다. 언젠가 또 활용할 일이 있을수도 있기 때문에, 저는 일단 해당 월의 시작 날짜정보와 마지막 날의 날짜정보를 구하는 메소드를 작성하였습니다.</p>
+
+<h3 id="해당-월의-시작-날짜">해당 월의 시작 날짜</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 이 달의 첫번째 날짜</span>
+<span class="kd">func</span> <span class="nf">firstDayOfMonth</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">calendar</span><span class="p">:</span> <span class="kt">Calendar</span> <span class="o">=</span> <span class="kt">Calendar</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="o">.</span><span class="n">gregorian</span><span class="p">)</span>
+    <span class="n">calendar</span><span class="o">.</span><span class="n">locale</span> <span class="o">=</span> <span class="kt">Locale</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="s">"ko_KR"</span><span class="p">)</span>
+
+    <span class="k">let</span> <span class="nv">components</span><span class="p">:</span> <span class="kt">DateComponents</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">dateComponents</span><span class="p">([</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="o">.</span><span class="n">month</span><span class="p">],</span> <span class="nv">from</span><span class="p">:</span> <span class="n">date</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">components</span><span class="p">)</span><span class="o">!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>날짜 객체를 생성할 때 연도와 월 정보만 주어진다면 해당 월의 첫번째 날짜가 도출되는 것을 이용하여 메소드를 작성하였습니다.</p>
+
+<h3 id="해당-월의-마지막-날짜">해당 월의 마지막 날짜</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 이 달의 마지막 날짜</span>
+<span class="kd">func</span> <span class="nf">lastDayOfMonth</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">calendar</span><span class="p">:</span> <span class="kt">Calendar</span> <span class="o">=</span> <span class="kt">Calendar</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="o">.</span><span class="n">gregorian</span><span class="p">)</span>
+    <span class="n">calendar</span><span class="o">.</span><span class="n">locale</span> <span class="o">=</span> <span class="kt">Locale</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="s">"ko_KR"</span><span class="p">)</span>
+
+    <span class="k">let</span> <span class="nv">firstDate</span> <span class="o">=</span> <span class="nf">firstDayOfMonth</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+
+    <span class="c1">// 다음달 첫번째 날짜에서 -1 일</span>
+    <span class="k">let</span> <span class="nv">nextMonth</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">byAdding</span><span class="p">:</span> <span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">firstDate</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">lastDate</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">byAdding</span><span class="p">:</span> <span class="o">.</span><span class="n">day</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">nextMonth</span><span class="o">!</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lastDate</span><span class="o">!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>해당 월의 마지막 날짜는 28, 29, 30, 31 일 등으로 다양합니다.</p>
+
+<p>간단하게 조건을 달아 분기해줄수도 있지만, 다음달의 시작 날짜에서 1일을 빼준다면 해당 월의 마지막 날짜를 구하는 방법이 더 효율적이라고 생각했습니다.</p>
+
+<h2 id="요일-개수-구하기">요일 개수 구하기</h2>
+
+<p>필요한 정보를 얻을 수 있는 방법을 모두 구현했으니, 요일의 개수를 구해보도록 하겠습니다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 요일 개수 구하기</span>
+<span class="kd">func</span> <span class="nf">getWeekdays</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="p">{</span>
+    <span class="c1">// 요일 개수를 순서대로 담아줄 배열 (일~토)</span>
+    <span class="k">var</span> <span class="nv">weekDays</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">var</span> <span class="nv">calendar</span><span class="p">:</span> <span class="kt">Calendar</span> <span class="o">=</span> <span class="kt">Calendar</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="o">.</span><span class="n">gregorian</span><span class="p">)</span>
+    <span class="n">calendar</span><span class="o">.</span><span class="n">locale</span> <span class="o">=</span> <span class="kt">Locale</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="s">"ko_KR"</span><span class="p">)</span>
+    
+    <span class="c1">// 해당 월의 시작 날짜와 마지막 날짜</span>
+    <span class="k">let</span> <span class="nv">firstDate</span> <span class="o">=</span> <span class="nf">firstDayOfMonth</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">lastDate</span> <span class="o">=</span> <span class="nf">lastDayOfMonth</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    
+    <span class="c1">// 해당 월의 첫 요일</span>
+    <span class="k">let</span> <span class="nv">firstWeekday</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">dateComponents</span><span class="p">([</span><span class="o">.</span><span class="n">weekday</span><span class="p">],</span> <span class="nv">from</span><span class="p">:</span> <span class="n">firstDate</span><span class="p">)</span><span class="o">.</span><span class="n">weekday</span><span class="o">!</span>
+    <span class="c1">// 해당 월의 전체일수</span>
+    <span class="k">let</span> <span class="nv">lastDay</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">dateComponents</span><span class="p">([</span><span class="o">.</span><span class="n">day</span><span class="p">],</span> <span class="nv">from</span><span class="p">:</span> <span class="n">lastDate</span><span class="p">)</span><span class="o">.</span><span class="n">day</span><span class="o">!</span>
+    
+    <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="mi">7</span> <span class="p">{</span>
+        <span class="n">weekDays</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">lastDay</span> <span class="o">/</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 남는 요일에 +1 씩</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">lastDay</span> <span class="o">%</span> <span class="mi">7</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">dayIndex</span> <span class="o">=</span> <span class="n">firstWeekday</span> <span class="o">+</span> <span class="n">i</span>
+        <span class="n">weekDays</span><span class="p">[(</span><span class="n">dayIndex</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="n">weekDays</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>일요일부터 토요일까지 요일의 개수를 순서대로 담아줄 배열을 생성합니다. 이후 앞서 작성한 메소드를 이용하여 해당 월의 첫 요일과 전체일수를 구합니다.</p>
+
+<p>요일의 개수를 담아줄 배열에 전체일수를 7로 나눈 값을 7번 채워줍니다. (배열 생성 시 4를 7번 넣어준 값으로 초기화해도 되지만 더 확실한 방법을 사용하였습니다.) 마지막으로 남는 요일에 1씩 더해줍니다.</p>
+
+<p>2022년 3월의 경우 리턴값은 <code class="language-plaintext highlighter-rouge">[4, 4, 5, 5, 5, 4, 4]</code> 입니다. 여기서 원하는 요일의 정보를 가져다가 쓸 수 있습니다.</p>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="c1">// 이 달의 첫번째 날짜</span>
+<span class="kd">func</span> <span class="nf">firstDayOfMonth</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">calendar</span><span class="p">:</span> <span class="kt">Calendar</span> <span class="o">=</span> <span class="kt">Calendar</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="o">.</span><span class="n">gregorian</span><span class="p">)</span>
+    <span class="n">calendar</span><span class="o">.</span><span class="n">locale</span> <span class="o">=</span> <span class="kt">Locale</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="s">"ko_KR"</span><span class="p">)</span>
+
+    <span class="k">let</span> <span class="nv">components</span><span class="p">:</span> <span class="kt">DateComponents</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">dateComponents</span><span class="p">([</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="o">.</span><span class="n">month</span><span class="p">],</span> <span class="nv">from</span><span class="p">:</span> <span class="n">date</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">components</span><span class="p">)</span><span class="o">!</span>
+<span class="p">}</span>
+
+<span class="c1">// 이 달의 마지막 날짜</span>
+<span class="kd">func</span> <span class="nf">lastDayOfMonth</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">calendar</span><span class="p">:</span> <span class="kt">Calendar</span> <span class="o">=</span> <span class="kt">Calendar</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="o">.</span><span class="n">gregorian</span><span class="p">)</span>
+    <span class="n">calendar</span><span class="o">.</span><span class="n">locale</span> <span class="o">=</span> <span class="kt">Locale</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="s">"ko_KR"</span><span class="p">)</span>
+
+    <span class="k">let</span> <span class="nv">firstDate</span> <span class="o">=</span> <span class="nf">firstDayOfMonth</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">nextMonth</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">byAdding</span><span class="p">:</span> <span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">firstDate</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">lastDate</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">date</span><span class="p">(</span><span class="nv">byAdding</span><span class="p">:</span> <span class="o">.</span><span class="n">day</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">nextMonth</span><span class="o">!</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lastDate</span><span class="o">!</span>
+<span class="p">}</span>
+
+<span class="c1">// 요일 개수 구하기</span>
+<span class="kd">func</span> <span class="nf">getWeekdays</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="p">{</span>
+    <span class="c1">// 요일 개수를 순서대로 담아줄 배열 (일~토)</span>
+    <span class="k">var</span> <span class="nv">weekDays</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">var</span> <span class="nv">calendar</span><span class="p">:</span> <span class="kt">Calendar</span> <span class="o">=</span> <span class="kt">Calendar</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="o">.</span><span class="n">gregorian</span><span class="p">)</span>
+    <span class="n">calendar</span><span class="o">.</span><span class="n">locale</span> <span class="o">=</span> <span class="kt">Locale</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="s">"ko_KR"</span><span class="p">)</span>
+    
+    <span class="c1">// 해당 월의 시작 날짜와 마지막 날짜</span>
+    <span class="k">let</span> <span class="nv">firstDate</span> <span class="o">=</span> <span class="nf">firstDayOfMonth</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">lastDate</span> <span class="o">=</span> <span class="nf">lastDayOfMonth</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    
+    <span class="c1">// 해당 월의 첫 요일</span>
+    <span class="k">let</span> <span class="nv">firstWeekday</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">dateComponents</span><span class="p">([</span><span class="o">.</span><span class="n">weekday</span><span class="p">],</span> <span class="nv">from</span><span class="p">:</span> <span class="n">firstDate</span><span class="p">)</span><span class="o">.</span><span class="n">weekday</span><span class="o">!</span>
+    <span class="c1">// 해당 월의 전체일수</span>
+    <span class="k">let</span> <span class="nv">lastDay</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="nf">dateComponents</span><span class="p">([</span><span class="o">.</span><span class="n">day</span><span class="p">],</span> <span class="nv">from</span><span class="p">:</span> <span class="n">lastDate</span><span class="p">)</span><span class="o">.</span><span class="n">day</span><span class="o">!</span>
+    
+    <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="mi">7</span> <span class="p">{</span>
+        <span class="n">weekDays</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">lastDay</span> <span class="o">/</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 남는 요일에 +1 씩</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">lastDay</span> <span class="o">%</span> <span class="mi">7</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">dayIndex</span> <span class="o">=</span> <span class="n">firstWeekday</span> <span class="o">+</span> <span class="n">i</span>
+        <span class="n">weekDays</span><span class="p">[(</span><span class="n">dayIndex</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="n">weekDays</span>
+<span class="p">}</span>
+
+<span class="c1">// 메소드 호출</span>
+<span class="nf">getWeekdays</span><span class="p">(</span><span class="kt">Date</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h2 id="마무리">마무리</h2>
+
+<p>구독 모아보기 서비스에서 주간 구독의 결제금액을 계산하려고 하다 보니 이렇게까지 왔습니다. 엄청 어려운 기능은 아니지만 정리해둬서 나쁠건 없다는 생각에 정리해봅니다.</p>
+
+<p>빠르게 프로젝트를 완성시키고 싶지만 생각보다 신경써야하는 점이 많아서 오래 걸리는 것 같습니다ㅠㅠ 외에도 따로 준비해야 할것들도 있고 하니 속도가 나지를 않네요..</p>
+
+<p>그래도 차근차근 하다보면 한두달 내로는 버전 1.0.0 을 완성시킬수 있지 않을까 생각합니다ㅎㅎ 언젠가 프로젝트 릴리즈 후 앱스토어 링크를 포스팅하는 날이 있으면 좋겠네요 ㅎㅎ</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+<!--        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#swift" class="page__taxonomy-item p-category" rel="tag">Swift</a>
+    
+    </span>
+  </p>
+
+-->
+<!--        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-02-20T09:00:00+09:00">February 20, 2022</time></p>
+-->
+      </footer>
+
+      
+
+      <!-- 
+  <nav class="pagination">
+    
+      <a href="/etc/4/" class="pagination--pager" title="[코딩테스트] 프로그래머스 데브코스 2기 - 백엔드 엔지니어링
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+ -->
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/etc/4/"  style="color:#101010;" rel="permalink">[코딩테스트] 프로그래머스 데브코스 2기 - 백엔드 엔지니어링
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-02-19
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/ios/1/"  style="color:#101010;" rel="permalink">[SwiftUI] 키보드 외 영역 터치 시 키보드 숨기기
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-02-13
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/algorithm/13/"  style="color:#101010;" rel="permalink">[알고리즘] 백준:1316 - 그룹 단어 체커 (Swift, Java)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-02-06
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/algorithm/12/"  style="color:#101010;" rel="permalink">[알고리즘] 백준:9012 - 괄호 (Swift, Java)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-02-06
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    
+      <li><a href="https://github.com/trumanfromkorea"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 trumanfromkorea. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
