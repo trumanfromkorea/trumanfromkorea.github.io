@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-06T14:37:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Java] Primitive Type 과 Wrapper Class</title><link href="http://localhost:4000/java/1/" rel="alternate" type="text/html" title="[Java] Primitive Type 과 Wrapper Class" /><published>2022-03-06T09:00:00+09:00</published><updated>2022-03-06T09:00:00+09:00</updated><id>http://localhost:4000/java/1</id><content type="html" xml:base="http://localhost:4000/java/1/">&lt;h2 id=&quot;java-primitive-type-과-wrapper-class&quot;&gt;[Java] Primitive Type 과 Wrapper Class&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-06T14:54:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Java] Primitive Type 과 Wrapper Class</title><link href="http://localhost:4000/java/1/" rel="alternate" type="text/html" title="[Java] Primitive Type 과 Wrapper Class" /><published>2022-03-06T09:00:00+09:00</published><updated>2022-03-06T09:00:00+09:00</updated><id>http://localhost:4000/java/1</id><content type="html" xml:base="http://localhost:4000/java/1/">&lt;h2 id=&quot;java-primitive-type-과-wrapper-class&quot;&gt;[Java] Primitive Type 과 Wrapper Class&lt;/h2&gt;
 
 &lt;p&gt;Java 를 이용하며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; 와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt;, 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;boolean&lt;/code&gt; 과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Boolean&lt;/code&gt; 처럼 같은 값을 나타내지만 선언형이 다른 경우를 보신 적이 있으실 것입니다.&lt;/p&gt;
 
@@ -91,7 +91,17 @@
 
 &lt;p&gt;또한 Wrapper Class 는 객체이기 때문에 연산자 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;==&lt;/code&gt; 를 이용할 수 없습니다. 모든 Wrapper Class 는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;equals()&lt;/code&gt; 가 오버라이딩 되어있기 때문에 이를 이용해 객체가 가지고 있는 값을 비교합니다.&lt;/p&gt;
 
-&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;</content><author><name>장재훈</name></author><category term="Java" /><summary type="html">[Java] Primitive Type 과 Wrapper Class</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)</title><link href="http://localhost:4000/algorithm/14/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)" /><published>2022-03-05T09:00:00+09:00</published><updated>2022-03-05T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/14</id><content type="html" xml:base="http://localhost:4000/algorithm/14/">&lt;h2 id=&quot;알고리즘-프로그래머스---가장-먼-노드-java&quot;&gt;[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)&lt;/h2&gt;
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;
+
+&lt;p&gt;항상 새로운 개발환경에 익숙해지기 위해서는 직접 부딪혀보고 프로젝트를 진행해보는 것이 훨씬 효율적인 학습방법이라고 생각했습니다.&lt;/p&gt;
+
+&lt;p&gt;원하는 기능이나 프로덕트를 제작하기 위해서는 나쁘지 않은 방법이라고 볼 수도 있지만, 해당 언어의 기초문법과 개념을 이해하는데에는 그렇게 좋지만은 않은 방법인 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;프로젝트를 진행하며 의문점이 생길 때마다 해당 내용을 찾아보고 학습하는 것도 하나의 방법이지만, 그렇게 되면 생산성도 떨어지게 되고 학습 효율도 떨어지게 되는 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 이제는 학습 방법을 조금 바꿔보기로 했는데, 프로젝트를 진행함과 동시에 기초 문법과 개념에 대해서 학습하는 시간을 정해두고 이를 수행하는 방향으로 나아가보려 합니다.&lt;/p&gt;
+
+&lt;p&gt;블로그에 꾸준히 오늘 배운 내용들을 작성하려고 하면 더 도움이 되겠죠? 열심히 해보겠습니다. 아자아자 화이팅!&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Java" /><summary type="html">[Java] Primitive Type 과 Wrapper Class</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)</title><link href="http://localhost:4000/algorithm/14/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)" /><published>2022-03-05T09:00:00+09:00</published><updated>2022-03-05T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/14</id><content type="html" xml:base="http://localhost:4000/algorithm/14/">&lt;h2 id=&quot;알고리즘-프로그래머스---가장-먼-노드-java&quot;&gt;[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/49189&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
 
