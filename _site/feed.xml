@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-06T00:23:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)</title><link href="http://localhost:4000/algorithm/14/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)" /><published>2022-03-05T09:00:00+09:00</published><updated>2022-03-05T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/14</id><content type="html" xml:base="http://localhost:4000/algorithm/14/">&lt;h2 id=&quot;알고리즘-프로그래머스---가장-먼-노드-java&quot;&gt;[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-06T14:37:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">꽁치대디의 개발일기 💻</title><subtitle>꾸준하게 꾸준하고 싶지만 꾸준하게 꾸준하지 못한 내 개발일지</subtitle><author><name>장재훈</name></author><entry><title type="html">[Java] Primitive Type 과 Wrapper Class</title><link href="http://localhost:4000/java/1/" rel="alternate" type="text/html" title="[Java] Primitive Type 과 Wrapper Class" /><published>2022-03-06T09:00:00+09:00</published><updated>2022-03-06T09:00:00+09:00</updated><id>http://localhost:4000/java/1</id><content type="html" xml:base="http://localhost:4000/java/1/">&lt;h2 id=&quot;java-primitive-type-과-wrapper-class&quot;&gt;[Java] Primitive Type 과 Wrapper Class&lt;/h2&gt;
+
+&lt;p&gt;Java 를 이용하며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; 와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt;, 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;boolean&lt;/code&gt; 과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Boolean&lt;/code&gt; 처럼 같은 값을 나타내지만 선언형이 다른 경우를 보신 적이 있으실 것입니다.&lt;/p&gt;
+
+&lt;p&gt;Java 언어에서 Primitive Type 과 Wrapper Class 가 존재한다는 것은 알고 있었지만, 정확한 개념이나 사용법은 숙지하고 있는 것 같지 않아서 학습하게 되었습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;분류&quot;&gt;분류&lt;/h3&gt;
+
+&lt;p&gt;Primitive Type 과 Wrapper Class 는 아래와 같이 분류할 수 있습니다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Primitive Type&lt;/th&gt;
+      &lt;th&gt;Wrapper Class&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;short&lt;/td&gt;
+      &lt;td&gt;Short&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;int&lt;/td&gt;
+      &lt;td&gt;Int&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;long&lt;/td&gt;
+      &lt;td&gt;Long&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;float&lt;/td&gt;
+      &lt;td&gt;Float&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;double&lt;/td&gt;
+      &lt;td&gt;Double&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;byte&lt;/td&gt;
+      &lt;td&gt;Byte&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;boolean&lt;/td&gt;
+      &lt;td&gt;Boolean&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;char&lt;/td&gt;
+      &lt;td&gt;Character&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;개념&quot;&gt;개념&lt;/h2&gt;
+
+&lt;p&gt;먼저 이름에서도 알 수 있듯이 Primitive Type 은 원시 타입 즉 기본형, Wrapper Class 는 객체입니다. 그렇기 때문에 기본형 변수에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt; 이 할당될 수 없지만, Wrapper Class 는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt; 이 할당될 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 일반적으로 변수를 선언할 때 굳이 객체로 이용할 필요가 없다거나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt; 이 할당될 필요가 없다면 Primitive Type 을 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;또한 객체를 생성하는 비용이 기본형 변수를 생성하는 비용보다 더 많이 들기 때문에 꼭 필요한 경우가 아니라면 Primitive Type 을 사용해주는게 좋습니다.&lt;/p&gt;
+
+&lt;p&gt;문자열 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;100&quot;&lt;/code&gt; 을 정수로 변환하는 과정을 예로 들어 설명해보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Primitive Type&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Wrapper Class&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;문자열을 기본형 정수로 변환하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parseInt()&lt;/code&gt; 메소드를, 객체를 생성하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;valueOf()&lt;/code&gt; 메소드를 이용하는 것을 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이때도 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;valueOf()&lt;/code&gt; 메소드는 객체를 생성하기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parseInt()&lt;/code&gt; 보다 조금 느리고 비효율적인 방법이라고 할 수 있습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;그렇다고 해서 Primitive Type 이 항상 Wrapper Class 보다 우선시 되어야 한다는 것은 아닙니다.&lt;/p&gt;
+
+&lt;p&gt;Wrapper Class 는 기본형 변수가 객체 형태로 다뤄져야 할 때 이용되곤 합니다.&lt;/p&gt;
+
+&lt;p&gt;예를 들어 정수로 이루어진 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;List&lt;/code&gt; 를 선언할 시 우리는 기본형 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; 가 아닌 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt; 를 이용하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;List&amp;lt;Integer&amp;gt;&lt;/code&gt; 와 같은 형태로 코드를 작성합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위와 같이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer Class&lt;/code&gt; 는 정수형 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; 를 가지고 있기 때문에 기본형 변수를 객체처럼 사용할 수 있게 해줍니다.&lt;/p&gt;
+
+&lt;p&gt;또한 Wrapper Class 는 객체이기 때문에 연산자 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;==&lt;/code&gt; 를 이용할 수 없습니다. 모든 Wrapper Class 는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;equals()&lt;/code&gt; 가 오버라이딩 되어있기 때문에 이를 이용해 객체가 가지고 있는 값을 비교합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;마무리&quot;&gt;마무리&lt;/h2&gt;</content><author><name>장재훈</name></author><category term="Java" /><summary type="html">[Java] Primitive Type 과 Wrapper Class</summary></entry><entry><title type="html">[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)</title><link href="http://localhost:4000/algorithm/14/" rel="alternate" type="text/html" title="[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)" /><published>2022-03-05T09:00:00+09:00</published><updated>2022-03-05T09:00:00+09:00</updated><id>http://localhost:4000/algorithm/14</id><content type="html" xml:base="http://localhost:4000/algorithm/14/">&lt;h2 id=&quot;알고리즘-프로그래머스---가장-먼-노드-java&quot;&gt;[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/49189&quot;&gt;클릭해서 문제 바로가기&lt;/a&gt;&lt;/p&gt;
 
@@ -1265,91 +1358,4 @@
 
 &lt;p&gt;이제는 Java 로도 코딩테스트를 풀려고 합니다. Spring 을 공부해보고 싶은 마음도 있고, Java 를 아는게 이후의 개발 인생에도 도움이 많이 될 것 같아서 이런 결정을 내렸습니다.&lt;/p&gt;
 
-&lt;p&gt;아직은 문법에 익숙치 않아 Swift 로 한번 문제를 풀어본 후 Java 로 다시 옮겨적어보고 있지만, 언젠가는 아예 Java 로 코딩테스트 문제들을 슥슥 풀어낼 수 있는 날이 오면 좋겠네요.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">[알고리즘] 백준:10830 - 행렬 제곱 (Swift, Java)</summary></entry><entry><title type="html">우주펫 - 지역 기반 반려동물 커뮤니티 앱</title><link href="http://localhost:4000/projects/6/" rel="alternate" type="text/html" title="우주펫 - 지역 기반 반려동물 커뮤니티 앱" /><published>2022-01-30T09:00:00+09:00</published><updated>2022-01-30T09:00:00+09:00</updated><id>http://localhost:4000/projects/6</id><content type="html" xml:base="http://localhost:4000/projects/6/">&lt;p&gt;&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2021.11 - 2022.01&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;우주펫---지역-기반-반려동물-커뮤니티-앱&quot;&gt;우주펫 - 지역 기반 반려동물 커뮤니티 앱&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2021년 12월 경 출시&lt;/li&gt;
-  &lt;li&gt;2022년 2월 기준 강남구 일대를 중심으로 서비스 중&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://apps.apple.com/kr/app/우주펫-내-주변-견주-집사-지인-찾기/id1597844235&quot;&gt;아이폰 앱 스토어&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.universepet.universepet&quot;&gt;안드로이드 플레이 스토어&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;업무&quot;&gt;업무&lt;/h2&gt;
-
-&lt;h3 id=&quot;앱-클라이언트-개발&quot;&gt;앱 클라이언트 개발&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;사용 언어&lt;/td&gt;
-      &lt;td&gt;Dart&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;프레임워크&lt;/td&gt;
-      &lt;td&gt;Flutter&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;협업툴&lt;/td&gt;
-      &lt;td&gt;Git&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;개발
-    &lt;ul&gt;
-      &lt;li&gt;채팅 기능 제외 전반적인 앱 개발 진행 (v1.2.0 까지 릴리즈)&lt;/li&gt;
-      &lt;li&gt;카메라 및 갤러리에서 선택한 사진 업로드 기능 구현&lt;/li&gt;
-      &lt;li&gt;GPS 위치 기반 사용자 주소 받아오는 기능 구현&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;iOS 관리
-    &lt;ul&gt;
-      &lt;li&gt;앱 스토어 릴리즈 및 버전 업데이트 관리&lt;/li&gt;
-      &lt;li&gt;Reject 사유에 대응하여 기능 수정&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;경험&quot;&gt;경험&lt;/h2&gt;
-
-&lt;h3 id=&quot;메모리-사용량-최적화&quot;&gt;메모리 사용량 최적화&lt;/h3&gt;
-
-&lt;p&gt;버전 업데이트 전 테스트 중에 앱이 버벅거리다가 갑자기 종료되는 현상이 일어났습니다. 세부적인 기능에는 문제가 없었던 터라 원인은 메모리 사용량이라고 생각했습니다. 앱을 디버그 모드로 실행시키고 메모리 사용량을 살펴보니 2GB 가 넘는 것을 확인할 수 있었습니다.&lt;/p&gt;
-
-&lt;p&gt;앱에서 메모리를 가장 많이 사용하는 부분은 당연히 사진 등의 컨텐츠를 로드하는 부분이라고 생각했습니다. 앱의 홈 화면에서 동물들의 사진을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Grid&lt;/code&gt; 형태로 출력하는 부분이 있었는데, 해당 부분을 살펴보자 아래 사진과 같은 문제가 있다는 것을 확인할 수 있었습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/55919701/154073232-18d274ff-aa1d-4075-b0d4-ef8be0b1602c.png&quot; alt=&quot;프레젠테이션1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Header&lt;/code&gt; 부분과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GridView&lt;/code&gt; 부분을 모두 스크롤 가능하게 하고자 하던 것에서 발생한 문제였습니다. 그래서 화면에 많은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;View&lt;/code&gt; 를 한꺼번에 나타내면서 스크롤이 가능하게 하면서도 렌더링은 화면에 보이는 요소만 가능하게 하는 방법을 찾아보았습니다.&lt;/p&gt;
-
-&lt;p&gt;제가 발견한 해결책은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CustomScrollView&lt;/code&gt; 와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SliverGridView&lt;/code&gt; 를 이용하는 것이었습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sliver&lt;/code&gt; 를 이용하면 화면의 요소들을 동적으로 표현가능한데, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GridView&lt;/code&gt; 를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CustomScrollView&lt;/code&gt; 안에 넣으면 요소들을 동적으로 렌더링 해준다는 사실을 알 수 있었습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ListView&lt;/code&gt; 또한 화면을 동적으로 표현해주기는 하지만, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GridView&lt;/code&gt; 라는 묶음이 하나의 요소로 인식되어 이러한 문제가 발생한 것이었습니다.&lt;/p&gt;
-
-&lt;p&gt;문제를 해결하고 나니 2GB 에 육박하던 메모리 사용량이 500MB 가량으로 줄어드는것을 확인할 수 있었습니다. 해당 문제를 해결하며 데이터를 화면에 표시하는 것 뿐만이 아닌 메모리를 효율적으로 사용하는 것 또한 매우 중요하다는 것을 배울 수 있었습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;클린-코드-작성&quot;&gt;클린 코드 작성&lt;/h3&gt;
-
-&lt;p&gt;학교생활 중 교내 프로젝트를 진행할 때에는 강의 시간에 맞춰 작동하는 프로그램을 만들어내는 것에 급급하여  코드의 퀄리티에 대해 크게 신경쓰지 않았습니다. 시간이 지날수록 기능을 수정할 일이 생기거나, 협업으로 인해 내 코드를 타인에게 설명하려고 할 때 코드의 가독성이 매우 떨어진다는 사실을 깨달았습니다.&lt;/p&gt;
-
-&lt;p&gt;해당 프로젝트를 진행하면서는 코드를 작성하는데에 더욱 많은 신경을 썼던 것 같습니다. 처음 겪어보는 개발환경이기도 했고 협업을 위해서라면 누구든지 코드를 쉽게 알아볼 수 있어야 한다는 생각이 많이 들었습니다.&lt;/p&gt;
-
-&lt;p&gt;그래서 변수명이나 메소드명을 정할때도 어떤 기능을 하는지 정확하게 나타내려고 하였고, 메소드는 한 번에 한 가지 일만 하게 함으로써 코드의 재사용성을 높였습니다. 뿐만 아니라 자주 사용되는 요소들은 컴포넌트화 시켜 어디에서든 사용할 수 있도록 코드를 작성해놓았습니다.&lt;/p&gt;
-
-&lt;p&gt;그러다 보니 누구나 쉽게 알아볼 수 있는 코드 작성법에 많은 관심이 생겼습니다. 그래서 퇴사 후에는 클린 코드라는 서적을 구입하기도 하였고, 틈틈히 책을 읽으며 클린 코드를 작성하는 법을 터득해나갈 계획입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;빠른-습득력&quot;&gt;빠른 습득력&lt;/h3&gt;
-
-&lt;p&gt;해당 프로젝트는 굉장히 갑작스럽게 진행이 결정된 프로젝트였고 Flutter 프레임워크를 사용하게 된 것도 정말 갑작스러운 일이었습니다. 새롭게 접하는 개발환경이었기 때문에 걱정이 앞서기도 하였지만 매일 퇴근 후 관련 문서와 사이드 프로젝트를 진행하며 Flutter 에 익숙해지려고 노력하였습니다.&lt;/p&gt;
-
-&lt;p&gt;결과적으로 프로젝트를 무사히 릴리즈 할 수 있었고, Flutter 프레임워크를 보다 능숙하게 다룰 수 있게 되었습니다.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Projects" /><summary type="html">2021.11 - 2022.01</summary></entry></feed>
+&lt;p&gt;아직은 문법에 익숙치 않아 Swift 로 한번 문제를 풀어본 후 Java 로 다시 옮겨적어보고 있지만, 언젠가는 아예 Java 로 코딩테스트 문제들을 슥슥 풀어낼 수 있는 날이 오면 좋겠네요.&lt;/p&gt;</content><author><name>장재훈</name></author><category term="Algorithm" /><summary type="html">[알고리즘] 백준:10830 - 행렬 제곱 (Swift, Java)</summary></entry></feed>

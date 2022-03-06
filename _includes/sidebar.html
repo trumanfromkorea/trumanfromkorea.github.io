@@ -80,6 +80,12 @@
                     <li><a href="/categories/Swift" class="nav__sub-title_sub">Swift ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
+
+                    {% for category in site.categories %}
+                    {% if category[0] == "Java" %}
+                    <li><a href="/categories/Java" class="nav__sub-title_sub">Java ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% endfor %}
                 </ul>
 
                 <!-- 스터디 카테고리 -->

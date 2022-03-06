@@ -133,6 +133,10 @@
 <lastmod>2022-03-05T09:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/java/1/</loc>
+<lastmod>2022-03-06T09:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/categories/Algorithm</loc>
 </url>
 <url>
@@ -140,6 +144,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/categories/flutter</loc>
+</url>
+<url>
+<loc>http://localhost:4000/categories/Java</loc>
 </url>
 <url>
 <loc>http://localhost:4000/categories/Swift</loc>

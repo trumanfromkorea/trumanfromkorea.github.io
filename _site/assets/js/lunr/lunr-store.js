@@ -196,4 +196,10 @@ var store = [{
         "tags": [],
         "url": "/algorithm/14/",
         "teaser": null
+      },{
+        "title": "[Java] Primitive Type 과 Wrapper Class",
+        "excerpt":"[Java] Primitive Type 과 Wrapper Class Java 를 이용하며 int 와 Integer, 혹은 boolean 과 Boolean 처럼 같은 값을 나타내지만 선언형이 다른 경우를 보신 적이 있으실 것입니다. Java 언어에서 Primitive Type 과 Wrapper Class 가 존재한다는 것은 알고 있었지만, 정확한 개념이나 사용법은 숙지하고 있는 것 같지 않아서 학습하게 되었습니다. 분류...","categories": ["Java"],
+        "tags": [],
+        "url": "/java/1/",
+        "teaser": null
       }]
