@@ -1,0 +1,859 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property - 꽁치대디의 개발일기 💻</title>
+<meta name="description" content="[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property">
+
+
+  <meta name="author" content="장재훈">
+  
+  <meta property="article:author" content="장재훈">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="꽁치대디의 개발일기 💻">
+<meta property="og:title" content="[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property">
+<meta property="og:url" content="http://localhost:4000/swift/4/">
+
+
+  <meta property="og:description" content="[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-03-08T09:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/swift/4/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "trumanfromkorea",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="꽁치대디의 개발일기 💻 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          꽁치대디의 개발일기 💻
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+<div class="sidebar sticky">
+    
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/avatar.jpeg" alt="장재훈" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">장재훈</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>쥬쥬쥬니어 개발자</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="trumanfromkorea@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/trumanfromkorea" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/trumanfromkorea/" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div> 
+
+    <!-- 카테고리 파트 -->
+    
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+    
+    <nav class="nav__list" style="margin-top:1.5rem;">
+        <input id="ac-toc" name="accordion-toc" type="checkbox" />
+        <label for="ac-toc">Toggle menu</label>
+        <ul class="nav__items" id="category_tag_menu">
+            <style>
+                .hits {
+                    width: auto;
+                    height: auto;
+                    max-width: 120px;
+                    max-height: 30px;
+                    margin-bottom: 20px;
+                }
+            </style>
+
+            <!-- 방문자 수
+            <a href="https://hits.seeyoufarm.com"><img class="hits"
+                    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftrumanfromkorea.github.io&count_bg=%23007DFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=%F0%9F%8C%90+방문자수&edge_flat=false" /></a>
+            -->
+
+            <li style="border-bottom:1px
+            solid #cecece;border-top:1px
+            solid #cecece;">
+                <ul>
+                    <a href="/about_me"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        ABOUT ME
+                    </a>
+                </ul>
+                <ul>
+                    <a href="/projects"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        PROJECTS
+                    </a>
+                </ul>
+            </li>
+
+            <!--전체 글 수-->
+            <li style="padding-top: 1rem;">
+                🚀 <b><span style="font-size:0.8rem;"> 전체 글 수 <span
+                            style="font-size:1rem; color : #4e89f0;">36</span> 개</span></b>
+            </li>
+
+            <li>
+                <!--여기가 카테고리 대분류 -->
+                <!-- <span class="nav__sub-title" style="font-size:1rem; color : #1b4387;">Categories</span> -->
+                <!-- 앱 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">App</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/flutter" class="nav__sub-title_sub">Flutter (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/ios" class="nav__sub-title_sub">iOS (1)</a></li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- 문법 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Languages</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Swift" class="nav__sub-title_sub">Swift (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Java" class="nav__sub-title_sub">Java (1)</a></li>
+                    
+                    
+                </ul>
+
+                <!-- 스터디 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Studies</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/TIL" class="nav__sub-title_sub">TIL (2)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm (14)</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    <li><a href="/categories/ETC" class="nav__sub-title_sub">ETC (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </ul>
+
+            </li>
+
+        </ul>
+    </nav>
+    
+</div>
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <meta itemprop="headline" content="[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property">
+    
+    <meta itemprop="description" content="[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property">
+    
+    
+    <meta itemprop="datePublished" content="2022-03-08T09:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+      <header>
+        <h1 id="page-title" class="page__title p-name" itemprop="headline">
+          <a href="http://localhost:4000/swift/4/" class="u-url" itemprop="url"><p>[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property
+</a>
+        </h1>
+        <!--          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+-->
+
+      </header>
+      
+
+
+      <!--      날짜-->
+      
+      <span class="page__meta" style="font-size : 0.8rem">
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#swift" class="page__taxonomy-item p-category" rel="tag">Swift</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-03-08T09:00:00+09:00">March 8, 2022</time></p>
+
+      </span>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h2 id="swift-프로퍼티---저장-프로퍼티-stored-property">[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property</h2>
+
+<p>Swift 공식 문서를 직역하자면, 프로퍼티는 클래스, 구조체, 열거형과 값을 연결해주는 역할을 한다고 합니다.</p>
+
+<p>프로퍼티에는 저장 프로퍼티 (Stored Property), 연산 프로퍼티 (Computed Property), 그리고 타입 프로퍼티 (Type Property) 등이 존재하는데, 오늘은 그 중 저장 프로퍼티에 대해 알아보도록 하겠습니다.</p>
+
+<h2 id="저장-프로퍼티란">저장 프로퍼티란?</h2>
+
+<p>저장 프로퍼티는 클래스와 구조체에서만 사용할 수 있고 값을 저장하기 위해 선언되는 상수 혹은 변수를 뜻합니다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">Person</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Jaehoon"</span>
+    <span class="k">var</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">Device</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"iphone"</span>
+    <span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>여기서 <code class="language-plaintext highlighter-rouge">Person</code> 클래스의 <code class="language-plaintext highlighter-rouge">name</code> 과 <code class="language-plaintext highlighter-rouge">age</code>, 그리고 <code class="language-plaintext highlighter-rouge">Device</code> 구조체의 <code class="language-plaintext highlighter-rouge">name</code> 과 <code class="language-plaintext highlighter-rouge">version</code> 은 모두 저장 프로퍼티입니다.</p>
+
+<p>그럼 이 때 클래스와 구조체의 차이를 알아보겠습니다.</p>
+
+<h3 id="class">class</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">person</span><span class="p">:</span> <span class="kt">Person</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">()</span>
+
+<span class="n">person</span><span class="p">?</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"재훈"</span> <span class="c1">// 에러 발생</span>
+<span class="n">person</span><span class="p">?</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+<p>위의 코드에 이어서 <code class="language-plaintext highlighter-rouge">person</code> 이라는 클래스 인스턴스를 상수 형태로 선언해보겠습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Person</code> 클래스 내에서 상수로 선언된 <code class="language-plaintext highlighter-rouge">name</code> 의 값을 변경하려고 하면 당연히 에러가 발생하지만, 변수로 선언된 <code class="language-plaintext highlighter-rouge">age</code> 의 값을 변경하려고 하면 에러가 발생하지 않는 것을 확인할 수 있습니다.</p>
+
+<p>하지만 누군가는 <code class="language-plaintext highlighter-rouge">person</code> 이라는 인스턴스가 상수로 선언되었으니 내부 값을 변경시키는 것도 불가능한게 아닐까? 라는 의문을 품을 수 있습니다.</p>
+
+<p>이것에 대한 해답은 이전에 올린 포스트인 <a href="https://trumanfromkorea.github.io/swift/3/">class 와 struct</a> 에서 찾을 수 있습니다.</p>
+
+<p>클래스는 메모리를 참조하기 때문에 상수 <code class="language-plaintext highlighter-rouge">person</code> 은 스택 영역에 할당되지만 생성된 인스턴스는 힙 영역에 할당됩니다. 그렇기 때문에 클래스 인스턴스 내부 값을 변경하는 것은 상수로 선언된 인스턴스의 주소 값을 변경하는 것이 아니기 때문에 가능해지는 것입니다.</p>
+
+<p>물론 인스턴스 자체는 상수로 선언되었기 때문에 새로운 인스턴스나 nil 을 할당하는 것은 불가능합니다.</p>
+
+<h3 id="struct">struct</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">device</span><span class="p">:</span> <span class="kt">Device</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">()</span>
+
+<span class="n">device</span><span class="p">?</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"아이폰"</span> <span class="c1">// 에러 발생</span>
+<span class="n">device</span><span class="p">?</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// 에러 발생</span>
+</code></pre></div></div>
+
+<p>이어 구조체의 경우 상수로 인스턴스를 선언할 시 내부 값을 변경하려고 하면 에러가 발생하는 것을 확인할 수 있습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">version</code> 프로퍼티의 경우 변수로 선언되었음에도 불구하고 값 변경을 시도할 시 에러가 발생합니다.</p>
+
+<p>그 이유는 구조체는 메모리가 아닌 값을 참조하기 때문입니다. 그렇기 때문에 구조체 내부의 값을 변경하는 것은 선언된 인스턴스 자체의 값을 바꾼다는 것으로 생각할 수 있고, 해당 인스턴스는 상수로 선언되었기 때문에 값 변경이 불가능해지는 것입니다.</p>
+
+<p>구조체 내부의 값을 변경시키고 싶다면 인스턴스와 내부 프로퍼티 모두 변수로 선언해주는 것이 좋을 것입니다.</p>
+
+<h2 id="lazy-stored-property">Lazy Stored Property</h2>
+
+<p>Lazy 저장 프로퍼티는 처음 사용될 때까지 초기화되지 않는 프로퍼티입니다.</p>
+
+<p>이러한 프로퍼티는 <code class="language-plaintext highlighter-rouge">lazy</code> 키워드를 이용해 선언할 수 있는데, 그러기 위해서는 상수가 아닌 변수로 프로퍼티를 선언해야 합니다.</p>
+
+<p>상수로 선언하게 되면 처음 사용할 때까지 값이 없게 되기 때문에 에러가 발생합니다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">DataImporter</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">filename</span> <span class="o">=</span> <span class="s">"data.txt"</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="kt">DataManager</span> <span class="p">{</span>
+    <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">importer</span> <span class="o">=</span> <span class="kt">DataImporter</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">data</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">]()</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">manager</span> <span class="o">=</span> <span class="kt">DataManager</span><span class="p">()</span>
+<span class="n">manager</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Some data"</span><span class="p">)</span>
+<span class="n">manager</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"Some more data"</span><span class="p">)</span>
+<span class="c1">// importer 프로퍼티가 사용되지 않기 때문에 할당되지 않음</span>
+</code></pre></div></div>
+
+<p>위의 코드에서 <code class="language-plaintext highlighter-rouge">DataManager</code> 의 <code class="language-plaintext highlighter-rouge">importer</code> 프로퍼티는 <code class="language-plaintext highlighter-rouge">Lazy</code> 프로퍼티입니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">manager</code> 라는 인스턴스가 생성되고 나서 <code class="language-plaintext highlighter-rouge">importer</code> 프로퍼티를 사용하지 않는데, 이런 경우에서 <code class="language-plaintext highlighter-rouge">importer</code> 프로퍼티에 값이 할당되면 낭비이기 때문에 <code class="language-plaintext highlighter-rouge">lazy</code> 키워드를 이용하여 초기화를 지연시킬 수 있습니다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">manager</span><span class="o">.</span><span class="n">importer</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+<span class="c1">// imporer 프로퍼티 할당</span>
+</code></pre></div></div>
+
+<p>위와 같이 <code class="language-plaintext highlighter-rouge">importer</code> 프로퍼티에 처음 접근될 때 초기화됩니다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>오늘은 저장 프로퍼티에 대해 알아보았습니다. 프로퍼티를 단순하게 값을 저장하고 다루는 어떤 저장소의 개념으로 생각했는데, 학습 중에 프로퍼티에 대한 여러 사용법과 종류가 있는 것을 알게 되고 정리를 시작하게 되었습니다.</p>
+
+<p>다음에는 연산 프로퍼티에 대해 알아보는 시간을 가져보도록 하겠습니다.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        <!--        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#swift" class="page__taxonomy-item p-category" rel="tag">Swift</a>
+    
+    </span>
+  </p>
+
+-->
+        <!--        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-03-08T09:00:00+09:00">March 8, 2022</time></p>
+-->
+      </footer>
+
+      
+
+      <!-- 다라쓰 설치 코드 -->
+      <div id="darass" data-project-key="P0J1iLltiWoPEq6608" data-dark-mode="false" data-primary-color="#5089f0"
+        data-show-sort-option="true" data-allow-social-login="true" data-show-logo="true">
+        <script type="text/javascript" defer>
+          (function () {
+            var $document = document;
+
+            var $script = $document.createElement("script");
+            $script.src = "https://deploy-script.darass.co.kr/embed.js";
+            $script.defer = true;
+
+            $document.head.appendChild($script);
+          })();
+        </script>
+        <noscript>다라쓰 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+      </div>
+      <!-- 다라쓰 설치 코드 끝 -->
+
+      <!-- 
+  <nav class="pagination">
+    
+      <a href="/swift/3/" class="pagination--pager" title="[Swift] Class 와 Struct
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+ -->
+    </div>
+
+    
+  </article>
+
+  
+  
+  <div class="page__related">
+    <h2 class="page__related-title">You may also enjoy
+    </h2>
+    <div class="grid__wrapper">
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/swift/3/"  style="color:#101010;" rel="permalink">[Swift] Class 와 Struct
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-08
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/java/1/"  style="color:#101010;" rel="permalink">[Java] Primitive Type 과 Wrapper Class
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-06
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/algorithm/14/"  style="color:#101010;" rel="permalink">[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-05
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/swift/2/"  style="color:#101010;" rel="permalink">[Swift] 지정한 달의 요일 수 구하기
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-02-20
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+    </div>
+  </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    
+      <li><a href="https://github.com/trumanfromkorea"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 trumanfromkorea. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

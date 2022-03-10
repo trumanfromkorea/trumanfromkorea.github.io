@@ -1,0 +1,93 @@
+I"7<h2 id="swift-class-와-struct">[Swift] Class 와 Struct</h2>
+
+<p>Swift 의 클래스와 구조체에는 공통점이 매우 많습니다. 하지만 그만큼 사용되는 용도나 성능의 차이도 많은데요, 오늘은 Swift 언어에서의 클래스와 구조체에 대해 알아보도록 하겠습니다.</p>
+
+<h2 id="공통점과-차이점">공통점과 차이점</h2>
+
+<h3 id="공통점">공통점</h3>
+
+<ul>
+  <li>값을 저장할 프로퍼티를 선언할 수 있습니다.</li>
+  <li>함수적 기능을 하는 메소드를 선언할 수 있습니다.</li>
+  <li>내부 값에 . 을 사용하여 접근할 수 있습니다.</li>
+  <li>생성자를 사용해 초기 상태를 설정할 수 있습니다.</li>
+  <li>extension 을 사용하여 기능을 확장할 수 있습니다.</li>
+  <li>Protocol 을 채택하여 기능을 설정할 수 있습니다.</li>
+</ul>
+
+<h3 id="차이점">차이점</h3>
+
+<h4 id="class">Class</h4>
+
+<ul>
+  <li>call-by-reference (참조 타입) 입니다.</li>
+  <li>ARC 로 메모리를 관리합니다.</li>
+  <li>상속이 가능합니다.</li>
+  <li>타입 캐스팅을 통해 런타임에서 클래스 인스턴스의 타입을 확인할 수 있습니다.</li>
+  <li>deinit 을 사용하여 클래스 인스턴스의 메모리 할당을 해제할 수 있습니다.</li>
+</ul>
+
+<h4 id="struct">Struct</h4>
+
+<ul>
+  <li>call-by-value (값 타입) 입니다.</li>
+  <li>구조체 변수를 새로운 변수에 할당할 때마다 새로운 구조체가 할당됩니다.</li>
+  <li>생성자를 만들지 않아도 됩니다.</li>
+</ul>
+
+<h3 id="예시">예시</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Person</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">var</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span>
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">me</span><span class="p">:</span> <span class="kt">Person</span> <span class="o">=</span> <span class="kt">Person</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"재훈"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="k">var</span> <span class="nv">meClone</span><span class="p">:</span> <span class="kt">Person</span> <span class="o">=</span> <span class="n">me</span> <span class="c1">// 새로운 구조체 할당</span>
+<span class="n">meClone</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"jaehoon"</span> 
+
+<span class="c1">// 값 복사이기 때문에 둘의 값이 다름</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">me</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// -&gt; 재훈</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">meClone</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// -&gt; jaehoon</span>
+</code></pre></div></div>
+
+<p>struct 는 call-by-value (값 타입) 이기 때문에 이미 선언된 구조체 변수를 다른 변수에 할당할 때마다 새로운 구조체가 생성됩니다.</p>
+
+<p>그래서 같은 구조체를 여러 개의 변수에 할당한 후 내부 값을 변경시키더라도 각각의 구조체에만 적용될 뿐, 다른 구조체에는 아무런 영향을 주지 않습니다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">Device</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">Int</span>
+    
+    <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">version</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">phone</span><span class="p">:</span> <span class="kt">Device</span> <span class="o">=</span> <span class="kt">Device</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"iphone"</span><span class="p">,</span> <span class="nv">version</span><span class="p">:</span> <span class="mi">13</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">phone</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// -&gt; iphone</span>
+
+<span class="k">var</span> <span class="nv">phoneClone</span><span class="p">:</span> <span class="kt">Device</span> <span class="o">=</span> <span class="n">phone</span>
+<span class="n">phoneClone</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"iphone pro"</span>
+
+<span class="c1">// 메모리 참조 형태이기 때문에 둘다 값이 바뀜</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">phone</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// -&gt; iphone pro</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">phoneClone</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// -&gt; iphone pro</span>
+</code></pre></div></div>
+
+<p>class 는 call-by-reference (참조 타입) 이기 때문에 선언된 객체를 다른 변수에 할당할 시 같은 메모리를 공유합니다.</p>
+
+<p>그렇기 때문에 어떤 변수에서 내부 값을 변경시킨다면 같은 객체를 참조하고 있는 다른 변수도 모두 영향을 받습니다.</p>
+
+<p>또한 모든 구조체에는 새로운 구조체 인스턴스 프로퍼티들을 초기화하기 위해 자동적으로 생성되는 Memberwise initializer 가 존재하지만, 클래스에는 존재하지 않기 때문에 생성자를 직접 만들어 초기화 시켜줘야 합니다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>오늘은 클래스와 구조체에 대해서 알아보았습니다. 언뜻 보면 하는 일도 비슷하고 크게 차이점이 없는 것 같지만 잘 활용한다면 성능에도 큰 차이가 생기지 않을까 싶습니다.</p>
+
+<p>다음에는 ARC, 그리고 클래스와 구조체의 메모리 할당에 대해서 학습해보도록 하겠습니다.</p>
+
+:ET

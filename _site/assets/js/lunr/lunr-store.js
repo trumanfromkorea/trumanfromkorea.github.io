@@ -202,4 +202,16 @@ var store = [{
         "tags": [],
         "url": "/java/1/",
         "teaser": null
+      },{
+        "title": "[Swift] Class 와 Struct",
+        "excerpt":"[Swift] Class 와 Struct Swift 의 클래스와 구조체에는 공통점이 매우 많습니다. 하지만 그만큼 사용되는 용도나 성능의 차이도 많은데요, 오늘은 Swift 언어에서의 클래스와 구조체에 대해 알아보도록 하겠습니다. 공통점과 차이점 공통점 값을 저장할 프로퍼티를 선언할 수 있습니다. 함수적 기능을 하는 메소드를 선언할 수 있습니다. 내부 값에 . 을 사용하여 접근할 수 있습니다....","categories": ["Swift"],
+        "tags": [],
+        "url": "/swift/3/",
+        "teaser": null
+      },{
+        "title": "[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property",
+        "excerpt":"[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property Swift 공식 문서를 직역하자면, 프로퍼티는 클래스, 구조체, 열거형과 값을 연결해주는 역할을 한다고 합니다. 프로퍼티에는 저장 프로퍼티 (Stored Property), 연산 프로퍼티 (Computed Property), 그리고 타입 프로퍼티 (Type Property) 등이 존재하는데, 오늘은 그 중 저장 프로퍼티에 대해 알아보도록 하겠습니다. 저장 프로퍼티란? 저장 프로퍼티는 클래스와 구조체에서만...","categories": ["Swift"],
+        "tags": [],
+        "url": "/swift/4/",
+        "teaser": null
       }]
