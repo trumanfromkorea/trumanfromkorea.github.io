@@ -1,0 +1,120 @@
+I"I5<h2 id="알고리즘-백준5639---이진-검색-트리-swift">[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)</h2>
+
+<p><a href="https://www.acmicpc.net/problem/5639">클릭해서 문제 바로가기</a></p>
+
+<h2 id="문제">문제</h2>
+
+<p>이진 검색 트리는 다음과 같은 세 가지 조건을 만족하는 이진 트리이다.</p>
+
+<ul>
+  <li>노드의 왼쪽 서브트리에 있는 모든 노드의 키는 노드의 키보다 작다.</li>
+  <li>노드의 오른쪽 서브트리에 있는 모든 노드의 키는 노드의 키보다 크다.</li>
+  <li>왼쪽, 오른쪽 서브트리도 이진 검색 트리이다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/55919701/158178456-4b8048e9-c6c9-4d78-b81f-8decd3012442.png" alt="image" /></p>
+
+<p>전위 순회 (루트-왼쪽-오른쪽)은 루트를 방문하고, 왼쪽 서브트리, 오른쪽 서브 트리를 순서대로 방문하면서 노드의 키를 출력한다. 후위 순회 (왼쪽-오른쪽-루트)는 왼쪽 서브트리, 오른쪽 서브트리, 루트 노드 순서대로 키를 출력한다.</p>
+
+<p>예를 들어, 위의 이진 검색 트리의 전위 순회 결과는 <code class="language-plaintext highlighter-rouge">50 30 24 5 28 45 98 52 60</code> 이고, 후위 순회 결과는 <code class="language-plaintext highlighter-rouge">5 28 24 45 30 60 52 98 50</code> 이다.</p>
+
+<p>이진 검색 트리를 전위 순회한 결과가 주어졌을 때, 이 트리를 후위 순회한 결과를 구하는 프로그램을 작성하시오.</p>
+
+<h2 id="이해">이해</h2>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<h3 id="java">Java</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">boolean</span><span class="o">[]</span> <span class="n">visited</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">listGraph</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="kd">private</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">distanceList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">solution</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">edge</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="n">initGraph</span><span class="o">(</span><span class="n">n</span><span class="o">);</span>
+        <span class="n">generateGraph</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">edge</span><span class="o">);</span>
+        <span class="no">BFS</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+
+        <span class="k">return</span> <span class="nf">findMaxCount</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 모든 노드와 1번 노드의 거리 중 가장 큰 값의 개수</span>
+    <span class="kt">int</span> <span class="nf">findMaxCount</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">distanceList</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">frequency</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">distanceList</span><span class="o">,</span> <span class="n">max</span><span class="o">);</span>
+
+        <span class="k">return</span> <span class="n">count</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 입력값을 토대로 그래프를 인접리스트 형태로 만드는 메소드</span>
+    <span class="kt">void</span> <span class="nf">generateGraph</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">edge</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">visited</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">e</span> <span class="o">:</span> <span class="n">edge</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">e</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+            <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">e</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+
+            <span class="k">this</span><span class="o">.</span><span class="na">listGraph</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="n">j</span><span class="o">);</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">listGraph</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">j</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 그래프 초기화 함수</span>
+    <span class="kt">void</span> <span class="nf">initGraph</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">listGraph</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;());</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">BFS</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+        <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">distance</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span> <span class="c1">// 거리 저장</span>
+
+        <span class="k">this</span><span class="o">.</span><span class="na">visited</span><span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+
+        <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+        <span class="n">distance</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span> <span class="c1">// 첫번째는 0으로 초기화</span>
+
+        <span class="k">while</span> <span class="o">(!</span><span class="n">queue</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">now</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+            <span class="kt">int</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">distance</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+
+            <span class="k">this</span><span class="o">.</span><span class="na">distanceList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">dist</span><span class="o">);</span>
+
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="o">.</span><span class="na">listGraph</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">now</span><span class="o">).</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="kt">int</span> <span class="n">next</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">listGraph</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">now</span><span class="o">).</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+
+                <span class="k">if</span> <span class="o">(!</span><span class="n">visited</span><span class="o">[</span><span class="n">next</span><span class="o">])</span> <span class="o">{</span>
+                    <span class="k">this</span><span class="o">.</span><span class="na">visited</span><span class="o">[</span><span class="n">next</span><span class="o">]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+                    <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">next</span><span class="o">);</span>
+                    <span class="n">distance</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">dist</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span> <span class="c1">// 이전 노드의 거리값보다 1을 더해준다</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="til">TIL</h2>
+
+<h3 id="프로그래머스-메모리초과">프로그래머스 메모리초과</h3>
+
+<p>그래프 탐색 문제를 풀 때 대부분 인접행렬로 구현하는것이 익숙해서 그렇게 하는 편입니다. 해당 문제를 처음 풀 때도 인접행렬로 구현하였으나 테스트케이스 8,9 번에서 메모리초과가 발생했습니다.</p>
+
+<p>동기 형 말로는 그래프 문제를 인접행렬로 풀면 메모리나 시간초과가 발생하는 경우가 많으니 인접리스트로 해결하는게 더 효율적이라고 합니다.</p>
+
+<p>생각해보면 노드의 개수가 많아질수록 낭비되는 공간이 더 많을테니 당연한 얘기겠죠.. 시간복잡도도 인접리스트가 더 효율적이니 앞으로는 인접리스트로 구현하는 버릇을 들여야겠습니다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>오랜만에 코딩테스트 문제를 푸는거라 못풀면 어떡하지 걱정이 앞섰는데, 비록 메모리초과 때문에 한 번에 해결하지는 못했지만 풀이 방식이 틀린건 아니었어서 다행이네요.</p>
+
+<p>코로나 때문에 정신도 없고 이런저런 일이 많았어서 최근에 스터디를 꾸준히 진행하지 못했는데, 다시 알고리즘 문제 푸는것에도 집중해야겠네요.</p>
+
+<p>3월달이 벌써 일주일 정도가 지나갔는데 열심히 한번 가보겠습니다. 아자아자 화이팅!</p>
+:ET

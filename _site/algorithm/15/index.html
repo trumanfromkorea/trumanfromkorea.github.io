@@ -1,0 +1,789 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[알고리즘] 백준:5639 - 이진 검색 트리 (Swift) - 꽁치대디의 개발일기 💻</title>
+<meta name="description" content="[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)">
+
+
+  <meta name="author" content="장재훈">
+  
+  <meta property="article:author" content="장재훈">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="꽁치대디의 개발일기 💻">
+<meta property="og:title" content="[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)">
+<meta property="og:url" content="http://localhost:4000/algorithm/15/">
+
+
+  <meta property="og:description" content="[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-03-14T09:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/algorithm/15/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "trumanfromkorea",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="꽁치대디의 개발일기 💻 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          꽁치대디의 개발일기 💻
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+<div class="sidebar sticky">
+    
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/avatar.jpeg" alt="장재훈" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">장재훈</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>쥬쥬쥬니어 개발자</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="trumanfromkorea@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/trumanfromkorea" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/trumanfromkorea/" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div> 
+
+    <!-- 카테고리 파트 -->
+    
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+    
+    <nav class="nav__list" style="margin-top:1.5rem;">
+        <input id="ac-toc" name="accordion-toc" type="checkbox" />
+        <label for="ac-toc">Toggle menu</label>
+        <ul class="nav__items" id="category_tag_menu">
+            <style>
+                .hits {
+                    width: auto;
+                    height: auto;
+                    max-width: 120px;
+                    max-height: 30px;
+                    margin-bottom: 20px;
+                }
+            </style>
+
+            <!-- 방문자 수
+            <a href="https://hits.seeyoufarm.com"><img class="hits"
+                    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftrumanfromkorea.github.io&count_bg=%23007DFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=%F0%9F%8C%90+방문자수&edge_flat=false" /></a>
+            -->
+
+            <li style="border-bottom:1px
+            solid #cecece;border-top:1px
+            solid #cecece;">
+                <ul>
+                    <a href="/about_me"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        ABOUT ME
+                    </a>
+                </ul>
+                <ul>
+                    <a href="/projects"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        PROJECTS
+                    </a>
+                </ul>
+            </li>
+
+            <!--전체 글 수-->
+            <li style="padding-top: 1rem;">
+                🚀 <b><span style="font-size:0.8rem;"> 전체 글 수 <span
+                            style="font-size:1rem; color : #4e89f0;">39</span> 개</span></b>
+            </li>
+
+            <li>
+                <!--여기가 카테고리 대분류 -->
+                <!-- <span class="nav__sub-title" style="font-size:1rem; color : #1b4387;">Categories</span> -->
+                <!-- 앱 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">App</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/flutter" class="nav__sub-title_sub">Flutter (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/ios" class="nav__sub-title_sub">iOS (1)</a></li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- 문법 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Languages</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Swift" class="nav__sub-title_sub">Swift (6)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Java" class="nav__sub-title_sub">Java (1)</a></li>
+                    
+                    
+                </ul>
+
+                <!-- 스터디 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Studies</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/TIL" class="nav__sub-title_sub">TIL (2)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm (15)</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    <li><a href="/categories/ETC" class="nav__sub-title_sub">ETC (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </ul>
+
+            </li>
+
+        </ul>
+    </nav>
+    
+</div>
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <meta itemprop="headline" content="[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)">
+    
+    <meta itemprop="description" content="[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)">
+    
+    
+    <meta itemprop="datePublished" content="2022-03-14T09:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+      <header>
+        <h1 id="page-title" class="page__title p-name" itemprop="headline">
+          <a href="http://localhost:4000/algorithm/15/" class="u-url" itemprop="url"><p>[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)
+</a>
+        </h1>
+        <!--          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+-->
+
+      </header>
+      
+
+
+      <!--      날짜-->
+      
+      <span class="page__meta" style="font-size : 0.8rem">
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-03-14T09:00:00+09:00">March 14, 2022</time></p>
+
+      </span>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h2 id="알고리즘-백준5639---이진-검색-트리-swift">[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)</h2>
+
+<p><a href="https://www.acmicpc.net/problem/5639">클릭해서 문제 바로가기</a></p>
+
+<h2 id="문제">문제</h2>
+
+<p>이진 검색 트리는 다음과 같은 세 가지 조건을 만족하는 이진 트리이다.</p>
+
+<ul>
+  <li>노드의 왼쪽 서브트리에 있는 모든 노드의 키는 노드의 키보다 작다.</li>
+  <li>노드의 오른쪽 서브트리에 있는 모든 노드의 키는 노드의 키보다 크다.</li>
+  <li>왼쪽, 오른쪽 서브트리도 이진 검색 트리이다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/55919701/158178456-4b8048e9-c6c9-4d78-b81f-8decd3012442.png" alt="image" /></p>
+
+<p>전위 순회 (루트-왼쪽-오른쪽)은 루트를 방문하고, 왼쪽 서브트리, 오른쪽 서브 트리를 순서대로 방문하면서 노드의 키를 출력한다. 후위 순회 (왼쪽-오른쪽-루트)는 왼쪽 서브트리, 오른쪽 서브트리, 루트 노드 순서대로 키를 출력한다.</p>
+
+<p>예를 들어, 위의 이진 검색 트리의 전위 순회 결과는 <code class="language-plaintext highlighter-rouge">50 30 24 5 28 45 98 52 60</code> 이고, 후위 순회 결과는 <code class="language-plaintext highlighter-rouge">5 28 24 45 30 60 52 98 50</code> 이다.</p>
+
+<p>이진 검색 트리를 전위 순회한 결과가 주어졌을 때, 이 트리를 후위 순회한 결과를 구하는 프로그램을 작성하시오.</p>
+
+<h2 id="이해">이해</h2>
+
+<p>예전에 학교 강의에서 트리에 대해 배울 때, 분명 트리의 순회 방식을 변환하는 방법을 배웠던 것 같은데 도저히 기억이 안나서 단순한 방법으로 해결하고자 했습니다.</p>
+
+<p>들어오는 입력대로</p>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        <!--        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a>
+    
+    </span>
+  </p>
+
+-->
+        <!--        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-03-14T09:00:00+09:00">March 14, 2022</time></p>
+-->
+      </footer>
+
+      
+
+      <!-- 다라쓰 설치 코드 -->
+      <div id="darass" data-project-key="P0J1iLltiWoPEq6608" data-dark-mode="false" data-primary-color="#5089f0"
+        data-show-sort-option="true" data-allow-social-login="true" data-show-logo="true">
+        <script type="text/javascript" defer>
+          (function () {
+            var $document = document;
+
+            var $script = $document.createElement("script");
+            $script.src = "https://deploy-script.darass.co.kr/embed.js";
+            $script.defer = true;
+
+            $document.head.appendChild($script);
+          })();
+        </script>
+        <noscript>다라쓰 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+      </div>
+      <!-- 다라쓰 설치 코드 끝 -->
+
+      <!-- 
+  <nav class="pagination">
+    
+      <a href="/swift/6/" class="pagination--pager" title="[Swift] 프로퍼티 - 타입 프로퍼티 (Type Property)
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+ -->
+    </div>
+
+    
+  </article>
+
+  
+  
+  <div class="page__related">
+    <h2 class="page__related-title">You may also enjoy
+    </h2>
+    <div class="grid__wrapper">
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/swift/6/"  style="color:#101010;" rel="permalink">[Swift] 프로퍼티 - 타입 프로퍼티 (Type Property)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-12
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/swift/5/"  style="color:#101010;" rel="permalink">[Swift] 프로퍼티 - 연산 프로퍼티 (Computed Property)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-11
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/swift/4/"  style="color:#101010;" rel="permalink">[Swift] 프로퍼티 - 저장 프로퍼티 (Stored Property)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-10
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/swift/3/"  style="color:#101010;" rel="permalink">[Swift] Class 와 Struct
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-08
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+    </div>
+  </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    
+      <li><a href="https://github.com/trumanfromkorea"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 trumanfromkorea. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

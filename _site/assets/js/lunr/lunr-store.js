@@ -209,9 +209,27 @@ var store = [{
         "url": "/swift/3/",
         "teaser": null
       },{
-        "title": "[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property",
+        "title": "[Swift] 프로퍼티 - 저장 프로퍼티 (Stored Property)",
         "excerpt":"[Swift] 프로퍼티 - 저장 프로퍼티 Stored Property Swift 공식 문서를 직역하자면, 프로퍼티는 클래스, 구조체, 열거형과 값을 연결해주는 역할을 한다고 합니다. 프로퍼티에는 저장 프로퍼티 (Stored Property), 연산 프로퍼티 (Computed Property), 그리고 타입 프로퍼티 (Type Property) 등이 존재하는데, 오늘은 그 중 저장 프로퍼티에 대해 알아보도록 하겠습니다. 저장 프로퍼티란? 저장 프로퍼티는 클래스와 구조체에서만...","categories": ["Swift"],
         "tags": [],
         "url": "/swift/4/",
+        "teaser": null
+      },{
+        "title": "[Swift] 프로퍼티 - 연산 프로퍼티 (Computed Property)",
+        "excerpt":"[Swift] 프로퍼티 - 연산 프로퍼티 Computed Property 연산 프로퍼티는 클래스, 구조체, 열거형에서 사용됩니다. 저장 프로퍼티와는 다르게 저장 공간을 갖지 않고, getter 와 setter 를 이용해서 다른 프로퍼티와 값들에 간접적으로 접근이 가능합니다. 연산 프로퍼티는 어떤 값을 저장하는 것이 아니기 때문에 타입 추론이 불가능합니다. 따라서 선언 시 타입을 꼭 명시해줘야 합니다. class...","categories": ["Swift"],
+        "tags": [],
+        "url": "/swift/5/",
+        "teaser": null
+      },{
+        "title": "[Swift] 프로퍼티 - 타입 프로퍼티 (Type Property)",
+        "excerpt":"[Swift] 프로퍼티 - 타입 프로퍼티 (Type Property) 타입 프로퍼티는 클래스, 구조체, 열거형에서 사용됩니다. 타입 프로퍼티에는 저장 타입 프로퍼티와 연산 타입 프로퍼티가 존재하며 저장 타입 프로퍼티의 경우 항상 값이 초기화가 되어있어야 합니다. static 키워드를 이용해 선언하며 lazy 키워드를 직접 붙여주지 않아도 lazy 하게 작동합니다. class Person { static let name: String...","categories": ["Swift"],
+        "tags": [],
+        "url": "/swift/6/",
+        "teaser": null
+      },{
+        "title": "[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)",
+        "excerpt":"[알고리즘] 백준:5639 - 이진 검색 트리 (Swift) 클릭해서 문제 바로가기 문제 이진 검색 트리는 다음과 같은 세 가지 조건을 만족하는 이진 트리이다. 노드의 왼쪽 서브트리에 있는 모든 노드의 키는 노드의 키보다 작다. 노드의 오른쪽 서브트리에 있는 모든 노드의 키는 노드의 키보다 크다. 왼쪽, 오른쪽 서브트리도 이진 검색 트리이다. 전위 순회...","categories": ["Algorithm"],
+        "tags": [],
+        "url": "/algorithm/15/",
         "teaser": null
       }]
