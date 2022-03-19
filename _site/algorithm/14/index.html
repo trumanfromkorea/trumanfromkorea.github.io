@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[알고리즘] 프로그래머스 - 가장 먼 노드 (Java) - 꽁치대디의 개발일기 💻</title>
+<!-- begin _includes/seo.html --><title>[알고리즘] 프로그래머스 - 가장 먼 노드 (Swift, Java) - 꽁치대디의 개발일기 💻</title>
 <meta name="description" content="[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)">
 
 
@@ -22,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="꽁치대디의 개발일기 💻">
-<meta property="og:title" content="[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)">
+<meta property="og:title" content="[알고리즘] 프로그래머스 - 가장 먼 노드 (Swift, Java)">
 <meta property="og:url" content="http://localhost:4000/algorithm/14/">
 
 
@@ -302,7 +302,7 @@
             <!--전체 글 수-->
             <li style="padding-top: 1rem;">
                 🚀 <b><span style="font-size:0.8rem;"> 전체 글 수 <span
-                            style="font-size:1rem; color : #4e89f0;">39</span> 개</span></b>
+                            style="font-size:1rem; color : #4e89f0;">40</span> 개</span></b>
             </li>
 
             <li>
@@ -426,7 +426,7 @@
                     
                     
                     
-                    <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm (15)</a>
+                    <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm (16)</a>
                     </li>
                     
                     
@@ -471,7 +471,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <meta itemprop="headline" content="[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)">
+    <meta itemprop="headline" content="[알고리즘] 프로그래머스 - 가장 먼 노드 (Swift, Java)">
     
     <meta itemprop="description" content="[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)">
     
@@ -483,7 +483,7 @@
       
       <header>
         <h1 id="page-title" class="page__title p-name" itemprop="headline">
-          <a href="http://localhost:4000/algorithm/14/" class="u-url" itemprop="url"><p>[알고리즘] 프로그래머스 - 가장 먼 노드 (Java)
+          <a href="http://localhost:4000/algorithm/14/" class="u-url" itemprop="url"><p>[알고리즘] 프로그래머스 - 가장 먼 노드 (Swift, Java)
 </a>
         </h1>
         <!--          
@@ -500,7 +500,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          3 minute read
         
       </span>
     
@@ -573,6 +573,95 @@
 <p>모든 노드들과 1번 노드와의 거리를 구한 다음, 가장 큰 값이 몇 번 등장하는지 세어주면 정답이 도출됩니다.</p>
 
 <h2 id="전체-코드">전체 코드</h2>
+
+<h3 id="swift">Swift</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="kd">func</span> <span class="nf">solution</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">edge</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">visited</span><span class="p">:</span> <span class="p">[</span><span class="kt">Bool</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kt">Bool</span><span class="p">](</span><span class="nv">repeating</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">var</span> <span class="nv">distanceList</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">let</span> <span class="nv">listGraph</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]]</span> <span class="o">=</span> <span class="nf">generateGraph</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">edge</span><span class="p">)</span>
+    <span class="kt">BFS</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">listGraph</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">visited</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">distanceList</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nf">findMaxCount</span><span class="p">(</span><span class="n">distanceList</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">findMaxCount</span><span class="p">(</span><span class="n">_</span> <span class="nv">distanceList</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">let</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">distanceList</span><span class="o">.</span><span class="nf">max</span><span class="p">()</span><span class="o">!</span>
+
+    <span class="k">for</span> <span class="n">d</span> <span class="k">in</span> <span class="n">distanceList</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="n">max</span> <span class="p">{</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">count</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">generateGraph</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">edge</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]]</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">_listGraph</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]](</span><span class="nv">repeating</span><span class="p">:</span> <span class="p">[],</span> <span class="nv">count</span><span class="p">:</span> <span class="n">n</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">e</span> <span class="k">in</span> <span class="n">edge</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">let</span> <span class="nv">j</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+
+        <span class="n">_listGraph</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="n">_listGraph</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">_listGraph</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="kt">BFS</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">listGraph</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]],</span> <span class="n">_</span> <span class="nv">visited</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Bool</span><span class="p">],</span> <span class="n">_</span> <span class="nv">distanceList</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">Queue</span> <span class="o">=</span> <span class="kt">Queue</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">distQueue</span><span class="p">:</span> <span class="kt">Queue</span> <span class="o">=</span> <span class="kt">Queue</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">()</span>
+
+    <span class="n">visited</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
+
+    <span class="n">queue</span><span class="o">.</span><span class="nf">enqueue</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">distQueue</span><span class="o">.</span><span class="nf">enqueue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="o">!</span><span class="n">queue</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">now</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="nf">dequeue</span><span class="p">()</span><span class="o">!</span>
+        <span class="k">let</span> <span class="nv">dist</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">distQueue</span><span class="o">.</span><span class="nf">dequeue</span><span class="p">()</span><span class="o">!</span>
+
+        <span class="n">distanceList</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">listGraph</span><span class="p">[</span><span class="n">now</span><span class="p">]</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">next</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">listGraph</span><span class="p">[</span><span class="n">now</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="p">{</span>
+                <span class="n">visited</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
+                <span class="n">queue</span><span class="o">.</span><span class="nf">enqueue</span><span class="p">(</span><span class="n">next</span><span class="p">)</span>
+                <span class="n">distQueue</span><span class="o">.</span><span class="nf">enqueue</span><span class="p">(</span><span class="n">dist</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">Queue</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">queue</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">queue</span><span class="o">.</span><span class="n">count</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">queue</span><span class="o">.</span><span class="n">isEmpty</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">queue</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">dequeue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">isEmpty</span> <span class="p">?</span> <span class="nv">nil</span> <span class="p">:</span> <span class="n">queue</span><span class="o">.</span><span class="nf">removeFirst</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h3 id="java">Java</h3>
 
@@ -751,6 +840,30 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline" >
       
+        <a href="/algorithm/16/"  style="color:#101010;" rel="permalink">[알고리즘] 백준:1238 - 파티 (Swift)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-14
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
         <a href="/algorithm/15/"  style="color:#101010;" rel="permalink">[알고리즘] 백준:5639 - 이진 검색 트리 (Swift)
 </a>
       
@@ -807,30 +920,6 @@
             <span class="page__meta" style="margin-left:0.5rem">
                 <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
                 2022-03-11
-            </span> 
-      
-    </h2>
-  </article>
-</div>
-      
-      
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline" >
-      
-        <a href="/swift/4/"  style="color:#101010;" rel="permalink">[Swift] 프로퍼티 - 저장 프로퍼티 (Stored Property)
-</a>
-      
-
-      
-            <span class="page__meta" style="margin-left:0.5rem">
-                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-                2022-03-10
             </span> 
       
     </h2>
