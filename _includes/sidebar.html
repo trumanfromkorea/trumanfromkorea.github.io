@@ -88,19 +88,42 @@
                     {% endfor %}
                 </ul>
 
-                <!-- 스터디 카테고리 -->
-                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Studies</span>
+                <!-- 코딩테스트 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Coding Test</span>
                 <ul>
                     {% for category in site.categories %}
-                    {% if category[0] == "TIL" %}
-                    <li><a href="/categories/TIL" class="nav__sub-title_sub">TIL ({{category[1].size}})</a></li>
+                    {% if category[0] == "BOJ" %}
+                    <li><a href="/categories/BOJ" class="nav__sub-title_sub">BOJ ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
 
                     {% for category in site.categories %}
+                    {% if category[0] == "Programmers" %}
+                    <li><a href="/categories/Programmers" class="nav__sub-title_sub">Programmers ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <!-- 스터디 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Studies</span>
+                <ul>
+                    {% for category in site.categories %}
                     {% if category[0] == "Algorithm" %}
                     <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm ({{category[1].size}})</a>
                     </li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% for category in site.categories %}
+                    {% if category[0] == "Weekly" %}
+                    <li><a href="/categories/Weekly" class="nav__sub-title_sub">Weekly Study ({{category[1].size}})</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% for category in site.categories %}
+                    {% if category[0] == "TIL" %}
+                    <li><a href="/categories/TIL" class="nav__sub-title_sub">TIL ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
 

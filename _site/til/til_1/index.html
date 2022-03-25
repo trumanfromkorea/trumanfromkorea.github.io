@@ -1,0 +1,947 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[iOS] Swift UI 사이드 프로젝트 시작 - 꽁치대디의 개발일기 💻</title>
+<meta name="description" content="BDG - 해외 거주 한국인을 위한 역 배대지 사이트">
+
+
+  <meta name="author" content="장재훈">
+  
+  <meta property="article:author" content="장재훈">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="꽁치대디의 개발일기 💻">
+<meta property="og:title" content="[iOS] Swift UI 사이드 프로젝트 시작">
+<meta property="og:url" content="http://localhost:4000/til/til_1/">
+
+
+  <meta property="og:description" content="BDG - 해외 거주 한국인을 위한 역 배대지 사이트">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-01-03T09:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/til/til_1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "trumanfromkorea",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="꽁치대디의 개발일기 💻 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          꽁치대디의 개발일기 💻
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+<div class="sidebar sticky">
+    
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/avatar.jpeg" alt="장재훈" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">장재훈</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>쥬쥬쥬니어 개발자</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="trumanfromkorea@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/trumanfromkorea" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/trumanfromkorea/" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div> 
+
+    <!-- 카테고리 파트 -->
+    
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+    
+    <nav class="nav__list" style="margin-top:1.5rem;">
+        <input id="ac-toc" name="accordion-toc" type="checkbox" />
+        <label for="ac-toc">Toggle menu</label>
+        <ul class="nav__items" id="category_tag_menu">
+            <style>
+                .hits {
+                    width: auto;
+                    height: auto;
+                    max-width: 120px;
+                    max-height: 30px;
+                    margin-bottom: 20px;
+                }
+            </style>
+
+            <!-- 방문자 수
+            <a href="https://hits.seeyoufarm.com"><img class="hits"
+                    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftrumanfromkorea.github.io&count_bg=%23007DFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=%F0%9F%8C%90+방문자수&edge_flat=false" /></a>
+            -->
+
+            <li style="border-bottom:1px
+            solid #cecece;border-top:1px
+            solid #cecece;">
+                <ul>
+                    <a href="/about_me"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        ABOUT ME
+                    </a>
+                </ul>
+                <ul>
+                    <a href="/projects"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        PROJECTS
+                    </a>
+                </ul>
+            </li>
+
+            <!--전체 글 수-->
+            <li style="padding-top: 1rem;">
+                🚀 <b><span style="font-size:0.8rem;"> 전체 글 수 <span
+                            style="font-size:1rem; color : #4e89f0;">45</span> 개</span></b>
+            </li>
+
+            <li>
+                <!--여기가 카테고리 대분류 -->
+                <!-- <span class="nav__sub-title" style="font-size:1rem; color : #1b4387;">Categories</span> -->
+                <!-- 앱 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">App</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/flutter" class="nav__sub-title_sub">Flutter (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/ios" class="nav__sub-title_sub">iOS (1)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- 문법 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Languages</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Swift" class="nav__sub-title_sub">Swift (6)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Java" class="nav__sub-title_sub">Java (1)</a></li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- 코딩테스트 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Coding Test</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/BOJ" class="nav__sub-title_sub">BOJ (11)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Programmers" class="nav__sub-title_sub">Programmers (3)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- 스터디 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Studies</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm (4)</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Weekly" class="nav__sub-title_sub">Weekly Study (2)</a>
+                    </li>
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/TIL" class="nav__sub-title_sub">TIL (2)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    <li><a href="/categories/ETC" class="nav__sub-title_sub">ETC (5)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </ul>
+
+            </li>
+
+        </ul>
+    </nav>
+    
+</div>
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <meta itemprop="headline" content="[iOS] Swift UI 사이드 프로젝트 시작">
+    
+    <meta itemprop="description" content="BDG - 해외 거주 한국인을 위한 역 배대지 사이트">
+    
+    
+    <meta itemprop="datePublished" content="2022-01-03T09:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+      <header>
+        <h1 id="page-title" class="page__title p-name" itemprop="headline">
+          <a href="http://localhost:4000/til/til_1/" class="u-url" itemprop="url"><p>[iOS] Swift UI 사이드 프로젝트 시작
+</a>
+        </h1>
+        <!--          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+-->
+
+      </header>
+      
+
+
+      <!--      날짜-->
+      
+      <span class="page__meta" style="font-size : 0.8rem">
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-03T09:00:00+09:00">January 3, 2022</time></p>
+
+      </span>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h2 id="bdg---해외-거주-한국인을-위한-역-배대지-사이트">BDG - 해외 거주 한국인을 위한 역 배대지 사이트</h2>
+
+<p>해외에 거주하고 있는 한국인들은 한국 물건이나 음식을 사려면 거주지에서 멀리 떨어진 한인마트로 향하거나, 지인에게 필요한 물건을 배송해달라고 부탁하곤 합니다.</p>
+
+<p>제가 아는 해외 거주 한국인이 얼마나 많겠냐만은 .. 적어도 제가 만나본 분들께서는 모두 한국 물품을 구매하는데 어려움을 겪으셨다고 합니다.</p>
+
+<p>그래서 배송대행지(이하 배대지)를 한국에서 운영한다면 어떨까 라는 아이디어를 떠올렸는데 진지하게 창업을 한다던가 대회를 나간다던가 할 생각까지는 없고 Swift UI 를 공부하면서 만들어볼 딱 좋은 주제라고 생각했습니다.</p>
+
+<h2 id="구성">구성</h2>
+
+<h3 id="개념">개념</h3>
+<ul>
+  <li>해외 거주 한국인들은 한국 물품을 구할 때 많은 어려움을 겪고 있습니다.</li>
+  <li>작거나 적은 물품이라도 한국에서 구매와 배송을 대행해주는 시스템이 있다면 좋을 것 같다고 생각했습니다.</li>
+  <li>사용자는 크게 두 종류로 분류됩니다
+    <ul>
+      <li>구매자 : 재외 한국인, 한국 물품 배송을 신청하고 수수료를 지불하는 사람들</li>
+      <li>판매자 : 한국 거주인, 구매자들이 신청한 물품의 구매와 배송을 대행해주고 수수료를 받는 사람들</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="기능">기능</h3>
+<p>기능은 크게 3가지로 분류됩니다.</p>
+<ul>
+  <li>배대지 등록 및 판매
+    <ul>
+      <li>한국 거주인들은 자신을 판매자로 등록할 수 있습니다.</li>
+      <li>일괄적으로 택배 출고를 하는 일자를 선택합니다. (ex. 매주 금요일)</li>
+      <li>자신의 배송 수수료를 직접 정할 수 있습니다.</li>
+    </ul>
+  </li>
+  <li>구매 물품 신청
+    <ul>
+      <li>재외 한국인들은 자신이 필요한 물품을 원하는 배대지에 신청할 수 있습니다.</li>
+      <li>이때 신청은 인터넷 배송을 원칙으로 합니다. (배대지 주소를 인터넷 배송에 입력)</li>
+      <li>여러 사이트에서 주문한다면 받는 이의 이름을 동일하게 하고 이를 명시합니다.</li>
+      <li>물품 신청 시 수수료를 지불합니다.</li>
+    </ul>
+  </li>
+  <li>채팅
+    <ul>
+      <li>판매자와 구매자는 서로 채팅을 통해 소통할 수 있습니다.</li>
+      <li>채팅은 기본적인 메세지 송수신 기능, 사진 송수신 기능을 지원합니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="계획">계획</h3>
+
+<p>일단 배대지 시스템이 정확히 어떤 방식으로 돌아가는지는 몰라서 많은 허점이 있을 수 있지만, 저는 단순히 Swift 학습을 위해 해당 프로젝트를 기획하고 있다는 점 알아주시길 바랍니다.</p>
+
+<p>1차적으로 구현할 기능은 판매자의 배대지 등록과 구매자의 물품 신청입니다. 구매자가 선입금을 하는 구조이기 때문에 판매자가 돈만 받고 배송을 진행하지 않을 위험이 있어 입금 - 배송시작 의 사이에 금액이 pending 되는 상태를 구현하려고 합니다.</p>
+
+<p>2차적으로 구현할 기능이 채팅 기능입니다. 채팅 기능은 조금 시간이 걸릴 것 같아 기능을 구분하여 진행할 예정입니다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>오늘은 직접적인 개발에 대한 내용을 적어보진 않았지만, 다른 카테고리에 글을 올릴만큼 내용이 없는 날이면 이렇게 아주 소소하게나마 제가 오늘 기획했거나 배운 내용들에 대해 정리해볼 생각입니다.</p>
+
+<p>BDG 앱에 대해서는 우선적으로 Swift UI 를 학습하며 구현해볼 예정이며, 더욱 상세한 기획이나 플로우를 작성할 수 있는 여유시간이 생기면 추가적으로 업로드 할 계획입니다.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        <!--        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
+    
+    </span>
+  </p>
+
+-->
+        <!--        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-03T09:00:00+09:00">January 3, 2022</time></p>
+-->
+      </footer>
+
+      
+
+      <!-- 다라쓰 설치 코드 -->
+      <div id="darass" data-project-key="P0J1iLltiWoPEq6608" data-dark-mode="false" data-primary-color="#5089f0"
+        data-show-sort-option="true" data-allow-social-login="true" data-show-logo="true">
+        <script type="text/javascript" defer>
+          (function () {
+            var $document = document;
+
+            var $script = $document.createElement("script");
+            $script.src = "https://deploy-script.darass.co.kr/embed.js";
+            $script.defer = true;
+
+            $document.head.appendChild($script);
+          })();
+        </script>
+        <noscript>다라쓰 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+      </div>
+      <!-- 다라쓰 설치 코드 끝 -->
+
+      <!-- 
+  <nav class="pagination">
+    
+      <a href="/flutter/flutter_4/" class="pagination--pager" title="[Flutter] iOS - Firestore 추가 시  빌드 에러
+">Previous</a>
+    
+    
+      <a href="/til/til_2/" class="pagination--pager" title="[iOS] SwiftUI - Navigation Link
+">Next</a>
+    
+  </nav>
+ -->
+    </div>
+
+    
+  </article>
+
+  
+  
+  <div class="page__related">
+    <h2 class="page__related-title">You may also enjoy
+    </h2>
+    <div class="grid__wrapper">
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/weekly/Weekly_2/"  style="color:#101010;" rel="permalink">[Week 2] 22.03.19 - 22.03.25
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-25
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/weekly/Weekly_1/"  style="color:#101010;" rel="permalink">[주간학습] 스터디 기록 시작
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-25
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/etc/etc_5/"  style="color:#101010;" rel="permalink">[코딩테스트] 쏘카 - iOS 엔지니어
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-21
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/boj/BOJ_11/"  style="color:#101010;" rel="permalink">[백준] 18808.스티커 붙이기 (Swift)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-21
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+    </div>
+  </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    
+      <li><a href="https://github.com/trumanfromkorea"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 trumanfromkorea. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

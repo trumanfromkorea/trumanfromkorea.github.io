@@ -1,0 +1,1098 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[백준] 1238.파티 (Swift) - 꽁치대디의 개발일기 💻</title>
+<meta name="description" content="[백준] 1238.파티 (Swift)">
+
+
+  <meta name="author" content="장재훈">
+  
+  <meta property="article:author" content="장재훈">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="꽁치대디의 개발일기 💻">
+<meta property="og:title" content="[백준] 1238.파티 (Swift)">
+<meta property="og:url" content="http://localhost:4000/boj/BOJ_9/">
+
+
+  <meta property="og:description" content="[백준] 1238.파티 (Swift)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-03-19T09:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/boj/BOJ_9/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "trumanfromkorea",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="꽁치대디의 개발일기 💻 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          꽁치대디의 개발일기 💻
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+<div class="sidebar sticky">
+    
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/avatar.jpeg" alt="장재훈" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">장재훈</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>쥬쥬쥬니어 개발자</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="trumanfromkorea@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/trumanfromkorea" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/trumanfromkorea/" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div> 
+
+    <!-- 카테고리 파트 -->
+    
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+    
+    <nav class="nav__list" style="margin-top:1.5rem;">
+        <input id="ac-toc" name="accordion-toc" type="checkbox" />
+        <label for="ac-toc">Toggle menu</label>
+        <ul class="nav__items" id="category_tag_menu">
+            <style>
+                .hits {
+                    width: auto;
+                    height: auto;
+                    max-width: 120px;
+                    max-height: 30px;
+                    margin-bottom: 20px;
+                }
+            </style>
+
+            <!-- 방문자 수
+            <a href="https://hits.seeyoufarm.com"><img class="hits"
+                    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftrumanfromkorea.github.io&count_bg=%23007DFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=%F0%9F%8C%90+방문자수&edge_flat=false" /></a>
+            -->
+
+            <li style="border-bottom:1px
+            solid #cecece;border-top:1px
+            solid #cecece;">
+                <ul>
+                    <a href="/about_me"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        ABOUT ME
+                    </a>
+                </ul>
+                <ul>
+                    <a href="/projects"
+                        style="display:block;margin:0.5rem 0;padding:0.1rem 0;font-size:0.8rem;font-weight:bold;text-transform:uppercase;color: #1b4387;">
+                        PROJECTS
+                    </a>
+                </ul>
+            </li>
+
+            <!--전체 글 수-->
+            <li style="padding-top: 1rem;">
+                🚀 <b><span style="font-size:0.8rem;"> 전체 글 수 <span
+                            style="font-size:1rem; color : #4e89f0;">45</span> 개</span></b>
+            </li>
+
+            <li>
+                <!--여기가 카테고리 대분류 -->
+                <!-- <span class="nav__sub-title" style="font-size:1rem; color : #1b4387;">Categories</span> -->
+                <!-- 앱 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">App</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/flutter" class="nav__sub-title_sub">Flutter (4)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/ios" class="nav__sub-title_sub">iOS (1)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- 문법 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Languages</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Swift" class="nav__sub-title_sub">Swift (6)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Java" class="nav__sub-title_sub">Java (1)</a></li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- 코딩테스트 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Coding Test</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/BOJ" class="nav__sub-title_sub">BOJ (11)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Programmers" class="nav__sub-title_sub">Programmers (3)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- 스터디 카테고리 -->
+                <span class="nav__sub-title" style="font-size:1rem; color : #4e89f0;">Studies</span>
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Algorithm" class="nav__sub-title_sub">Algorithm (4)</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/Weekly" class="nav__sub-title_sub">Weekly Study (2)</a>
+                    </li>
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="/categories/TIL" class="nav__sub-title_sub">TIL (2)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    <li><a href="/categories/ETC" class="nav__sub-title_sub">ETC (5)</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </ul>
+
+            </li>
+
+        </ul>
+    </nav>
+    
+</div>
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <meta itemprop="headline" content="[백준] 1238.파티 (Swift)">
+    
+    <meta itemprop="description" content="[백준] 1238.파티 (Swift)">
+    
+    
+    <meta itemprop="datePublished" content="2022-03-19T09:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+      <header>
+        <h1 id="page-title" class="page__title p-name" itemprop="headline">
+          <a href="http://localhost:4000/boj/BOJ_9/" class="u-url" itemprop="url"><p>[백준] 1238.파티 (Swift)
+</a>
+        </h1>
+        <!--          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+-->
+
+      </header>
+      
+
+
+      <!--      날짜-->
+      
+      <span class="page__meta" style="font-size : 0.8rem">
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-03-19T09:00:00+09:00">March 19, 2022</time></p>
+
+      </span>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h2 id="백준-1238파티-swift">[백준] 1238.파티 (Swift)</h2>
+
+<p><a href="https://www.acmicpc.net/problem/1238">클릭해서 문제 바로가기</a></p>
+
+<h2 id="문제">문제</h2>
+
+<p>N개의 숫자로 구분된 각각의 마을에 한 명의 학생이 살고 있다.</p>
+
+<p>어느 날 이 N명의 학생이 X (1 ≤ X ≤ N)번 마을에 모여서 파티를 벌이기로 했다. 이 마을 사이에는 총 M개의 단방향 도로들이 있고 i번째 길을 지나는데 Ti(1 ≤ Ti ≤ 100)의 시간을 소비한다.</p>
+
+<p>각각의 학생들은 파티에 참석하기 위해 걸어가서 다시 그들의 마을로 돌아와야 한다. 하지만 이 학생들은 워낙 게을러서 최단 시간에 오고 가기를 원한다.</p>
+
+<p>이 도로들은 단방향이기 때문에 아마 그들이 오고 가는 길이 다를지도 모른다. N명의 학생들 중 오고 가는데 가장 많은 시간을 소비하는 학생은 누구일지 구하여라.</p>
+
+<h2 id="이해">이해</h2>
+
+<p>간단한 다익스트라 구현 문제입니다. 프로그래머스 데브코스 코딩테스트 마지막 문제가 다익스트라를 이용하는 문제였기 때문에 이번 주 스터디에서 다익스트라 문제를 다루고자 했습니다.</p>
+
+<p>각 노드에서 임의의 노드 X 로 왕복하는 최단거리를 계산하여 그 중 최대값을 뽑는 문제입니다. 그래서 저는 단순하게 다익스트라를 이용하여 왕복 거리를 찾고 그 중 최대값을 뽑았습니다.</p>
+
+<p>다익스트라에 관한 더 자세한 내용은 이후에 포스트로 정리해서 깔끔하게 업로드하도록 하겠습니다.</p>
+
+<p>제가 구현한 다익스트라 코드는 한 노드에서 다른 모든 노드로 가는 최단거리를 담은 배열을 리턴합니다.</p>
+
+<p>어차피 더하는 순서는 상관없기 때문에 저는 먼저 X 에서 다른 모든 노드로 가는 최단거리를 구하고, 그 다음 각 노드에서 X 까지 오는 최단거리들을 더해주었습니다.</p>
+
+<p>더 자세한 사항은 아래 코드를 통해 확인해보겠습니다.</p>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="c1">// MARK: - 구현부</span>
+<span class="k">let</span> <span class="nv">input</span> <span class="o">=</span> <span class="nf">readLine</span><span class="p">()</span><span class="o">!.</span><span class="nf">split</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="kt">Int</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">$0</span><span class="p">))</span><span class="o">!</span> <span class="p">}</span>
+<span class="c1">// 학생 수, 간선 수, 목적지</span>
+<span class="k">let</span> <span class="p">(</span><span class="nv">n</span><span class="p">,</span> <span class="nv">m</span><span class="p">,</span> <span class="nv">x</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">input</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">input</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">input</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">var</span> <span class="nv">graph</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Node</span><span class="p">]]</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">(</span><span class="nv">repeating</span><span class="p">:</span> <span class="p">[],</span> <span class="nv">count</span><span class="p">:</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="k">var</span> <span class="nv">minDists</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">m</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">line</span> <span class="o">=</span> <span class="nf">readLine</span><span class="p">()</span><span class="o">!.</span><span class="nf">split</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="kt">Int</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">$0</span><span class="p">))</span><span class="o">!</span> <span class="p">}</span>
+
+    <span class="k">let</span> <span class="p">(</span><span class="nv">from</span><span class="p">,</span> <span class="nv">to</span><span class="p">,</span> <span class="nv">cost</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="n">graph</span><span class="p">[</span><span class="n">from</span><span class="p">]</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="kt">Node</span><span class="p">(</span> <span class="nv">to</span><span class="p">:</span> <span class="n">to</span><span class="p">,</span> <span class="nv">cost</span><span class="p">:</span> <span class="n">cost</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="c1">// 먼저 x 로부터 다른 모든 노드들까지 최단거리 리턴</span>
+<span class="n">minDists</span> <span class="o">=</span> <span class="nf">dijkstra</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+    <span class="c1">// 각 노드들로부터 x 까지의 최단거리 </span>
+    <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="nf">dijkstra</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span> <span class="n">i</span><span class="p">)</span>
+    <span class="c1">// 이후 각 인덱스에 더해줌</span>
+    <span class="n">minDists</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">result</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">minDists</span><span class="o">.</span><span class="nf">max</span><span class="p">()</span><span class="o">!</span><span class="p">)</span>
+
+<span class="c1">// MARK: - 선언부</span>
+<span class="kd">struct</span> <span class="kt">Node</span><span class="p">:</span> <span class="kt">Comparable</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">func</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Node</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="n">lhs</span><span class="o">.</span><span class="n">cost</span> <span class="o">&gt;</span> <span class="n">rhs</span><span class="o">.</span><span class="n">cost</span>
+    <span class="p">}</span>
+
+    <span class="k">var</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span>
+    <span class="k">var</span> <span class="nv">cost</span><span class="p">:</span> <span class="kt">Int</span>
+<span class="p">}</span>
+
+<span class="c1">// 다익스트라</span>
+<span class="kd">func</span> <span class="nf">dijkstra</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">distances</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">var</span> <span class="nv">pQueue</span> <span class="o">=</span> <span class="kt">Heap</span><span class="o">&lt;</span><span class="kt">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">compare</span><span class="p">:</span> <span class="o">&gt;</span><span class="p">)</span> <span class="c1">// maxHeap</span>
+    
+    <span class="n">pQueue</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">Node</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="n">start</span><span class="p">,</span> <span class="nv">cost</span><span class="p">:</span> <span class="mi">0</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+        <span class="n">distances</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">start</span> <span class="o">==</span> <span class="n">i</span> <span class="p">?</span> <span class="mi">0</span> <span class="p">:</span> <span class="kt">Int</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">while</span> <span class="o">!</span><span class="n">pQueue</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">popped</span> <span class="o">=</span> <span class="n">pQueue</span><span class="o">.</span><span class="nf">delete</span><span class="p">()</span><span class="o">!</span>
+        
+        <span class="k">if</span> <span class="n">distances</span><span class="p">[</span><span class="n">popped</span><span class="o">.</span><span class="n">to</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">popped</span><span class="o">.</span><span class="n">cost</span> <span class="p">{</span>
+            <span class="k">continue</span>
+        <span class="p">}</span>
+        
+        <span class="k">for</span> <span class="n">node</span> <span class="k">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">popped</span><span class="o">.</span><span class="n">to</span><span class="p">]</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">dist</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">cost</span> <span class="o">+</span> <span class="n">popped</span><span class="o">.</span><span class="n">cost</span>
+            
+            <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="n">distances</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">to</span><span class="p">]</span> <span class="p">{</span>
+                <span class="n">distances</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span>
+                <span class="n">pQueue</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">Node</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="n">node</span><span class="o">.</span><span class="n">to</span><span class="p">,</span> <span class="nv">cost</span><span class="p">:</span> <span class="n">dist</span><span class="p">))</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 한 노드에서 각 노드로의 최단거리를 리턴</span>
+    <span class="k">return</span> <span class="n">distances</span>
+<span class="p">}</span>
+
+<span class="c1">// 우선순위 큐 이용하기 위한 힙</span>
+<span class="kd">struct</span> <span class="kt">Heap</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Comparable</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">heap</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span>
+
+    <span class="c1">// maxHeap &gt;, minHeap &lt;</span>
+    <span class="k">var</span> <span class="nv">compare</span><span class="p">:</span> <span class="p">(</span><span class="kt">T</span><span class="p">,</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+
+    <span class="k">var</span> <span class="nv">root</span><span class="p">:</span> <span class="kt">T</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">heap</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">?</span> <span class="nv">nil</span> <span class="p">:</span> <span class="n">heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="p">}</span>
+    
+    <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">heap</span><span class="o">.</span><span class="n">isEmpty</span>
+    <span class="p">}</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">compare</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">T</span><span class="p">,</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">heap</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">compare</span> <span class="o">=</span> <span class="n">compare</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 삽입</span>
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">heap</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="nf">shiftUp</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="n">heap</span><span class="o">.</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 삭제</span>
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">heap</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">nil</span>
+        <span class="p">}</span>
+        
+        <span class="k">if</span> <span class="n">heap</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">heap</span><span class="o">.</span><span class="nf">removeFirst</span><span class="p">()</span>
+        <span class="p">}</span>
+        
+        <span class="n">heap</span><span class="o">.</span><span class="nf">swapAt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">heap</span><span class="o">.</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        
+        <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">heap</span><span class="o">.</span><span class="nf">removeLast</span><span class="p">()</span>
+        <span class="nf">shiftDown</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">result</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 삽입 시 노드 상승</span>
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">shiftUp</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">now</span> <span class="o">=</span> <span class="n">i</span>
+
+        <span class="c1">// 현재 노드가 루트 노드보다 하위 노드일때</span>
+        <span class="k">while</span> <span class="n">now</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="c1">// 부모 노드 인덱스</span>
+            <span class="k">let</span> <span class="nv">parent</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+            <span class="c1">// 부모 노드와 대소비교, 교환 필요 시</span>
+            <span class="k">if</span> <span class="nf">compare</span><span class="p">(</span><span class="n">heap</span><span class="p">[</span><span class="n">now</span><span class="p">],</span> <span class="n">heap</span><span class="p">[</span><span class="n">parent</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">heap</span><span class="o">.</span><span class="nf">swapAt</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+                <span class="c1">// 교환 후 현재 노드를 원래 부모 노드가 있던 자리로 옮겨줌</span>
+                <span class="n">now</span> <span class="o">=</span> <span class="n">parent</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 루트노드 값 제자리 찾기 (원래 원소 삭제 시 많이 쓰임)</span>
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">shiftDown</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">now</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="c1">// 자식 노드 인덱스</span>
+        <span class="k">var</span> <span class="nv">child</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">now</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">let</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">heap</span><span class="o">.</span><span class="n">count</span>
+
+        <span class="c1">// 자식 노드가 트리 범위안에 있을때</span>
+        <span class="k">while</span> <span class="n">child</span> <span class="o">&lt;</span> <span class="n">count</span> <span class="p">{</span>
+            <span class="c1">// 왼쪽 자식, 오른쪽 자식 둘다 있을때</span>
+            <span class="k">if</span> <span class="n">child</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">count</span> <span class="p">{</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="nf">compare</span><span class="p">(</span><span class="n">heap</span><span class="p">[</span><span class="n">child</span><span class="p">],</span> <span class="n">heap</span><span class="p">[</span><span class="n">child</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">?</span> <span class="nv">child</span> <span class="p">:</span> <span class="n">child</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="p">}</span>
+            <span class="c1">// 자식 노드와 대소비교 후 교환</span>
+            <span class="k">if</span> <span class="nf">compare</span><span class="p">(</span><span class="n">heap</span><span class="p">[</span><span class="n">child</span><span class="p">],</span> <span class="n">heap</span><span class="p">[</span><span class="n">now</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">heap</span><span class="o">.</span><span class="nf">swapAt</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
+                <span class="n">now</span> <span class="o">=</span> <span class="n">child</span> <span class="c1">// 현재 노드를 자식노드 인덱스로</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">now</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="til">TIL</h2>
+
+<h3 id="자료구조-구현">자료구조 구현</h3>
+
+<p>Swift 언어에는 Queue 도 없고, Heap 도 없습니다. 물론 배열을 이용하여 Queue 처럼 사용할 수 있고, 어떤 우선순위가 필요하다면 객체를 생성해서 기준을 주어 정렬 후 값들을 뽑아낼 수도 있습니다.</p>
+
+<p>그래도 기본적으로 쓰이는 자료구조들은 어느정도 구현해놓을 필요성이 있음을 느꼈습니다. 일단은 코드로 조금씩 정리하여 파일로 만들어두고 필요할때마다 가져다가 쓰고있습니다.</p>
+
+<p>언젠가 한번은 자료구조 이론과 함께 깔끔하게 코드까지 정리해서 포스트로 올려두는게 낫지 않을까 싶네요. 차차 계획해보도록 하겠습니다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>쏘카 코딩테스트를 대비해서 구현문제 2문제와 해당 다익스트라 문제 1문제를 풀었습니다.</p>
+
+<p>결과적으로 쏘카 코딩테스트 중 테스트케이스는 다 맞았지만, 나중에 다시 친구들과 얘기해보니 시간초과가 날 것 같기도 하고 아직 결과는 잘 모르겠습니다.</p>
+
+<p>그래도 의의를 두는것은 코딩테스트를 어느정도 풀 수 있게 되었다는 것입니다! 조금 더 노력하다 보면 언젠가는 더 어려운 문제도 슥슥 풀어낼 수 있을거라 생각합니다.</p>
+
+<p>다음에는 쏘카 코딩테스트 준비하며 풀었던 구현 문제 2개와 코딩테스트 회고를 작성해보도록 하겠습니다.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        <!--        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+    
+    </span>
+  </p>
+
+-->
+        <!--        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-03-19T09:00:00+09:00">March 19, 2022</time></p>
+-->
+      </footer>
+
+      
+
+      <!-- 다라쓰 설치 코드 -->
+      <div id="darass" data-project-key="P0J1iLltiWoPEq6608" data-dark-mode="false" data-primary-color="#5089f0"
+        data-show-sort-option="true" data-allow-social-login="true" data-show-logo="true">
+        <script type="text/javascript" defer>
+          (function () {
+            var $document = document;
+
+            var $script = $document.createElement("script");
+            $script.src = "https://deploy-script.darass.co.kr/embed.js";
+            $script.defer = true;
+
+            $document.head.appendChild($script);
+          })();
+        </script>
+        <noscript>다라쓰 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+      </div>
+      <!-- 다라쓰 설치 코드 끝 -->
+
+      <!-- 
+  <nav class="pagination">
+    
+      <a href="/boj/BOJ_8/" class="pagination--pager" title="[백준] 5639.이진 검색 트리 (Swift)
+">Previous</a>
+    
+    
+      <a href="/boj/BOJ_10/" class="pagination--pager" title="[백준] 19238.스타트 택시 (Swift)
+">Next</a>
+    
+  </nav>
+ -->
+    </div>
+
+    
+  </article>
+
+  
+  
+  <div class="page__related">
+    <h2 class="page__related-title">You may also enjoy
+    </h2>
+    <div class="grid__wrapper">
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/weekly/Weekly_2/"  style="color:#101010;" rel="permalink">[Week 2] 22.03.19 - 22.03.25
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-25
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/weekly/Weekly_1/"  style="color:#101010;" rel="permalink">[주간학습] 스터디 기록 시작
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-25
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/etc/etc_5/"  style="color:#101010;" rel="permalink">[코딩테스트] 쏘카 - iOS 엔지니어
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-21
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline" >
+      
+        <a href="/boj/BOJ_11/"  style="color:#101010;" rel="permalink">[백준] 18808.스티커 붙이기 (Swift)
+</a>
+      
+
+      
+            <span class="page__meta" style="margin-left:0.5rem">
+                <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                2022-03-21
+            </span> 
+      
+    </h2>
+  </article>
+</div>
+      
+    </div>
+  </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    
+      <li><a href="https://github.com/trumanfromkorea"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 trumanfromkorea. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,267 @@
+I"Zz<h2 id="백준-1655가운데를-말해요-swift">[백준] 1655.가운데를 말해요 (Swift)</h2>
+
+<p><a href="https://www.acmicpc.net/problem/1655">클릭해서 문제 바로가기</a></p>
+
+<h2 id="문제-설명">문제 설명</h2>
+
+<h3 id="본문">본문</h3>
+
+<p>백준이는 동생에게 “가운데를 말해요” 게임을 가르쳐주고 있다. 백준이가 정수를 하나씩 외칠때마다 동생은 지금까지 백준이가 말한 수 중에서 중간값을 말해야 한다. 만약, 그동안 백준이가 외친 수의 개수가 짝수개라면 중간에 있는 두 수 중에서 작은 수를 말해야 한다.</p>
+
+<p>예를 들어 백준이가 동생에게 1, 5, 2, 10, -99, 7, 5를 순서대로 외쳤다고 하면, 동생은 1, 1, 2, 2, 2, 2, 5를 차례대로 말해야 한다. 백준이가 외치는 수가 주어졌을 때, 동생이 말해야 하는 수를 구하는 프로그램을 작성하시오.</p>
+
+<ul>
+  <li>입력</li>
+</ul>
+
+<blockquote>
+  <p>첫째 줄에는 백준이가 외치는 정수의 개수 N이 주어진다. N은 1보다 크거나 같고, 100,000보다 작거나 같은 자연수이다. 그 다음 N줄에 걸쳐서 백준이가 외치는 정수가 차례대로 주어진다. 정수는 -10,000보다 크거나 같고, 10,000보다 작거나 같다.</p>
+</blockquote>
+
+<ul>
+  <li>출력</li>
+</ul>
+
+<blockquote>
+  <p>한 줄에 하나씩 N줄에 걸쳐 백준이의 동생이 말해야 하는 수를 순서대로 출력한다.</p>
+</blockquote>
+
+<h2 id="이해">이해</h2>
+
+<p>우선순위 큐, 힙을 이용하여 해결할 수 있는 문제입니다. 아직 알고리즘 개념들에 대해 완벽한 이해가 없기도 하고, 많은 문제를 풀어보지 않아 처음에는 무작정 배열과 반복문을 이용하여 중간값을 뽑아주었습니다.</p>
+
+<p>하지만 시간복잡도를 전혀 고려하지 않은 코드였기에 시간 초과로 통과하지 못하였고, 몇 번의 검색 끝에 힙을 이용하여 문제를 해결하기로 했습니다.</p>
+
+<h3 id="1-힙-heap">1. 힙 Heap</h3>
+
+<p>힙은 트리 형태로 이루어진 자료구조로써 최대힙과 최소힙이 있습니다. 최대힙과 최소힙의 루트 노드는 각각 힙을 구성하고 있는 원소들의 최대값, 최소값입니다.</p>
+
+<p>힙의 삽입은 트리의 가장 아래부분에서 이루어지며 최대힙의 경우 부모가 자기 자신보다 큰 원소일때까지 값을 교환해주며 올라가고, 최소힙의 경우 부모가 자기 자신보다 작은 원소일때까지 값을 교환해주며 올라갑니다.</p>
+
+<p>힙에서의 삭제는 루트 노드에서 이루어지며 루트의 공백은 임시적으로 가장 마지막 노드로 채우게 됩니다. 이후 해당 노드가 제대로 된 자리를 찾아갈 수 있도록 자식 노드와 값을 교환해주며 내려갑니다. 힙에 대한 더욱 자세한 설명은 나중에 따로 포스트를 작성하도록 하겠습니다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Heap</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Comparable</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">heap</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span>
+    
+    <span class="c1">// 부모, 자식간 비교를 위한 클로저</span>
+    <span class="c1">// 최대힙은 &gt;, 최소힙은 &lt;</span>
+    <span class="k">var</span> <span class="nv">compare</span><span class="p">:</span> <span class="p">(</span><span class="kt">T</span><span class="p">,</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+    
+    <span class="k">var</span> <span class="nv">root</span><span class="p">:</span> <span class="kt">T</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">heap</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">nil</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="nf">init</span><span class="p">(</span><span class="nv">compare</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">T</span><span class="p">,</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">heap</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">compare</span> <span class="o">=</span> <span class="n">compare</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 원소 삽입</span>
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">heap</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1">// 삽입은 가장 마지막 노드에서 이루어지고</span>
+        <span class="nf">shiftUp</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="n">heap</span><span class="o">.</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 자리 찾을때까지 올라간다</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 삽입 시 노드 상승</span>
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">shiftUp</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">now</span> <span class="o">=</span> <span class="n">i</span>
+        
+        <span class="c1">// 현재 노드가 루트 노드보다 하위 노드일때</span>
+        <span class="k">while</span> <span class="n">now</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="c1">// 부모 노드 인덱스</span>
+            <span class="k">let</span> <span class="nv">parent</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+            
+            <span class="c1">// 부모 노드와 대소비교, 교환 필요 시</span>
+            <span class="k">if</span> <span class="nf">compare</span><span class="p">(</span><span class="n">heap</span><span class="p">[</span><span class="n">now</span><span class="p">],</span> <span class="n">heap</span><span class="p">[</span><span class="n">parent</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">heap</span><span class="o">.</span><span class="nf">swapAt</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+                <span class="c1">// 교환 후 현재 노드를 원래 부모 노드가 있던 자리로 옮겨줌</span>
+                <span class="n">now</span> <span class="o">=</span> <span class="n">parent</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 루트노드 값 제자리 찾기 (원래 원소 삭제 시 많이 쓰임)</span>
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">shiftDown</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">now</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="c1">// 자식 노드 인덱스</span>
+        <span class="k">var</span> <span class="nv">child</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">now</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">let</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">heap</span><span class="o">.</span><span class="n">count</span>
+        
+        <span class="c1">// 자식 노드가 트리 범위안에 있을때</span>
+        <span class="k">while</span> <span class="n">child</span> <span class="o">&lt;</span> <span class="n">count</span> <span class="p">{</span>
+            <span class="c1">// 왼쪽 자식, 오른쪽 자식 둘다 있을때</span>
+            <span class="k">if</span> <span class="n">child</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">count</span> <span class="p">{</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="nf">compare</span><span class="p">(</span><span class="n">heap</span><span class="p">[</span><span class="n">child</span><span class="p">],</span> <span class="n">heap</span><span class="p">[</span><span class="n">child</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">?</span> <span class="nv">child</span> <span class="p">:</span> <span class="n">child</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="p">}</span>
+            <span class="c1">// 자식 노드와 대소비교 후 교환</span>
+            <span class="k">if</span> <span class="nf">compare</span><span class="p">(</span><span class="n">heap</span><span class="p">[</span><span class="n">child</span><span class="p">],</span> <span class="n">heap</span><span class="p">[</span><span class="n">now</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">heap</span><span class="o">.</span><span class="nf">swapAt</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
+                <span class="n">now</span> <span class="o">=</span> <span class="n">child</span> <span class="c1">// 현재 노드를 자식노드 인덱스로</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">now</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="2-활용">2. 활용</h3>
+
+<p>문제 풀이에는 최대힙과 최소힙을 모두 사용합니다. 최대힙과 최소힙에 번갈아가며 원소를 삽입하고 최대힙의 루트노드가 최소힙의 루트노드보다 큰 값을 가지고 있을 때 서로의 루트를 교환하는 것을 반복합니다.</p>
+
+<p>그렇게 되면 최대힙의 모든 원소는 최소힙의 모든 원소보다 항상 작은 값을 가지고 있고 최대힙의 루트 노드는 전체의 중간값을 유지하게 됩니다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">maxHeap</span><span class="p">:</span> <span class="kt">Heap</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Heap</span><span class="p">(</span><span class="nv">compare</span><span class="p">:</span> <span class="o">&gt;</span><span class="p">)</span>
+<span class="k">var</span> <span class="nv">minHeap</span><span class="p">:</span> <span class="kt">Heap</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Heap</span><span class="p">(</span><span class="nv">compare</span><span class="p">:</span> <span class="o">&lt;</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="nf">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">)</span><span class="o">!</span>
+<span class="k">var</span> <span class="nv">answer</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">n</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">input</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="nf">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">)</span><span class="o">!</span>
+    
+    <span class="c1">// 번갈아가면서 최대힙, 최소힙에 원소삽입</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+        <span class="n">minHeap</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="n">input</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">maxHeap</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="n">input</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="k">if</span> <span class="n">minHeap</span><span class="o">.</span><span class="n">root</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="n">answer</span> <span class="o">+=</span> <span class="s">"</span><span class="se">\(</span><span class="n">maxHeap</span><span class="o">.</span><span class="n">root</span><span class="o">!</span><span class="se">)\n</span><span class="s">"</span>
+        <span class="k">continue</span>
+    <span class="p">}</span>
+    
+    <span class="k">let</span> <span class="nv">maxRoot</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">maxHeap</span><span class="o">.</span><span class="n">root</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">minRoot</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">minHeap</span><span class="o">.</span><span class="n">root</span><span class="o">!</span>
+    
+    <span class="c1">// 최대힙 루트값이 최소힙 루트값보다 클때 교환</span>
+    <span class="k">if</span> <span class="n">maxRoot</span> <span class="o">&gt;</span> <span class="n">minRoot</span> <span class="p">{</span>
+        <span class="n">minHeap</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">maxRoot</span>
+        <span class="n">maxHeap</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">minRoot</span>
+    <span class="p">}</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span> <span class="n">maxHeap</span><span class="o">.</span><span class="nf">shiftDown</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span> <span class="n">minHeap</span><span class="o">.</span><span class="nf">shiftDown</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+
+    <span class="n">answer</span> <span class="o">+=</span> <span class="s">"</span><span class="se">\(</span><span class="n">maxHeap</span><span class="o">.</span><span class="n">root</span><span class="o">!</span><span class="se">)\n</span><span class="s">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="kd">struct</span> <span class="kt">Heap</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Comparable</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">heap</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span>
+    
+    <span class="k">var</span> <span class="nv">compare</span><span class="p">:</span> <span class="p">(</span><span class="kt">T</span><span class="p">,</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+    
+    <span class="k">var</span> <span class="nv">root</span><span class="p">:</span> <span class="kt">T</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">heap</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">nil</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="nf">init</span><span class="p">(</span><span class="nv">compare</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">T</span><span class="p">,</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">heap</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">compare</span> <span class="o">=</span> <span class="n">compare</span>
+    <span class="p">}</span>
+    
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">heap</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="nf">shiftUp</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="n">heap</span><span class="o">.</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">shiftUp</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">now</span> <span class="o">=</span> <span class="n">i</span>
+        
+        <span class="k">while</span> <span class="n">now</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">parent</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+            
+            <span class="k">if</span> <span class="nf">compare</span><span class="p">(</span><span class="n">heap</span><span class="p">[</span><span class="n">now</span><span class="p">],</span> <span class="n">heap</span><span class="p">[</span><span class="n">parent</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">heap</span><span class="o">.</span><span class="nf">swapAt</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+                <span class="n">now</span> <span class="o">=</span> <span class="n">parent</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">shiftDown</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">now</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">var</span> <span class="nv">child</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">now</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">let</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">heap</span><span class="o">.</span><span class="n">count</span>
+        
+        <span class="k">while</span> <span class="n">child</span> <span class="o">&lt;</span> <span class="n">count</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="n">child</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">count</span> <span class="p">{</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="nf">compare</span><span class="p">(</span><span class="n">heap</span><span class="p">[</span><span class="n">child</span><span class="p">],</span> <span class="n">heap</span><span class="p">[</span><span class="n">child</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">?</span> <span class="nv">child</span> <span class="p">:</span> <span class="n">child</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="nf">compare</span><span class="p">(</span><span class="n">heap</span><span class="p">[</span><span class="n">child</span><span class="p">],</span> <span class="n">heap</span><span class="p">[</span><span class="n">now</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">heap</span><span class="o">.</span><span class="nf">swapAt</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
+                <span class="n">now</span> <span class="o">=</span> <span class="n">child</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">now</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">maxHeap</span><span class="p">:</span> <span class="kt">Heap</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Heap</span><span class="p">(</span><span class="nv">compare</span><span class="p">:</span> <span class="o">&gt;</span><span class="p">)</span>
+<span class="k">var</span> <span class="nv">minHeap</span><span class="p">:</span> <span class="kt">Heap</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Heap</span><span class="p">(</span><span class="nv">compare</span><span class="p">:</span> <span class="o">&lt;</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="nf">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">)</span><span class="o">!</span>
+<span class="k">var</span> <span class="nv">answer</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">n</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">input</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="nf">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">)</span><span class="o">!</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+        <span class="n">minHeap</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="n">input</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">maxHeap</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="n">input</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="k">if</span> <span class="n">minHeap</span><span class="o">.</span><span class="n">root</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="n">answer</span> <span class="o">+=</span> <span class="s">"</span><span class="se">\(</span><span class="n">maxHeap</span><span class="o">.</span><span class="n">root</span><span class="o">!</span><span class="se">)\n</span><span class="s">"</span>
+        <span class="k">continue</span>
+    <span class="p">}</span>
+    
+    <span class="k">let</span> <span class="nv">maxRoot</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">maxHeap</span><span class="o">.</span><span class="n">root</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">minRoot</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">minHeap</span><span class="o">.</span><span class="n">root</span><span class="o">!</span>
+    
+    <span class="k">if</span> <span class="n">maxRoot</span> <span class="o">&gt;</span> <span class="n">minRoot</span> <span class="p">{</span>
+        <span class="n">minHeap</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">maxRoot</span>
+        <span class="n">maxHeap</span><span class="o">.</span><span class="n">heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">minRoot</span>
+    <span class="p">}</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span> <span class="n">maxHeap</span><span class="o">.</span><span class="nf">shiftDown</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span> <span class="n">minHeap</span><span class="o">.</span><span class="nf">shiftDown</span><span class="p">(</span><span class="nv">i</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+
+    <span class="n">answer</span> <span class="o">+=</span> <span class="s">"</span><span class="se">\(</span><span class="n">maxHeap</span><span class="o">.</span><span class="n">root</span><span class="o">!</span><span class="se">)\n</span><span class="s">"</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h2 id="마무리">마무리</h2>
+
+<p>분명 힙은 되게 기초적인 자료구조라서 엄청 예전에 배웠던 기억이 있는데 개념도 잘 기억이 안나고 구현도 제대로 하지 못해 애를 많이 먹었습니다.. 또 시간복잡도를 제대로 고려하지 않아 시간초과도 많이 나오고 여러 이유로 오래 걸린 문제 풀이였습니다.</p>
+
+<p>현재 시간이 100ms 로 나오기도 하고 온전히 처음부터 끝까지 제가 작성한 코드는 아니기 때문에 언젠가는 꼭 다시한번 풀어보는 시간을 가져야 할 것 같습니다.</p>
+
+<p>이론적인 부분을 다잡기 위해서 다음에는 우선순위 큐와 힙에 대한 개념을 한번 정리해보는 시간을 가져보도록 하겠습니다.</p>
+
+<p><em>해당 풀이에 쓰인 코드는 BOJ 1655 번 beddl 님의 풀이를 참고하여 작성하였습니다.</em></p>
+:ET

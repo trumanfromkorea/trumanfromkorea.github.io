@@ -1,0 +1,235 @@
+I"o<h2 id="백준-10830행렬-제곱-swift-java">[백준] 10830.행렬 제곱 (Swift, Java)</h2>
+
+<p><a href="https://www.acmicpc.net/problem/10830">클릭해서 문제 바로가기</a></p>
+
+<h2 id="문제">문제</h2>
+
+<p>크기가 N*N인 행렬 A가 주어진다. 이때, A의 B제곱을 구하는 프로그램을 작성하시오. 수가 매우 커질 수 있으니, A^B의 각 원소를 1,000으로 나눈 나머지를 출력한다.</p>
+
+<blockquote>
+  <p>첫째 줄에 행렬의 크기 N과 B가 주어진다. (2 ≤ N ≤  5, 1 ≤ B ≤ 100,000,000,000)</p>
+
+  <p>둘째 줄부터 N개의 줄에 행렬의 각 원소가 주어진다. 행렬의 각 원소는 1,000보다 작거나 같은 자연수 또는 0이다.</p>
+</blockquote>
+
+<h2 id="이해">이해</h2>
+
+<h3 id="1-단순-제곱">1. 단순 제곱</h3>
+
+<p>문제를 처음 읽었을 때 당연히 처음 떠오르는 해답은 단순 제곱이었습니다. 행렬을 B 번 만큼 곱해주면 되는거 아냐? 라는 생각이 들면서도 역시 문제가 그렇게 단순할 리 없다는 생각과, O(B^2) 만큼의 시간이 걸릴것이라고 예상했기 때문에 해당 방법은 과감하게 버렸습니다.</p>
+
+<h3 id="2-이진탐색---ologn">2. 이진탐색 - O(logN)</h3>
+
+<p>가장 힌트가 되었던건 시간복잡도였습니다. 어떤 식으로 문제를 풀어야 할지 몰라 검색 도중, O(logN) 이라는 키워드가 가장 큰 아이디어가 되었습니다.</p>
+
+<p>이진탐색은 데이터를 반씩 나누어가며 탐색하는 방법으로 이진트리의 모양을 하고있어 시간복잡도가 O(logN) 이지만, 저는 이진탐색의 역순(?)과 비슷한 방향으로 문제를 풀어나갔습니다.</p>
+
+<hr />
+
+<p><img src="https://user-images.githubusercontent.com/55919701/152167982-a0989fa8-e97f-46cb-a6cc-518b05fea8e1.jpg" alt="연습장-134" /></p>
+
+<p>먼저 제곱을 해야하는 횟수를 N 이라고 하고, N 은 11 이 주어졌다고 가정하겠습니다.</p>
+
+<p>그림에서 각 원은 행렬을 뜻합니다.</p>
+
+<hr />
+
+<p><img src="https://user-images.githubusercontent.com/55919701/152168186-bbaf2357-1d7b-456e-b2df-603c76044fa8.jpg" alt="연습장-134 2" /></p>
+
+<p>그 다음 행렬을 2개씩 짝지어 곱셈을 진행합니다. 이때 N 이 홀수라면 무조건 하나의 행렬이 남게 되는데, 이는 <code class="language-plaintext highlighter-rouge">odd</code> 라는 이름의 변수에 저장해둡니다.</p>
+
+<p>행렬을 2개씩 짝지어 곱셈을 진행했기 때문에 남은 연산 수는 1/2 이 됩니다. 그렇기 때문에 N/2 인 5 를 다시 N 에 저장해줍니다.</p>
+
+<hr />
+
+<p><img src="https://user-images.githubusercontent.com/55919701/152168521-1ff230a9-7dd6-42e3-bfa9-5ff88af82829.jpg" alt="연습장-134 3" /></p>
+
+<p>다시 행렬을 두개씩 짝지어 곱해주고 <code class="language-plaintext highlighter-rouge">N/=2</code> 를 진행합니다. 5 또한 홀수이기 때문에 하나의 행렬이 남게 되는데 이는 이전에 존재하던 <code class="language-plaintext highlighter-rouge">odd</code> 와 곱해준 후 그 결과값을 다시 <code class="language-plaintext highlighter-rouge">odd</code> 에 저장해줍니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">odd</code> 를 계속해서 업데이트 시켜주는 이유는 짝지어 계산한 마지막 결과에 곱해주기 위함입니다.</p>
+
+<p>이후 남은 2개의 행렬을 곱해주고 <code class="language-plaintext highlighter-rouge">N/=2</code> 를 진행합니다. N이 1이 되었기 때문에 더 이상 짝지어 곱해줄 행렬을 존재하지 않습니다.</p>
+
+<hr />
+
+<p><img src="https://user-images.githubusercontent.com/55919701/152169116-a48762e7-cb20-41b3-ace9-8c4eda0f5ba0.jpg" alt="연습장-134 4" /></p>
+
+<p>하지만 아직 곱해주지 않은 나머지 행렬 <code class="language-plaintext highlighter-rouge">odd</code> 가 남았기 때문에 이 둘을 곱해주면 정답이 도출되게 됩니다.</p>
+
+<p>위 그림은 이진트리의 모양을 하고있기 때문에 O(logN) 의 시간복잡도를 가지게 됩니다.</p>
+
+<hr />
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<h3 id="swift">Swift</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="c1">// 행렬의 곱을 반환해주는 메소드</span>
+<span class="kd">func</span> <span class="nf">multiple</span><span class="p">(</span><span class="n">_</span> <span class="nv">matrix_01</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]],</span> <span class="n">_</span> <span class="nv">matrix_02</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]],</span> <span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]]</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">result</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]]</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">(</span><span class="nv">repeating</span><span class="p">:</span> <span class="kt">Array</span><span class="p">(</span><span class="nv">repeating</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="n">n</span><span class="p">),</span> <span class="nv">count</span><span class="p">:</span> <span class="n">n</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">matrix_01</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">matrix_02</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">%=</span> <span class="mi">1000</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+<span class="p">}</span>
+
+<span class="c1">// 마지막 결과 출력 메소드</span>
+<span class="kd">func</span> <span class="nf">printMatrix</span><span class="p">(</span><span class="n">_</span> <span class="nv">matrix</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]],</span> <span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+            <span class="n">line</span> <span class="o">+=</span> <span class="s">"</span><span class="se">\(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">%</span> <span class="mi">1000</span><span class="se">)</span><span class="s"> "</span>
+        <span class="p">}</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">input</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="nf">readLine</span><span class="p">()</span><span class="o">!.</span><span class="nf">split</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="kt">Int</span><span class="p">(</span><span class="nv">$0</span><span class="p">)</span><span class="o">!</span> <span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">input</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">var</span> <span class="nv">square</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">input</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">var</span> <span class="nv">matrix</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">var</span> <span class="nv">odd</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">0</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+    <span class="n">matrix</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="nf">readLine</span><span class="p">()</span><span class="o">!.</span><span class="nf">split</span><span class="p">(</span><span class="nv">separator</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="kt">Int</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">$0</span><span class="p">))</span><span class="o">!</span> <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="c1">// 더 이상 짝지어 곱해줄 행렬이 남지 않을때까지</span>
+<span class="k">while</span> <span class="n">square</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">{</span>
+    <span class="c1">// 만약 홀수라면</span>
+    <span class="k">if</span> <span class="n">square</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+        <span class="c1">// odd 가 없을때는 그냥 odd 에 저장</span>
+        <span class="k">if</span> <span class="n">odd</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+            <span class="n">odd</span> <span class="o">=</span> <span class="n">matrix</span>
+        <span class="p">}</span>
+        <span class="c1">// odd 가 이미 존재한다면 곱해준 다음 저장</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="n">odd</span> <span class="o">=</span> <span class="nf">multiple</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">odd</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// 계속 제곱을 해주고</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="nf">multiple</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="c1">// 제곱수는 /2</span>
+    <span class="n">square</span> <span class="o">/=</span> <span class="mi">2</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="n">odd</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+    <span class="nf">printMatrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="nf">multiple</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">odd</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="nf">printMatrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="java">Java</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.StringTokenizer</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">,</span> <span class="nc">NumberFormatException</span> <span class="o">{</span>
+        <span class="nc">BufferedReader</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+        <span class="nc">BufferedWriter</span> <span class="n">output</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamWriter</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
+
+        <span class="nc">StringTokenizer</span> <span class="n">tokenizer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">input</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+        <span class="kt">long</span> <span class="n">square</span> <span class="o">=</span> <span class="nc">Long</span><span class="o">.</span><span class="na">parseLong</span><span class="o">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">matrix</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">n</span><span class="o">];</span>
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">odd</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">n</span><span class="o">];</span>
+        <span class="kt">boolean</span> <span class="n">isOddEmpty</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">tokenizer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringTokenizer</span><span class="o">(</span><span class="n">input</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">matrix</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="na">nextToken</span><span class="o">());</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="c1">// 더 이상 짝지어 곱해줄 행렬이 남지 않을때까지</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">square</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// 만약 홀수라면</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">square</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// odd 가 없을때는 그냥 저장</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">isOddEmpty</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">odd</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">;</span>
+                    <span class="n">isOddEmpty</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+                <span class="o">}</span> 
+                <span class="c1">// odd 가 이미 존재한다면 곱해준 다음 저장</span>
+                <span class="k">else</span> <span class="o">{</span>
+                    <span class="n">odd</span> <span class="o">=</span> <span class="n">multiple</span><span class="o">(</span><span class="n">matrix</span><span class="o">,</span> <span class="n">odd</span><span class="o">,</span> <span class="n">n</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="c1">// 계속 제곱해주고</span>
+            <span class="n">matrix</span> <span class="o">=</span> <span class="n">multiple</span><span class="o">(</span><span class="n">matrix</span><span class="o">,</span> <span class="n">matrix</span><span class="o">,</span> <span class="n">n</span><span class="o">);</span>
+            <span class="c1">// 제곱수는  /2</span>
+            <span class="n">square</span> <span class="o">/=</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">isOddEmpty</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">printMatrix</span><span class="o">(</span><span class="n">matrix</span><span class="o">,</span> <span class="n">n</span><span class="o">,</span> <span class="n">output</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">matrix</span> <span class="o">=</span> <span class="n">multiple</span><span class="o">(</span><span class="n">matrix</span><span class="o">,</span> <span class="n">odd</span><span class="o">,</span> <span class="n">n</span><span class="o">);</span>
+            <span class="n">printMatrix</span><span class="o">(</span><span class="n">matrix</span><span class="o">,</span> <span class="n">n</span><span class="o">,</span> <span class="n">output</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="n">output</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+        <span class="n">output</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+    
+    <span class="c1">// 행렬 곱셈 메소드</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span><span class="o">[][]</span> <span class="nf">multiple</span><span class="o">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">matrix_01</span><span class="o">,</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">matrix_02</span><span class="o">,</span> <span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">n</span><span class="o">];</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+                    <span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">+=</span> <span class="n">matrix_01</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">k</span><span class="o">]</span> <span class="o">*</span> <span class="n">matrix_02</span><span class="o">[</span><span class="n">k</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
+                    <span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">%=</span> <span class="mi">10000</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 마지막 결과값 출력 메소드</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printMatrix</span><span class="o">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">matrix</span><span class="o">,</span> <span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="nc">BufferedWriter</span> <span class="n">output</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="nc">String</span> <span class="n">line</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">output</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">matrix</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">+</span> <span class="s">" "</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="n">output</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"\n"</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h2 id="마무리">마무리</h2>
+
+<p>이번에도 100% 제 힘만으로 해결한 문제는 아니지만, O(logN) 이라는 키워드 하나로 풀어낸것에 대해 조금은 뿌듯함을 느끼는 것 같습니다.</p>
+
+<p>물론 온전히 제 힘으로 문제를 풀 수 있어야 어느 코딩테스트건 간에 통과할 수 있겠지만 말이죠..ㅜㅜ</p>
+
+<p>이제는 Java 로도 코딩테스트를 풀려고 합니다. Spring 을 공부해보고 싶은 마음도 있고, Java 를 아는게 이후의 개발 인생에도 도움이 많이 될 것 같아서 이런 결정을 내렸습니다.</p>
+
+<p>아직은 문법에 익숙치 않아 Swift 로 한번 문제를 풀어본 후 Java 로 다시 옮겨적어보고 있지만, 언젠가는 아예 Java 로 코딩테스트 문제들을 슥슥 풀어낼 수 있는 날이 오면 좋겠네요.</p>
+:ET
