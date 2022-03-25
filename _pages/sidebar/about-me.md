@@ -30,11 +30,12 @@ author_profile: true
 
 ## 🏅 Awards
 
-`2020.07` 세종대학교 7회 AI/SW 해커톤 금상
+`2020.12` 세종대학교 창의설계 경진대회 장려상, 인기상
 
 `2020.11` 세종대학교 인공지능 경진대회 장려상
 
-`2020.12` 세종대학교 창의설계 경진대회 장려상, 인기상
+`2020.07` 세종대학교 7회 AI/SW 해커톤 금상
+
 
 ## 📝 Projects
 
@@ -56,11 +57,11 @@ author_profile: true
 - 중고물품 경매 어플리케이션  -->
 
 
-## More About Me
-
-<!-- [🫐 Introduction](https://www.notion.so/53d70adf9109406aa9e533b88db1ac1e) -->
+## 📩 Contacts
 
 [🐈‍⬛ Github](https://github.com/trumanfromkorea)
+
+[🫐 Portfolio](https://www.notion.so/53d70adf9109406aa9e533b88db1ac1e)
 
 📧 trumanfromkorea@gmail.com
 
