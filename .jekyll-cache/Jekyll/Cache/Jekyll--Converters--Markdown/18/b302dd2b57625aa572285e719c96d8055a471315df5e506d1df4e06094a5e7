@@ -1,0 +1,51 @@
+I"&<h2 id="백준-9655돌-게임-swift">[백준] 9655.돌 게임 (Swift)</h2>
+
+<p><a href="https://www.acmicpc.net/problem/9655">클릭해서 문제 바로가기</a></p>
+
+<h2 id="문제">문제</h2>
+
+<p>돌 게임은 두 명이서 즐기는 재밌는 게임이다.</p>
+
+<p>탁자 위에 돌 N개가 있다. 상근이와 창영이는 턴을 번갈아가면서 돌을 가져가며, 돌은 1개 또는 3개 가져갈 수 있다. 마지막 돌을 가져가는 사람이 게임을 이기게 된다.</p>
+
+<p>두 사람이 완벽하게 게임을 했을 때, 이기는 사람을 구하는 프로그램을 작성하시오. 게임은 상근이가 먼저 시작한다.</p>
+
+<h3 id="입력">입력</h3>
+
+<p>첫째 줄에 N이 주어진다. (1 ≤ N ≤ 1000)</p>
+
+<h3 id="출력">출력</h3>
+
+<p>상근이가 게임을 이기면 SK를, 창영이가 게임을 이기면 CY을 출력한다.</p>
+
+<h2 id="이해">이해</h2>
+
+<p>일단 매 순서마다 돌을 1개 혹은 3개 가져갈 수 있으니 1개 가져가는 경우, 3개 가져가는 경우 두 가지로 나누어 생각해보려고 했습니다.</p>
+
+<p>이진트리처럼 계속 분기를 해본다음 게임이 끝나는 순간 누가 이겼는지 리턴하려고 했는데, 그럼 무조건 3개씩 가져가다가 끝날 것 같아서 그러지 않았습니다.</p>
+
+<p>그래서 돌이 1개일때, 2개일때, 3개일때 … 하나씩 차근차근 생각해보았습니다. 7개 정도까지 생각해보니 두 명이 서로 번갈아가면서 게임을 이긴다는 것을 알 수 있었습니다.</p>
+
+<p>이를 통해 가져갈 수 있는 돌의 숫자 1과 3이 모두 홀수이기 때문에 결국 서로 한 번씩 돌을 가져가면 짝수개만큼의 돌이 빠진다는 것을 깨달았습니다.</p>
+
+<p>그래서 돌이 짝수개라면 창영이가, 홀수개라면 상근이가 이긴다는 것을 알 수 있었습니다.</p>
+
+<p>코드는 매우 짧습니다..</p>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<h3 id="swift">Swift</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="k">let</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="nf">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">)</span><span class="o">!</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">?</span> <span class="s">"CY"</span> <span class="p">:</span> <span class="s">"SK"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="마무리">마무리</h2>
+
+<p>DP 에 너무 약한 것 같아 DP 문제들을 낮은 난이도부터 풀어나갈 생각입니다.</p>
+
+<p>이번에는 너무 싱거운 문제가 걸렸지만… 어려운 문제도 풀 수 있을때까지 차근차근 풀어나가보겠습니다.</p>
+:ET

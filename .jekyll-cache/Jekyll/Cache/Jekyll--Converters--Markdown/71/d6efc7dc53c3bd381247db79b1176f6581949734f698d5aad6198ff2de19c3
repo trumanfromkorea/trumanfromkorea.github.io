@@ -1,0 +1,60 @@
+I"N<h2 id="백준-117262n-타일링-swift">[백준] 11726.2×n 타일링 (Swift)</h2>
+
+<p><a href="https://www.acmicpc.net/problem/11726">클릭해서 문제 바로가기</a></p>
+
+<h2 id="문제">문제</h2>
+
+<p>2×n 크기의 직사각형을 1×2, 2×1 타일로 채우는 방법의 수를 구하는 프로그램을 작성하시오.</p>
+
+<p>아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/55919701/160414934-8acfbc07-59f8-4d0f-9ecb-21f558b4a1f1.png" alt="image" /></p>
+
+<h3 id="입력">입력</h3>
+
+<p>첫째 줄에 n이 주어진다. (1 ≤ n ≤ 1,000)</p>
+
+<h3 id="출력">출력</h3>
+
+<p>첫째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.</p>
+
+<h2 id="이해">이해</h2>
+
+<p>저는 1부터 5가 될때까지 모든 경우의 수를 계산해봤습니다. 1, 2, 3, 5, 8, … 어디선가 많이 본 숫자이지 않나요?</p>
+
+<p>입출력 예에서 n이 9일때 출력값이 55였기에 피보나치 수열이라고 확신했습니다. 그래서 피보나치 수열대로 구현을 하여 정답은 맞았는데, 왜 피보나치 수열로 문제가 해결되는지 궁금했습니다.</p>
+
+<p>다른 분들의 풀이를 보던 중 <a href="https://yabmoons.tistory.com/506">이 풀이</a> 를 보니 확실히 이해가 되었던 것 같습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">DP[n]</code> 타일은 <code class="language-plaintext highlighter-rouge">DP[n-1]</code> 타일의 오른쪽에 <code class="language-plaintext highlighter-rouge">2*1</code> 타일을 하나 붙인 경우들과 <code class="language-plaintext highlighter-rouge">DP[n-2]</code> 타일의 오른쪽에 <code class="language-plaintext highlighter-rouge">2*2</code> 타일을 붙인 경우들을 합친 모양을 하고 있습니다.</p>
+
+<p>그렇기 때문에 <code class="language-plaintext highlighter-rouge">DP[n] = DP[n-1] + DP[n-2]</code> 이라는 피보나치 수열과 같은 점화식으로 해당 문제를 풀이할 수 있는 것입니다.</p>
+
+<h2 id="전체-코드">전체 코드</h2>
+
+<h3 id="swift">Swift</h3>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="k">let</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="nf">readLine</span><span class="p">()</span><span class="o">!</span><span class="p">)</span><span class="o">!</span>
+
+<span class="k">var</span> <span class="nv">DP</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">(</span><span class="nv">repeating</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="kt">DP</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kt">DP</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">..&lt;</span> <span class="n">n</span> <span class="p">{</span>
+    <span class="kt">DP</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">DP</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="kt">DP</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">%</span> <span class="mi">10007</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="kt">DP</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+</code></pre></div></div>
+
+<h2 id="마무리">마무리</h2>
+
+<p>운이 좋은건지 DP 풀이 능력이 성장하고 있는건지 ^^ 어쩌다 보니 풀어냈네요..</p>
+
+<p>몇일 지나면 더 어려운 문제도 척척 풀어낼 수 있겠죠 ^^</p>
+
+<p>내일도 DP 문제로 또 찾아오겠습니다.</p>
+:ET
